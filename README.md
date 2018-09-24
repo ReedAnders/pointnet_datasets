@@ -36,6 +36,19 @@ Then, add flags of `-I$TF_INC/external/nsync/public -L$TF_LIB -ltensorflow_frame
 
 ### Usage
 
+#### Downloading data
+
+The paper uses pickled data derived from the ScanNet dataset. The authors have preprocessed data for you to download <a href="https://shapenet.cs.stanford.edu/media/scannet_data_pointnet2.zip">here (1.72GB)</a>. My code expects to find this here: `pointnet_datasets/data/scannet_data_pointnet2/*.pickle`.
+
+```
+cd pointnet_datasets
+mkdir data && cd data
+wget https://shapenet.cs.stanford.edu/media/scannet_data_pointnet2.zip
+unzip scannet_data_pointnet2.zip
+```
+
+#### Training/Testing Model
+
 The master branch should run with the following command:
 
 `python train.py`
