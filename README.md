@@ -14,7 +14,7 @@ My primary movitations are to process my own point cloud data, improve speed, an
 
 I'm using Ubuntu 18.04, a Python 2 virtual environment, and the custmized TF operators. It's highly recommended that you have access to a GPU (Find installation support <a href="https://www.tensorflow.org/install/gpu">here</a>)
 
-####Setup virtualenv
+#### Setup virtualenv
 
 `
 virtualenv env
