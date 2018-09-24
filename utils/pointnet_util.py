@@ -16,7 +16,9 @@ import numpy as np
 
 sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
 
-from tf_ops import tf_sampling, tf_grouping, tf_interpolate
+from tf_ops.sampling import tf_sampling
+from tf_ops.grouping import tf_grouping
+from tf.ops.3d_interpolation import tf_interpolate
 import tf_util
 
 def sample_and_group(npoint, radius, nsample, xyz, points, knn=False, use_xyz=True):
