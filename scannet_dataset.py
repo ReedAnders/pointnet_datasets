@@ -3,8 +3,7 @@ import os
 import sys
 import numpy as np
 
-from utils import pc_util
-import scene_util
+from utils import pc_util, scene_util
 
 class ScannetDataset():
     def __init__(self, root, npoints=8192, split='train'):
