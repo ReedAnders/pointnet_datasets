@@ -5,13 +5,18 @@ Date: November 2017
 
 """
 
-import os
+from os import path
 import sys
 
 import tensorflow as tf
 import numpy as np
 
-from ..tf_ops import tf_sampling, tf_grouping, tf_interpolate
+
+
+
+sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
+
+from tf_ops import tf_sampling, tf_grouping, tf_interpolate
 import tf_util
 
 def sample_and_group(npoint, radius, nsample, xyz, points, knn=False, use_xyz=True):

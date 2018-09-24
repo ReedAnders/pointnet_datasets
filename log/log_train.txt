@@ -1,15 +1,15 @@
 Namespace(batch_size=32, decay_rate=0.7, decay_step=200000, gpu=0, learning_rate=0.001, log_dir='log', max_epoch=201, model='model', momentum=0.9, num_point=8192, optimizer='adam')
-pid: 12830
+pid: 12983
 **** EPOCH 000 ****
-2018-09-24 11:16:30.981671
+2018-09-24 11:32:01.691265
  -- 010 / 037 --
-mean loss: 9.297911
-accuracy: 0.207869
+mean loss: 9.061645
+accuracy: 0.222638
  -- 020 / 037 --
-mean loss: 6.914712
-accuracy: 0.375467
+mean loss: 7.329204
+accuracy: 0.355179
  -- 030 / 037 --
-mean loss: 7.294095
-accuracy: 0.383364
-2018-09-24 11:17:39.347221
+mean loss: 7.152714
+accuracy: 0.368602
+2018-09-24 11:33:09.767126
 ---- EPOCH 000 EVALUATION ----
