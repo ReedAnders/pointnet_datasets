@@ -7,13 +7,12 @@ Date: November 2016
 import os
 import sys
 
-
-# Draw point cloud
-from eulerangles import euler2mat
-
 # Point cloud IO
 import numpy as np
 from plyfile import PlyData, PlyElement
+
+# Draw point cloud
+from eulerangles import euler2mat
 
  
 # ----------------------------------------

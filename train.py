@@ -1,7 +1,6 @@
 import argparse
 import math
 from datetime import datetime
-#import h5pyprovider
 import numpy as np
 import tensorflow as tf
 import socket
@@ -9,15 +8,7 @@ import importlib
 import os
 import sys
 
-
-
-
-
-
 from utils import provider, tf_util, pc_util
-
-
-
 import scannet_dataset
 
 parser = argparse.ArgumentParser()
