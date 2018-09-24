@@ -18,7 +18,7 @@ sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
 
 from tf_ops.sampling import tf_sampling
 from tf_ops.grouping import tf_grouping
-from tf.ops.3d_interpolation import tf_interpolate
+from tf_ops.interpolation import tf_interpolate
 import tf_util
 
 def sample_and_group(npoint, radius, nsample, xyz, points, knn=False, use_xyz=True):
@@ -47,7 +47,7 @@ def sample_and_group(npoint, radius, nsample, xyz, points, knn=False, use_xyz=Tr
     grouped_xyz = tf_grouping.group_point(xyz, idx) # (batch_size, npoint, nsample, 3)
     grouped_xyz -= tf.tile(tf.expand_dims(new_xyz, 2), [1,1,nsample,1]) # translation normalization
     if points is not None:
-        grouped_points = group_point(points, idx) # (batch_size, npoint, nsample, channel)
+        grouped_points = tf_grouping.group_point(points, idx) # (batch_size, npoint, nsample, channel)
         if use_xyz:
             new_points = tf.concat([grouped_xyz, grouped_points], axis=-1) # (batch_size, npoint, nample, 3+channel)
         else:
@@ -178,10 +178,10 @@ def pointnet_sa_module_msg(xyz, points, npoint, radius_list, nsample_list, mlp_l
             radius = radius_list[i]
             nsample = nsample_list[i]
             idx, pts_cnt = query_ball_point(radius, nsample, xyz, new_xyz)
-            grouped_xyz = group_point(xyz, idx)
+            grouped_xyz = tf_grouping.group_point(xyz, idx)
             grouped_xyz -= tf.tile(tf.expand_dims(new_xyz, 2), [1,1,nsample,1])
             if points is not None:
-                grouped_points = group_point(points, idx)
+                grouped_points = tf_grouping.group_point(points, idx)
                 if use_xyz:
                     grouped_points = tf.concat([grouped_points, grouped_xyz], axis=-1)
             else:

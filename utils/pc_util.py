@@ -7,17 +7,48 @@ Date: November 2016
 import os
 import sys
 
-# Point cloud IO
-import numpy as np
-from plyfile import PlyData, PlyElement
+
 
 # Draw point cloud
 from eulerangles import euler2mat
+
+# Point cloud IO
+import numpy as np
+from plyfile import PlyData, PlyElement
 
  
 # ----------------------------------------
 # Point Cloud/Volume Conversions
 # ----------------------------------------
+def point_cloud_label_to_surface_voxel_label(point_cloud, label, res=0.0484):
+    coordmax = np.max(point_cloud,axis=0)
+    coordmin = np.min(point_cloud,axis=0)
+    nvox = np.ceil((coordmax-coordmin)/res)
+    vidx = np.ceil((point_cloud-coordmin)/res)
+    vidx = vidx[:,0]+vidx[:,1]*nvox[0]+vidx[:,2]*nvox[0]*nvox[1]
+    uvidx = np.unique(vidx)
+    if label.ndim==1:
+        uvlabel = [np.argmax(np.bincount(label[vidx==uv].astype(np.uint32))) for uv in uvidx]
+    else:
+        assert(label.ndim==2)
+	uvlabel = np.zeros(len(uvidx),label.shape[1])
+	for i in range(label.shape[1]):
+	    uvlabel[:,i] = np.array([np.argmax(np.bincount(label[vidx==uv,i].astype(np.uint32))) for uv in uvidx])
+    return uvidx, uvlabel, nvox
+
+def point_cloud_label_to_surface_voxel_label_fast(point_cloud, label, res=0.0484):
+    coordmax = np.max(point_cloud,axis=0)
+    coordmin = np.min(point_cloud,axis=0)
+    nvox = np.ceil((coordmax-coordmin)/res)
+    vidx = np.ceil((point_cloud-coordmin)/res)
+    vidx = vidx[:,0]+vidx[:,1]*nvox[0]+vidx[:,2]*nvox[0]*nvox[1]
+    uvidx, vpidx = np.unique(vidx,return_index=True)
+    if label.ndim==1:
+        uvlabel = label[vpidx]
+    else:
+        assert(label.ndim==2)
+	uvlabel = label[vpidx,:]
+    return uvidx, uvlabel, nvox
 
 def point_cloud_to_volume_batch(point_clouds, vsize=12, radius=1.0, flatten=True):
     """ Input is BxNx3 batch of point cloud
@@ -304,8 +335,7 @@ def write_ply_color(points, labels, out_filename, num_classes=None):
     else:
         assert(num_classes>np.max(labels))
     fout = open(out_filename, 'w')
-    #colors = [pyplot.cm.hsv(i/float(num_classes)) for i in range(num_classes)]
-    colors = [pyplot.cm.jet(i/float(num_classes)) for i in range(num_classes)]
+    colors = [pyplot.cm.hsv(i/float(num_classes)) for i in range(num_classes)]
     for i in range(N):
         c = colors[labels[i]]
         c = [int(x*255) for x in c]
