@@ -16,11 +16,11 @@ I'm using Ubuntu 18.04, a Python 2 virtual environment, and the custmized TF ope
 
 #### Setup virtualenv
 
-`
+```
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
-`
+```
 
 #### Compile Customized TF Operators
 The TF operators are included under `tf_ops`, you need to compile them (check `tf_xxx_compile.sh` under each ops subfolder) first. Update `nvcc` and `python` path if necessary. The code is tested under TF1.2.0. If you are using earlier version it's possible that you need to remove the `-D_GLIBCXX_USE_CXX11_ABI=0` flag in g++ command in order to compile correctly.
@@ -35,5 +35,7 @@ First, find Tensorflow include and library paths.
 Then, add flags of `-I$TF_INC/external/nsync/public -L$TF_LIB -ltensorflow_framework` to the `g++` commands.
 
 ### Usage
+
+The master branch should run with the following command:
 
 `python train.py`
