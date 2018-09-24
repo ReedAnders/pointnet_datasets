@@ -1,0 +1,15 @@
+Namespace(batch_size=32, decay_rate=0.7, decay_step=200000, gpu=0, learning_rate=0.001, log_dir='log', max_epoch=201, model='model', momentum=0.9, num_point=8192, optimizer='adam')
+pid: 12830
+**** EPOCH 000 ****
+2018-09-24 11:16:30.981671
+ -- 010 / 037 --
+mean loss: 9.297911
+accuracy: 0.207869
+ -- 020 / 037 --
+mean loss: 6.914712
+accuracy: 0.375467
+ -- 030 / 037 --
+mean loss: 7.294095
+accuracy: 0.383364
+2018-09-24 11:17:39.347221
+---- EPOCH 000 EVALUATION ----
