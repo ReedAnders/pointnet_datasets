@@ -2,7 +2,7 @@
 
 This is refactor of the PointNet++ semantic segmentation implementation; the main difference is use of the Tensorflow Data API. The original code is on the author's repo <a href="https://github.com/charlesq34/pointnet2">here</a> and the paper is <a href="https://arxiv.org/abs/1706.02413">here</a>. There you can find more information on PointNet.
 
-My primary movitations are to process my own point cloud data, improve speed, and add documentation. At the moment I'm focusing only on semantic segmentation.
+My primary motivations are to process my own point cloud data, improve speed, and add documentation. At the moment I'm focusing only on semantic segmentation.
 
 #### Todo list:
 - [ ] Use Data API for training pipeline
