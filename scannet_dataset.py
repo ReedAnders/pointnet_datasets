@@ -2,7 +2,8 @@ import pickle
 import os
 import sys
 import numpy as np
-import pc_util
+
+from utils import pc_util
 import scene_util
 
 class ScannetDataset():

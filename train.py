@@ -18,7 +18,7 @@ from utils import provider, tf_util, pc_util
 
 
 
-import original_scannet_dataset as scannet_dataset
+import scannet_dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
