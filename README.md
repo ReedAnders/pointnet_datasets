@@ -42,7 +42,7 @@ The paper uses pickled data derived from the ScanNet dataset. The authors have p
 
 ```
 cd pointnet_datasets
-mkdir data && cd data
+mkdir -p data/scannet_data_pointnet2 && cd data/scannet_data_pointnet2
 wget https://shapenet.cs.stanford.edu/media/scannet_data_pointnet2.zip
 unzip scannet_data_pointnet2.zip
 ```
