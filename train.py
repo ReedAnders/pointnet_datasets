@@ -480,6 +480,5 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
 
 
 if __name__ == "__main__":
-    log_string('pid: %s'%(str(os.getpid())))
-    train()
-    LOG_FOUT.close()
+    
+    
