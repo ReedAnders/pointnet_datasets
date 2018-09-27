@@ -10,10 +10,16 @@ import sys
 import numpy as np
 
 from utils import pc_util, scene_util
+import train
 
 
 class ScannetDataset():
 
+	"""Generate training data for ScanNet scenes by sampling 1.5 x 1.5 x 3m cubes in scene
+	then subsample cube to npoints
+	
+	"""
+	
 	def __init__(self, root, npoints=8192, split='train'):
 		
 		self.npoints = npoints
@@ -104,7 +110,10 @@ class ScannetDataset():
 
 class ScannetDatasetWholeScene():
 
+	"""Generate cubes over all points in a scene, then subsample cube to npoints
 
+	"""
+	
 	def __init__(self, root, npoints=8192, split='train'):
 
 		self.npoints = npoints
@@ -129,6 +138,7 @@ class ScannetDatasetWholeScene():
 		
 		elif split=='test':
 			self.labelweights = np.ones(21)
+
 
 	def __getitem__(self, index):
 
@@ -178,12 +188,14 @@ class ScannetDatasetWholeScene():
 		
 		return point_sets, semantic_segs, sample_weights
 
+
 	def __len__(self):
 
 		return len(self.scene_points_list)
 
 
 class ScannetDatasetVirtualScan():
+
 
 	def __init__(self, root, npoints=8192, split='train'):
 
@@ -208,6 +220,7 @@ class ScannetDatasetVirtualScan():
 		
 		elif split=='test':
 			self.labelweights = np.ones(21)
+
 
 	def __getitem__(self, index):
 
@@ -241,6 +254,7 @@ class ScannetDatasetVirtualScan():
 		sample_weights = np.concatenate(tuple(sample_weights),axis=0)
 
 		return point_sets, semantic_segs, sample_weights
+
 
 	def __len__(self):
 		
