@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import tensorflow
 
 import train
@@ -8,11 +8,9 @@ def generate_train_data():
 
     # Shuffle train samples
     dataset = train.TRAIN_DATASET
-    np.random.shuffle(dataset)
-
     import pdb; pdb.set_trace()
-
-    for ii in len(dataset)
+    
+    for ii in len(dataset):
     
         ps,seg,smpw = dataset[ii]
         aug_data = provider.rotate_point_cloud_z(ps)
@@ -28,4 +26,4 @@ def generate_whole_test_data():
 
 if __name__ == "__main__":
 
-    generate_test_data()    
+    generate_train_data()    

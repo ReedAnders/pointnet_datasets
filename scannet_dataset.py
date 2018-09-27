@@ -10,7 +10,6 @@ import sys
 import numpy as np
 
 from utils import pc_util, scene_util
-import train
 
 
 class ScannetDataset():
