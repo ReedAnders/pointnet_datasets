@@ -8,7 +8,7 @@ def generate_train_data():
 
     # Shuffle train samples
     dataset = train.TRAIN_DATASET
-    np.random.shuffle(train_idxs)
+    np.random.shuffle(dataset)
 
     import pdb; pdb.set_trace()
 
