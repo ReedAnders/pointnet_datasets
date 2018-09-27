@@ -6,7 +6,7 @@ My primary motivations are to process my own point cloud data, improve speed, an
 
 #### Todo list:
 - [ ] Use Data API for training pipeline
-- [ ] Add more documentation
+- [x] Add more documentation
 - [ ] Enable multi-gpu 
 
 
