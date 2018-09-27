@@ -42,11 +42,16 @@ class ScannetDataset():
 
 	
 	def __getitem__(self, index):
+
+		'''
+		Generate random sample cubes (in meters)
+		'''
 		
 		point_set = self.scene_points_list[index]
 		semantic_seg = self.semantic_labels_list[index].astype(np.int32)
 		coordmax = np.max(point_set,axis=0)
 		coordmin = np.min(point_set,axis=0)
+
 		smpmin = np.maximum(coordmax-[1.5,1.5,3.0], coordmin)
 		smpmin[2] = coordmin[2]
 		smpsz = np.minimum(coordmax-smpmin,[1.5,1.5,3.0])
@@ -54,20 +59,31 @@ class ScannetDataset():
 		isvalid = False
 
 		for i in range(10):
+
+			# Create random center
 			curcenter = point_set[np.random.choice(len(semantic_seg),1)[0],:]
-			curmin = curcenter-[0.75,0.75,1.5]
+
+			# Sample 1.5 x 1.5 x 3m cube
+			curmin = curcenter-[0.75,0.75,1.5] 
 			curmax = curcenter+[0.75,0.75,1.5]
+			
 			curmin[2] = coordmin[2]
 			curmax[2] = coordmax[2]
+
 			curchoice = np.sum((point_set>=(curmin-0.2))*(point_set<=(curmax+0.2)),axis=1)==3
 			cur_point_set = point_set[curchoice,:]
 			cur_semantic_seg = semantic_seg[curchoice]
+
 			if len(cur_semantic_seg)==0:
 				continue
+
 			mask = np.sum((cur_point_set>=(curmin-0.01))*(cur_point_set<=(curmax+0.01)),axis=1)==3
 			vidx = np.ceil((cur_point_set[mask,:]-curmin)/(curmax-curmin)*[31.0,31.0,62.0])
 			vidx = np.unique(vidx[:,0]*31.0*62.0+vidx[:,1]*62.0+vidx[:,2])
+
+			# Keep cubes where >70% of data is annotated and >2% of voxels are occupied
 			isvalid = np.sum(cur_semantic_seg>0)/len(cur_semantic_seg)>=0.7 and len(vidx)/31.0/31.0/62.0>=0.02
+
 			if isvalid:
 				break
 
@@ -128,6 +144,7 @@ class ScannetDatasetWholeScene():
 		isvalid = False
 		
 		for i in range(nsubvolume_x):
+
 			for j in range(nsubvolume_y):
 				
 				curmin = coordmin+[i*1.5,j*1.5,0]
