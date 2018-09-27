@@ -1,6 +1,7 @@
 # Custom
 data/
 log/
+notes.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
