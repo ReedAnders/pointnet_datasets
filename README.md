@@ -5,6 +5,7 @@ This is refactor of the PointNet++ semantic segmentation implementation; the mai
 My primary motivations are to process my own point cloud data, improve speed, and add documentation. At the moment I'm focusing only on semantic segmentation.
 
 #### Todo list:
+- [x] Cleanup semantic segmentation implementation
 - [ ] Use Data API for training pipeline
 - [x] Add more documentation
 - [ ] Enable multi-gpu 
