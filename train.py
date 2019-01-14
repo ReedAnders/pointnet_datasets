@@ -54,7 +54,7 @@ BN_DECAY_CLIP = 0.99
 HOSTNAME = socket.gethostname()
 
 NUM_CLASSES = 21
-NUM_CLASSES = 3
+# NUM_CLASSES = 3
 
 # Shapenet official train/test split
 DATA_PATH = 'data/scannet_data_pointnet2'
