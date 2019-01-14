@@ -25,6 +25,7 @@ class ScannetDataset():
 		self.root = root
 		self.split = split
 		self.num_classes = num_classes
+		self.subsample_dimensions_m = 0.15
 
 		# # Scannet data
 		# self.data_filename = os.path.join(self.root, 'scannet_%s.pickle'%(split))
@@ -69,9 +70,13 @@ class ScannetDataset():
 		coordmax = np.max(point_set,axis=0)
 		coordmin = np.min(point_set,axis=0)
 
-		smpmin = np.maximum(coordmax-[1.5,1.5,3.0], coordmin)
+		smpmin = np.maximum(
+			coordmax-[self.subsample_dimensions_m,self.subsample_dimensions_m,self.subsample_dimensions_m*2], 
+			coordmin)
 		smpmin[2] = coordmin[2]
-		smpsz = np.minimum(coordmax-smpmin,[1.5,1.5,3.0])
+		smpsz = np.minimum(
+			coordmax-smpmin,
+			[self.subsample_dimensions_m,self.subsample_dimensions_m,self.subsample_dimensions_m*2])
 		smpsz[2] = coordmax[2]-coordmin[2]
 		isvalid = False
 
@@ -81,8 +86,8 @@ class ScannetDataset():
 			curcenter = point_set[np.random.choice(len(semantic_seg),1)[0],:]
 
 			# Sample 1.5 x 1.5 x 3m cube
-			curmin = curcenter-[0.75,0.75,1.5] 
-			curmax = curcenter+[0.75,0.75,1.5]
+			curmin = curcenter-[self.subsample_dimensions_m/2,self.subsample_dimensions_m/2,self.subsample_dimensions_m] 
+			curmax = curcenter+[self.subsample_dimensions_m/2,self.subsample_dimensions_m/2,self.subsample_dimensions_m]
 			
 			curmin[2] = coordmin[2]
 			curmax[2] = coordmax[2]
@@ -169,8 +174,8 @@ class ScannetDatasetWholeScene():
 		semantic_seg_ini = self.semantic_labels_list[index].astype(np.int32)
 		coordmax = np.max(point_set_ini,axis=0)
 		coordmin = np.min(point_set_ini,axis=0)
-		nsubvolume_x = np.ceil((coordmax[0]-coordmin[0])/1.5).astype(np.int32)
-		nsubvolume_y = np.ceil((coordmax[1]-coordmin[1])/1.5).astype(np.int32)
+		nsubvolume_x = np.ceil((coordmax[0]-coordmin[0])/self.subsample_dimensions_m).astype(np.int32)
+		nsubvolume_y = np.ceil((coordmax[1]-coordmin[1])/self.subsample_dimensions_m).astype(np.int32)
 		point_sets = list()
 		semantic_segs = list()
 		sample_weights = list()
@@ -180,8 +185,8 @@ class ScannetDatasetWholeScene():
 
 			for j in range(nsubvolume_y):
 				
-				curmin = coordmin+[i*1.5,j*1.5,0]
-				curmax = coordmin+[(i+1)*1.5,(j+1)*1.5,coordmax[2]-coordmin[2]]
+				curmin = coordmin+[i*self.subsample_dimensions_m,j*self.subsample_dimensions_m,0]
+				curmax = coordmin+[(i+1)*self.subsample_dimensions_m,(j+1)*self.subsample_dimensions_m,coordmax[2]-coordmin[2]]
 				curchoice = np.sum((point_set_ini>=(curmin-0.2))*(point_set_ini<=(curmax+0.2)),axis=1)==3
 				cur_point_set = point_set_ini[curchoice,:]
 				cur_semantic_seg = semantic_seg_ini[curchoice]
