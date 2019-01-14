@@ -53,12 +53,12 @@ BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
 
-NUM_CLASSES = 21
-# NUM_CLASSES = 3
+# NUM_CLASSES = 21
+NUM_CLASSES = 3
 
 # Shapenet official train/test split
-DATA_PATH = 'data/scannet_data_pointnet2'
-# DATA_PATH = 'data/veggie_platter_data'
+# DATA_PATH = 'data/scannet_data_pointnet2'
+DATA_PATH = 'data/veggie_platter_data'
 
 TRAIN_DATASET = scannet_dataset.ScannetDataset(
     root=DATA_PATH, 
@@ -371,8 +371,8 @@ def eval_one_epoch(sess, ops, test_writer):
     log_string('eval point accuracy: %f'% (total_correct / float(total_seen)))
     log_string('eval point avg class acc: %f' % (np.mean(np.array(total_correct_class[1:])/(np.array(total_seen_class[1:],dtype=np.float)+1e-6))))
     labelweights_vox = labelweights_vox[1:].astype(np.float32)/np.sum(labelweights_vox[1:].astype(np.float32))
-    caliweights = np.array([0.388,0.357,0.038,0.033,0.017,0.02,0.016,0.025,0.002,0.002,0.002,0.007,0.006,0.022,0.004,0.0004,0.003,0.002,0.024,0.029])
-    # caliweights = np.array([0.33,0.66])
+    # caliweights = np.array([0.388,0.357,0.038,0.033,0.017,0.02,0.016,0.025,0.002,0.002,0.002,0.007,0.006,0.022,0.004,0.0004,0.003,0.002,0.024,0.029])
+    caliweights = np.array([0.33,0.66])
     log_string('eval point calibrated average acc: %f' % (np.average(np.array(total_correct_class[1:])/(np.array(total_seen_class[1:],dtype=np.float)+1e-6),weights=caliweights)))
     per_class_str = 'vox based --------'
     
@@ -483,8 +483,8 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
     log_string('eval whole scene point avg class acc: %f' % (np.mean(np.array(total_correct_class[1:])/(np.array(total_seen_class[1:],dtype=np.float)+1e-6))))
     labelweights = labelweights[1:].astype(np.float32)/np.sum(labelweights[1:].astype(np.float32))
     labelweights_vox = labelweights_vox[1:].astype(np.float32)/np.sum(labelweights_vox[1:].astype(np.float32))
-    caliweights = np.array([0.388,0.357,0.038,0.033,0.017,0.02,0.016,0.025,0.002,0.002,0.002,0.007,0.006,0.022,0.004,0.0004,0.003,0.002,0.024,0.029])
-    # caliweights = np.array([0.33,0.66])
+    # caliweights = np.array([0.388,0.357,0.038,0.033,0.017,0.02,0.016,0.025,0.002,0.002,0.002,0.007,0.006,0.022,0.004,0.0004,0.003,0.002,0.024,0.029])
+    caliweights = np.array([0.33,0.66])
     caliacc = np.average(np.array(total_correct_class_vox[1:])/(np.array(total_seen_class_vox[1:],dtype=np.float)+1e-6),weights=caliweights)
     log_string('eval whole scene point calibrated average acc vox: %f' % caliacc)
 
