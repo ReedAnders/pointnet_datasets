@@ -35,16 +35,16 @@ class ScannetDataset():
 		
 		if split=='train':
 			# Count labels over entire list of pointclouds and get weights as log probability
-			labelweights = np.zeros(self.num_classes-1)
+			labelweights = np.zeros(self.num_classes)
 			for seg in self.semantic_labels_list:
-				tmp,_ = np.histogram(seg,range(self.num_classes))
+				tmp,_ = np.histogram(seg,range(self.num_classes+1))
 				labelweights += tmp
 				labelweights = labelweights.astype(np.float32)
 				labelweights = labelweights/np.sum(labelweights)
 			self.labelweights = 1/np.log(1.2+labelweights)
 		
 		elif split=='test':
-			self.labelweights = np.ones(self.num_classes-1)
+			self.labelweights = np.ones(self.num_classes)
 
 	
 	def __getitem__(self, index):
@@ -128,9 +128,9 @@ class ScannetDatasetWholeScene():
 
 		if split=='train':
 
-			labelweights = np.zeros(self.num_classes-1)
+			labelweights = np.zeros(self.num_classes)
 			for seg in self.semantic_labels_list:
-				tmp,_ = np.histogram(seg,range(self.num_classes))
+				tmp,_ = np.histogram(seg,range(self.num_classes+1))
 				labelweights += tmp
 				labelweights = labelweights.astype(np.float32)
 				labelweights = labelweights/np.sum(labelweights)
@@ -138,7 +138,7 @@ class ScannetDatasetWholeScene():
 			self.labelweights = 1/np.log(1.2+labelweights)
 		
 		elif split=='test':
-			self.labelweights = np.ones(self.num_classes-1)
+			self.labelweights = np.ones(self.num_classes)
 
 
 	def __getitem__(self, index):
@@ -212,16 +212,16 @@ class ScannetDatasetVirtualScan():
 		
 		if split=='train':
 			
-			labelweights = np.zeros(self.num_classes-1)
+			labelweights = np.zeros(self.num_classes)
 			for seg in self.semantic_labels_list:
-				tmp,_ = np.histogram(seg,range(self.num_classes))
+				tmp,_ = np.histogram(seg,range(self.num_classes+1))
 				labelweights += tmp
 				labelweights = labelweights.astype(np.float32)
 				labelweights = labelweights/np.sum(labelweights)
 			self.labelweights = 1/np.log(1.2+labelweights)
 		
 		elif split=='test':
-			self.labelweights = np.ones(self.num_classes-1)
+			self.labelweights = np.ones(self.num_classes)
 
 
 	def __getitem__(self, index):

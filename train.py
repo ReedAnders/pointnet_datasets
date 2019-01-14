@@ -321,8 +321,8 @@ def eval_one_epoch(sess, ops, test_writer):
     log_string(str(datetime.now()))
     log_string('---- EPOCH %03d EVALUATION ----'%(EPOCH_CNT))
 
-    labelweights = np.zeros(21)
-    labelweights_vox = np.zeros(21)
+    labelweights = np.zeros(NUM_CLASSES)
+    labelweights_vox = np.zeros(NUM_CLASSES)
 
     for batch_idx in range(num_batches):
         start_idx = batch_idx * BATCH_SIZE
@@ -345,7 +345,7 @@ def eval_one_epoch(sess, ops, test_writer):
         total_correct += correct
         total_seen += np.sum((batch_label>0) & (batch_smpw>0))
         loss_sum += loss_val
-        tmp,_ = np.histogram(batch_label,range(22))
+        tmp,_ = np.histogram(batch_label,range(NUM_CLASSES+1))
         labelweights += tmp
         
         for l in range(NUM_CLASSES):
@@ -356,7 +356,7 @@ def eval_one_epoch(sess, ops, test_writer):
             _, uvlabel, _ = pc_util.point_cloud_label_to_surface_voxel_label_fast(aug_data[b,batch_smpw[b,:]>0,:], np.concatenate((np.expand_dims(batch_label[b,batch_smpw[b,:]>0],1),np.expand_dims(pred_val[b,batch_smpw[b,:]>0],1)),axis=1), res=0.02)
             total_correct_vox += np.sum((uvlabel[:,0]==uvlabel[:,1])&(uvlabel[:,0]>0))
             total_seen_vox += np.sum(uvlabel[:,0]>0)
-            tmp,_ = np.histogram(uvlabel[:,0],range(22))
+            tmp,_ = np.histogram(uvlabel[:,0],range(NUM_CLASSES+1))
             labelweights_vox += tmp
             
             for l in range(NUM_CLASSES):
@@ -402,8 +402,8 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
     log_string(str(datetime.now()))
     log_string('---- EPOCH %03d EVALUATION WHOLE SCENE----'%(EPOCH_CNT))
 
-    labelweights = np.zeros(21)
-    labelweights_vox = np.zeros(21)
+    labelweights = np.zeros(NUM_CLASSES)
+    labelweights_vox = np.zeros(NUM_CLASSES)
     is_continue_batch = False
 
     extra_batch_data = np.zeros((0,NUM_POINT,3))
@@ -453,7 +453,7 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
         total_correct += correct
         total_seen += np.sum((batch_label>0) & (batch_smpw>0))
         loss_sum += loss_val
-        tmp,_ = np.histogram(batch_label,range(22))
+        tmp,_ = np.histogram(batch_label,range(NUM_CLASSES+1))
         labelweights += tmp
 
         for l in range(NUM_CLASSES):
@@ -466,7 +466,7 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
                     np.expand_dims(pred_val[b,batch_smpw[b,:]>0],1)),axis=1), res=0.02)
             total_correct_vox += np.sum((uvlabel[:,0]==uvlabel[:,1])&(uvlabel[:,0]>0))
             total_seen_vox += np.sum(uvlabel[:,0]>0)
-            tmp,_ = np.histogram(uvlabel[:,0],range(22))
+            tmp,_ = np.histogram(uvlabel[:,0],range(NUM_CLASSES+1))
             labelweights_vox += tmp
 
             for l in range(NUM_CLASSES):
