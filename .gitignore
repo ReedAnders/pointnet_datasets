@@ -2,7 +2,7 @@
 data/
 log/
 notes.py
-tfrecord/
+tfrecords/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
