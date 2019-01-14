@@ -19,7 +19,7 @@ class ScannetDataset():
 	
 	"""
 	
-	def __init__(self, root, npoints=8192, num_classes, split='train'):
+	def __init__(self, root, num_classes, npoints=8192, split='train'):
 		
 		self.npoints = npoints
 		self.root = root
@@ -114,7 +114,7 @@ class ScannetDatasetWholeScene():
 
 	"""
 	
-	def __init__(self, root, npoints=8192, num_classes, split='train'):
+	def __init__(self, root, num_classes, npoints=8192, split='train'):
 
 		self.npoints = npoints
 		self.root = root
@@ -198,7 +198,7 @@ class ScannetDatasetWholeScene():
 class ScannetDatasetVirtualScan():
 
 
-	def __init__(self, root, npoints=8192, num_classes, split='train'):
+	def __init__(self, root, num_classes, npoints=8192, split='train'):
 
 		self.npoints = npoints
 		self.root = root
