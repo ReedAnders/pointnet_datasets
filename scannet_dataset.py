@@ -108,6 +108,7 @@ class ScannetDataset():
 		point_set = cur_point_set[choice,:]
 		semantic_seg = cur_semantic_seg[choice]
 		mask = mask[choice]
+		import pdb; pdb.set_trace()
 		sample_weight = self.labelweights[semantic_seg]
 		sample_weight *= mask
 
