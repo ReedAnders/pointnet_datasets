@@ -57,9 +57,24 @@ NUM_CLASSES = 21
 
 # Shapenet official train/test split
 DATA_PATH = 'data/scannet_data_pointnet2'
-TRAIN_DATASET = scannet_dataset.ScannetDataset(root=DATA_PATH, npoints=NUM_POINT, split='train')
-TEST_DATASET = scannet_dataset.ScannetDataset(root=DATA_PATH, npoints=NUM_POINT, split='test')
-TEST_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(root=DATA_PATH, npoints=NUM_POINT, split='test')
+
+TRAIN_DATASET = scannet_dataset.ScannetDataset(
+    root=DATA_PATH, 
+    npoints=NUM_POINT, 
+    num_classes=NUM_CLASSES, 
+    split='train')
+
+TEST_DATASET = scannet_dataset.ScannetDataset(
+    root=DATA_PATH, 
+    npoints=NUM_POINT, 
+    num_classes=NUM_CLASSES, 
+    split='test')
+
+TEST_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
+    root=DATA_PATH, 
+    npoints=NUM_POINT, 
+    num_classes=NUM_CLASSES, 
+    split='test')
 
 
 def log_string(out_str):
