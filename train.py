@@ -58,7 +58,7 @@ NUM_CLASSES = 3
 
 # Shapenet official train/test split
 # DATA_PATH = 'data/scannet_data_pointnet2'
-DATA_PATH = 'data/veggie_platter_data'
+DATA_PATH = 'data/veggieplatter_data'
 
 TRAIN_DATASET = scannet_dataset.ScannetDataset(
     root=DATA_PATH, 
