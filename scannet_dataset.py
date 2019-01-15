@@ -188,8 +188,6 @@ class ScannetDatasetWholeScene():
 
 			for j in range(nsubvolume_y):
 				
-				print(i, j)
-
 				curmin = coordmin+[i*self.subsample_dimensions_m,j*self.subsample_dimensions_m,0]
 				curmax = coordmin+[(i+1)*self.subsample_dimensions_m,(j+1)*self.subsample_dimensions_m,coordmax[2]-coordmin[2]]
 				curchoice = np.sum((point_set_ini>=(curmin-0.2))*(point_set_ini<=(curmax+0.2)),axis=1)==3
