@@ -182,7 +182,7 @@ class ScannetDatasetWholeScene():
 		sample_weights = list()
 		isvalid = False
 
-		print(coordmax, coordmin, nsubvolume_x, nsubvolume_y)
+		# print(coordmax, coordmin, nsubvolume_x, nsubvolume_y)
 		
 		for i in range(nsubvolume_x):
 
