@@ -80,11 +80,11 @@ TEST_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
     num_classes=NUM_CLASSES, 
     split='test')
 
-# PRED_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
-#     root=PRED_DATA_PATH, 
-#     npoints=NUM_POINT, 
-#     num_classes=NUM_CLASSES, 
-#     split='test')
+PRED_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
+    root=PRED_DATA_PATH, 
+    npoints=NUM_POINT, 
+    num_classes=NUM_CLASSES, 
+    split='test')
 
 def log_string(out_str):
 
@@ -543,7 +543,7 @@ def test_whole_scene(sess, ops):
     for batch_idx in range(num_batches):
         if not is_continue_batch:
             # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
-            batch_data, batch_label, batch_smpw = TEST_DATASET_WHOLE_SCENE[batch_idx]
+            batch_data, batch_label, batch_smpw = PRED_DATASET_WHOLE_SCENE[batch_idx]
             batch_data = np.concatenate((batch_data,extra_batch_data),axis=0)
             batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
             batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)

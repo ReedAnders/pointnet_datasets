@@ -52,6 +52,7 @@ for index in range(input_array.shape[0]):
 					temp_coords,
 					dtype=[('x', 'f8'), ('y', 'f8'), ('z', 'f8')]
 					)
+
 	n = len(vertex)
 	assert len(vertex_color) == n
 
