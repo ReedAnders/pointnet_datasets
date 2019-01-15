@@ -516,7 +516,7 @@ def test_whole_scene(sess, ops):
     # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
 
     # num_batches = len(TEST_DATASET_WHOLE_SCENE)
-    num_batches = 1
+    num_batches = 32
 
     # total_correct = 0
     # total_seen = 0
