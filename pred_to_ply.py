@@ -42,9 +42,9 @@ def create_colors(label_arr):
 for index in range(input_array.shape[0]):
 	
 	temp_labels = pred_array[index]
-	import pdb; pdb.set_trace()
+
 	temp_coords = input_array[index]
-	temp_coords = [([0], x[1], x[2]) for x in temp_coords]
+	temp_coords = [(x[0], x[1], x[2]) for x in temp_coords]
 
 	vertex_color = create_colors(temp_labels)
 
@@ -52,6 +52,8 @@ for index in range(input_array.shape[0]):
 					temp_coords,
 					dtype=[('x', 'f8'), ('y', 'f8'), ('z', 'f8')]
 					)
+
+	import pdb; pdb.set_trace()
 
 	n = len(vertex)
 	assert len(vertex_color) == n
@@ -66,10 +68,10 @@ for index in range(input_array.shape[0]):
 
 	ply = PlyData([PlyElement.describe(vertex_all, 'vertex')], text=True)
 	
-	ply.write('pred/labled_{}.ply'.format(index))
+	ply.write(open('pred/labled_{}.ply'.format(index), mode='wb'))
 
-	# with open('pred/labled_{}.ply'.format(index), mode='wb') as f:
-	# 	PlyData([ply], byte_order='>').write(f)
+	with open('pred/labled_{}.ply'.format(index), mode='wb') as f:
+		PlyData([ply], byte_order='>').write(f)
 
 	
 
