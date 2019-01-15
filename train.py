@@ -188,6 +188,7 @@ def train():
             sys.stdout.flush()
 
             train_one_epoch(sess, ops, train_writer)
+            test_whole_scene(sess, ops)
             if epoch%5==0:
                 acc = eval_one_epoch(sess, ops, test_writer)
                 acc = eval_whole_scene_one_epoch(sess, ops, test_writer)
@@ -201,9 +202,9 @@ def train():
                 save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
                 log_string("Model saved in file: %s" % save_path)
 
-            if epoch == 5:
-                test_whole_scene(sess, ops)
-                log_string("Done pickling...")
+            # if epoch == 5:
+            #     test_whole_scene(sess, ops)
+            #     log_string("Done pickling...")
 
 
 def get_batch_wdp(dataset, idxs, start_idx, end_idx):
@@ -516,7 +517,7 @@ def test_whole_scene(sess, ops):
     # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
 
     # num_batches = len(TEST_DATASET_WHOLE_SCENE)
-    num_batches = 32
+    num_batches = 1
 
     # total_correct = 0
     # total_seen = 0
@@ -539,6 +540,7 @@ def test_whole_scene(sess, ops):
     extra_batch_data = np.zeros((0,NUM_POINT,3))
     extra_batch_label = np.zeros((0,NUM_POINT))
     extra_batch_smpw = np.zeros((0,NUM_POINT))
+    import pdb; pdb.set_trace()
     for batch_idx in range(num_batches):
         if not is_continue_batch:
             # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
@@ -552,22 +554,22 @@ def test_whole_scene(sess, ops):
             batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
             batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
     
-        # if batch_data.shape[0]<BATCH_SIZE:
-        #     is_continue_batch = True
-        #     continue
-        # elif batch_data.shape[0]==BATCH_SIZE:
-        #     is_continue_batch = False
-        #     extra_batch_data = np.zeros((0,NUM_POINT,3))
-        #     extra_batch_label = np.zeros((0,NUM_POINT))
-        #     extra_batch_smpw = np.zeros((0,NUM_POINT))
-        # else:
-        #     is_continue_batch = False
-        #     extra_batch_data = batch_data[BATCH_SIZE:,:,:]
-        #     extra_batch_label = batch_label[BATCH_SIZE:,:]
-        #     extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
-        #     batch_data = batch_data[:BATCH_SIZE,:,:]
-        #     batch_label = batch_label[:BATCH_SIZE,:]
-        #     batch_smpw = batch_smpw[:BATCH_SIZE,:]
+        if batch_data.shape[0]<BATCH_SIZE:
+            is_continue_batch = True
+            continue
+        elif batch_data.shape[0]==BATCH_SIZE:
+            is_continue_batch = False
+            extra_batch_data = np.zeros((0,NUM_POINT,3))
+            extra_batch_label = np.zeros((0,NUM_POINT))
+            extra_batch_smpw = np.zeros((0,NUM_POINT))
+        else:
+            is_continue_batch = False
+            extra_batch_data = batch_data[BATCH_SIZE:,:,:]
+            extra_batch_label = batch_label[BATCH_SIZE:,:]
+            extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
+            batch_data = batch_data[:BATCH_SIZE,:,:]
+            batch_label = batch_label[:BATCH_SIZE,:]
+            batch_smpw = batch_smpw[:BATCH_SIZE,:]
 
         aug_data = batch_data
         feed_dict = {ops['pointclouds_pl']: aug_data,
