@@ -67,7 +67,11 @@ class ScannetDataset():
 		
 		point_set = self.scene_points_list[index]
 		semantic_seg = self.semantic_labels_list[index].astype(np.int32)
-		import pdb; pdb.set_trace()
+		coordmax = np.max(point_set,axis=0)
+		coordmin = np.min(point_set,axis=0)
+
+		normalizer = (coordmax-coordmin)
+		point_set = point_set/normalizer
 		coordmax = np.max(point_set,axis=0)
 		coordmin = np.min(point_set,axis=0)
 
@@ -176,6 +180,12 @@ class ScannetDatasetWholeScene():
 		semantic_seg_ini = self.semantic_labels_list[index].astype(np.int32)
 		coordmax = np.max(point_set_ini,axis=0)
 		coordmin = np.min(point_set_ini,axis=0)
+
+		normalizer = (coordmax-coordmin)
+		point_set = point_set/normalizer
+		coordmax = np.max(point_set,axis=0)
+		coordmin = np.min(point_set,axis=0)
+
 		nsubvolume_x = np.ceil((coordmax[0]-coordmin[0])/self.subsample_dimensions_m).astype(np.int32)
 		nsubvolume_y = np.ceil((coordmax[1]-coordmin[1])/self.subsample_dimensions_m).astype(np.int32)
 		point_sets = list()
@@ -271,6 +281,14 @@ class ScannetDatasetVirtualScan():
 		point_set_ini = self.scene_points_list[index]
 		semantic_seg_ini = self.semantic_labels_list[index].astype(np.int32)
 		sample_weight_ini = self.labelweights[semantic_seg_ini]
+
+		coordmax = np.max(point_set_ini,axis=0)
+		coordmin = np.min(point_set_ini,axis=0)
+		normalizer = (coordmax-coordmin)
+		point_set = point_set/normalizer
+		coordmax = np.max(point_set,axis=0)
+		coordmin = np.min(point_set,axis=0)
+
 		point_sets = list()
 		semantic_segs = list()
 		sample_weights = list()
