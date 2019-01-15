@@ -42,9 +42,9 @@ def create_colors(label_arr):
 for index in range(input_array.shape[0]):
 	
 	temp_labels = pred_array[index]
-
+	import pdb; pdb.set_trace()
 	temp_coords = input_array[index]
-	temp_coords = [(x[0], x[1], x[2]) for x in temp_coords]
+	temp_coords = [([0], x[1], x[2]) for x in temp_coords]
 
 	vertex_color = create_colors(temp_labels)
 

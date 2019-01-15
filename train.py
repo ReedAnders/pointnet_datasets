@@ -579,7 +579,7 @@ def test_whole_scene(sess, ops):
 
         summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
             ops['loss'], ops['pred']], feed_dict=feed_dict)
-
+        import pdb; pdb.set_trace()
         log_string("Starting pickle....")
         pickle.dump(points_default, open('input_vals.p', 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
