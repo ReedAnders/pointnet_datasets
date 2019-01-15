@@ -188,7 +188,6 @@ def train():
             sys.stdout.flush()
 
             train_one_epoch(sess, ops, train_writer)
-            test_whole_scene(sess, ops)
             if epoch%5==0:
                 acc = eval_one_epoch(sess, ops, test_writer)
                 acc = eval_whole_scene_one_epoch(sess, ops, test_writer)
@@ -202,9 +201,9 @@ def train():
                 save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
                 log_string("Model saved in file: %s" % save_path)
 
-            # if epoch == 5:
-            #     test_whole_scene(sess, ops)
-            #     log_string("Done pickling...")
+            if epoch == 5:
+                test_whole_scene(sess, ops)
+                log_string("Done pickling...")
 
 
 def get_batch_wdp(dataset, idxs, start_idx, end_idx):
@@ -553,8 +552,7 @@ def test_whole_scene(sess, ops):
             batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
             batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
             batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
-        
-        import pdb; pdb.set_trace()
+
         if batch_data.shape[0]<BATCH_SIZE:
             is_continue_batch = True
             continue
@@ -582,6 +580,7 @@ def test_whole_scene(sess, ops):
             ops['loss'], ops['pred']], feed_dict=feed_dict)
 
         log_string("Starting pickle....")
+        pickle.dump(batch_data, open('input_vals.p', 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
