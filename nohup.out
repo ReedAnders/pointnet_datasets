@@ -1,0 +1,267 @@
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:129: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:215: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/.local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:519: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2019-01-15 14:51:58.719931: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-01-15 14:51:58.865617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:17:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-15 14:51:58.966469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:65:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-15 14:51:59.063630: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:66:00.0
+totalMemory: 15.89GiB freeMemory: 15.76GiB
+2019-01-15 14:51:59.066749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
+2019-01-15 14:51:59.623846: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-15 14:51:59.623880: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
+2019-01-15 14:51:59.623885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
+2019-01-15 14:51:59.623888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
+2019-01-15 14:51:59.623891: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
+2019-01-15 14:51:59.624326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
+2019-01-15 14:51:59.625049: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
+2019-01-15 14:51:59.625631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
+pid: 26951
+Tensor("Placeholder_3:0", shape=(), dtype=bool, device=/device:GPU:0)
+--- Get model and loss
+--- Get training operator
+**** EPOCH 000 ****
+2019-01-15 14:52:00.987198
+ -- 010 / 022 --
+mean loss: 1.523908
+accuracy: 0.505394
+ -- 020 / 022 --
+mean loss: 1.095062
+accuracy: 0.549144
+2019-01-15 14:52:50.506032
+---- EPOCH 000 EVALUATION ----
+eval mean loss: 0.411388
+eval point accuracy vox: 0.809094
+eval point avg class acc vox: 0.752944
+eval point accuracy: 0.804477
+eval point avg class acc: 0.759992
+eval point calibrated average acc: 0.732296
+vox based --------class 1 weight: 0.801346, acc: 0.843083; class 2 weight: 0.198654, acc: 0.676902; 
+2019-01-15 14:53:16.741281
+---- EPOCH 001 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.012684
+eval whole scene point accuracy vox: 0.814054
+eval whole scene point avg class acc vox: 0.750941
+eval whole scene point accuracy: 0.809129
+eval whole scene point avg class acc: 0.758930
+eval whole scene point calibrated average acc vox: 0.716047
+vox based --------class 1 weight: 0.801458, acc: 0.855621; class 2 weight: 0.198542, acc: 0.646261; 
+Model saved in file: log/best_model_epoch_000.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 001 ****
+2019-01-15 14:53:42.239326
+ -- 010 / 022 --
+mean loss: 0.965771
+accuracy: 0.588874
+ -- 020 / 022 --
+mean loss: 0.834610
+accuracy: 0.614963
+**** EPOCH 002 ****
+2019-01-15 14:54:14.957651
+ -- 010 / 022 --
+mean loss: 0.816931
+accuracy: 0.600404
+ -- 020 / 022 --
+mean loss: 0.800201
+accuracy: 0.635077
+**** EPOCH 003 ****
+2019-01-15 14:54:47.738859
+ -- 010 / 022 --
+mean loss: 0.759260
+accuracy: 0.652605
+ -- 020 / 022 --
+mean loss: 0.772045
+accuracy: 0.653778
+**** EPOCH 004 ****
+2019-01-15 14:55:20.471635
+ -- 010 / 022 --
+mean loss: 0.697314
+accuracy: 0.666179
+ -- 020 / 022 --
+mean loss: 0.699680
+accuracy: 0.660900
+**** EPOCH 005 ****
+2019-01-15 14:55:53.246645
+ -- 010 / 022 --
+mean loss: 0.650557
+accuracy: 0.687720
+ -- 020 / 022 --
+mean loss: 0.672669
+accuracy: 0.678871
+2019-01-15 14:56:26.150494
+---- EPOCH 002 EVALUATION ----
+eval mean loss: 0.315190
+eval point accuracy vox: 0.852210
+eval point avg class acc vox: 0.851518
+eval point accuracy: 0.853330
+eval point avg class acc: 0.857233
+eval point calibrated average acc: 0.859662
+vox based --------class 1 weight: 0.801458, acc: 0.849947; class 2 weight: 0.198542, acc: 0.864520; 
+2019-01-15 14:56:52.117021
+---- EPOCH 003 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.009928
+eval whole scene point accuracy vox: 0.847999
+eval whole scene point avg class acc vox: 0.852515
+eval whole scene point accuracy: 0.849705
+eval whole scene point avg class acc: 0.858085
+eval whole scene point calibrated average acc vox: 0.855012
+vox based --------class 1 weight: 0.801444, acc: 0.845024; class 2 weight: 0.198556, acc: 0.860006; 
+Model saved in file: log/best_model_epoch_005.ckpt
+Traceback (most recent call last):
+  File "train.py", line 587, in <module>
+    train()
+  File "train.py", line 205, in train
+    test_whole_scene(sess, ops)
+  File "train.py", line 579, in test_whole_scene
+    ops['loss'], ops['pred']], feed_dict=feed_dict)
+  File "/home/subbotnik/.local/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 877, in run
+    run_metadata_ptr)
+  File "/home/subbotnik/.local/lib/python2.7/site-packages/tensorflow/python/client/session.py", line 1076, in _run
+    str(subfeed_t.get_shape())))
+ValueError: Cannot feed value of shape (1, 8192, 3) for Tensor u'Placeholder:0', which has shape '(32, 8192, 3)'
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:129: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:215: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/.local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:519: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2019-01-15 15:14:49.186557: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-01-15 15:14:49.333752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:17:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-15 15:14:49.429703: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:65:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-15 15:14:49.525825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:66:00.0
+totalMemory: 15.89GiB freeMemory: 15.76GiB
+2019-01-15 15:14:49.528956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
+2019-01-15 15:14:50.084651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-15 15:14:50.084691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
+2019-01-15 15:14:50.084695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
+2019-01-15 15:14:50.084699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
+2019-01-15 15:14:50.084702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
+2019-01-15 15:14:50.085166: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
+2019-01-15 15:14:50.085862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
+2019-01-15 15:14:50.086410: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
+pid: 27363
+Tensor("Placeholder_3:0", shape=(), dtype=bool, device=/device:GPU:0)
+--- Get model and loss
+--- Get training operator
+**** EPOCH 000 ****
+2019-01-15 15:14:51.415594
+ -- 010 / 022 --
+mean loss: 1.835757
+accuracy: 0.397128
+ -- 020 / 022 --
+mean loss: 1.268388
+accuracy: 0.426736
+2019-01-15 15:15:41.097088
+---- EPOCH 000 EVALUATION ----
+eval mean loss: 0.491519
+eval point accuracy vox: 0.749127
+eval point avg class acc vox: 0.751197
+eval point accuracy: 0.748598
+eval point avg class acc: 0.755201
+eval point calibrated average acc: 0.759314
+vox based --------class 1 weight: 0.801448, acc: 0.742864; class 2 weight: 0.198552, acc: 0.767539; 
+2019-01-15 15:16:07.595346
+---- EPOCH 001 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.015264
+eval whole scene point accuracy vox: 0.747895
+eval whole scene point avg class acc vox: 0.746026
+eval whole scene point accuracy: 0.747046
+eval whole scene point avg class acc: 0.750355
+eval whole scene point calibrated average acc vox: 0.744993
+vox based --------class 1 weight: 0.801454, acc: 0.749126; class 2 weight: 0.198546, acc: 0.742926; 
+Model saved in file: log/best_model_epoch_000.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 001 ****
+2019-01-15 15:16:32.893726
+ -- 010 / 022 --
+mean loss: 1.009566
+accuracy: 0.487505
+ -- 020 / 022 --
+mean loss: 0.944339
+accuracy: 0.503302
+**** EPOCH 002 ****
+2019-01-15 15:17:05.630653
+ -- 010 / 022 --
+mean loss: 0.935355
+accuracy: 0.509475
+ -- 020 / 022 --
+mean loss: 0.799628
+accuracy: 0.551099
+**** EPOCH 003 ****
+2019-01-15 15:17:38.806449
+ -- 010 / 022 --
+mean loss: 0.790843
+accuracy: 0.562453
+ -- 020 / 022 --
+mean loss: 0.787529
+accuracy: 0.577484
+**** EPOCH 004 ****
+2019-01-15 15:18:11.639462
+ -- 010 / 022 --
+mean loss: 0.743659
+accuracy: 0.565734
+ -- 020 / 022 --
+mean loss: 0.760885
+accuracy: 0.573148
+**** EPOCH 005 ****
+2019-01-15 15:18:44.531361
+ -- 010 / 022 --
+mean loss: 0.726229
+accuracy: 0.591103
+ -- 020 / 022 --
+mean loss: 0.686904
+accuracy: 0.579476
+2019-01-15 15:19:17.204233
+---- EPOCH 002 EVALUATION ----
+eval mean loss: 0.308948
+eval point accuracy vox: 0.860668
+eval point avg class acc vox: 0.841240
+eval point accuracy: 0.860119
+eval point avg class acc: 0.847980
+eval point calibrated average acc: 0.840420
+vox based --------class 1 weight: 0.801401, acc: 0.870661; class 2 weight: 0.198599, acc: 0.825300; 
+2019-01-15 15:19:43.351449
+---- EPOCH 003 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.009522
+eval whole scene point accuracy vox: 0.860304
+eval whole scene point avg class acc vox: 0.845396
+eval whole scene point accuracy: 0.860297
+eval whole scene point avg class acc: 0.851943
+eval whole scene point calibrated average acc vox: 0.837151
+vox based --------class 1 weight: 0.801347, acc: 0.870131; class 2 weight: 0.198653, acc: 0.820661; 
+Model saved in file: log/best_model_epoch_005.ckpt
+Starting pickle....
+Done pickling...
+**** EPOCH 006 ****
+2019-01-15 15:20:09.747264
+ -- 010 / 022 --
+mean loss: 0.677726
+accuracy: 0.605633
+ -- 020 / 022 --
+mean loss: 0.680845
+accuracy: 0.594151
+**** EPOCH 007 ****
