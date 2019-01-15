@@ -67,6 +67,7 @@ class ScannetDataset():
 		
 		point_set = self.scene_points_list[index]
 		semantic_seg = self.semantic_labels_list[index].astype(np.int32)
+		import pdb; pdb.set_trace()
 		coordmax = np.max(point_set,axis=0)
 		coordmin = np.min(point_set,axis=0)
 

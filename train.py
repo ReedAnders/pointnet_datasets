@@ -513,7 +513,7 @@ def test_whole_scene(sess, ops):
     # global EPOCH_CNT
     is_training = False
     # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
-    
+
     # num_batches = len(TEST_DATASET_WHOLE_SCENE)
     num_batches = 1
 
@@ -577,7 +577,7 @@ def test_whole_scene(sess, ops):
         summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
             ops['loss'], ops['pred']], feed_dict=feed_dict)
 
-        pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'rb'))
+        pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
     
