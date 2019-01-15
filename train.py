@@ -7,6 +7,7 @@ import socket
 import importlib
 import os
 import sys
+import pickle
 
 from utils import provider, tf_util, pc_util
 import scannet_dataset
@@ -59,6 +60,7 @@ NUM_CLASSES = 3
 # Shapenet official train/test split
 # DATA_PATH = 'data/scannet_data_pointnet2'
 DATA_PATH = 'data/veggieplatter_data'
+PRED_DATA_PATH = 'data/veggieplatter_data_real'
 
 TRAIN_DATASET = scannet_dataset.ScannetDataset(
     root=DATA_PATH, 
@@ -78,6 +80,11 @@ TEST_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
     num_classes=NUM_CLASSES, 
     split='test')
 
+# PRED_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
+#     root=PRED_DATA_PATH, 
+#     npoints=NUM_POINT, 
+#     num_classes=NUM_CLASSES, 
+#     split='test')
 
 def log_string(out_str):
 
@@ -193,6 +200,9 @@ def train():
             if epoch % 10 == 0:
                 save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
                 log_string("Model saved in file: %s" % save_path)
+
+            if epoch == 5:
+                test_whole_scene(sess, ops)
 
 
 def get_batch_wdp(dataset, idxs, start_idx, end_idx):
@@ -497,6 +507,77 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
     
     return caliacc
 
+
+def test_whole_scene(sess, ops):
+
+    # global EPOCH_CNT
+    is_training = False
+    # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
+    
+    # num_batches = len(TEST_DATASET_WHOLE_SCENE)
+    num_batches = 1
+
+    # total_correct = 0
+    # total_seen = 0
+    # loss_sum = 0
+    # total_seen_class = [0 for _ in range(NUM_CLASSES)]
+    # total_correct_class = [0 for _ in range(NUM_CLASSES)]
+
+    # total_correct_vox = 0
+    # total_seen_vox = 0
+    # total_seen_class_vox = [0 for _ in range(NUM_CLASSES)]
+    # total_correct_class_vox = [0 for _ in range(NUM_CLASSES)]
+
+    # log_string(str(datetime.now()))
+    # log_string('---- EPOCH %03d EVALUATION WHOLE SCENE----'%(EPOCH_CNT))
+
+    # labelweights = np.zeros(NUM_CLASSES)
+    # labelweights_vox = np.zeros(NUM_CLASSES)
+    is_continue_batch = False
+
+    extra_batch_data = np.zeros((0,NUM_POINT,3))
+    extra_batch_label = np.zeros((0,NUM_POINT))
+    extra_batch_smpw = np.zeros((0,NUM_POINT))
+    for batch_idx in range(num_batches):
+        if not is_continue_batch:
+            # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
+            batch_data, batch_label, batch_smpw = TEST_DATASET_WHOLE_SCENE[batch_idx]
+            batch_data = np.concatenate((batch_data,extra_batch_data),axis=0)
+            batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
+            batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)
+        else:
+            batch_data_tmp, batch_label_tmp, batch_smpw_tmp = TEST_DATASET_WHOLE_SCENE[batch_idx]
+            batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
+            batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
+            batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
+    
+        if batch_data.shape[0]<BATCH_SIZE:
+            is_continue_batch = True
+            continue
+        elif batch_data.shape[0]==BATCH_SIZE:
+            is_continue_batch = False
+            extra_batch_data = np.zeros((0,NUM_POINT,3))
+            extra_batch_label = np.zeros((0,NUM_POINT))
+            extra_batch_smpw = np.zeros((0,NUM_POINT))
+        else:
+            is_continue_batch = False
+            extra_batch_data = batch_data[BATCH_SIZE:,:,:]
+            extra_batch_label = batch_label[BATCH_SIZE:,:]
+            extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
+            batch_data = batch_data[:BATCH_SIZE,:,:]
+            batch_label = batch_label[:BATCH_SIZE,:]
+            batch_smpw = batch_smpw[:BATCH_SIZE,:]
+
+        aug_data = batch_data
+        feed_dict = {ops['pointclouds_pl']: aug_data,
+            ops['labels_pl']: batch_label,
+            ops['smpws_pl']: batch_smpw,
+            ops['is_training_pl']: is_training}
+
+        summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
+            ops['loss'], ops['pred']], feed_dict=feed_dict)
+
+        pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'rb'))
 
 if __name__ == "__main__":
     
