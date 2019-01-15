@@ -203,6 +203,7 @@ def train():
 
             if epoch == 5:
                 test_whole_scene(sess, ops)
+                log_string("Done pickling...")
 
 
 def get_batch_wdp(dataset, idxs, start_idx, end_idx):
@@ -577,6 +578,7 @@ def test_whole_scene(sess, ops):
         summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
             ops['loss'], ops['pred']], feed_dict=feed_dict)
 
+        log_string("Starting pickle....")
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
