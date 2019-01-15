@@ -80,7 +80,7 @@ TEST_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
     num_classes=NUM_CLASSES, 
     split='test')
 
-PRED_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene(
+PRED_DATASET_WHOLE_SCENE = scannet_dataset.ScannetDatasetWholeScene_Pred(
     root=PRED_DATA_PATH, 
     npoints=NUM_POINT, 
     num_classes=NUM_CLASSES, 
@@ -188,6 +188,7 @@ def train():
             sys.stdout.flush()
 
             train_one_epoch(sess, ops, train_writer)
+            test_whole_scene(sess, ops)
             if epoch%5==0:
                 acc = eval_one_epoch(sess, ops, test_writer)
                 acc = eval_whole_scene_one_epoch(sess, ops, test_writer)
@@ -543,7 +544,7 @@ def test_whole_scene(sess, ops):
     for batch_idx in range(num_batches):
         if not is_continue_batch:
             # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
-            batch_data, batch_label, batch_smpw = PRED_DATASET_WHOLE_SCENE[batch_idx]
+            batch_data, batch_label, batch_smpw, points_default = PRED_DATASET_WHOLE_SCENE[batch_idx]
             batch_data = np.concatenate((batch_data,extra_batch_data),axis=0)
             batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
             batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)
@@ -580,7 +581,7 @@ def test_whole_scene(sess, ops):
             ops['loss'], ops['pred']], feed_dict=feed_dict)
 
         log_string("Starting pickle....")
-        pickle.dump(batch_data, open('input_vals.p', 'wb'))
+        pickle.dump(points_default, open('input_vals.p', 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
