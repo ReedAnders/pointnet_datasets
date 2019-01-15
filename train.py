@@ -581,7 +581,7 @@ def test_whole_scene(sess, ops):
             ops['loss'], ops['pred']], feed_dict=feed_dict)
             
         log_string("Starting pickle....")
-        pickle.dump(points_default, open('input_vals.p', 'wb'))
+        pickle.dump(batch_data, open('input_vals.p', 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
