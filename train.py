@@ -517,7 +517,7 @@ def test_whole_scene(sess, ops):
     # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
 
     # num_batches = len(TEST_DATASET_WHOLE_SCENE)
-    num_batches = 1
+    num_batches = 32
 
     # total_correct = 0
     # total_seen = 0
@@ -540,7 +540,7 @@ def test_whole_scene(sess, ops):
     extra_batch_data = np.zeros((0,NUM_POINT,3))
     extra_batch_label = np.zeros((0,NUM_POINT))
     extra_batch_smpw = np.zeros((0,NUM_POINT))
-    import pdb; pdb.set_trace()
+    
     for batch_idx in range(num_batches):
         if not is_continue_batch:
             # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
@@ -553,7 +553,8 @@ def test_whole_scene(sess, ops):
             batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
             batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
             batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
-    
+        
+        import pdb; pdb.set_trace()
         if batch_data.shape[0]<BATCH_SIZE:
             is_continue_batch = True
             continue
