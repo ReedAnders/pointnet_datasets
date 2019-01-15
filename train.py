@@ -552,22 +552,22 @@ def test_whole_scene(sess, ops):
             batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
             batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
     
-        if batch_data.shape[0]<BATCH_SIZE:
-            is_continue_batch = True
-            continue
-        elif batch_data.shape[0]==BATCH_SIZE:
-            is_continue_batch = False
-            extra_batch_data = np.zeros((0,NUM_POINT,3))
-            extra_batch_label = np.zeros((0,NUM_POINT))
-            extra_batch_smpw = np.zeros((0,NUM_POINT))
-        else:
-            is_continue_batch = False
-            extra_batch_data = batch_data[BATCH_SIZE:,:,:]
-            extra_batch_label = batch_label[BATCH_SIZE:,:]
-            extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
-            batch_data = batch_data[:BATCH_SIZE,:,:]
-            batch_label = batch_label[:BATCH_SIZE,:]
-            batch_smpw = batch_smpw[:BATCH_SIZE,:]
+        # if batch_data.shape[0]<BATCH_SIZE:
+        #     is_continue_batch = True
+        #     continue
+        # elif batch_data.shape[0]==BATCH_SIZE:
+        #     is_continue_batch = False
+        #     extra_batch_data = np.zeros((0,NUM_POINT,3))
+        #     extra_batch_label = np.zeros((0,NUM_POINT))
+        #     extra_batch_smpw = np.zeros((0,NUM_POINT))
+        # else:
+        #     is_continue_batch = False
+        #     extra_batch_data = batch_data[BATCH_SIZE:,:,:]
+        #     extra_batch_label = batch_label[BATCH_SIZE:,:]
+        #     extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
+        #     batch_data = batch_data[:BATCH_SIZE,:,:]
+        #     batch_label = batch_label[:BATCH_SIZE,:]
+        #     batch_smpw = batch_smpw[:BATCH_SIZE,:]
 
         aug_data = batch_data
         feed_dict = {ops['pointclouds_pl']: aug_data,
