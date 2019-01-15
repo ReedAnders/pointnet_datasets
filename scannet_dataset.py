@@ -25,7 +25,7 @@ class ScannetDataset():
 		self.root = root
 		self.split = split
 		self.num_classes = num_classes
-		self.subsample_dimensions_m = 0.15
+		self.subsample_dimensions_m = 100
 
 		# # Scannet data
 		# self.data_filename = os.path.join(self.root, 'scannet_%s.pickle'%(split))
@@ -136,7 +136,7 @@ class ScannetDatasetWholeScene():
 		self.root = root
 		self.split = split
 		self.num_classes = num_classes
-		self.subsample_dimensions_m = 0.15
+		self.subsample_dimensions_m = 100
 
 		# # Scannet data
 		# self.data_filename = os.path.join(self.root, 'scannet_%s.pickle'%(split))
