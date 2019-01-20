@@ -549,7 +549,7 @@ def test_whole_scene(sess, ops):
             batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
             batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)
         else:
-            batch_data_tmp, batch_label_tmp, batch_smpw_tmp = TEST_DATASET_WHOLE_SCENE[batch_idx]
+            batch_data_tmp, batch_label_tmp, batch_smpw_tmp, _ = PRED_DATASET_WHOLE_SCENE[batch_idx]
             batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
             batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
             batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
@@ -579,8 +579,8 @@ def test_whole_scene(sess, ops):
 
         summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
             ops['loss'], ops['pred']], feed_dict=feed_dict)
-        import pdb; pdb.set_trace()    
-        log_string("Starting pickle....")
+        #import pdb; pdb.set_trace()    
+        log_string("Starting pickle...")
         pickle.dump(batch_data, open('input_vals.p', 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 

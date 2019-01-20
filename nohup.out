@@ -1,0 +1,158 @@
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:129: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:215: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/env/local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:519: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2019-01-20 12:13:56.941218: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-01-20 12:13:57.079449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:17:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-20 12:13:57.174957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:65:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-20 12:13:57.271883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:66:00.0
+totalMemory: 15.89GiB freeMemory: 15.76GiB
+2019-01-20 12:13:57.275061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
+2019-01-20 12:13:57.724758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-20 12:13:57.724798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
+2019-01-20 12:13:57.724803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
+2019-01-20 12:13:57.724806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
+2019-01-20 12:13:57.724809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
+2019-01-20 12:13:57.725291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
+2019-01-20 12:13:57.725960: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
+2019-01-20 12:13:57.726468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
+pid: 2312
+Tensor("Placeholder_3:0", shape=(), dtype=bool, device=/device:GPU:0)
+--- Get model and loss
+--- Get training operator
+**** EPOCH 000 ****
+2019-01-20 12:13:59.093154
+ -- 010 / 333 --
+mean loss: 1.914194
+accuracy: 0.347179
+ -- 020 / 333 --
+mean loss: 1.248479
+accuracy: 0.424176
+ -- 030 / 333 --
+mean loss: 1.079629
+accuracy: 0.468923
+ -- 040 / 333 --
+mean loss: 0.932267
+accuracy: 0.496815
+ -- 050 / 333 --
+mean loss: 0.863139
+accuracy: 0.502132
+ -- 060 / 333 --
+mean loss: 0.824413
+accuracy: 0.536084
+ -- 070 / 333 --
+mean loss: 0.840427
+accuracy: 0.522226
+ -- 080 / 333 --
+mean loss: 0.829851
+accuracy: 0.542301
+ -- 090 / 333 --
+mean loss: 0.810362
+accuracy: 0.533032
+ -- 100 / 333 --
+mean loss: 0.769140
+accuracy: 0.543192
+ -- 110 / 333 --
+mean loss: 0.752350
+accuracy: 0.548252
+ -- 120 / 333 --
+mean loss: 0.690273
+accuracy: 0.570525
+ -- 130 / 333 --
+mean loss: 0.672494
+accuracy: 0.582930
+ -- 140 / 333 --
+mean loss: 0.737224
+accuracy: 0.570969
+ -- 150 / 333 --
+mean loss: 0.733250
+accuracy: 0.584468
+ -- 160 / 333 --
+mean loss: 0.702989
+accuracy: 0.573980
+ -- 170 / 333 --
+mean loss: 0.689640
+accuracy: 0.567345
+ -- 180 / 333 --
+mean loss: 0.678139
+accuracy: 0.573781
+ -- 190 / 333 --
+mean loss: 0.685760
+accuracy: 0.576686
+ -- 200 / 333 --
+mean loss: 0.641602
+accuracy: 0.610535
+ -- 210 / 333 --
+mean loss: 0.613197
+accuracy: 0.616212
+ -- 220 / 333 --
+mean loss: 0.613568
+accuracy: 0.605004
+ -- 230 / 333 --
+mean loss: 0.692905
+accuracy: 0.604916
+ -- 240 / 333 --
+mean loss: 0.631430
+accuracy: 0.601435
+ -- 250 / 333 --
+mean loss: 0.609871
+accuracy: 0.608790
+ -- 260 / 333 --
+mean loss: 0.637685
+accuracy: 0.602869
+ -- 270 / 333 --
+mean loss: 0.648407
+accuracy: 0.612425
+ -- 280 / 333 --
+mean loss: 0.651747
+accuracy: 0.591394
+ -- 290 / 333 --
+mean loss: 0.593944
+accuracy: 0.612148
+ -- 300 / 333 --
+mean loss: 0.636174
+accuracy: 0.625887
+ -- 310 / 333 --
+mean loss: 0.617880
+accuracy: 0.607011
+ -- 320 / 333 --
+mean loss: 0.585006
+accuracy: 0.617373
+ -- 330 / 333 --
+mean loss: 0.635477
+accuracy: 0.626262
+Starting pickle...
+2019-01-20 12:26:52.612889
+---- EPOCH 000 EVALUATION ----
+eval mean loss: 0.279003
+eval point accuracy vox: 0.875246
+eval point avg class acc vox: 0.872656
+eval point accuracy: 0.872229
+eval point avg class acc: 0.877524
+eval point calibrated average acc: 0.880813
+vox based --------class 1 weight: 0.808926, acc: 0.867657; class 2 weight: 0.191074, acc: 0.887390; 
+2019-01-20 12:37:41.896044
+---- EPOCH 001 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.008686
+eval whole scene point accuracy vox: 0.875598
+eval whole scene point avg class acc vox: 0.873050
+eval whole scene point accuracy: 0.872483
+eval whole scene point avg class acc: 0.877934
+eval whole scene point calibrated average acc vox: 0.871676
+vox based --------class 1 weight: 0.809024, acc: 0.877172; class 2 weight: 0.190976, acc: 0.868927; 
+Model saved in file: log/best_model_epoch_000.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 001 ****
