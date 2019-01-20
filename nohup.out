@@ -156,3 +156,105 @@ vox based --------class 1 weight: 0.809024, acc: 0.877172; class 2 weight: 0.190
 Model saved in file: log/best_model_epoch_000.ckpt
 Model saved in file: log/model.ckpt
 **** EPOCH 001 ****
+2019-01-20 12:44:21.820482
+ -- 010 / 333 --
+mean loss: 0.595387
+accuracy: 0.632411
+ -- 020 / 333 --
+mean loss: 0.591258
+accuracy: 0.634708
+ -- 030 / 333 --
+mean loss: 0.592681
+accuracy: 0.631410
+ -- 040 / 333 --
+mean loss: 0.614834
+accuracy: 0.626771
+ -- 050 / 333 --
+mean loss: 0.542648
+accuracy: 0.636791
+ -- 060 / 333 --
+mean loss: 0.582196
+accuracy: 0.634479
+ -- 070 / 333 --
+mean loss: 0.611929
+accuracy: 0.624811
+ -- 080 / 333 --
+mean loss: 0.583274
+accuracy: 0.634399
+ -- 090 / 333 --
+mean loss: 0.583676
+accuracy: 0.636559
+ -- 100 / 333 --
+mean loss: 0.585747
+accuracy: 0.636397
+ -- 110 / 333 --
+mean loss: 0.578103
+accuracy: 0.629403
+ -- 120 / 333 --
+mean loss: 0.554225
+accuracy: 0.635784
+ -- 130 / 333 --
+mean loss: 0.637310
+accuracy: 0.650243
+ -- 140 / 333 --
+mean loss: 0.561511
+accuracy: 0.646843
+ -- 150 / 333 --
+mean loss: 0.611702
+accuracy: 0.640596
+ -- 160 / 333 --
+mean loss: 0.596293
+accuracy: 0.638134
+ -- 170 / 333 --
+mean loss: 0.585005
+accuracy: 0.673359
+ -- 180 / 333 --
+mean loss: 0.611568
+accuracy: 0.641538
+ -- 190 / 333 --
+mean loss: 0.532526
+accuracy: 0.656642
+ -- 200 / 333 --
+mean loss: 0.575436
+accuracy: 0.663077
+ -- 210 / 333 --
+mean loss: 0.535653
+accuracy: 0.655487
+ -- 220 / 333 --
+mean loss: 0.582454
+accuracy: 0.661623
+ -- 230 / 333 --
+mean loss: 0.563765
+accuracy: 0.648606
+ -- 240 / 333 --
+mean loss: 0.568208
+accuracy: 0.662288
+ -- 250 / 333 --
+mean loss: 0.552416
+accuracy: 0.654160
+ -- 260 / 333 --
+mean loss: 0.547423
+accuracy: 0.646518
+ -- 270 / 333 --
+mean loss: 0.579733
+accuracy: 0.652909
+ -- 280 / 333 --
+mean loss: 0.569590
+accuracy: 0.661405
+ -- 290 / 333 --
+mean loss: 0.559682
+accuracy: 0.662886
+ -- 300 / 333 --
+mean loss: 0.562687
+accuracy: 0.657572
+ -- 310 / 333 --
+mean loss: 0.526342
+accuracy: 0.672641
+ -- 320 / 333 --
+mean loss: 0.579111
+accuracy: 0.658084
+ -- 330 / 333 --
+mean loss: 0.523769
+accuracy: 0.669833
+Starting pickle...
+**** EPOCH 002 ****
