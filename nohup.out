@@ -258,3 +258,105 @@ mean loss: 0.523769
 accuracy: 0.669833
 Starting pickle...
 **** EPOCH 002 ****
+2019-01-20 12:57:03.574532
+ -- 010 / 333 --
+mean loss: 0.545732
+accuracy: 0.651014
+ -- 020 / 333 --
+mean loss: 0.553135
+accuracy: 0.686396
+ -- 030 / 333 --
+mean loss: 0.525805
+accuracy: 0.677769
+ -- 040 / 333 --
+mean loss: 0.599977
+accuracy: 0.666383
+ -- 050 / 333 --
+mean loss: 0.589044
+accuracy: 0.668670
+ -- 060 / 333 --
+mean loss: 0.501735
+accuracy: 0.692017
+ -- 070 / 333 --
+mean loss: 0.551458
+accuracy: 0.694724
+ -- 080 / 333 --
+mean loss: 0.548087
+accuracy: 0.691026
+ -- 090 / 333 --
+mean loss: 0.573235
+accuracy: 0.697613
+ -- 100 / 333 --
+mean loss: 0.551103
+accuracy: 0.694381
+ -- 110 / 333 --
+mean loss: 0.528865
+accuracy: 0.677660
+ -- 120 / 333 --
+mean loss: 0.560277
+accuracy: 0.687633
+ -- 130 / 333 --
+mean loss: 0.572301
+accuracy: 0.664070
+ -- 140 / 333 --
+mean loss: 0.565188
+accuracy: 0.694592
+ -- 150 / 333 --
+mean loss: 0.531824
+accuracy: 0.678824
+ -- 160 / 333 --
+mean loss: 0.554039
+accuracy: 0.674952
+ -- 170 / 333 --
+mean loss: 0.548444
+accuracy: 0.698296
+ -- 180 / 333 --
+mean loss: 0.535064
+accuracy: 0.699374
+ -- 190 / 333 --
+mean loss: 0.512852
+accuracy: 0.690564
+ -- 200 / 333 --
+mean loss: 0.522135
+accuracy: 0.692923
+ -- 210 / 333 --
+mean loss: 0.545952
+accuracy: 0.713865
+ -- 220 / 333 --
+mean loss: 0.501693
+accuracy: 0.713226
+ -- 230 / 333 --
+mean loss: 0.520841
+accuracy: 0.714529
+ -- 240 / 333 --
+mean loss: 0.556402
+accuracy: 0.710664
+ -- 250 / 333 --
+mean loss: 0.510817
+accuracy: 0.723566
+ -- 260 / 333 --
+mean loss: 0.542987
+accuracy: 0.721822
+ -- 270 / 333 --
+mean loss: 0.512103
+accuracy: 0.723671
+ -- 280 / 333 --
+mean loss: 0.529370
+accuracy: 0.703877
+ -- 290 / 333 --
+mean loss: 0.520412
+accuracy: 0.707945
+ -- 300 / 333 --
+mean loss: 0.520712
+accuracy: 0.726538
+ -- 310 / 333 --
+mean loss: 0.507764
+accuracy: 0.712617
+ -- 320 / 333 --
+mean loss: 0.490010
+accuracy: 0.720181
+ -- 330 / 333 --
+mean loss: 0.527797
+accuracy: 0.721416
+Starting pickle...
+**** EPOCH 003 ****
