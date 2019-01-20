@@ -2,6 +2,7 @@
 data/
 log/
 notes.py
+pred/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

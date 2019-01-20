@@ -2882,3 +2882,6821 @@ eval whole scene point avg class acc: 0.909327
 eval whole scene point calibrated average acc vox: 0.908379
 vox based --------class 1 weight: 0.801505, acc: 0.891311; class 2 weight: 0.198495, acc: 0.916913; 
 Model saved in file: log/model.ckpt
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:129: calling reduce_max (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/utils/pointnet_util.py:215: calling reduce_sum (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/env/local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:519: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
+Instructions for updating:
+`NHWC` for data_format is deprecated, use `NWC` instead
+2019-01-19 17:45:52.314145: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-01-19 17:45:52.458484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:17:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-19 17:45:52.567441: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:65:00.0
+totalMemory: 15.90GiB freeMemory: 15.77GiB
+2019-01-19 17:45:52.685762: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
+name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:66:00.0
+totalMemory: 15.89GiB freeMemory: 15.76GiB
+2019-01-19 17:45:52.689089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
+2019-01-19 17:45:53.694834: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-01-19 17:45:53.694876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
+2019-01-19 17:45:53.694881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
+2019-01-19 17:45:53.694885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
+2019-01-19 17:45:53.694902: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
+2019-01-19 17:45:53.698031: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
+2019-01-19 17:45:53.698694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
+2019-01-19 17:45:53.699189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
+pid: 30444
+Tensor("Placeholder_3:0", shape=(), dtype=bool, device=/device:GPU:0)
+--- Get model and loss
+--- Get training operator
+**** EPOCH 000 ****
+2019-01-19 17:45:56.383674: W tensorflow/core/framework/allocator.cc:108] Allocation of 134217728 exceeds 10% of system memory.
+2019-01-19 17:45:56.428436: W tensorflow/core/framework/allocator.cc:108] Allocation of 134217728 exceeds 10% of system memory.
+2019-01-19 17:45:56.468091: W tensorflow/core/framework/allocator.cc:108] Allocation of 134217728 exceeds 10% of system memory.
+2019-01-19 17:45:56.504540: W tensorflow/core/framework/allocator.cc:108] Allocation of 134217728 exceeds 10% of system memory.
+2019-01-19 17:45:56.540689: W tensorflow/core/framework/allocator.cc:108] Allocation of 134217728 exceeds 10% of system memory.
+2019-01-19 17:45:55.098501
+ -- 010 / 333 --
+mean loss: 1.880836
+accuracy: 0.359560
+ -- 020 / 333 --
+mean loss: 1.236547
+accuracy: 0.411599
+ -- 030 / 333 --
+mean loss: 0.993987
+accuracy: 0.481502
+ -- 040 / 333 --
+mean loss: 0.921904
+accuracy: 0.516594
+ -- 050 / 333 --
+mean loss: 0.866449
+accuracy: 0.542346
+ -- 060 / 333 --
+mean loss: 0.784863
+accuracy: 0.556709
+ -- 070 / 333 --
+mean loss: 0.779023
+accuracy: 0.565515
+ -- 080 / 333 --
+mean loss: 0.738883
+accuracy: 0.559317
+ -- 090 / 333 --
+mean loss: 0.689579
+accuracy: 0.556646
+ -- 100 / 333 --
+mean loss: 0.758007
+accuracy: 0.571441
+ -- 110 / 333 --
+mean loss: 0.758310
+accuracy: 0.581199
+ -- 120 / 333 --
+mean loss: 0.711825
+accuracy: 0.577373
+ -- 130 / 333 --
+mean loss: 0.677133
+accuracy: 0.584852
+ -- 140 / 333 --
+mean loss: 0.736506
+accuracy: 0.588708
+ -- 150 / 333 --
+mean loss: 0.699841
+accuracy: 0.584014
+ -- 160 / 333 --
+mean loss: 0.684739
+accuracy: 0.588033
+ -- 170 / 333 --
+mean loss: 0.700901
+accuracy: 0.570939
+ -- 180 / 333 --
+mean loss: 0.650506
+accuracy: 0.584761
+ -- 190 / 333 --
+mean loss: 0.674628
+accuracy: 0.603809
+ -- 200 / 333 --
+mean loss: 0.641664
+accuracy: 0.599168
+ -- 210 / 333 --
+mean loss: 0.661603
+accuracy: 0.610099
+ -- 220 / 333 --
+mean loss: 0.617036
+accuracy: 0.605349
+ -- 230 / 333 --
+mean loss: 0.601230
+accuracy: 0.627774
+ -- 240 / 333 --
+mean loss: 0.593264
+accuracy: 0.603179
+ -- 250 / 333 --
+mean loss: 0.608543
+accuracy: 0.608069
+ -- 260 / 333 --
+mean loss: 0.586099
+accuracy: 0.609042
+ -- 270 / 333 --
+mean loss: 0.642183
+accuracy: 0.630977
+ -- 280 / 333 --
+mean loss: 0.598790
+accuracy: 0.636524
+ -- 290 / 333 --
+mean loss: 0.604681
+accuracy: 0.631564
+ -- 300 / 333 --
+mean loss: 0.602522
+accuracy: 0.619202
+ -- 310 / 333 --
+mean loss: 0.616351
+accuracy: 0.634262
+ -- 320 / 333 --
+mean loss: 0.615287
+accuracy: 0.620026
+ -- 330 / 333 --
+mean loss: 0.609263
+accuracy: 0.623777
+Starting pickle....
+2019-01-19 17:58:50.694146
+---- EPOCH 000 EVALUATION ----
+eval mean loss: 0.297861
+eval point accuracy vox: 0.872051
+eval point avg class acc vox: 0.871804
+eval point accuracy: 0.868908
+eval point avg class acc: 0.876648
+eval point calibrated average acc: 0.881456
+vox based --------class 1 weight: 0.808981, acc: 0.862224; class 2 weight: 0.191019, acc: 0.891072; 
+2019-01-19 18:09:37.465835
+---- EPOCH 001 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.009477
+eval whole scene point accuracy vox: 0.870019
+eval whole scene point avg class acc vox: 0.871556
+eval whole scene point accuracy: 0.866839
+eval whole scene point avg class acc: 0.876306
+eval whole scene point calibrated average acc vox: 0.872385
+vox based --------class 1 weight: 0.808985, acc: 0.869069; class 2 weight: 0.191015, acc: 0.874043; 
+Model saved in file: log/best_model_epoch_000.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 001 ****
+2019-01-19 18:16:06.798265
+ -- 010 / 333 --
+mean loss: 0.595491
+accuracy: 0.629475
+ -- 020 / 333 --
+mean loss: 0.583555
+accuracy: 0.642072
+ -- 030 / 333 --
+mean loss: 0.579363
+accuracy: 0.645301
+ -- 040 / 333 --
+mean loss: 0.597426
+accuracy: 0.618595
+ -- 050 / 333 --
+mean loss: 0.606820
+accuracy: 0.655607
+ -- 060 / 333 --
+mean loss: 0.564003
+accuracy: 0.619803
+ -- 070 / 333 --
+mean loss: 0.571204
+accuracy: 0.646335
+ -- 080 / 333 --
+mean loss: 0.624613
+accuracy: 0.640806
+ -- 090 / 333 --
+mean loss: 0.591533
+accuracy: 0.676093
+ -- 100 / 333 --
+mean loss: 0.539543
+accuracy: 0.651627
+ -- 110 / 333 --
+mean loss: 0.617709
+accuracy: 0.646277
+ -- 120 / 333 --
+mean loss: 0.615855
+accuracy: 0.673841
+ -- 130 / 333 --
+mean loss: 0.556298
+accuracy: 0.656887
+ -- 140 / 333 --
+mean loss: 0.625333
+accuracy: 0.649751
+ -- 150 / 333 --
+mean loss: 0.604630
+accuracy: 0.658027
+ -- 160 / 333 --
+mean loss: 0.585302
+accuracy: 0.645475
+ -- 170 / 333 --
+mean loss: 0.577382
+accuracy: 0.654187
+ -- 180 / 333 --
+mean loss: 0.544272
+accuracy: 0.660378
+ -- 190 / 333 --
+mean loss: 0.579815
+accuracy: 0.657458
+ -- 200 / 333 --
+mean loss: 0.579180
+accuracy: 0.657402
+ -- 210 / 333 --
+mean loss: 0.587988
+accuracy: 0.688180
+ -- 220 / 333 --
+mean loss: 0.511155
+accuracy: 0.687482
+ -- 230 / 333 --
+mean loss: 0.594761
+accuracy: 0.667596
+ -- 240 / 333 --
+mean loss: 0.566462
+accuracy: 0.666922
+ -- 250 / 333 --
+mean loss: 0.548431
+accuracy: 0.691329
+ -- 260 / 333 --
+mean loss: 0.545146
+accuracy: 0.680960
+ -- 270 / 333 --
+mean loss: 0.549129
+accuracy: 0.687352
+ -- 280 / 333 --
+mean loss: 0.536599
+accuracy: 0.673580
+ -- 290 / 333 --
+mean loss: 0.552499
+accuracy: 0.668178
+ -- 300 / 333 --
+mean loss: 0.531322
+accuracy: 0.667828
+ -- 310 / 333 --
+mean loss: 0.566791
+accuracy: 0.675308
+ -- 320 / 333 --
+mean loss: 0.554831
+accuracy: 0.674578
+ -- 330 / 333 --
+mean loss: 0.562049
+accuracy: 0.688437
+Starting pickle....
+**** EPOCH 002 ****
+2019-01-19 18:28:41.733142
+ -- 010 / 333 --
+mean loss: 0.598948
+accuracy: 0.688127
+ -- 020 / 333 --
+mean loss: 0.558965
+accuracy: 0.685438
+ -- 030 / 333 --
+mean loss: 0.553540
+accuracy: 0.667652
+ -- 040 / 333 --
+mean loss: 0.569766
+accuracy: 0.687985
+ -- 050 / 333 --
+mean loss: 0.511945
+accuracy: 0.698220
+ -- 060 / 333 --
+mean loss: 0.513568
+accuracy: 0.696265
+ -- 070 / 333 --
+mean loss: 0.551466
+accuracy: 0.680765
+ -- 080 / 333 --
+mean loss: 0.532167
+accuracy: 0.682077
+ -- 090 / 333 --
+mean loss: 0.539625
+accuracy: 0.692027
+ -- 100 / 333 --
+mean loss: 0.559469
+accuracy: 0.684063
+ -- 110 / 333 --
+mean loss: 0.583133
+accuracy: 0.704045
+ -- 120 / 333 --
+mean loss: 0.537964
+accuracy: 0.703792
+ -- 130 / 333 --
+mean loss: 0.541017
+accuracy: 0.693303
+ -- 140 / 333 --
+mean loss: 0.550614
+accuracy: 0.689573
+ -- 150 / 333 --
+mean loss: 0.517597
+accuracy: 0.687928
+ -- 160 / 333 --
+mean loss: 0.549877
+accuracy: 0.680875
+ -- 170 / 333 --
+mean loss: 0.510482
+accuracy: 0.683031
+ -- 180 / 333 --
+mean loss: 0.569887
+accuracy: 0.689256
+ -- 190 / 333 --
+mean loss: 0.534109
+accuracy: 0.667593
+ -- 200 / 333 --
+mean loss: 0.553857
+accuracy: 0.690250
+ -- 210 / 333 --
+mean loss: 0.513580
+accuracy: 0.676210
+ -- 220 / 333 --
+mean loss: 0.521045
+accuracy: 0.676310
+ -- 230 / 333 --
+mean loss: 0.517451
+accuracy: 0.667347
+ -- 240 / 333 --
+mean loss: 0.538677
+accuracy: 0.696411
+ -- 250 / 333 --
+mean loss: 0.532971
+accuracy: 0.683934
+ -- 260 / 333 --
+mean loss: 0.520981
+accuracy: 0.688461
+ -- 270 / 333 --
+mean loss: 0.502203
+accuracy: 0.697651
+ -- 280 / 333 --
+mean loss: 0.525142
+accuracy: 0.708071
+ -- 290 / 333 --
+mean loss: 0.538380
+accuracy: 0.728066
+ -- 300 / 333 --
+mean loss: 0.556708
+accuracy: 0.730515
+ -- 310 / 333 --
+mean loss: 0.505941
+accuracy: 0.733725
+ -- 320 / 333 --
+mean loss: 0.496047
+accuracy: 0.720057
+ -- 330 / 333 --
+mean loss: 0.524721
+accuracy: 0.692096
+Starting pickle....
+**** EPOCH 003 ****
+2019-01-19 18:41:17.996470
+ -- 010 / 333 --
+mean loss: 0.537273
+accuracy: 0.729511
+ -- 020 / 333 --
+mean loss: 0.528892
+accuracy: 0.717425
+ -- 030 / 333 --
+mean loss: 0.561983
+accuracy: 0.726192
+ -- 040 / 333 --
+mean loss: 0.543905
+accuracy: 0.735203
+ -- 050 / 333 --
+mean loss: 0.522834
+accuracy: 0.733895
+ -- 060 / 333 --
+mean loss: 0.523499
+accuracy: 0.742551
+ -- 070 / 333 --
+mean loss: 0.510730
+accuracy: 0.728708
+ -- 080 / 333 --
+mean loss: 0.504370
+accuracy: 0.728445
+ -- 090 / 333 --
+mean loss: 0.501336
+accuracy: 0.731800
+ -- 100 / 333 --
+mean loss: 0.525493
+accuracy: 0.726564
+ -- 110 / 333 --
+mean loss: 0.521666
+accuracy: 0.716194
+ -- 120 / 333 --
+mean loss: 0.548526
+accuracy: 0.720086
+ -- 130 / 333 --
+mean loss: 0.560385
+accuracy: 0.724968
+ -- 140 / 333 --
+mean loss: 0.531583
+accuracy: 0.747059
+ -- 150 / 333 --
+mean loss: 0.511529
+accuracy: 0.714325
+ -- 160 / 333 --
+mean loss: 0.525405
+accuracy: 0.717225
+ -- 170 / 333 --
+mean loss: 0.534080
+accuracy: 0.718938
+ -- 180 / 333 --
+mean loss: 0.493085
+accuracy: 0.721834
+ -- 190 / 333 --
+mean loss: 0.554182
+accuracy: 0.729948
+ -- 200 / 333 --
+mean loss: 0.494227
+accuracy: 0.746484
+ -- 210 / 333 --
+mean loss: 0.494389
+accuracy: 0.728060
+ -- 220 / 333 --
+mean loss: 0.533620
+accuracy: 0.764140
+ -- 230 / 333 --
+mean loss: 0.493398
+accuracy: 0.745617
+ -- 240 / 333 --
+mean loss: 0.499766
+accuracy: 0.730258
+ -- 250 / 333 --
+mean loss: 0.514573
+accuracy: 0.744484
+ -- 260 / 333 --
+mean loss: 0.535690
+accuracy: 0.737855
+ -- 270 / 333 --
+mean loss: 0.518700
+accuracy: 0.750861
+ -- 280 / 333 --
+mean loss: 0.479780
+accuracy: 0.727707
+ -- 290 / 333 --
+mean loss: 0.548525
+accuracy: 0.721996
+ -- 300 / 333 --
+mean loss: 0.494155
+accuracy: 0.737001
+ -- 310 / 333 --
+mean loss: 0.449330
+accuracy: 0.746516
+ -- 320 / 333 --
+mean loss: 0.495313
+accuracy: 0.742031
+ -- 330 / 333 --
+mean loss: 0.501523
+accuracy: 0.742241
+Starting pickle....
+**** EPOCH 004 ****
+2019-01-19 18:53:53.016252
+ -- 010 / 333 --
+mean loss: 0.527656
+accuracy: 0.760532
+ -- 020 / 333 --
+mean loss: 0.503538
+accuracy: 0.736262
+ -- 030 / 333 --
+mean loss: 0.509638
+accuracy: 0.738300
+ -- 040 / 333 --
+mean loss: 0.490786
+accuracy: 0.769567
+ -- 050 / 333 --
+mean loss: 0.493485
+accuracy: 0.773961
+ -- 060 / 333 --
+mean loss: 0.507239
+accuracy: 0.761026
+ -- 070 / 333 --
+mean loss: 0.507566
+accuracy: 0.762793
+ -- 080 / 333 --
+mean loss: 0.478815
+accuracy: 0.761018
+ -- 090 / 333 --
+mean loss: 0.476498
+accuracy: 0.758874
+ -- 100 / 333 --
+mean loss: 0.516025
+accuracy: 0.745337
+ -- 110 / 333 --
+mean loss: 0.489596
+accuracy: 0.723249
+ -- 120 / 333 --
+mean loss: 0.534438
+accuracy: 0.742052
+ -- 130 / 333 --
+mean loss: 0.494639
+accuracy: 0.739086
+ -- 140 / 333 --
+mean loss: 0.502880
+accuracy: 0.751521
+ -- 150 / 333 --
+mean loss: 0.510802
+accuracy: 0.765281
+ -- 160 / 333 --
+mean loss: 0.465777
+accuracy: 0.757691
+ -- 170 / 333 --
+mean loss: 0.499931
+accuracy: 0.748460
+ -- 180 / 333 --
+mean loss: 0.448061
+accuracy: 0.767931
+ -- 190 / 333 --
+mean loss: 0.498235
+accuracy: 0.755793
+ -- 200 / 333 --
+mean loss: 0.529620
+accuracy: 0.771338
+ -- 210 / 333 --
+mean loss: 0.528982
+accuracy: 0.765124
+ -- 220 / 333 --
+mean loss: 0.487821
+accuracy: 0.751793
+ -- 230 / 333 --
+mean loss: 0.506090
+accuracy: 0.758533
+ -- 240 / 333 --
+mean loss: 0.482338
+accuracy: 0.765564
+ -- 250 / 333 --
+mean loss: 0.515186
+accuracy: 0.739809
+ -- 260 / 333 --
+mean loss: 0.488297
+accuracy: 0.733420
+ -- 270 / 333 --
+mean loss: 0.481315
+accuracy: 0.747298
+ -- 280 / 333 --
+mean loss: 0.495836
+accuracy: 0.757961
+ -- 290 / 333 --
+mean loss: 0.462353
+accuracy: 0.732298
+ -- 300 / 333 --
+mean loss: 0.486636
+accuracy: 0.770956
+ -- 310 / 333 --
+mean loss: 0.470145
+accuracy: 0.750132
+ -- 320 / 333 --
+mean loss: 0.524791
+accuracy: 0.760854
+ -- 330 / 333 --
+mean loss: 0.470067
+accuracy: 0.778394
+Starting pickle....
+**** EPOCH 005 ****
+2019-01-19 19:06:26.164565
+ -- 010 / 333 --
+mean loss: 0.495444
+accuracy: 0.764272
+ -- 020 / 333 --
+mean loss: 0.488466
+accuracy: 0.757523
+ -- 030 / 333 --
+mean loss: 0.488501
+accuracy: 0.781083
+ -- 040 / 333 --
+mean loss: 0.517194
+accuracy: 0.777583
+ -- 050 / 333 --
+mean loss: 0.479496
+accuracy: 0.760570
+ -- 060 / 333 --
+mean loss: 0.494986
+accuracy: 0.751182
+ -- 070 / 333 --
+mean loss: 0.505150
+accuracy: 0.757945
+ -- 080 / 333 --
+mean loss: 0.501609
+accuracy: 0.783774
+ -- 090 / 333 --
+mean loss: 0.522032
+accuracy: 0.763772
+ -- 100 / 333 --
+mean loss: 0.510405
+accuracy: 0.787955
+ -- 110 / 333 --
+mean loss: 0.471966
+accuracy: 0.772890
+ -- 120 / 333 --
+mean loss: 0.465423
+accuracy: 0.772081
+ -- 130 / 333 --
+mean loss: 0.468946
+accuracy: 0.767098
+ -- 140 / 333 --
+mean loss: 0.517603
+accuracy: 0.760404
+ -- 150 / 333 --
+mean loss: 0.472976
+accuracy: 0.782961
+ -- 160 / 333 --
+mean loss: 0.486747
+accuracy: 0.784585
+ -- 170 / 333 --
+mean loss: 0.462401
+accuracy: 0.797205
+ -- 180 / 333 --
+mean loss: 0.468752
+accuracy: 0.789560
+ -- 190 / 333 --
+mean loss: 0.472776
+accuracy: 0.791762
+ -- 200 / 333 --
+mean loss: 0.492962
+accuracy: 0.794860
+ -- 210 / 333 --
+mean loss: 0.456314
+accuracy: 0.791013
+ -- 220 / 333 --
+mean loss: 0.489647
+accuracy: 0.760162
+ -- 230 / 333 --
+mean loss: 0.480202
+accuracy: 0.783184
+ -- 240 / 333 --
+mean loss: 0.446429
+accuracy: 0.764075
+ -- 250 / 333 --
+mean loss: 0.518436
+accuracy: 0.760637
+ -- 260 / 333 --
+mean loss: 0.496641
+accuracy: 0.809752
+ -- 270 / 333 --
+mean loss: 0.499570
+accuracy: 0.787980
+ -- 280 / 333 --
+mean loss: 0.492767
+accuracy: 0.808088
+ -- 290 / 333 --
+mean loss: 0.518381
+accuracy: 0.797124
+ -- 300 / 333 --
+mean loss: 0.487065
+accuracy: 0.792367
+ -- 310 / 333 --
+mean loss: 0.478226
+accuracy: 0.793644
+ -- 320 / 333 --
+mean loss: 0.474107
+accuracy: 0.794129
+ -- 330 / 333 --
+mean loss: 0.469458
+accuracy: 0.784011
+Starting pickle....
+2019-01-19 19:18:59.142842
+---- EPOCH 002 EVALUATION ----
+eval mean loss: 0.221161
+eval point accuracy vox: 0.905475
+eval point avg class acc vox: 0.885292
+eval point accuracy: 0.903629
+eval point avg class acc: 0.893624
+eval point calibrated average acc: 0.887408
+vox based --------class 1 weight: 0.808933, acc: 0.912273; class 2 weight: 0.191067, acc: 0.874975; 
+2019-01-19 19:29:45.780668
+---- EPOCH 003 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006911
+eval whole scene point accuracy vox: 0.905316
+eval whole scene point avg class acc vox: 0.885796
+eval whole scene point accuracy: 0.903465
+eval whole scene point avg class acc: 0.894057
+eval whole scene point calibrated average acc vox: 0.875268
+vox based --------class 1 weight: 0.809013, acc: 0.917380; class 2 weight: 0.190987, acc: 0.854212; 
+Model saved in file: log/best_model_epoch_005.ckpt
+Starting pickle....
+Done pickling...
+**** EPOCH 006 ****
+2019-01-19 19:36:17.563466
+ -- 010 / 333 --
+mean loss: 0.485557
+accuracy: 0.778205
+ -- 020 / 333 --
+mean loss: 0.484269
+accuracy: 0.773981
+ -- 030 / 333 --
+mean loss: 0.481179
+accuracy: 0.793998
+ -- 040 / 333 --
+mean loss: 0.470790
+accuracy: 0.782435
+ -- 050 / 333 --
+mean loss: 0.480468
+accuracy: 0.772293
+ -- 060 / 333 --
+mean loss: 0.467348
+accuracy: 0.788906
+ -- 070 / 333 --
+mean loss: 0.473515
+accuracy: 0.785051
+ -- 080 / 333 --
+mean loss: 0.490029
+accuracy: 0.771268
+ -- 090 / 333 --
+mean loss: 0.447393
+accuracy: 0.773382
+ -- 100 / 333 --
+mean loss: 0.459588
+accuracy: 0.790774
+ -- 110 / 333 --
+mean loss: 0.428783
+accuracy: 0.797849
+ -- 120 / 333 --
+mean loss: 0.497098
+accuracy: 0.800711
+ -- 130 / 333 --
+mean loss: 0.483385
+accuracy: 0.804807
+ -- 140 / 333 --
+mean loss: 0.453755
+accuracy: 0.775636
+ -- 150 / 333 --
+mean loss: 0.475303
+accuracy: 0.794962
+ -- 160 / 333 --
+mean loss: 0.513042
+accuracy: 0.803686
+ -- 170 / 333 --
+mean loss: 0.454837
+accuracy: 0.807166
+ -- 180 / 333 --
+mean loss: 0.495538
+accuracy: 0.822441
+ -- 190 / 333 --
+mean loss: 0.469177
+accuracy: 0.807886
+ -- 200 / 333 --
+mean loss: 0.495468
+accuracy: 0.805154
+ -- 210 / 333 --
+mean loss: 0.471237
+accuracy: 0.807827
+ -- 220 / 333 --
+mean loss: 0.497788
+accuracy: 0.809837
+ -- 230 / 333 --
+mean loss: 0.513693
+accuracy: 0.809810
+ -- 240 / 333 --
+mean loss: 0.520975
+accuracy: 0.797290
+ -- 250 / 333 --
+mean loss: 0.487930
+accuracy: 0.821118
+ -- 260 / 333 --
+mean loss: 0.470843
+accuracy: 0.817789
+ -- 270 / 333 --
+mean loss: 0.465383
+accuracy: 0.806196
+ -- 280 / 333 --
+mean loss: 0.527412
+accuracy: 0.820485
+ -- 290 / 333 --
+mean loss: 0.474911
+accuracy: 0.831631
+ -- 300 / 333 --
+mean loss: 0.498253
+accuracy: 0.827308
+ -- 310 / 333 --
+mean loss: 0.472358
+accuracy: 0.821977
+ -- 320 / 333 --
+mean loss: 0.482719
+accuracy: 0.805227
+ -- 330 / 333 --
+mean loss: 0.480434
+accuracy: 0.825389
+Starting pickle....
+**** EPOCH 007 ****
+2019-01-19 19:48:50.111625
+ -- 010 / 333 --
+mean loss: 0.460011
+accuracy: 0.827758
+ -- 020 / 333 --
+mean loss: 0.514216
+accuracy: 0.818422
+ -- 030 / 333 --
+mean loss: 0.487401
+accuracy: 0.821696
+ -- 040 / 333 --
+mean loss: 0.496123
+accuracy: 0.799998
+ -- 050 / 333 --
+mean loss: 0.468368
+accuracy: 0.800499
+ -- 060 / 333 --
+mean loss: 0.545121
+accuracy: 0.813424
+ -- 070 / 333 --
+mean loss: 0.522504
+accuracy: 0.822906
+ -- 080 / 333 --
+mean loss: 0.500850
+accuracy: 0.800929
+ -- 090 / 333 --
+mean loss: 0.544001
+accuracy: 0.830351
+ -- 100 / 333 --
+mean loss: 0.462656
+accuracy: 0.827177
+ -- 110 / 333 --
+mean loss: 0.467112
+accuracy: 0.812424
+ -- 120 / 333 --
+mean loss: 0.455219
+accuracy: 0.816935
+ -- 130 / 333 --
+mean loss: 0.442424
+accuracy: 0.839622
+ -- 140 / 333 --
+mean loss: 0.461238
+accuracy: 0.830688
+ -- 150 / 333 --
+mean loss: 0.477035
+accuracy: 0.821926
+ -- 160 / 333 --
+mean loss: 0.460569
+accuracy: 0.840813
+ -- 170 / 333 --
+mean loss: 0.431122
+accuracy: 0.828179
+ -- 180 / 333 --
+mean loss: 0.477377
+accuracy: 0.826302
+ -- 190 / 333 --
+mean loss: 0.459162
+accuracy: 0.826618
+ -- 200 / 333 --
+mean loss: 0.468988
+accuracy: 0.843122
+ -- 210 / 333 --
+mean loss: 0.488984
+accuracy: 0.825466
+ -- 220 / 333 --
+mean loss: 0.474242
+accuracy: 0.813789
+ -- 230 / 333 --
+mean loss: 0.468133
+accuracy: 0.833072
+ -- 240 / 333 --
+mean loss: 0.476999
+accuracy: 0.824767
+ -- 250 / 333 --
+mean loss: 0.488081
+accuracy: 0.832351
+ -- 260 / 333 --
+mean loss: 0.440171
+accuracy: 0.831604
+ -- 270 / 333 --
+mean loss: 0.472295
+accuracy: 0.844701
+ -- 280 / 333 --
+mean loss: 0.474384
+accuracy: 0.826181
+ -- 290 / 333 --
+mean loss: 0.486538
+accuracy: 0.830745
+ -- 300 / 333 --
+mean loss: 0.464170
+accuracy: 0.818941
+ -- 310 / 333 --
+mean loss: 0.414729
+accuracy: 0.839196
+ -- 320 / 333 --
+mean loss: 0.456793
+accuracy: 0.812429
+ -- 330 / 333 --
+mean loss: 0.462701
+accuracy: 0.832951
+Starting pickle....
+**** EPOCH 008 ****
+2019-01-19 20:01:24.535016
+ -- 010 / 333 --
+mean loss: 0.443512
+accuracy: 0.832666
+ -- 020 / 333 --
+mean loss: 0.462325
+accuracy: 0.833513
+ -- 030 / 333 --
+mean loss: 0.446815
+accuracy: 0.828006
+ -- 040 / 333 --
+mean loss: 0.437672
+accuracy: 0.829290
+ -- 050 / 333 --
+mean loss: 0.485167
+accuracy: 0.823341
+ -- 060 / 333 --
+mean loss: 0.464044
+accuracy: 0.839985
+ -- 070 / 333 --
+mean loss: 0.483948
+accuracy: 0.845252
+ -- 080 / 333 --
+mean loss: 0.446181
+accuracy: 0.846525
+ -- 090 / 333 --
+mean loss: 0.484969
+accuracy: 0.844809
+ -- 100 / 333 --
+mean loss: 0.458896
+accuracy: 0.846824
+ -- 110 / 333 --
+mean loss: 0.459942
+accuracy: 0.847421
+ -- 120 / 333 --
+mean loss: 0.436585
+accuracy: 0.822126
+ -- 130 / 333 --
+mean loss: 0.462024
+accuracy: 0.834633
+ -- 140 / 333 --
+mean loss: 0.462760
+accuracy: 0.837124
+ -- 150 / 333 --
+mean loss: 0.493573
+accuracy: 0.828574
+ -- 160 / 333 --
+mean loss: 0.468928
+accuracy: 0.835667
+ -- 170 / 333 --
+mean loss: 0.465214
+accuracy: 0.850441
+ -- 180 / 333 --
+mean loss: 0.448994
+accuracy: 0.813383
+ -- 190 / 333 --
+mean loss: 0.457349
+accuracy: 0.840605
+ -- 200 / 333 --
+mean loss: 0.477880
+accuracy: 0.845294
+ -- 210 / 333 --
+mean loss: 0.484122
+accuracy: 0.843076
+ -- 220 / 333 --
+mean loss: 0.466701
+accuracy: 0.833426
+ -- 230 / 333 --
+mean loss: 0.461421
+accuracy: 0.847400
+ -- 240 / 333 --
+mean loss: 0.511360
+accuracy: 0.819978
+ -- 250 / 333 --
+mean loss: 0.474593
+accuracy: 0.831836
+ -- 260 / 333 --
+mean loss: 0.457072
+accuracy: 0.850620
+ -- 270 / 333 --
+mean loss: 0.451808
+accuracy: 0.855541
+ -- 280 / 333 --
+mean loss: 0.486664
+accuracy: 0.839997
+ -- 290 / 333 --
+mean loss: 0.471508
+accuracy: 0.852749
+ -- 300 / 333 --
+mean loss: 0.464693
+accuracy: 0.851539
+ -- 310 / 333 --
+mean loss: 0.446219
+accuracy: 0.854029
+ -- 320 / 333 --
+mean loss: 0.425061
+accuracy: 0.857879
+ -- 330 / 333 --
+mean loss: 0.456626
+accuracy: 0.848867
+Starting pickle....
+**** EPOCH 009 ****
+2019-01-19 20:13:59.048465
+ -- 010 / 333 --
+mean loss: 0.455952
+accuracy: 0.863342
+ -- 020 / 333 --
+mean loss: 0.436051
+accuracy: 0.837080
+ -- 030 / 333 --
+mean loss: 0.443433
+accuracy: 0.851855
+ -- 040 / 333 --
+mean loss: 0.466713
+accuracy: 0.820294
+ -- 050 / 333 --
+mean loss: 0.463135
+accuracy: 0.851184
+ -- 060 / 333 --
+mean loss: 0.444824
+accuracy: 0.849380
+ -- 070 / 333 --
+mean loss: 0.426009
+accuracy: 0.856502
+ -- 080 / 333 --
+mean loss: 0.450891
+accuracy: 0.854866
+ -- 090 / 333 --
+mean loss: 0.477572
+accuracy: 0.841934
+ -- 100 / 333 --
+mean loss: 0.474844
+accuracy: 0.837444
+ -- 110 / 333 --
+mean loss: 0.473727
+accuracy: 0.845452
+ -- 120 / 333 --
+mean loss: 0.467784
+accuracy: 0.858062
+ -- 130 / 333 --
+mean loss: 0.471530
+accuracy: 0.841820
+ -- 140 / 333 --
+mean loss: 0.461188
+accuracy: 0.846566
+ -- 150 / 333 --
+mean loss: 0.488642
+accuracy: 0.859450
+ -- 160 / 333 --
+mean loss: 0.474869
+accuracy: 0.860920
+ -- 170 / 333 --
+mean loss: 0.458463
+accuracy: 0.857603
+ -- 180 / 333 --
+mean loss: 0.471064
+accuracy: 0.851983
+ -- 190 / 333 --
+mean loss: 0.484904
+accuracy: 0.851989
+ -- 200 / 333 --
+mean loss: 0.487744
+accuracy: 0.861062
+ -- 210 / 333 --
+mean loss: 0.488523
+accuracy: 0.831955
+ -- 220 / 333 --
+mean loss: 0.494251
+accuracy: 0.848780
+ -- 230 / 333 --
+mean loss: 0.472124
+accuracy: 0.854413
+ -- 240 / 333 --
+mean loss: 0.443258
+accuracy: 0.848255
+ -- 250 / 333 --
+mean loss: 0.409484
+accuracy: 0.832345
+ -- 260 / 333 --
+mean loss: 0.424295
+accuracy: 0.816185
+ -- 270 / 333 --
+mean loss: 0.485075
+accuracy: 0.840881
+ -- 280 / 333 --
+mean loss: 0.468947
+accuracy: 0.822985
+ -- 290 / 333 --
+mean loss: 0.453681
+accuracy: 0.847189
+ -- 300 / 333 --
+mean loss: 0.445376
+accuracy: 0.847433
+ -- 310 / 333 --
+mean loss: 0.427035
+accuracy: 0.828474
+ -- 320 / 333 --
+mean loss: 0.458644
+accuracy: 0.838343
+ -- 330 / 333 --
+mean loss: 0.449881
+accuracy: 0.811786
+Starting pickle....
+**** EPOCH 010 ****
+2019-01-19 20:26:31.911012
+ -- 010 / 333 --
+mean loss: 0.456122
+accuracy: 0.844522
+ -- 020 / 333 --
+mean loss: 0.488244
+accuracy: 0.844905
+ -- 030 / 333 --
+mean loss: 0.411387
+accuracy: 0.841231
+ -- 040 / 333 --
+mean loss: 0.432555
+accuracy: 0.837794
+ -- 050 / 333 --
+mean loss: 0.465845
+accuracy: 0.846495
+ -- 060 / 333 --
+mean loss: 0.461278
+accuracy: 0.848668
+ -- 070 / 333 --
+mean loss: 0.466655
+accuracy: 0.839992
+ -- 080 / 333 --
+mean loss: 0.450916
+accuracy: 0.836924
+ -- 090 / 333 --
+mean loss: 0.490285
+accuracy: 0.823868
+ -- 100 / 333 --
+mean loss: 0.456663
+accuracy: 0.833420
+ -- 110 / 333 --
+mean loss: 0.461105
+accuracy: 0.820157
+ -- 120 / 333 --
+mean loss: 0.439070
+accuracy: 0.829634
+ -- 130 / 333 --
+mean loss: 0.439936
+accuracy: 0.845745
+ -- 140 / 333 --
+mean loss: 0.468425
+accuracy: 0.847884
+ -- 150 / 333 --
+mean loss: 0.447158
+accuracy: 0.820947
+ -- 160 / 333 --
+mean loss: 0.460005
+accuracy: 0.848254
+ -- 170 / 333 --
+mean loss: 0.459301
+accuracy: 0.859404
+ -- 180 / 333 --
+mean loss: 0.460293
+accuracy: 0.872281
+ -- 190 / 333 --
+mean loss: 0.448342
+accuracy: 0.848760
+ -- 200 / 333 --
+mean loss: 0.471130
+accuracy: 0.866875
+ -- 210 / 333 --
+mean loss: 0.467345
+accuracy: 0.855584
+ -- 220 / 333 --
+mean loss: 0.439751
+accuracy: 0.864903
+ -- 230 / 333 --
+mean loss: 0.435274
+accuracy: 0.860028
+ -- 240 / 333 --
+mean loss: 0.428768
+accuracy: 0.865618
+ -- 250 / 333 --
+mean loss: 0.452295
+accuracy: 0.859386
+ -- 260 / 333 --
+mean loss: 0.475789
+accuracy: 0.864080
+ -- 270 / 333 --
+mean loss: 0.442894
+accuracy: 0.824326
+ -- 280 / 333 --
+mean loss: 0.429546
+accuracy: 0.858344
+ -- 290 / 333 --
+mean loss: 0.462289
+accuracy: 0.860847
+ -- 300 / 333 --
+mean loss: 0.473258
+accuracy: 0.841574
+ -- 310 / 333 --
+mean loss: 0.455032
+accuracy: 0.837928
+ -- 320 / 333 --
+mean loss: 0.422921
+accuracy: 0.851086
+ -- 330 / 333 --
+mean loss: 0.446063
+accuracy: 0.849140
+Starting pickle....
+2019-01-19 20:39:05.514505
+---- EPOCH 004 EVALUATION ----
+eval mean loss: 0.248652
+eval point accuracy vox: 0.892488
+eval point avg class acc vox: 0.903547
+eval point accuracy: 0.892487
+eval point avg class acc: 0.907884
+eval point calibrated average acc: 0.917449
+vox based --------class 1 weight: 0.808935, acc: 0.879190; class 2 weight: 0.191065, acc: 0.936578; 
+2019-01-19 20:49:51.089691
+---- EPOCH 005 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.007764
+eval whole scene point accuracy vox: 0.892410
+eval whole scene point avg class acc vox: 0.903480
+eval whole scene point accuracy: 0.892496
+eval whole scene point avg class acc: 0.907940
+eval whole scene point calibrated average acc vox: 0.909450
+vox based --------class 1 weight: 0.809068, acc: 0.885571; class 2 weight: 0.190932, acc: 0.921390; 
+Model saved in file: log/best_model_epoch_010.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 011 ****
+2019-01-19 20:56:20.710330
+ -- 010 / 333 --
+mean loss: 0.450790
+accuracy: 0.831820
+ -- 020 / 333 --
+mean loss: 0.461126
+accuracy: 0.839439
+ -- 030 / 333 --
+mean loss: 0.469459
+accuracy: 0.845693
+ -- 040 / 333 --
+mean loss: 0.467685
+accuracy: 0.836076
+ -- 050 / 333 --
+mean loss: 0.454017
+accuracy: 0.843480
+ -- 060 / 333 --
+mean loss: 0.419364
+accuracy: 0.841905
+ -- 070 / 333 --
+mean loss: 0.402899
+accuracy: 0.868081
+ -- 080 / 333 --
+mean loss: 0.423851
+accuracy: 0.841598
+ -- 090 / 333 --
+mean loss: 0.429383
+accuracy: 0.852692
+ -- 100 / 333 --
+mean loss: 0.479401
+accuracy: 0.842701
+ -- 110 / 333 --
+mean loss: 0.468611
+accuracy: 0.866387
+ -- 120 / 333 --
+mean loss: 0.479652
+accuracy: 0.839775
+ -- 130 / 333 --
+mean loss: 0.421241
+accuracy: 0.848706
+ -- 140 / 333 --
+mean loss: 0.431948
+accuracy: 0.850483
+ -- 150 / 333 --
+mean loss: 0.453281
+accuracy: 0.837062
+ -- 160 / 333 --
+mean loss: 0.449433
+accuracy: 0.847153
+ -- 170 / 333 --
+mean loss: 0.439844
+accuracy: 0.856121
+ -- 180 / 333 --
+mean loss: 0.498597
+accuracy: 0.848813
+ -- 190 / 333 --
+mean loss: 0.445785
+accuracy: 0.849342
+ -- 200 / 333 --
+mean loss: 0.449063
+accuracy: 0.848437
+ -- 210 / 333 --
+mean loss: 0.448401
+accuracy: 0.840960
+ -- 220 / 333 --
+mean loss: 0.443835
+accuracy: 0.854525
+ -- 230 / 333 --
+mean loss: 0.445781
+accuracy: 0.858546
+ -- 240 / 333 --
+mean loss: 0.421178
+accuracy: 0.863281
+ -- 250 / 333 --
+mean loss: 0.457026
+accuracy: 0.844073
+ -- 260 / 333 --
+mean loss: 0.468574
+accuracy: 0.854450
+ -- 270 / 333 --
+mean loss: 0.444862
+accuracy: 0.880948
+ -- 280 / 333 --
+mean loss: 0.465130
+accuracy: 0.856955
+ -- 290 / 333 --
+mean loss: 0.433350
+accuracy: 0.844904
+ -- 300 / 333 --
+mean loss: 0.452058
+accuracy: 0.855113
+ -- 310 / 333 --
+mean loss: 0.417236
+accuracy: 0.863201
+ -- 320 / 333 --
+mean loss: 0.453969
+accuracy: 0.844258
+ -- 330 / 333 --
+mean loss: 0.450276
+accuracy: 0.861415
+Starting pickle....
+**** EPOCH 012 ****
+2019-01-19 21:08:54.062729
+ -- 010 / 333 --
+mean loss: 0.480612
+accuracy: 0.852160
+ -- 020 / 333 --
+mean loss: 0.487679
+accuracy: 0.874615
+ -- 030 / 333 --
+mean loss: 0.455938
+accuracy: 0.875487
+ -- 040 / 333 --
+mean loss: 0.476100
+accuracy: 0.844665
+ -- 050 / 333 --
+mean loss: 0.482448
+accuracy: 0.852656
+ -- 060 / 333 --
+mean loss: 0.443538
+accuracy: 0.858612
+ -- 070 / 333 --
+mean loss: 0.462267
+accuracy: 0.850092
+ -- 080 / 333 --
+mean loss: 0.453224
+accuracy: 0.850592
+ -- 090 / 333 --
+mean loss: 0.436516
+accuracy: 0.876136
+ -- 100 / 333 --
+mean loss: 0.483146
+accuracy: 0.857018
+ -- 110 / 333 --
+mean loss: 0.466042
+accuracy: 0.859997
+ -- 120 / 333 --
+mean loss: 0.437688
+accuracy: 0.850191
+ -- 130 / 333 --
+mean loss: 0.484564
+accuracy: 0.847624
+ -- 140 / 333 --
+mean loss: 0.446047
+accuracy: 0.874941
+ -- 150 / 333 --
+mean loss: 0.460357
+accuracy: 0.856548
+ -- 160 / 333 --
+mean loss: 0.441387
+accuracy: 0.840995
+ -- 170 / 333 --
+mean loss: 0.428482
+accuracy: 0.844083
+ -- 180 / 333 --
+mean loss: 0.446074
+accuracy: 0.845893
+ -- 190 / 333 --
+mean loss: 0.428012
+accuracy: 0.851865
+ -- 200 / 333 --
+mean loss: 0.468267
+accuracy: 0.849741
+ -- 210 / 333 --
+mean loss: 0.460145
+accuracy: 0.847610
+ -- 220 / 333 --
+mean loss: 0.442794
+accuracy: 0.829436
+ -- 230 / 333 --
+mean loss: 0.425563
+accuracy: 0.841779
+ -- 240 / 333 --
+mean loss: 0.470742
+accuracy: 0.851678
+ -- 250 / 333 --
+mean loss: 0.431157
+accuracy: 0.852237
+ -- 260 / 333 --
+mean loss: 0.412379
+accuracy: 0.851319
+ -- 270 / 333 --
+mean loss: 0.411621
+accuracy: 0.871003
+ -- 280 / 333 --
+mean loss: 0.446377
+accuracy: 0.849660
+ -- 290 / 333 --
+mean loss: 0.436849
+accuracy: 0.858263
+ -- 300 / 333 --
+mean loss: 0.446331
+accuracy: 0.861512
+ -- 310 / 333 --
+mean loss: 0.478683
+accuracy: 0.860933
+ -- 320 / 333 --
+mean loss: 0.431512
+accuracy: 0.854659
+ -- 330 / 333 --
+mean loss: 0.424598
+accuracy: 0.857416
+Starting pickle....
+**** EPOCH 013 ****
+2019-01-19 21:21:27.149272
+ -- 010 / 333 --
+mean loss: 0.455655
+accuracy: 0.851792
+ -- 020 / 333 --
+mean loss: 0.458107
+accuracy: 0.868922
+ -- 030 / 333 --
+mean loss: 0.462668
+accuracy: 0.849839
+ -- 040 / 333 --
+mean loss: 0.409634
+accuracy: 0.847993
+ -- 050 / 333 --
+mean loss: 0.458329
+accuracy: 0.839114
+ -- 060 / 333 --
+mean loss: 0.456336
+accuracy: 0.854344
+ -- 070 / 333 --
+mean loss: 0.421558
+accuracy: 0.866692
+ -- 080 / 333 --
+mean loss: 0.484723
+accuracy: 0.840600
+ -- 090 / 333 --
+mean loss: 0.428421
+accuracy: 0.879380
+ -- 100 / 333 --
+mean loss: 0.411737
+accuracy: 0.870529
+ -- 110 / 333 --
+mean loss: 0.422288
+accuracy: 0.848854
+ -- 120 / 333 --
+mean loss: 0.398125
+accuracy: 0.843790
+ -- 130 / 333 --
+mean loss: 0.432478
+accuracy: 0.863995
+ -- 140 / 333 --
+mean loss: 0.470641
+accuracy: 0.857070
+ -- 150 / 333 --
+mean loss: 0.428108
+accuracy: 0.871119
+ -- 160 / 333 --
+mean loss: 0.429849
+accuracy: 0.866923
+ -- 170 / 333 --
+mean loss: 0.442090
+accuracy: 0.849797
+ -- 180 / 333 --
+mean loss: 0.423131
+accuracy: 0.850315
+ -- 190 / 333 --
+mean loss: 0.412161
+accuracy: 0.840486
+ -- 200 / 333 --
+mean loss: 0.475603
+accuracy: 0.850891
+ -- 210 / 333 --
+mean loss: 0.437885
+accuracy: 0.844561
+ -- 220 / 333 --
+mean loss: 0.460942
+accuracy: 0.831495
+ -- 230 / 333 --
+mean loss: 0.474930
+accuracy: 0.855700
+ -- 240 / 333 --
+mean loss: 0.481282
+accuracy: 0.853098
+ -- 250 / 333 --
+mean loss: 0.452094
+accuracy: 0.854484
+ -- 260 / 333 --
+mean loss: 0.442224
+accuracy: 0.847485
+ -- 270 / 333 --
+mean loss: 0.439465
+accuracy: 0.854761
+ -- 280 / 333 --
+mean loss: 0.423316
+accuracy: 0.847330
+ -- 290 / 333 --
+mean loss: 0.462459
+accuracy: 0.854187
+ -- 300 / 333 --
+mean loss: 0.422696
+accuracy: 0.845281
+ -- 310 / 333 --
+mean loss: 0.455231
+accuracy: 0.860226
+ -- 320 / 333 --
+mean loss: 0.429919
+accuracy: 0.844683
+ -- 330 / 333 --
+mean loss: 0.442330
+accuracy: 0.867357
+Starting pickle....
+**** EPOCH 014 ****
+2019-01-19 21:34:00.138372
+ -- 010 / 333 --
+mean loss: 0.465078
+accuracy: 0.843245
+ -- 020 / 333 --
+mean loss: 0.433883
+accuracy: 0.850687
+ -- 030 / 333 --
+mean loss: 0.466662
+accuracy: 0.853167
+ -- 040 / 333 --
+mean loss: 0.444387
+accuracy: 0.858393
+ -- 050 / 333 --
+mean loss: 0.402526
+accuracy: 0.852654
+ -- 060 / 333 --
+mean loss: 0.420861
+accuracy: 0.874409
+ -- 070 / 333 --
+mean loss: 0.452363
+accuracy: 0.837599
+ -- 080 / 333 --
+mean loss: 0.446015
+accuracy: 0.871270
+ -- 090 / 333 --
+mean loss: 0.448344
+accuracy: 0.866175
+ -- 100 / 333 --
+mean loss: 0.469339
+accuracy: 0.850740
+ -- 110 / 333 --
+mean loss: 0.446586
+accuracy: 0.851353
+ -- 120 / 333 --
+mean loss: 0.415997
+accuracy: 0.846038
+ -- 130 / 333 --
+mean loss: 0.457505
+accuracy: 0.847016
+ -- 140 / 333 --
+mean loss: 0.463787
+accuracy: 0.858210
+ -- 150 / 333 --
+mean loss: 0.446021
+accuracy: 0.859826
+ -- 160 / 333 --
+mean loss: 0.425155
+accuracy: 0.866752
+ -- 170 / 333 --
+mean loss: 0.430706
+accuracy: 0.868371
+ -- 180 / 333 --
+mean loss: 0.450593
+accuracy: 0.867083
+ -- 190 / 333 --
+mean loss: 0.445517
+accuracy: 0.865714
+ -- 200 / 333 --
+mean loss: 0.454692
+accuracy: 0.847186
+ -- 210 / 333 --
+mean loss: 0.430596
+accuracy: 0.876639
+ -- 220 / 333 --
+mean loss: 0.430390
+accuracy: 0.829986
+ -- 230 / 333 --
+mean loss: 0.457301
+accuracy: 0.837048
+ -- 240 / 333 --
+mean loss: 0.437094
+accuracy: 0.871879
+ -- 250 / 333 --
+mean loss: 0.466421
+accuracy: 0.859856
+ -- 260 / 333 --
+mean loss: 0.433610
+accuracy: 0.882652
+ -- 270 / 333 --
+mean loss: 0.434613
+accuracy: 0.860259
+ -- 280 / 333 --
+mean loss: 0.439504
+accuracy: 0.848223
+ -- 290 / 333 --
+mean loss: 0.435182
+accuracy: 0.874770
+ -- 300 / 333 --
+mean loss: 0.464688
+accuracy: 0.863558
+ -- 310 / 333 --
+mean loss: 0.439412
+accuracy: 0.858374
+ -- 320 / 333 --
+mean loss: 0.408325
+accuracy: 0.866522
+ -- 330 / 333 --
+mean loss: 0.437860
+accuracy: 0.846972
+Starting pickle....
+**** EPOCH 015 ****
+2019-01-19 21:46:31.888171
+ -- 010 / 333 --
+mean loss: 0.418473
+accuracy: 0.860610
+ -- 020 / 333 --
+mean loss: 0.441209
+accuracy: 0.845802
+ -- 030 / 333 --
+mean loss: 0.428329
+accuracy: 0.862383
+ -- 040 / 333 --
+mean loss: 0.448676
+accuracy: 0.853028
+ -- 050 / 333 --
+mean loss: 0.438889
+accuracy: 0.869481
+ -- 060 / 333 --
+mean loss: 0.433744
+accuracy: 0.852374
+ -- 070 / 333 --
+mean loss: 0.418746
+accuracy: 0.868050
+ -- 080 / 333 --
+mean loss: 0.426709
+accuracy: 0.858468
+ -- 090 / 333 --
+mean loss: 0.458148
+accuracy: 0.876506
+ -- 100 / 333 --
+mean loss: 0.414799
+accuracy: 0.862234
+ -- 110 / 333 --
+mean loss: 0.451757
+accuracy: 0.866876
+ -- 120 / 333 --
+mean loss: 0.438412
+accuracy: 0.851367
+ -- 130 / 333 --
+mean loss: 0.463313
+accuracy: 0.856779
+ -- 140 / 333 --
+mean loss: 0.426586
+accuracy: 0.853802
+ -- 150 / 333 --
+mean loss: 0.399035
+accuracy: 0.860172
+ -- 160 / 333 --
+mean loss: 0.412001
+accuracy: 0.865849
+ -- 170 / 333 --
+mean loss: 0.421422
+accuracy: 0.869673
+ -- 180 / 333 --
+mean loss: 0.455347
+accuracy: 0.848965
+ -- 190 / 333 --
+mean loss: 0.433026
+accuracy: 0.851852
+ -- 200 / 333 --
+mean loss: 0.434150
+accuracy: 0.857766
+ -- 210 / 333 --
+mean loss: 0.446240
+accuracy: 0.836402
+ -- 220 / 333 --
+mean loss: 0.410236
+accuracy: 0.849924
+ -- 230 / 333 --
+mean loss: 0.439288
+accuracy: 0.867768
+ -- 240 / 333 --
+mean loss: 0.412415
+accuracy: 0.866308
+ -- 250 / 333 --
+mean loss: 0.462747
+accuracy: 0.848817
+ -- 260 / 333 --
+mean loss: 0.442325
+accuracy: 0.878307
+ -- 270 / 333 --
+mean loss: 0.445272
+accuracy: 0.885474
+ -- 280 / 333 --
+mean loss: 0.444838
+accuracy: 0.855115
+ -- 290 / 333 --
+mean loss: 0.447310
+accuracy: 0.858511
+ -- 300 / 333 --
+mean loss: 0.453875
+accuracy: 0.871249
+ -- 310 / 333 --
+mean loss: 0.425340
+accuracy: 0.841698
+ -- 320 / 333 --
+mean loss: 0.458979
+accuracy: 0.861716
+ -- 330 / 333 --
+mean loss: 0.450433
+accuracy: 0.853175
+Starting pickle....
+2019-01-19 21:59:04.137192
+---- EPOCH 006 EVALUATION ----
+eval mean loss: 0.230094
+eval point accuracy vox: 0.899359
+eval point avg class acc vox: 0.905126
+eval point accuracy: 0.898971
+eval point avg class acc: 0.910132
+eval point calibrated average acc: 0.917066
+vox based --------class 1 weight: 0.808911, acc: 0.889330; class 2 weight: 0.191089, acc: 0.930934; 
+2019-01-19 22:09:52.144973
+---- EPOCH 007 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.007178
+eval whole scene point accuracy vox: 0.899337
+eval whole scene point avg class acc vox: 0.904997
+eval whole scene point accuracy: 0.899000
+eval whole scene point avg class acc: 0.910041
+eval whole scene point calibrated average acc vox: 0.908050
+vox based --------class 1 weight: 0.808985, acc: 0.895838; class 2 weight: 0.191015, acc: 0.914156; 
+**** EPOCH 016 ****
+2019-01-19 22:16:21.391866
+ -- 010 / 333 --
+mean loss: 0.385173
+accuracy: 0.855582
+ -- 020 / 333 --
+mean loss: 0.420673
+accuracy: 0.864624
+ -- 030 / 333 --
+mean loss: 0.455298
+accuracy: 0.852134
+ -- 040 / 333 --
+mean loss: 0.457883
+accuracy: 0.850990
+ -- 050 / 333 --
+mean loss: 0.436482
+accuracy: 0.863075
+ -- 060 / 333 --
+mean loss: 0.476887
+accuracy: 0.863514
+ -- 070 / 333 --
+mean loss: 0.430218
+accuracy: 0.846004
+ -- 080 / 333 --
+mean loss: 0.447025
+accuracy: 0.866166
+ -- 090 / 333 --
+mean loss: 0.461203
+accuracy: 0.857734
+ -- 100 / 333 --
+mean loss: 0.391141
+accuracy: 0.870996
+ -- 110 / 333 --
+mean loss: 0.458598
+accuracy: 0.873877
+ -- 120 / 333 --
+mean loss: 0.444523
+accuracy: 0.845837
+ -- 130 / 333 --
+mean loss: 0.421973
+accuracy: 0.886764
+ -- 140 / 333 --
+mean loss: 0.417141
+accuracy: 0.869561
+ -- 150 / 333 --
+mean loss: 0.398830
+accuracy: 0.851546
+ -- 160 / 333 --
+mean loss: 0.455000
+accuracy: 0.870098
+ -- 170 / 333 --
+mean loss: 0.436184
+accuracy: 0.866544
+ -- 180 / 333 --
+mean loss: 0.406910
+accuracy: 0.868068
+ -- 190 / 333 --
+mean loss: 0.442097
+accuracy: 0.875536
+ -- 200 / 333 --
+mean loss: 0.441700
+accuracy: 0.841447
+ -- 210 / 333 --
+mean loss: 0.460110
+accuracy: 0.855635
+ -- 220 / 333 --
+mean loss: 0.426333
+accuracy: 0.864566
+ -- 230 / 333 --
+mean loss: 0.435437
+accuracy: 0.859118
+ -- 240 / 333 --
+mean loss: 0.439834
+accuracy: 0.873816
+ -- 250 / 333 --
+mean loss: 0.407411
+accuracy: 0.834607
+ -- 260 / 333 --
+mean loss: 0.456822
+accuracy: 0.876527
+ -- 270 / 333 --
+mean loss: 0.454263
+accuracy: 0.850232
+ -- 280 / 333 --
+mean loss: 0.432594
+accuracy: 0.865340
+ -- 290 / 333 --
+mean loss: 0.456717
+accuracy: 0.848180
+ -- 300 / 333 --
+mean loss: 0.427100
+accuracy: 0.848317
+ -- 310 / 333 --
+mean loss: 0.444166
+accuracy: 0.840093
+ -- 320 / 333 --
+mean loss: 0.412783
+accuracy: 0.850973
+ -- 330 / 333 --
+mean loss: 0.435421
+accuracy: 0.860033
+Starting pickle....
+**** EPOCH 017 ****
+2019-01-19 22:28:55.210982
+ -- 010 / 333 --
+mean loss: 0.435171
+accuracy: 0.861199
+ -- 020 / 333 --
+mean loss: 0.444278
+accuracy: 0.869910
+ -- 030 / 333 --
+mean loss: 0.435399
+accuracy: 0.844134
+ -- 040 / 333 --
+mean loss: 0.391416
+accuracy: 0.850068
+ -- 050 / 333 --
+mean loss: 0.454418
+accuracy: 0.874979
+ -- 060 / 333 --
+mean loss: 0.435849
+accuracy: 0.850394
+ -- 070 / 333 --
+mean loss: 0.431524
+accuracy: 0.861933
+ -- 080 / 333 --
+mean loss: 0.405962
+accuracy: 0.857081
+ -- 090 / 333 --
+mean loss: 0.414984
+accuracy: 0.861917
+ -- 100 / 333 --
+mean loss: 0.433736
+accuracy: 0.861390
+ -- 110 / 333 --
+mean loss: 0.418733
+accuracy: 0.856141
+ -- 120 / 333 --
+mean loss: 0.414480
+accuracy: 0.859277
+ -- 130 / 333 --
+mean loss: 0.433289
+accuracy: 0.871138
+ -- 140 / 333 --
+mean loss: 0.429011
+accuracy: 0.862062
+ -- 150 / 333 --
+mean loss: 0.444527
+accuracy: 0.875859
+ -- 160 / 333 --
+mean loss: 0.455636
+accuracy: 0.847386
+ -- 170 / 333 --
+mean loss: 0.409053
+accuracy: 0.859304
+ -- 180 / 333 --
+mean loss: 0.469586
+accuracy: 0.854266
+ -- 190 / 333 --
+mean loss: 0.412230
+accuracy: 0.879269
+ -- 200 / 333 --
+mean loss: 0.470891
+accuracy: 0.860128
+ -- 210 / 333 --
+mean loss: 0.440718
+accuracy: 0.857557
+ -- 220 / 333 --
+mean loss: 0.474985
+accuracy: 0.872932
+ -- 230 / 333 --
+mean loss: 0.402880
+accuracy: 0.857162
+ -- 240 / 333 --
+mean loss: 0.420639
+accuracy: 0.871463
+ -- 250 / 333 --
+mean loss: 0.426570
+accuracy: 0.890557
+ -- 260 / 333 --
+mean loss: 0.417869
+accuracy: 0.857757
+ -- 270 / 333 --
+mean loss: 0.430839
+accuracy: 0.868207
+ -- 280 / 333 --
+mean loss: 0.446480
+accuracy: 0.848472
+ -- 290 / 333 --
+mean loss: 0.466262
+accuracy: 0.856075
+ -- 300 / 333 --
+mean loss: 0.448642
+accuracy: 0.846226
+ -- 310 / 333 --
+mean loss: 0.447434
+accuracy: 0.868424
+ -- 320 / 333 --
+mean loss: 0.425574
+accuracy: 0.866197
+ -- 330 / 333 --
+mean loss: 0.433088
+accuracy: 0.882638
+Starting pickle....
+**** EPOCH 018 ****
+2019-01-19 22:41:28.658420
+ -- 010 / 333 --
+mean loss: 0.456265
+accuracy: 0.859468
+ -- 020 / 333 --
+mean loss: 0.424402
+accuracy: 0.877766
+ -- 030 / 333 --
+mean loss: 0.399016
+accuracy: 0.871843
+ -- 040 / 333 --
+mean loss: 0.428996
+accuracy: 0.860538
+ -- 050 / 333 --
+mean loss: 0.396160
+accuracy: 0.857290
+ -- 060 / 333 --
+mean loss: 0.445572
+accuracy: 0.844753
+ -- 070 / 333 --
+mean loss: 0.436820
+accuracy: 0.841465
+ -- 080 / 333 --
+mean loss: 0.432706
+accuracy: 0.869204
+ -- 090 / 333 --
+mean loss: 0.427046
+accuracy: 0.868564
+ -- 100 / 333 --
+mean loss: 0.426822
+accuracy: 0.863580
+ -- 110 / 333 --
+mean loss: 0.448079
+accuracy: 0.841389
+ -- 120 / 333 --
+mean loss: 0.451279
+accuracy: 0.843378
+ -- 130 / 333 --
+mean loss: 0.430384
+accuracy: 0.847993
+ -- 140 / 333 --
+mean loss: 0.437186
+accuracy: 0.855754
+ -- 150 / 333 --
+mean loss: 0.398245
+accuracy: 0.850089
+ -- 160 / 333 --
+mean loss: 0.413269
+accuracy: 0.855927
+ -- 170 / 333 --
+mean loss: 0.401266
+accuracy: 0.863538
+ -- 180 / 333 --
+mean loss: 0.457211
+accuracy: 0.867671
+ -- 190 / 333 --
+mean loss: 0.445412
+accuracy: 0.847036
+ -- 200 / 333 --
+mean loss: 0.434903
+accuracy: 0.892172
+ -- 210 / 333 --
+mean loss: 0.471719
+accuracy: 0.857191
+ -- 220 / 333 --
+mean loss: 0.416174
+accuracy: 0.865435
+ -- 230 / 333 --
+mean loss: 0.454272
+accuracy: 0.846405
+ -- 240 / 333 --
+mean loss: 0.449226
+accuracy: 0.849951
+ -- 250 / 333 --
+mean loss: 0.428879
+accuracy: 0.855584
+ -- 260 / 333 --
+mean loss: 0.425350
+accuracy: 0.853123
+ -- 270 / 333 --
+mean loss: 0.443443
+accuracy: 0.859505
+ -- 280 / 333 --
+mean loss: 0.422402
+accuracy: 0.849165
+ -- 290 / 333 --
+mean loss: 0.424737
+accuracy: 0.862049
+ -- 300 / 333 --
+mean loss: 0.439124
+accuracy: 0.861221
+ -- 310 / 333 --
+mean loss: 0.422835
+accuracy: 0.877402
+ -- 320 / 333 --
+mean loss: 0.423936
+accuracy: 0.842774
+ -- 330 / 333 --
+mean loss: 0.443102
+accuracy: 0.855923
+Starting pickle....
+**** EPOCH 019 ****
+2019-01-19 22:54:01.854164
+ -- 010 / 333 --
+mean loss: 0.425593
+accuracy: 0.867133
+ -- 020 / 333 --
+mean loss: 0.443563
+accuracy: 0.856084
+ -- 030 / 333 --
+mean loss: 0.431166
+accuracy: 0.847331
+ -- 040 / 333 --
+mean loss: 0.451880
+accuracy: 0.866991
+ -- 050 / 333 --
+mean loss: 0.417148
+accuracy: 0.878677
+ -- 060 / 333 --
+mean loss: 0.419373
+accuracy: 0.865167
+ -- 070 / 333 --
+mean loss: 0.414328
+accuracy: 0.854610
+ -- 080 / 333 --
+mean loss: 0.423378
+accuracy: 0.877928
+ -- 090 / 333 --
+mean loss: 0.418035
+accuracy: 0.868725
+ -- 100 / 333 --
+mean loss: 0.416922
+accuracy: 0.870784
+ -- 110 / 333 --
+mean loss: 0.414193
+accuracy: 0.817626
+ -- 120 / 333 --
+mean loss: 0.410806
+accuracy: 0.876004
+ -- 130 / 333 --
+mean loss: 0.389085
+accuracy: 0.852049
+ -- 140 / 333 --
+mean loss: 0.441012
+accuracy: 0.883111
+ -- 150 / 333 --
+mean loss: 0.445112
+accuracy: 0.864890
+ -- 160 / 333 --
+mean loss: 0.431756
+accuracy: 0.862495
+ -- 170 / 333 --
+mean loss: 0.455087
+accuracy: 0.871673
+ -- 180 / 333 --
+mean loss: 0.432543
+accuracy: 0.856348
+ -- 190 / 333 --
+mean loss: 0.425612
+accuracy: 0.848926
+ -- 200 / 333 --
+mean loss: 0.440399
+accuracy: 0.848815
+ -- 210 / 333 --
+mean loss: 0.419014
+accuracy: 0.858372
+ -- 220 / 333 --
+mean loss: 0.428927
+accuracy: 0.879760
+ -- 230 / 333 --
+mean loss: 0.409289
+accuracy: 0.867892
+ -- 240 / 333 --
+mean loss: 0.448676
+accuracy: 0.871675
+ -- 250 / 333 --
+mean loss: 0.447830
+accuracy: 0.859002
+ -- 260 / 333 --
+mean loss: 0.443713
+accuracy: 0.861781
+ -- 270 / 333 --
+mean loss: 0.423414
+accuracy: 0.885252
+ -- 280 / 333 --
+mean loss: 0.434683
+accuracy: 0.875465
+ -- 290 / 333 --
+mean loss: 0.401972
+accuracy: 0.873396
+ -- 300 / 333 --
+mean loss: 0.379956
+accuracy: 0.835386
+ -- 310 / 333 --
+mean loss: 0.401077
+accuracy: 0.858512
+ -- 320 / 333 --
+mean loss: 0.411170
+accuracy: 0.846220
+ -- 330 / 333 --
+mean loss: 0.406109
+accuracy: 0.836423
+Starting pickle....
+**** EPOCH 020 ****
+2019-01-19 23:06:34.620442
+ -- 010 / 333 --
+mean loss: 0.417801
+accuracy: 0.855038
+ -- 020 / 333 --
+mean loss: 0.403529
+accuracy: 0.861062
+ -- 030 / 333 --
+mean loss: 0.397092
+accuracy: 0.851083
+ -- 040 / 333 --
+mean loss: 0.425584
+accuracy: 0.874250
+ -- 050 / 333 --
+mean loss: 0.392642
+accuracy: 0.871040
+ -- 060 / 333 --
+mean loss: 0.425951
+accuracy: 0.856238
+ -- 070 / 333 --
+mean loss: 0.431015
+accuracy: 0.874616
+ -- 080 / 333 --
+mean loss: 0.429111
+accuracy: 0.845303
+ -- 090 / 333 --
+mean loss: 0.428336
+accuracy: 0.840199
+ -- 100 / 333 --
+mean loss: 0.419723
+accuracy: 0.866301
+ -- 110 / 333 --
+mean loss: 0.397097
+accuracy: 0.857648
+ -- 120 / 333 --
+mean loss: 0.439826
+accuracy: 0.844459
+ -- 130 / 333 --
+mean loss: 0.432432
+accuracy: 0.848753
+ -- 140 / 333 --
+mean loss: 0.430245
+accuracy: 0.855497
+ -- 150 / 333 --
+mean loss: 0.429226
+accuracy: 0.854652
+ -- 160 / 333 --
+mean loss: 0.416748
+accuracy: 0.862599
+ -- 170 / 333 --
+mean loss: 0.408585
+accuracy: 0.870224
+ -- 180 / 333 --
+mean loss: 0.458173
+accuracy: 0.855078
+ -- 190 / 333 --
+mean loss: 0.430561
+accuracy: 0.864923
+ -- 200 / 333 --
+mean loss: 0.436915
+accuracy: 0.874190
+ -- 210 / 333 --
+mean loss: 0.414937
+accuracy: 0.888617
+ -- 220 / 333 --
+mean loss: 0.410695
+accuracy: 0.847415
+ -- 230 / 333 --
+mean loss: 0.426032
+accuracy: 0.853558
+ -- 240 / 333 --
+mean loss: 0.427327
+accuracy: 0.876162
+ -- 250 / 333 --
+mean loss: 0.391038
+accuracy: 0.864336
+ -- 260 / 333 --
+mean loss: 0.391926
+accuracy: 0.873692
+ -- 270 / 333 --
+mean loss: 0.405131
+accuracy: 0.865234
+ -- 280 / 333 --
+mean loss: 0.417902
+accuracy: 0.852615
+ -- 290 / 333 --
+mean loss: 0.414455
+accuracy: 0.862260
+ -- 300 / 333 --
+mean loss: 0.448513
+accuracy: 0.875014
+ -- 310 / 333 --
+mean loss: 0.409860
+accuracy: 0.864367
+ -- 320 / 333 --
+mean loss: 0.436620
+accuracy: 0.860686
+ -- 330 / 333 --
+mean loss: 0.420552
+accuracy: 0.868923
+Starting pickle....
+2019-01-19 23:19:08.757324
+---- EPOCH 008 EVALUATION ----
+eval mean loss: 0.203794
+eval point accuracy vox: 0.914335
+eval point avg class acc vox: 0.888318
+eval point accuracy: 0.912571
+eval point avg class acc: 0.898255
+eval point calibrated average acc: 0.889361
+vox based --------class 1 weight: 0.808937, acc: 0.924938; class 2 weight: 0.191063, acc: 0.871573; 
+2019-01-19 23:29:54.797558
+---- EPOCH 009 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006383
+eval whole scene point accuracy vox: 0.913893
+eval whole scene point avg class acc vox: 0.888116
+eval whole scene point accuracy: 0.912181
+eval whole scene point avg class acc: 0.898142
+eval whole scene point calibrated average acc vox: 0.874213
+vox based --------class 1 weight: 0.809014, acc: 0.929825; class 2 weight: 0.190986, acc: 0.846408; 
+Model saved in file: log/model.ckpt
+**** EPOCH 021 ****
+2019-01-19 23:36:24.585744
+ -- 010 / 333 --
+mean loss: 0.391550
+accuracy: 0.864102
+ -- 020 / 333 --
+mean loss: 0.428414
+accuracy: 0.872033
+ -- 030 / 333 --
+mean loss: 0.430667
+accuracy: 0.874568
+ -- 040 / 333 --
+mean loss: 0.437595
+accuracy: 0.854875
+ -- 050 / 333 --
+mean loss: 0.396052
+accuracy: 0.872145
+ -- 060 / 333 --
+mean loss: 0.439528
+accuracy: 0.868064
+ -- 070 / 333 --
+mean loss: 0.434341
+accuracy: 0.870343
+ -- 080 / 333 --
+mean loss: 0.433399
+accuracy: 0.875552
+ -- 090 / 333 --
+mean loss: 0.417544
+accuracy: 0.887607
+ -- 100 / 333 --
+mean loss: 0.436505
+accuracy: 0.861736
+ -- 110 / 333 --
+mean loss: 0.394519
+accuracy: 0.877090
+ -- 120 / 333 --
+mean loss: 0.389726
+accuracy: 0.860089
+ -- 130 / 333 --
+mean loss: 0.423090
+accuracy: 0.865247
+ -- 140 / 333 --
+mean loss: 0.399632
+accuracy: 0.864941
+ -- 150 / 333 --
+mean loss: 0.456095
+accuracy: 0.851950
+ -- 160 / 333 --
+mean loss: 0.447744
+accuracy: 0.879485
+ -- 170 / 333 --
+mean loss: 0.398919
+accuracy: 0.882624
+ -- 180 / 333 --
+mean loss: 0.402336
+accuracy: 0.845793
+ -- 190 / 333 --
+mean loss: 0.428375
+accuracy: 0.842300
+ -- 200 / 333 --
+mean loss: 0.424629
+accuracy: 0.858112
+ -- 210 / 333 --
+mean loss: 0.457609
+accuracy: 0.859781
+ -- 220 / 333 --
+mean loss: 0.443537
+accuracy: 0.884736
+ -- 230 / 333 --
+mean loss: 0.412540
+accuracy: 0.867006
+ -- 240 / 333 --
+mean loss: 0.415737
+accuracy: 0.858064
+ -- 250 / 333 --
+mean loss: 0.420812
+accuracy: 0.854087
+ -- 260 / 333 --
+mean loss: 0.405844
+accuracy: 0.858947
+ -- 270 / 333 --
+mean loss: 0.425701
+accuracy: 0.860123
+ -- 280 / 333 --
+mean loss: 0.428190
+accuracy: 0.858725
+ -- 290 / 333 --
+mean loss: 0.423967
+accuracy: 0.852887
+ -- 300 / 333 --
+mean loss: 0.381405
+accuracy: 0.850864
+ -- 310 / 333 --
+mean loss: 0.388171
+accuracy: 0.853955
+ -- 320 / 333 --
+mean loss: 0.418901
+accuracy: 0.877191
+ -- 330 / 333 --
+mean loss: 0.436205
+accuracy: 0.876049
+Starting pickle....
+**** EPOCH 022 ****
+2019-01-19 23:48:59.269737
+ -- 010 / 333 --
+mean loss: 0.425363
+accuracy: 0.867009
+ -- 020 / 333 --
+mean loss: 0.421526
+accuracy: 0.858958
+ -- 030 / 333 --
+mean loss: 0.411405
+accuracy: 0.862537
+ -- 040 / 333 --
+mean loss: 0.438565
+accuracy: 0.867568
+ -- 050 / 333 --
+mean loss: 0.401202
+accuracy: 0.854388
+ -- 060 / 333 --
+mean loss: 0.411947
+accuracy: 0.847370
+ -- 070 / 333 --
+mean loss: 0.433466
+accuracy: 0.872928
+ -- 080 / 333 --
+mean loss: 0.439157
+accuracy: 0.864652
+ -- 090 / 333 --
+mean loss: 0.415853
+accuracy: 0.878888
+ -- 100 / 333 --
+mean loss: 0.418412
+accuracy: 0.867691
+ -- 110 / 333 --
+mean loss: 0.421691
+accuracy: 0.843752
+ -- 120 / 333 --
+mean loss: 0.416977
+accuracy: 0.855289
+ -- 130 / 333 --
+mean loss: 0.417816
+accuracy: 0.871371
+ -- 140 / 333 --
+mean loss: 0.416857
+accuracy: 0.870050
+ -- 150 / 333 --
+mean loss: 0.412676
+accuracy: 0.884209
+ -- 160 / 333 --
+mean loss: 0.356287
+accuracy: 0.861638
+ -- 170 / 333 --
+mean loss: 0.386106
+accuracy: 0.859402
+ -- 180 / 333 --
+mean loss: 0.415691
+accuracy: 0.879646
+ -- 190 / 333 --
+mean loss: 0.410890
+accuracy: 0.876738
+ -- 200 / 333 --
+mean loss: 0.408174
+accuracy: 0.881877
+ -- 210 / 333 --
+mean loss: 0.427417
+accuracy: 0.861818
+ -- 220 / 333 --
+mean loss: 0.415303
+accuracy: 0.874660
+ -- 230 / 333 --
+mean loss: 0.431470
+accuracy: 0.880296
+ -- 240 / 333 --
+mean loss: 0.444586
+accuracy: 0.853301
+ -- 250 / 333 --
+mean loss: 0.409691
+accuracy: 0.861018
+ -- 260 / 333 --
+mean loss: 0.417911
+accuracy: 0.856353
+ -- 270 / 333 --
+mean loss: 0.436218
+accuracy: 0.864399
+ -- 280 / 333 --
+mean loss: 0.457147
+accuracy: 0.863263
+ -- 290 / 333 --
+mean loss: 0.417032
+accuracy: 0.873257
+ -- 300 / 333 --
+mean loss: 0.430928
+accuracy: 0.855578
+ -- 310 / 333 --
+mean loss: 0.405944
+accuracy: 0.865208
+ -- 320 / 333 --
+mean loss: 0.440866
+accuracy: 0.861297
+ -- 330 / 333 --
+mean loss: 0.407668
+accuracy: 0.837857
+Starting pickle....
+**** EPOCH 023 ****
+2019-01-20 00:01:33.124734
+ -- 010 / 333 --
+mean loss: 0.443687
+accuracy: 0.871235
+ -- 020 / 333 --
+mean loss: 0.419595
+accuracy: 0.876833
+ -- 030 / 333 --
+mean loss: 0.408646
+accuracy: 0.856058
+ -- 040 / 333 --
+mean loss: 0.448491
+accuracy: 0.866883
+ -- 050 / 333 --
+mean loss: 0.402547
+accuracy: 0.855423
+ -- 060 / 333 --
+mean loss: 0.437497
+accuracy: 0.870897
+ -- 070 / 333 --
+mean loss: 0.434285
+accuracy: 0.849650
+ -- 080 / 333 --
+mean loss: 0.429326
+accuracy: 0.876141
+ -- 090 / 333 --
+mean loss: 0.435319
+accuracy: 0.881232
+ -- 100 / 333 --
+mean loss: 0.404744
+accuracy: 0.868895
+ -- 110 / 333 --
+mean loss: 0.394102
+accuracy: 0.871817
+ -- 120 / 333 --
+mean loss: 0.400602
+accuracy: 0.880513
+ -- 130 / 333 --
+mean loss: 0.436662
+accuracy: 0.874654
+ -- 140 / 333 --
+mean loss: 0.439378
+accuracy: 0.876621
+ -- 150 / 333 --
+mean loss: 0.381188
+accuracy: 0.844312
+ -- 160 / 333 --
+mean loss: 0.417868
+accuracy: 0.861057
+ -- 170 / 333 --
+mean loss: 0.412512
+accuracy: 0.865700
+ -- 180 / 333 --
+mean loss: 0.419014
+accuracy: 0.871868
+ -- 190 / 333 --
+mean loss: 0.394283
+accuracy: 0.870070
+ -- 200 / 333 --
+mean loss: 0.404989
+accuracy: 0.873149
+ -- 210 / 333 --
+mean loss: 0.432047
+accuracy: 0.872176
+ -- 220 / 333 --
+mean loss: 0.406611
+accuracy: 0.871397
+ -- 230 / 333 --
+mean loss: 0.398373
+accuracy: 0.873233
+ -- 240 / 333 --
+mean loss: 0.421557
+accuracy: 0.884320
+ -- 250 / 333 --
+mean loss: 0.427917
+accuracy: 0.879625
+ -- 260 / 333 --
+mean loss: 0.427913
+accuracy: 0.865990
+ -- 270 / 333 --
+mean loss: 0.447091
+accuracy: 0.861341
+ -- 280 / 333 --
+mean loss: 0.424806
+accuracy: 0.854906
+ -- 290 / 333 --
+mean loss: 0.430052
+accuracy: 0.886696
+ -- 300 / 333 --
+mean loss: 0.424258
+accuracy: 0.863883
+ -- 310 / 333 --
+mean loss: 0.440422
+accuracy: 0.871730
+ -- 320 / 333 --
+mean loss: 0.418168
+accuracy: 0.860696
+ -- 330 / 333 --
+mean loss: 0.393376
+accuracy: 0.858704
+Starting pickle....
+**** EPOCH 024 ****
+2019-01-20 00:14:06.971566
+ -- 010 / 333 --
+mean loss: 0.398262
+accuracy: 0.862903
+ -- 020 / 333 --
+mean loss: 0.447988
+accuracy: 0.880227
+ -- 030 / 333 --
+mean loss: 0.402898
+accuracy: 0.882084
+ -- 040 / 333 --
+mean loss: 0.408102
+accuracy: 0.874821
+ -- 050 / 333 --
+mean loss: 0.390420
+accuracy: 0.880047
+ -- 060 / 333 --
+mean loss: 0.419395
+accuracy: 0.868342
+ -- 070 / 333 --
+mean loss: 0.412993
+accuracy: 0.867117
+ -- 080 / 333 --
+mean loss: 0.426753
+accuracy: 0.875676
+ -- 090 / 333 --
+mean loss: 0.426371
+accuracy: 0.863248
+ -- 100 / 333 --
+mean loss: 0.388766
+accuracy: 0.872159
+ -- 110 / 333 --
+mean loss: 0.408443
+accuracy: 0.876912
+ -- 120 / 333 --
+mean loss: 0.398861
+accuracy: 0.872399
+ -- 130 / 333 --
+mean loss: 0.422382
+accuracy: 0.884775
+ -- 140 / 333 --
+mean loss: 0.395386
+accuracy: 0.864880
+ -- 150 / 333 --
+mean loss: 0.449338
+accuracy: 0.867869
+ -- 160 / 333 --
+mean loss: 0.411492
+accuracy: 0.869506
+ -- 170 / 333 --
+mean loss: 0.421113
+accuracy: 0.873715
+ -- 180 / 333 --
+mean loss: 0.408960
+accuracy: 0.868091
+ -- 190 / 333 --
+mean loss: 0.411718
+accuracy: 0.890013
+ -- 200 / 333 --
+mean loss: 0.415212
+accuracy: 0.885398
+ -- 210 / 333 --
+mean loss: 0.435638
+accuracy: 0.870037
+ -- 220 / 333 --
+mean loss: 0.466528
+accuracy: 0.859917
+ -- 230 / 333 --
+mean loss: 0.395924
+accuracy: 0.858221
+ -- 240 / 333 --
+mean loss: 0.403005
+accuracy: 0.883669
+ -- 250 / 333 --
+mean loss: 0.390877
+accuracy: 0.890189
+ -- 260 / 333 --
+mean loss: 0.415655
+accuracy: 0.881630
+ -- 270 / 333 --
+mean loss: 0.426884
+accuracy: 0.887380
+ -- 280 / 333 --
+mean loss: 0.434748
+accuracy: 0.889352
+ -- 290 / 333 --
+mean loss: 0.410012
+accuracy: 0.865017
+ -- 300 / 333 --
+mean loss: 0.426663
+accuracy: 0.888015
+ -- 310 / 333 --
+mean loss: 0.409484
+accuracy: 0.844895
+ -- 320 / 333 --
+mean loss: 0.399336
+accuracy: 0.862976
+ -- 330 / 333 --
+mean loss: 0.439397
+accuracy: 0.875433
+Starting pickle....
+**** EPOCH 025 ****
+2019-01-20 00:26:39.842960
+ -- 010 / 333 --
+mean loss: 0.402420
+accuracy: 0.888394
+ -- 020 / 333 --
+mean loss: 0.412061
+accuracy: 0.857656
+ -- 030 / 333 --
+mean loss: 0.420525
+accuracy: 0.873933
+ -- 040 / 333 --
+mean loss: 0.435525
+accuracy: 0.879488
+ -- 050 / 333 --
+mean loss: 0.410154
+accuracy: 0.857176
+ -- 060 / 333 --
+mean loss: 0.418141
+accuracy: 0.879450
+ -- 070 / 333 --
+mean loss: 0.434404
+accuracy: 0.882136
+ -- 080 / 333 --
+mean loss: 0.433488
+accuracy: 0.868700
+ -- 090 / 333 --
+mean loss: 0.427630
+accuracy: 0.889510
+ -- 100 / 333 --
+mean loss: 0.427205
+accuracy: 0.874722
+ -- 110 / 333 --
+mean loss: 0.424256
+accuracy: 0.873232
+ -- 120 / 333 --
+mean loss: 0.396020
+accuracy: 0.856326
+ -- 130 / 333 --
+mean loss: 0.392018
+accuracy: 0.861619
+ -- 140 / 333 --
+mean loss: 0.418303
+accuracy: 0.869692
+ -- 150 / 333 --
+mean loss: 0.430198
+accuracy: 0.866727
+ -- 160 / 333 --
+mean loss: 0.404079
+accuracy: 0.876651
+ -- 170 / 333 --
+mean loss: 0.414211
+accuracy: 0.856136
+ -- 180 / 333 --
+mean loss: 0.418899
+accuracy: 0.880514
+ -- 190 / 333 --
+mean loss: 0.399166
+accuracy: 0.866445
+ -- 200 / 333 --
+mean loss: 0.414457
+accuracy: 0.866169
+ -- 210 / 333 --
+mean loss: 0.382911
+accuracy: 0.890280
+ -- 220 / 333 --
+mean loss: 0.419186
+accuracy: 0.868657
+ -- 230 / 333 --
+mean loss: 0.408791
+accuracy: 0.876033
+ -- 240 / 333 --
+mean loss: 0.427156
+accuracy: 0.882352
+ -- 250 / 333 --
+mean loss: 0.398284
+accuracy: 0.872518
+ -- 260 / 333 --
+mean loss: 0.446459
+accuracy: 0.887040
+ -- 270 / 333 --
+mean loss: 0.394859
+accuracy: 0.879200
+ -- 280 / 333 --
+mean loss: 0.398098
+accuracy: 0.883524
+ -- 290 / 333 --
+mean loss: 0.427782
+accuracy: 0.882858
+ -- 300 / 333 --
+mean loss: 0.410103
+accuracy: 0.866412
+ -- 310 / 333 --
+mean loss: 0.419645
+accuracy: 0.867047
+ -- 320 / 333 --
+mean loss: 0.446630
+accuracy: 0.870568
+ -- 330 / 333 --
+mean loss: 0.415508
+accuracy: 0.881613
+Starting pickle....
+2019-01-20 00:39:14.143735
+---- EPOCH 010 EVALUATION ----
+eval mean loss: 0.206172
+eval point accuracy vox: 0.910195
+eval point avg class acc vox: 0.905036
+eval point accuracy: 0.909910
+eval point avg class acc: 0.911305
+eval point calibrated average acc: 0.912172
+vox based --------class 1 weight: 0.809010, acc: 0.908705; class 2 weight: 0.190990, acc: 0.913906; 
+2019-01-20 00:49:59.885970
+---- EPOCH 011 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006481
+eval whole scene point accuracy vox: 0.909321
+eval whole scene point avg class acc vox: 0.905238
+eval whole scene point accuracy: 0.909116
+eval whole scene point avg class acc: 0.911463
+eval whole scene point calibrated average acc vox: 0.903035
+vox based --------class 1 weight: 0.808977, acc: 0.911846; class 2 weight: 0.191023, acc: 0.898630; 
+**** EPOCH 026 ****
+2019-01-20 00:56:30.218849
+ -- 010 / 333 --
+mean loss: 0.393802
+accuracy: 0.876939
+ -- 020 / 333 --
+mean loss: 0.408127
+accuracy: 0.884961
+ -- 030 / 333 --
+mean loss: 0.434483
+accuracy: 0.861674
+ -- 040 / 333 --
+mean loss: 0.444822
+accuracy: 0.889691
+ -- 050 / 333 --
+mean loss: 0.415481
+accuracy: 0.869549
+ -- 060 / 333 --
+mean loss: 0.412775
+accuracy: 0.888892
+ -- 070 / 333 --
+mean loss: 0.406617
+accuracy: 0.882074
+ -- 080 / 333 --
+mean loss: 0.435148
+accuracy: 0.865870
+ -- 090 / 333 --
+mean loss: 0.408486
+accuracy: 0.883181
+ -- 100 / 333 --
+mean loss: 0.427095
+accuracy: 0.889616
+ -- 110 / 333 --
+mean loss: 0.413504
+accuracy: 0.867785
+ -- 120 / 333 --
+mean loss: 0.422643
+accuracy: 0.867860
+ -- 130 / 333 --
+mean loss: 0.402488
+accuracy: 0.886052
+ -- 140 / 333 --
+mean loss: 0.435557
+accuracy: 0.862582
+ -- 150 / 333 --
+mean loss: 0.413893
+accuracy: 0.894855
+ -- 160 / 333 --
+mean loss: 0.420469
+accuracy: 0.859047
+ -- 170 / 333 --
+mean loss: 0.396896
+accuracy: 0.871612
+ -- 180 / 333 --
+mean loss: 0.409450
+accuracy: 0.867322
+ -- 190 / 333 --
+mean loss: 0.399381
+accuracy: 0.892781
+ -- 200 / 333 --
+mean loss: 0.372447
+accuracy: 0.881456
+ -- 210 / 333 --
+mean loss: 0.431740
+accuracy: 0.883762
+ -- 220 / 333 --
+mean loss: 0.426554
+accuracy: 0.875307
+ -- 230 / 333 --
+mean loss: 0.390180
+accuracy: 0.889487
+ -- 240 / 333 --
+mean loss: 0.384549
+accuracy: 0.890929
+ -- 250 / 333 --
+mean loss: 0.386134
+accuracy: 0.865183
+ -- 260 / 333 --
+mean loss: 0.432511
+accuracy: 0.869284
+ -- 270 / 333 --
+mean loss: 0.427654
+accuracy: 0.866312
+ -- 280 / 333 --
+mean loss: 0.411817
+accuracy: 0.878249
+ -- 290 / 333 --
+mean loss: 0.395558
+accuracy: 0.869847
+ -- 300 / 333 --
+mean loss: 0.408313
+accuracy: 0.885045
+ -- 310 / 333 --
+mean loss: 0.385347
+accuracy: 0.870602
+ -- 320 / 333 --
+mean loss: 0.397187
+accuracy: 0.875072
+ -- 330 / 333 --
+mean loss: 0.400482
+accuracy: 0.887325
+Starting pickle....
+**** EPOCH 027 ****
+2019-01-20 01:09:03.844784
+ -- 010 / 333 --
+mean loss: 0.403568
+accuracy: 0.875520
+ -- 020 / 333 --
+mean loss: 0.412876
+accuracy: 0.872132
+ -- 030 / 333 --
+mean loss: 0.397751
+accuracy: 0.866981
+ -- 040 / 333 --
+mean loss: 0.431407
+accuracy: 0.886851
+ -- 050 / 333 --
+mean loss: 0.384739
+accuracy: 0.887400
+ -- 060 / 333 --
+mean loss: 0.424597
+accuracy: 0.873629
+ -- 070 / 333 --
+mean loss: 0.425080
+accuracy: 0.870715
+ -- 080 / 333 --
+mean loss: 0.414372
+accuracy: 0.880541
+ -- 090 / 333 --
+mean loss: 0.430345
+accuracy: 0.880534
+ -- 100 / 333 --
+mean loss: 0.403187
+accuracy: 0.867001
+ -- 110 / 333 --
+mean loss: 0.421866
+accuracy: 0.886231
+ -- 120 / 333 --
+mean loss: 0.403631
+accuracy: 0.884583
+ -- 130 / 333 --
+mean loss: 0.421545
+accuracy: 0.857309
+ -- 140 / 333 --
+mean loss: 0.400526
+accuracy: 0.879354
+ -- 150 / 333 --
+mean loss: 0.399611
+accuracy: 0.877117
+ -- 160 / 333 --
+mean loss: 0.426636
+accuracy: 0.879731
+ -- 170 / 333 --
+mean loss: 0.417392
+accuracy: 0.890886
+ -- 180 / 333 --
+mean loss: 0.420550
+accuracy: 0.885299
+ -- 190 / 333 --
+mean loss: 0.402281
+accuracy: 0.880674
+ -- 200 / 333 --
+mean loss: 0.385839
+accuracy: 0.878523
+ -- 210 / 333 --
+mean loss: 0.405992
+accuracy: 0.873674
+ -- 220 / 333 --
+mean loss: 0.420342
+accuracy: 0.869378
+ -- 230 / 333 --
+mean loss: 0.402925
+accuracy: 0.874108
+ -- 240 / 333 --
+mean loss: 0.384003
+accuracy: 0.869976
+ -- 250 / 333 --
+mean loss: 0.410506
+accuracy: 0.870286
+ -- 260 / 333 --
+mean loss: 0.426453
+accuracy: 0.866986
+ -- 270 / 333 --
+mean loss: 0.411193
+accuracy: 0.857844
+ -- 280 / 333 --
+mean loss: 0.427587
+accuracy: 0.867322
+ -- 290 / 333 --
+mean loss: 0.400271
+accuracy: 0.885817
+ -- 300 / 333 --
+mean loss: 0.411414
+accuracy: 0.883204
+ -- 310 / 333 --
+mean loss: 0.407144
+accuracy: 0.879456
+ -- 320 / 333 --
+mean loss: 0.405714
+accuracy: 0.862981
+ -- 330 / 333 --
+mean loss: 0.403853
+accuracy: 0.863523
+Starting pickle....
+**** EPOCH 028 ****
+2019-01-20 01:21:37.982007
+ -- 010 / 333 --
+mean loss: 0.396621
+accuracy: 0.876124
+ -- 020 / 333 --
+mean loss: 0.408453
+accuracy: 0.871393
+ -- 030 / 333 --
+mean loss: 0.426111
+accuracy: 0.877499
+ -- 040 / 333 --
+mean loss: 0.419866
+accuracy: 0.881831
+ -- 050 / 333 --
+mean loss: 0.410408
+accuracy: 0.873068
+ -- 060 / 333 --
+mean loss: 0.422729
+accuracy: 0.870694
+ -- 070 / 333 --
+mean loss: 0.392847
+accuracy: 0.886889
+ -- 080 / 333 --
+mean loss: 0.412107
+accuracy: 0.882404
+ -- 090 / 333 --
+mean loss: 0.416022
+accuracy: 0.856392
+ -- 100 / 333 --
+mean loss: 0.416022
+accuracy: 0.876831
+ -- 110 / 333 --
+mean loss: 0.378943
+accuracy: 0.859571
+ -- 120 / 333 --
+mean loss: 0.385124
+accuracy: 0.877892
+ -- 130 / 333 --
+mean loss: 0.440316
+accuracy: 0.878543
+ -- 140 / 333 --
+mean loss: 0.408267
+accuracy: 0.893330
+ -- 150 / 333 --
+mean loss: 0.358304
+accuracy: 0.886202
+ -- 160 / 333 --
+mean loss: 0.396677
+accuracy: 0.869776
+ -- 170 / 333 --
+mean loss: 0.411580
+accuracy: 0.877047
+ -- 180 / 333 --
+mean loss: 0.445392
+accuracy: 0.877203
+ -- 190 / 333 --
+mean loss: 0.399225
+accuracy: 0.869739
+ -- 200 / 333 --
+mean loss: 0.404170
+accuracy: 0.864222
+ -- 210 / 333 --
+mean loss: 0.425192
+accuracy: 0.877638
+ -- 220 / 333 --
+mean loss: 0.402382
+accuracy: 0.862418
+ -- 230 / 333 --
+mean loss: 0.431638
+accuracy: 0.887544
+ -- 240 / 333 --
+mean loss: 0.398017
+accuracy: 0.867543
+ -- 250 / 333 --
+mean loss: 0.398100
+accuracy: 0.885885
+ -- 260 / 333 --
+mean loss: 0.374823
+accuracy: 0.887666
+ -- 270 / 333 --
+mean loss: 0.409490
+accuracy: 0.853191
+ -- 280 / 333 --
+mean loss: 0.388026
+accuracy: 0.887586
+ -- 290 / 333 --
+mean loss: 0.437667
+accuracy: 0.880649
+ -- 300 / 333 --
+mean loss: 0.432264
+accuracy: 0.869994
+ -- 310 / 333 --
+mean loss: 0.412161
+accuracy: 0.881727
+ -- 320 / 333 --
+mean loss: 0.437673
+accuracy: 0.886161
+ -- 330 / 333 --
+mean loss: 0.403767
+accuracy: 0.883090
+Starting pickle....
+**** EPOCH 029 ****
+2019-01-20 01:34:12.625433
+ -- 010 / 333 --
+mean loss: 0.394465
+accuracy: 0.872919
+ -- 020 / 333 --
+mean loss: 0.390771
+accuracy: 0.849847
+ -- 030 / 333 --
+mean loss: 0.403389
+accuracy: 0.856694
+ -- 040 / 333 --
+mean loss: 0.395477
+accuracy: 0.867202
+ -- 050 / 333 --
+mean loss: 0.400631
+accuracy: 0.877327
+ -- 060 / 333 --
+mean loss: 0.398815
+accuracy: 0.885647
+ -- 070 / 333 --
+mean loss: 0.407224
+accuracy: 0.852879
+ -- 080 / 333 --
+mean loss: 0.403440
+accuracy: 0.874206
+ -- 090 / 333 --
+mean loss: 0.405770
+accuracy: 0.881566
+ -- 100 / 333 --
+mean loss: 0.418012
+accuracy: 0.878169
+ -- 110 / 333 --
+mean loss: 0.408415
+accuracy: 0.857224
+ -- 120 / 333 --
+mean loss: 0.398141
+accuracy: 0.866946
+ -- 130 / 333 --
+mean loss: 0.385961
+accuracy: 0.862159
+ -- 140 / 333 --
+mean loss: 0.395628
+accuracy: 0.861818
+ -- 150 / 333 --
+mean loss: 0.386012
+accuracy: 0.854657
+ -- 160 / 333 --
+mean loss: 0.415778
+accuracy: 0.866662
+ -- 170 / 333 --
+mean loss: 0.412861
+accuracy: 0.867343
+ -- 180 / 333 --
+mean loss: 0.415023
+accuracy: 0.849509
+ -- 190 / 333 --
+mean loss: 0.404751
+accuracy: 0.888064
+ -- 200 / 333 --
+mean loss: 0.415739
+accuracy: 0.877444
+ -- 210 / 333 --
+mean loss: 0.403768
+accuracy: 0.874894
+ -- 220 / 333 --
+mean loss: 0.398051
+accuracy: 0.882311
+ -- 230 / 333 --
+mean loss: 0.426912
+accuracy: 0.862667
+ -- 240 / 333 --
+mean loss: 0.437588
+accuracy: 0.856479
+ -- 250 / 333 --
+mean loss: 0.405729
+accuracy: 0.885561
+ -- 260 / 333 --
+mean loss: 0.398331
+accuracy: 0.871692
+ -- 270 / 333 --
+mean loss: 0.414841
+accuracy: 0.895588
+ -- 280 / 333 --
+mean loss: 0.412268
+accuracy: 0.850856
+ -- 290 / 333 --
+mean loss: 0.398940
+accuracy: 0.882186
+ -- 300 / 333 --
+mean loss: 0.411898
+accuracy: 0.870441
+ -- 310 / 333 --
+mean loss: 0.422783
+accuracy: 0.876663
+ -- 320 / 333 --
+mean loss: 0.415368
+accuracy: 0.882006
+ -- 330 / 333 --
+mean loss: 0.417386
+accuracy: 0.900314
+Starting pickle....
+**** EPOCH 030 ****
+2019-01-20 01:46:46.400324
+ -- 010 / 333 --
+mean loss: 0.456288
+accuracy: 0.878101
+ -- 020 / 333 --
+mean loss: 0.400109
+accuracy: 0.868303
+ -- 030 / 333 --
+mean loss: 0.414168
+accuracy: 0.891886
+ -- 040 / 333 --
+mean loss: 0.418371
+accuracy: 0.877943
+ -- 050 / 333 --
+mean loss: 0.380687
+accuracy: 0.870565
+ -- 060 / 333 --
+mean loss: 0.405896
+accuracy: 0.862465
+ -- 070 / 333 --
+mean loss: 0.419393
+accuracy: 0.867772
+ -- 080 / 333 --
+mean loss: 0.397551
+accuracy: 0.884124
+ -- 090 / 333 --
+mean loss: 0.396677
+accuracy: 0.867206
+ -- 100 / 333 --
+mean loss: 0.396876
+accuracy: 0.865986
+ -- 110 / 333 --
+mean loss: 0.431676
+accuracy: 0.874708
+ -- 120 / 333 --
+mean loss: 0.371081
+accuracy: 0.869329
+ -- 130 / 333 --
+mean loss: 0.412901
+accuracy: 0.882315
+ -- 140 / 333 --
+mean loss: 0.447863
+accuracy: 0.872401
+ -- 150 / 333 --
+mean loss: 0.415354
+accuracy: 0.890167
+ -- 160 / 333 --
+mean loss: 0.403335
+accuracy: 0.877885
+ -- 170 / 333 --
+mean loss: 0.384902
+accuracy: 0.849795
+ -- 180 / 333 --
+mean loss: 0.381560
+accuracy: 0.880281
+ -- 190 / 333 --
+mean loss: 0.429623
+accuracy: 0.880587
+ -- 200 / 333 --
+mean loss: 0.386790
+accuracy: 0.867957
+ -- 210 / 333 --
+mean loss: 0.393424
+accuracy: 0.877572
+ -- 220 / 333 --
+mean loss: 0.400016
+accuracy: 0.888942
+ -- 230 / 333 --
+mean loss: 0.433013
+accuracy: 0.871678
+ -- 240 / 333 --
+mean loss: 0.415268
+accuracy: 0.861845
+ -- 250 / 333 --
+mean loss: 0.399663
+accuracy: 0.883131
+ -- 260 / 333 --
+mean loss: 0.395772
+accuracy: 0.881703
+ -- 270 / 333 --
+mean loss: 0.400586
+accuracy: 0.857719
+ -- 280 / 333 --
+mean loss: 0.421671
+accuracy: 0.870889
+ -- 290 / 333 --
+mean loss: 0.411345
+accuracy: 0.887745
+ -- 300 / 333 --
+mean loss: 0.411962
+accuracy: 0.872377
+ -- 310 / 333 --
+mean loss: 0.405698
+accuracy: 0.866965
+ -- 320 / 333 --
+mean loss: 0.379377
+accuracy: 0.874086
+ -- 330 / 333 --
+mean loss: 0.398493
+accuracy: 0.885675
+Starting pickle....
+2019-01-20 01:59:21.099338
+---- EPOCH 012 EVALUATION ----
+eval mean loss: 0.201083
+eval point accuracy vox: 0.912904
+eval point avg class acc vox: 0.905739
+eval point accuracy: 0.912513
+eval point avg class acc: 0.912958
+eval point calibrated average acc: 0.913235
+vox based --------class 1 weight: 0.809015, acc: 0.912128; class 2 weight: 0.190985, acc: 0.913789; 
+2019-01-20 02:10:07.052864
+---- EPOCH 013 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006291
+eval whole scene point accuracy vox: 0.912690
+eval whole scene point avg class acc vox: 0.905803
+eval whole scene point accuracy: 0.912216
+eval whole scene point avg class acc: 0.912949
+eval whole scene point calibrated average acc vox: 0.902088
+vox based --------class 1 weight: 0.808981, acc: 0.916948; class 2 weight: 0.191019, acc: 0.894658; 
+Model saved in file: log/model.ckpt
+**** EPOCH 031 ****
+2019-01-20 02:16:37.162997
+ -- 010 / 333 --
+mean loss: 0.407721
+accuracy: 0.896383
+ -- 020 / 333 --
+mean loss: 0.426144
+accuracy: 0.888263
+ -- 030 / 333 --
+mean loss: 0.429578
+accuracy: 0.868346
+ -- 040 / 333 --
+mean loss: 0.392686
+accuracy: 0.897240
+ -- 050 / 333 --
+mean loss: 0.396504
+accuracy: 0.871001
+ -- 060 / 333 --
+mean loss: 0.401829
+accuracy: 0.888966
+ -- 070 / 333 --
+mean loss: 0.394048
+accuracy: 0.878065
+ -- 080 / 333 --
+mean loss: 0.408380
+accuracy: 0.884319
+ -- 090 / 333 --
+mean loss: 0.423233
+accuracy: 0.877802
+ -- 100 / 333 --
+mean loss: 0.399238
+accuracy: 0.892221
+ -- 110 / 333 --
+mean loss: 0.406506
+accuracy: 0.872357
+ -- 120 / 333 --
+mean loss: 0.422090
+accuracy: 0.859570
+ -- 130 / 333 --
+mean loss: 0.379402
+accuracy: 0.862942
+ -- 140 / 333 --
+mean loss: 0.418134
+accuracy: 0.866293
+ -- 150 / 333 --
+mean loss: 0.380505
+accuracy: 0.896646
+ -- 160 / 333 --
+mean loss: 0.418936
+accuracy: 0.858748
+ -- 170 / 333 --
+mean loss: 0.405602
+accuracy: 0.886637
+ -- 180 / 333 --
+mean loss: 0.397998
+accuracy: 0.874694
+ -- 190 / 333 --
+mean loss: 0.425445
+accuracy: 0.877163
+ -- 200 / 333 --
+mean loss: 0.403200
+accuracy: 0.873542
+ -- 210 / 333 --
+mean loss: 0.358739
+accuracy: 0.889965
+ -- 220 / 333 --
+mean loss: 0.416716
+accuracy: 0.887366
+ -- 230 / 333 --
+mean loss: 0.396195
+accuracy: 0.869469
+ -- 240 / 333 --
+mean loss: 0.400357
+accuracy: 0.868953
+ -- 250 / 333 --
+mean loss: 0.434092
+accuracy: 0.866616
+ -- 260 / 333 --
+mean loss: 0.423326
+accuracy: 0.876861
+ -- 270 / 333 --
+mean loss: 0.424897
+accuracy: 0.877974
+ -- 280 / 333 --
+mean loss: 0.403599
+accuracy: 0.865008
+ -- 290 / 333 --
+mean loss: 0.401837
+accuracy: 0.862217
+ -- 300 / 333 --
+mean loss: 0.407906
+accuracy: 0.870680
+ -- 310 / 333 --
+mean loss: 0.405111
+accuracy: 0.883230
+ -- 320 / 333 --
+mean loss: 0.461125
+accuracy: 0.854310
+ -- 330 / 333 --
+mean loss: 0.386648
+accuracy: 0.883504
+Starting pickle....
+**** EPOCH 032 ****
+2019-01-20 02:29:12.093869
+ -- 010 / 333 --
+mean loss: 0.425572
+accuracy: 0.870664
+ -- 020 / 333 --
+mean loss: 0.386945
+accuracy: 0.858868
+ -- 030 / 333 --
+mean loss: 0.395893
+accuracy: 0.870601
+ -- 040 / 333 --
+mean loss: 0.380858
+accuracy: 0.859708
+ -- 050 / 333 --
+mean loss: 0.376239
+accuracy: 0.884534
+ -- 060 / 333 --
+mean loss: 0.407685
+accuracy: 0.885927
+ -- 070 / 333 --
+mean loss: 0.404704
+accuracy: 0.870864
+ -- 080 / 333 --
+mean loss: 0.404794
+accuracy: 0.872334
+ -- 090 / 333 --
+mean loss: 0.381858
+accuracy: 0.872030
+ -- 100 / 333 --
+mean loss: 0.396989
+accuracy: 0.872253
+ -- 110 / 333 --
+mean loss: 0.417252
+accuracy: 0.884007
+ -- 120 / 333 --
+mean loss: 0.374114
+accuracy: 0.875441
+ -- 130 / 333 --
+mean loss: 0.409904
+accuracy: 0.888354
+ -- 140 / 333 --
+mean loss: 0.405315
+accuracy: 0.875365
+ -- 150 / 333 --
+mean loss: 0.397634
+accuracy: 0.889007
+ -- 160 / 333 --
+mean loss: 0.379167
+accuracy: 0.870814
+ -- 170 / 333 --
+mean loss: 0.412311
+accuracy: 0.876337
+ -- 180 / 333 --
+mean loss: 0.417070
+accuracy: 0.853858
+ -- 190 / 333 --
+mean loss: 0.419814
+accuracy: 0.881509
+ -- 200 / 333 --
+mean loss: 0.424248
+accuracy: 0.898445
+ -- 210 / 333 --
+mean loss: 0.400482
+accuracy: 0.889734
+ -- 220 / 333 --
+mean loss: 0.404337
+accuracy: 0.891733
+ -- 230 / 333 --
+mean loss: 0.369199
+accuracy: 0.899633
+ -- 240 / 333 --
+mean loss: 0.433131
+accuracy: 0.880916
+ -- 250 / 333 --
+mean loss: 0.420356
+accuracy: 0.882818
+ -- 260 / 333 --
+mean loss: 0.394109
+accuracy: 0.881732
+ -- 270 / 333 --
+mean loss: 0.407763
+accuracy: 0.880248
+ -- 280 / 333 --
+mean loss: 0.411384
+accuracy: 0.871257
+ -- 290 / 333 --
+mean loss: 0.434087
+accuracy: 0.877749
+ -- 300 / 333 --
+mean loss: 0.405374
+accuracy: 0.881641
+ -- 310 / 333 --
+mean loss: 0.430541
+accuracy: 0.871168
+ -- 320 / 333 --
+mean loss: 0.402645
+accuracy: 0.890648
+ -- 330 / 333 --
+mean loss: 0.405302
+accuracy: 0.884539
+Starting pickle....
+**** EPOCH 033 ****
+2019-01-20 02:41:45.288505
+ -- 010 / 333 --
+mean loss: 0.371611
+accuracy: 0.886928
+ -- 020 / 333 --
+mean loss: 0.374569
+accuracy: 0.892994
+ -- 030 / 333 --
+mean loss: 0.395527
+accuracy: 0.893524
+ -- 040 / 333 --
+mean loss: 0.419916
+accuracy: 0.888007
+ -- 050 / 333 --
+mean loss: 0.395179
+accuracy: 0.888581
+ -- 060 / 333 --
+mean loss: 0.381216
+accuracy: 0.881420
+ -- 070 / 333 --
+mean loss: 0.425844
+accuracy: 0.879566
+ -- 080 / 333 --
+mean loss: 0.407081
+accuracy: 0.882087
+ -- 090 / 333 --
+mean loss: 0.418120
+accuracy: 0.881745
+ -- 100 / 333 --
+mean loss: 0.390047
+accuracy: 0.862050
+ -- 110 / 333 --
+mean loss: 0.412993
+accuracy: 0.884359
+ -- 120 / 333 --
+mean loss: 0.377663
+accuracy: 0.871360
+ -- 130 / 333 --
+mean loss: 0.401622
+accuracy: 0.882337
+ -- 140 / 333 --
+mean loss: 0.410233
+accuracy: 0.885307
+ -- 150 / 333 --
+mean loss: 0.385026
+accuracy: 0.884908
+ -- 160 / 333 --
+mean loss: 0.376239
+accuracy: 0.888876
+ -- 170 / 333 --
+mean loss: 0.404707
+accuracy: 0.867329
+ -- 180 / 333 --
+mean loss: 0.409330
+accuracy: 0.879484
+ -- 190 / 333 --
+mean loss: 0.386347
+accuracy: 0.878191
+ -- 200 / 333 --
+mean loss: 0.396144
+accuracy: 0.865665
+ -- 210 / 333 --
+mean loss: 0.400145
+accuracy: 0.884716
+ -- 220 / 333 --
+mean loss: 0.402524
+accuracy: 0.888435
+ -- 230 / 333 --
+mean loss: 0.396583
+accuracy: 0.868710
+ -- 240 / 333 --
+mean loss: 0.400943
+accuracy: 0.870400
+ -- 250 / 333 --
+mean loss: 0.403132
+accuracy: 0.878688
+ -- 260 / 333 --
+mean loss: 0.410276
+accuracy: 0.874897
+ -- 270 / 333 --
+mean loss: 0.409578
+accuracy: 0.867274
+ -- 280 / 333 --
+mean loss: 0.423829
+accuracy: 0.880802
+ -- 290 / 333 --
+mean loss: 0.398025
+accuracy: 0.875598
+ -- 300 / 333 --
+mean loss: 0.416353
+accuracy: 0.864349
+ -- 310 / 333 --
+mean loss: 0.422810
+accuracy: 0.896361
+ -- 320 / 333 --
+mean loss: 0.418619
+accuracy: 0.864447
+ -- 330 / 333 --
+mean loss: 0.437758
+accuracy: 0.874586
+Starting pickle....
+**** EPOCH 034 ****
+2019-01-20 02:54:18.450000
+ -- 010 / 333 --
+mean loss: 0.405556
+accuracy: 0.861965
+ -- 020 / 333 --
+mean loss: 0.380347
+accuracy: 0.865113
+ -- 030 / 333 --
+mean loss: 0.383695
+accuracy: 0.874252
+ -- 040 / 333 --
+mean loss: 0.407492
+accuracy: 0.883972
+ -- 050 / 333 --
+mean loss: 0.398506
+accuracy: 0.892075
+ -- 060 / 333 --
+mean loss: 0.377576
+accuracy: 0.866007
+ -- 070 / 333 --
+mean loss: 0.400477
+accuracy: 0.865583
+ -- 080 / 333 --
+mean loss: 0.435929
+accuracy: 0.870848
+ -- 090 / 333 --
+mean loss: 0.393250
+accuracy: 0.873168
+ -- 100 / 333 --
+mean loss: 0.410989
+accuracy: 0.878229
+ -- 110 / 333 --
+mean loss: 0.387882
+accuracy: 0.887766
+ -- 120 / 333 --
+mean loss: 0.449992
+accuracy: 0.868977
+ -- 130 / 333 --
+mean loss: 0.439166
+accuracy: 0.873947
+ -- 140 / 333 --
+mean loss: 0.394044
+accuracy: 0.893206
+ -- 150 / 333 --
+mean loss: 0.388916
+accuracy: 0.885445
+ -- 160 / 333 --
+mean loss: 0.398039
+accuracy: 0.873316
+ -- 170 / 333 --
+mean loss: 0.410457
+accuracy: 0.882666
+ -- 180 / 333 --
+mean loss: 0.405650
+accuracy: 0.890350
+ -- 190 / 333 --
+mean loss: 0.398839
+accuracy: 0.871562
+ -- 200 / 333 --
+mean loss: 0.410271
+accuracy: 0.878613
+ -- 210 / 333 --
+mean loss: 0.379324
+accuracy: 0.879501
+ -- 220 / 333 --
+mean loss: 0.397499
+accuracy: 0.895878
+ -- 230 / 333 --
+mean loss: 0.424203
+accuracy: 0.875324
+ -- 240 / 333 --
+mean loss: 0.410464
+accuracy: 0.869874
+ -- 250 / 333 --
+mean loss: 0.390188
+accuracy: 0.877431
+ -- 260 / 333 --
+mean loss: 0.379927
+accuracy: 0.877178
+ -- 270 / 333 --
+mean loss: 0.396191
+accuracy: 0.871394
+ -- 280 / 333 --
+mean loss: 0.410504
+accuracy: 0.884290
+ -- 290 / 333 --
+mean loss: 0.371519
+accuracy: 0.895066
+ -- 300 / 333 --
+mean loss: 0.388758
+accuracy: 0.874389
+ -- 310 / 333 --
+mean loss: 0.406649
+accuracy: 0.881113
+ -- 320 / 333 --
+mean loss: 0.400755
+accuracy: 0.872224
+ -- 330 / 333 --
+mean loss: 0.402709
+accuracy: 0.892807
+Starting pickle....
+**** EPOCH 035 ****
+2019-01-20 03:06:51.583534
+ -- 010 / 333 --
+mean loss: 0.370871
+accuracy: 0.873370
+ -- 020 / 333 --
+mean loss: 0.410309
+accuracy: 0.881202
+ -- 030 / 333 --
+mean loss: 0.379905
+accuracy: 0.873325
+ -- 040 / 333 --
+mean loss: 0.390532
+accuracy: 0.870611
+ -- 050 / 333 --
+mean loss: 0.407117
+accuracy: 0.880290
+ -- 060 / 333 --
+mean loss: 0.403480
+accuracy: 0.891530
+ -- 070 / 333 --
+mean loss: 0.404483
+accuracy: 0.880640
+ -- 080 / 333 --
+mean loss: 0.398823
+accuracy: 0.885456
+ -- 090 / 333 --
+mean loss: 0.380852
+accuracy: 0.867185
+ -- 100 / 333 --
+mean loss: 0.395073
+accuracy: 0.873542
+ -- 110 / 333 --
+mean loss: 0.382744
+accuracy: 0.873777
+ -- 120 / 333 --
+mean loss: 0.418520
+accuracy: 0.869589
+ -- 130 / 333 --
+mean loss: 0.415818
+accuracy: 0.898482
+ -- 140 / 333 --
+mean loss: 0.408128
+accuracy: 0.888612
+ -- 150 / 333 --
+mean loss: 0.391088
+accuracy: 0.891035
+ -- 160 / 333 --
+mean loss: 0.375703
+accuracy: 0.887534
+ -- 170 / 333 --
+mean loss: 0.421631
+accuracy: 0.888104
+ -- 180 / 333 --
+mean loss: 0.403013
+accuracy: 0.864316
+ -- 190 / 333 --
+mean loss: 0.395618
+accuracy: 0.860527
+ -- 200 / 333 --
+mean loss: 0.418454
+accuracy: 0.879333
+ -- 210 / 333 --
+mean loss: 0.387195
+accuracy: 0.866314
+ -- 220 / 333 --
+mean loss: 0.393514
+accuracy: 0.880025
+ -- 230 / 333 --
+mean loss: 0.416876
+accuracy: 0.879445
+ -- 240 / 333 --
+mean loss: 0.376708
+accuracy: 0.881259
+ -- 250 / 333 --
+mean loss: 0.391602
+accuracy: 0.862501
+ -- 260 / 333 --
+mean loss: 0.383694
+accuracy: 0.881329
+ -- 270 / 333 --
+mean loss: 0.418798
+accuracy: 0.883365
+ -- 280 / 333 --
+mean loss: 0.416085
+accuracy: 0.887133
+ -- 290 / 333 --
+mean loss: 0.407391
+accuracy: 0.875063
+ -- 300 / 333 --
+mean loss: 0.412839
+accuracy: 0.893984
+ -- 310 / 333 --
+mean loss: 0.422312
+accuracy: 0.883126
+ -- 320 / 333 --
+mean loss: 0.406058
+accuracy: 0.877524
+ -- 330 / 333 --
+mean loss: 0.427209
+accuracy: 0.873582
+Starting pickle....
+2019-01-20 03:19:25.307346
+---- EPOCH 014 EVALUATION ----
+eval mean loss: 0.195084
+eval point accuracy vox: 0.915940
+eval point avg class acc vox: 0.905399
+eval point accuracy: 0.915414
+eval point avg class acc: 0.912960
+eval point calibrated average acc: 0.911435
+vox based --------class 1 weight: 0.808935, acc: 0.917534; class 2 weight: 0.191065, acc: 0.908386; 
+2019-01-20 03:30:11.879349
+---- EPOCH 015 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006083
+eval whole scene point accuracy vox: 0.915877
+eval whole scene point avg class acc vox: 0.905130
+eval whole scene point accuracy: 0.915314
+eval whole scene point avg class acc: 0.912702
+eval whole scene point calibrated average acc vox: 0.899332
+vox based --------class 1 weight: 0.808945, acc: 0.922523; class 2 weight: 0.191055, acc: 0.887736; 
+**** EPOCH 036 ****
+2019-01-20 03:36:41.259337
+ -- 010 / 333 --
+mean loss: 0.405232
+accuracy: 0.857611
+ -- 020 / 333 --
+mean loss: 0.410591
+accuracy: 0.891466
+ -- 030 / 333 --
+mean loss: 0.399584
+accuracy: 0.869938
+ -- 040 / 333 --
+mean loss: 0.364462
+accuracy: 0.872289
+ -- 050 / 333 --
+mean loss: 0.393336
+accuracy: 0.872158
+ -- 060 / 333 --
+mean loss: 0.421537
+accuracy: 0.881530
+ -- 070 / 333 --
+mean loss: 0.410154
+accuracy: 0.890854
+ -- 080 / 333 --
+mean loss: 0.416074
+accuracy: 0.880005
+ -- 090 / 333 --
+mean loss: 0.398673
+accuracy: 0.880038
+ -- 100 / 333 --
+mean loss: 0.387761
+accuracy: 0.903139
+ -- 110 / 333 --
+mean loss: 0.405306
+accuracy: 0.883143
+ -- 120 / 333 --
+mean loss: 0.407709
+accuracy: 0.868213
+ -- 130 / 333 --
+mean loss: 0.382295
+accuracy: 0.896431
+ -- 140 / 333 --
+mean loss: 0.402815
+accuracy: 0.895048
+ -- 150 / 333 --
+mean loss: 0.405408
+accuracy: 0.877656
+ -- 160 / 333 --
+mean loss: 0.377642
+accuracy: 0.898551
+ -- 170 / 333 --
+mean loss: 0.397755
+accuracy: 0.881223
+ -- 180 / 333 --
+mean loss: 0.380738
+accuracy: 0.851716
+ -- 190 / 333 --
+mean loss: 0.383909
+accuracy: 0.858022
+ -- 200 / 333 --
+mean loss: 0.420986
+accuracy: 0.876136
+ -- 210 / 333 --
+mean loss: 0.393832
+accuracy: 0.872036
+ -- 220 / 333 --
+mean loss: 0.391313
+accuracy: 0.891095
+ -- 230 / 333 --
+mean loss: 0.388022
+accuracy: 0.880957
+ -- 240 / 333 --
+mean loss: 0.380332
+accuracy: 0.885041
+ -- 250 / 333 --
+mean loss: 0.403976
+accuracy: 0.882465
+ -- 260 / 333 --
+mean loss: 0.437296
+accuracy: 0.883731
+ -- 270 / 333 --
+mean loss: 0.384933
+accuracy: 0.878306
+ -- 280 / 333 --
+mean loss: 0.389996
+accuracy: 0.890482
+ -- 290 / 333 --
+mean loss: 0.372366
+accuracy: 0.884126
+ -- 300 / 333 --
+mean loss: 0.370091
+accuracy: 0.878920
+ -- 310 / 333 --
+mean loss: 0.406755
+accuracy: 0.894513
+ -- 320 / 333 --
+mean loss: 0.427670
+accuracy: 0.884333
+ -- 330 / 333 --
+mean loss: 0.429249
+accuracy: 0.889430
+Starting pickle....
+**** EPOCH 037 ****
+2019-01-20 03:49:14.419616
+ -- 010 / 333 --
+mean loss: 0.423763
+accuracy: 0.891535
+ -- 020 / 333 --
+mean loss: 0.393954
+accuracy: 0.896003
+ -- 030 / 333 --
+mean loss: 0.404608
+accuracy: 0.891342
+ -- 040 / 333 --
+mean loss: 0.372532
+accuracy: 0.892907
+ -- 050 / 333 --
+mean loss: 0.371598
+accuracy: 0.889878
+ -- 060 / 333 --
+mean loss: 0.392605
+accuracy: 0.914966
+ -- 070 / 333 --
+mean loss: 0.406186
+accuracy: 0.891197
+ -- 080 / 333 --
+mean loss: 0.417425
+accuracy: 0.897735
+ -- 090 / 333 --
+mean loss: 0.400058
+accuracy: 0.900044
+ -- 100 / 333 --
+mean loss: 0.411670
+accuracy: 0.897218
+ -- 110 / 333 --
+mean loss: 0.393709
+accuracy: 0.897413
+ -- 120 / 333 --
+mean loss: 0.417229
+accuracy: 0.883601
+ -- 130 / 333 --
+mean loss: 0.411952
+accuracy: 0.887246
+ -- 140 / 333 --
+mean loss: 0.406327
+accuracy: 0.880030
+ -- 150 / 333 --
+mean loss: 0.425915
+accuracy: 0.877732
+ -- 160 / 333 --
+mean loss: 0.406284
+accuracy: 0.904341
+ -- 170 / 333 --
+mean loss: 0.373051
+accuracy: 0.890999
+ -- 180 / 333 --
+mean loss: 0.392515
+accuracy: 0.885871
+ -- 190 / 333 --
+mean loss: 0.375376
+accuracy: 0.891471
+ -- 200 / 333 --
+mean loss: 0.407164
+accuracy: 0.897582
+ -- 210 / 333 --
+mean loss: 0.398250
+accuracy: 0.895419
+ -- 220 / 333 --
+mean loss: 0.380357
+accuracy: 0.891428
+ -- 230 / 333 --
+mean loss: 0.411555
+accuracy: 0.884377
+ -- 240 / 333 --
+mean loss: 0.399862
+accuracy: 0.900945
+ -- 250 / 333 --
+mean loss: 0.408086
+accuracy: 0.904789
+ -- 260 / 333 --
+mean loss: 0.386251
+accuracy: 0.877690
+ -- 270 / 333 --
+mean loss: 0.421198
+accuracy: 0.869719
+ -- 280 / 333 --
+mean loss: 0.399468
+accuracy: 0.884797
+ -- 290 / 333 --
+mean loss: 0.417851
+accuracy: 0.883351
+ -- 300 / 333 --
+mean loss: 0.416240
+accuracy: 0.894039
+ -- 310 / 333 --
+mean loss: 0.387175
+accuracy: 0.902570
+ -- 320 / 333 --
+mean loss: 0.389610
+accuracy: 0.891912
+ -- 330 / 333 --
+mean loss: 0.384267
+accuracy: 0.875455
+Starting pickle....
+**** EPOCH 038 ****
+2019-01-20 04:01:48.331270
+ -- 010 / 333 --
+mean loss: 0.381315
+accuracy: 0.873936
+ -- 020 / 333 --
+mean loss: 0.404351
+accuracy: 0.870434
+ -- 030 / 333 --
+mean loss: 0.406810
+accuracy: 0.885285
+ -- 040 / 333 --
+mean loss: 0.404338
+accuracy: 0.890329
+ -- 050 / 333 --
+mean loss: 0.404001
+accuracy: 0.877600
+ -- 060 / 333 --
+mean loss: 0.391379
+accuracy: 0.878499
+ -- 070 / 333 --
+mean loss: 0.394238
+accuracy: 0.867127
+ -- 080 / 333 --
+mean loss: 0.420664
+accuracy: 0.879916
+ -- 090 / 333 --
+mean loss: 0.414139
+accuracy: 0.878057
+ -- 100 / 333 --
+mean loss: 0.370766
+accuracy: 0.878916
+ -- 110 / 333 --
+mean loss: 0.399642
+accuracy: 0.882906
+ -- 120 / 333 --
+mean loss: 0.387614
+accuracy: 0.883629
+ -- 130 / 333 --
+mean loss: 0.382834
+accuracy: 0.874089
+ -- 140 / 333 --
+mean loss: 0.415641
+accuracy: 0.885770
+ -- 150 / 333 --
+mean loss: 0.405879
+accuracy: 0.883774
+ -- 160 / 333 --
+mean loss: 0.375150
+accuracy: 0.887202
+ -- 170 / 333 --
+mean loss: 0.389708
+accuracy: 0.890290
+ -- 180 / 333 --
+mean loss: 0.373747
+accuracy: 0.879777
+ -- 190 / 333 --
+mean loss: 0.420532
+accuracy: 0.880464
+ -- 200 / 333 --
+mean loss: 0.388360
+accuracy: 0.885731
+ -- 210 / 333 --
+mean loss: 0.390814
+accuracy: 0.885599
+ -- 220 / 333 --
+mean loss: 0.390868
+accuracy: 0.874837
+ -- 230 / 333 --
+mean loss: 0.400433
+accuracy: 0.881475
+ -- 240 / 333 --
+mean loss: 0.411411
+accuracy: 0.896037
+ -- 250 / 333 --
+mean loss: 0.405694
+accuracy: 0.884845
+ -- 260 / 333 --
+mean loss: 0.351549
+accuracy: 0.895350
+ -- 270 / 333 --
+mean loss: 0.401221
+accuracy: 0.882384
+ -- 280 / 333 --
+mean loss: 0.412343
+accuracy: 0.869754
+ -- 290 / 333 --
+mean loss: 0.383941
+accuracy: 0.878846
+ -- 300 / 333 --
+mean loss: 0.378364
+accuracy: 0.872858
+ -- 310 / 333 --
+mean loss: 0.368274
+accuracy: 0.877506
+ -- 320 / 333 --
+mean loss: 0.371020
+accuracy: 0.867387
+ -- 330 / 333 --
+mean loss: 0.388960
+accuracy: 0.883881
+Starting pickle....
+**** EPOCH 039 ****
+2019-01-20 04:14:22.464324
+ -- 010 / 333 --
+mean loss: 0.386357
+accuracy: 0.877083
+ -- 020 / 333 --
+mean loss: 0.401863
+accuracy: 0.878343
+ -- 030 / 333 --
+mean loss: 0.386546
+accuracy: 0.882200
+ -- 040 / 333 --
+mean loss: 0.380456
+accuracy: 0.880729
+ -- 050 / 333 --
+mean loss: 0.378093
+accuracy: 0.890497
+ -- 060 / 333 --
+mean loss: 0.385056
+accuracy: 0.881830
+ -- 070 / 333 --
+mean loss: 0.401355
+accuracy: 0.888995
+ -- 080 / 333 --
+mean loss: 0.397708
+accuracy: 0.882348
+ -- 090 / 333 --
+mean loss: 0.407396
+accuracy: 0.894479
+ -- 100 / 333 --
+mean loss: 0.419924
+accuracy: 0.881467
+ -- 110 / 333 --
+mean loss: 0.402975
+accuracy: 0.883270
+ -- 120 / 333 --
+mean loss: 0.369348
+accuracy: 0.894075
+ -- 130 / 333 --
+mean loss: 0.419095
+accuracy: 0.858634
+ -- 140 / 333 --
+mean loss: 0.372560
+accuracy: 0.895038
+ -- 150 / 333 --
+mean loss: 0.392345
+accuracy: 0.894529
+ -- 160 / 333 --
+mean loss: 0.394227
+accuracy: 0.877837
+ -- 170 / 333 --
+mean loss: 0.399178
+accuracy: 0.880619
+ -- 180 / 333 --
+mean loss: 0.409214
+accuracy: 0.876991
+ -- 190 / 333 --
+mean loss: 0.396809
+accuracy: 0.885351
+ -- 200 / 333 --
+mean loss: 0.405325
+accuracy: 0.876873
+ -- 210 / 333 --
+mean loss: 0.389348
+accuracy: 0.872114
+ -- 220 / 333 --
+mean loss: 0.391628
+accuracy: 0.881145
+ -- 230 / 333 --
+mean loss: 0.405979
+accuracy: 0.859910
+ -- 240 / 333 --
+mean loss: 0.403739
+accuracy: 0.887995
+ -- 250 / 333 --
+mean loss: 0.382915
+accuracy: 0.895892
+ -- 260 / 333 --
+mean loss: 0.417260
+accuracy: 0.888214
+ -- 270 / 333 --
+mean loss: 0.396217
+accuracy: 0.885386
+ -- 280 / 333 --
+mean loss: 0.401961
+accuracy: 0.885344
+ -- 290 / 333 --
+mean loss: 0.394140
+accuracy: 0.891179
+ -- 300 / 333 --
+mean loss: 0.395688
+accuracy: 0.873821
+ -- 310 / 333 --
+mean loss: 0.386850
+accuracy: 0.880063
+ -- 320 / 333 --
+mean loss: 0.364407
+accuracy: 0.887487
+ -- 330 / 333 --
+mean loss: 0.380708
+accuracy: 0.897506
+Starting pickle....
+**** EPOCH 040 ****
+2019-01-20 04:26:56.933646
+ -- 010 / 333 --
+mean loss: 0.405030
+accuracy: 0.898642
+ -- 020 / 333 --
+mean loss: 0.399049
+accuracy: 0.874590
+ -- 030 / 333 --
+mean loss: 0.403606
+accuracy: 0.883547
+ -- 040 / 333 --
+mean loss: 0.389499
+accuracy: 0.877544
+ -- 050 / 333 --
+mean loss: 0.406220
+accuracy: 0.896590
+ -- 060 / 333 --
+mean loss: 0.389022
+accuracy: 0.878113
+ -- 070 / 333 --
+mean loss: 0.404443
+accuracy: 0.875251
+ -- 080 / 333 --
+mean loss: 0.388391
+accuracy: 0.883707
+ -- 090 / 333 --
+mean loss: 0.394680
+accuracy: 0.887085
+ -- 100 / 333 --
+mean loss: 0.398071
+accuracy: 0.888063
+ -- 110 / 333 --
+mean loss: 0.374314
+accuracy: 0.869033
+ -- 120 / 333 --
+mean loss: 0.383116
+accuracy: 0.879025
+ -- 130 / 333 --
+mean loss: 0.399485
+accuracy: 0.875122
+ -- 140 / 333 --
+mean loss: 0.385144
+accuracy: 0.865022
+ -- 150 / 333 --
+mean loss: 0.376694
+accuracy: 0.867408
+ -- 160 / 333 --
+mean loss: 0.416633
+accuracy: 0.881380
+ -- 170 / 333 --
+mean loss: 0.374906
+accuracy: 0.891240
+ -- 180 / 333 --
+mean loss: 0.377029
+accuracy: 0.886585
+ -- 190 / 333 --
+mean loss: 0.395149
+accuracy: 0.890783
+ -- 200 / 333 --
+mean loss: 0.398490
+accuracy: 0.882840
+ -- 210 / 333 --
+mean loss: 0.408588
+accuracy: 0.884711
+ -- 220 / 333 --
+mean loss: 0.385224
+accuracy: 0.888756
+ -- 230 / 333 --
+mean loss: 0.403197
+accuracy: 0.881478
+ -- 240 / 333 --
+mean loss: 0.400495
+accuracy: 0.889638
+ -- 250 / 333 --
+mean loss: 0.440457
+accuracy: 0.872578
+ -- 260 / 333 --
+mean loss: 0.407962
+accuracy: 0.879477
+ -- 270 / 333 --
+mean loss: 0.393330
+accuracy: 0.893946
+ -- 280 / 333 --
+mean loss: 0.394139
+accuracy: 0.896841
+ -- 290 / 333 --
+mean loss: 0.382189
+accuracy: 0.888968
+ -- 300 / 333 --
+mean loss: 0.383034
+accuracy: 0.881184
+ -- 310 / 333 --
+mean loss: 0.395865
+accuracy: 0.881181
+ -- 320 / 333 --
+mean loss: 0.404478
+accuracy: 0.872279
+ -- 330 / 333 --
+mean loss: 0.388309
+accuracy: 0.902306
+Starting pickle....
+2019-01-20 04:39:30.094114
+---- EPOCH 016 EVALUATION ----
+eval mean loss: 0.197213
+eval point accuracy vox: 0.914505
+eval point avg class acc vox: 0.908312
+eval point accuracy: 0.914383
+eval point avg class acc: 0.915100
+eval point calibrated average acc: 0.915545
+vox based --------class 1 weight: 0.808959, acc: 0.913764; class 2 weight: 0.191041, acc: 0.916436; 
+2019-01-20 04:50:16.835905
+---- EPOCH 017 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006144
+eval whole scene point accuracy vox: 0.914424
+eval whole scene point avg class acc vox: 0.908585
+eval whole scene point accuracy: 0.914358
+eval whole scene point avg class acc: 0.915434
+eval whole scene point calibrated average acc vox: 0.905436
+vox based --------class 1 weight: 0.809034, acc: 0.918032; class 2 weight: 0.190966, acc: 0.899138; 
+Model saved in file: log/model.ckpt
+**** EPOCH 041 ****
+2019-01-20 04:56:45.927533
+ -- 010 / 333 --
+mean loss: 0.383023
+accuracy: 0.897335
+ -- 020 / 333 --
+mean loss: 0.404996
+accuracy: 0.878279
+ -- 030 / 333 --
+mean loss: 0.413700
+accuracy: 0.888060
+ -- 040 / 333 --
+mean loss: 0.389336
+accuracy: 0.875080
+ -- 050 / 333 --
+mean loss: 0.375102
+accuracy: 0.894879
+ -- 060 / 333 --
+mean loss: 0.372170
+accuracy: 0.884232
+ -- 070 / 333 --
+mean loss: 0.410811
+accuracy: 0.886047
+ -- 080 / 333 --
+mean loss: 0.367516
+accuracy: 0.873133
+ -- 090 / 333 --
+mean loss: 0.412702
+accuracy: 0.889191
+ -- 100 / 333 --
+mean loss: 0.378656
+accuracy: 0.894965
+ -- 110 / 333 --
+mean loss: 0.405749
+accuracy: 0.896245
+ -- 120 / 333 --
+mean loss: 0.394748
+accuracy: 0.890778
+ -- 130 / 333 --
+mean loss: 0.395739
+accuracy: 0.891273
+ -- 140 / 333 --
+mean loss: 0.358065
+accuracy: 0.896805
+ -- 150 / 333 --
+mean loss: 0.364619
+accuracy: 0.886911
+ -- 160 / 333 --
+mean loss: 0.400125
+accuracy: 0.875541
+ -- 170 / 333 --
+mean loss: 0.394464
+accuracy: 0.890049
+ -- 180 / 333 --
+mean loss: 0.391381
+accuracy: 0.896240
+ -- 190 / 333 --
+mean loss: 0.385655
+accuracy: 0.885587
+ -- 200 / 333 --
+mean loss: 0.397618
+accuracy: 0.892498
+ -- 210 / 333 --
+mean loss: 0.360917
+accuracy: 0.880159
+ -- 220 / 333 --
+mean loss: 0.400389
+accuracy: 0.875191
+ -- 230 / 333 --
+mean loss: 0.401597
+accuracy: 0.892165
+ -- 240 / 333 --
+mean loss: 0.380699
+accuracy: 0.889977
+ -- 250 / 333 --
+mean loss: 0.417638
+accuracy: 0.880236
+ -- 260 / 333 --
+mean loss: 0.387501
+accuracy: 0.873140
+ -- 270 / 333 --
+mean loss: 0.357550
+accuracy: 0.874323
+ -- 280 / 333 --
+mean loss: 0.387960
+accuracy: 0.886755
+ -- 290 / 333 --
+mean loss: 0.389729
+accuracy: 0.887336
+ -- 300 / 333 --
+mean loss: 0.390945
+accuracy: 0.884209
+ -- 310 / 333 --
+mean loss: 0.424753
+accuracy: 0.885020
+ -- 320 / 333 --
+mean loss: 0.408974
+accuracy: 0.891393
+ -- 330 / 333 --
+mean loss: 0.398791
+accuracy: 0.879619
+Starting pickle....
+**** EPOCH 042 ****
+2019-01-20 05:09:19.137676
+ -- 010 / 333 --
+mean loss: 0.418630
+accuracy: 0.871450
+ -- 020 / 333 --
+mean loss: 0.363669
+accuracy: 0.899890
+ -- 030 / 333 --
+mean loss: 0.375343
+accuracy: 0.882910
+ -- 040 / 333 --
+mean loss: 0.375856
+accuracy: 0.888528
+ -- 050 / 333 --
+mean loss: 0.385791
+accuracy: 0.877497
+ -- 060 / 333 --
+mean loss: 0.401653
+accuracy: 0.901627
+ -- 070 / 333 --
+mean loss: 0.415131
+accuracy: 0.880931
+ -- 080 / 333 --
+mean loss: 0.369402
+accuracy: 0.890138
+ -- 090 / 333 --
+mean loss: 0.371114
+accuracy: 0.893341
+ -- 100 / 333 --
+mean loss: 0.380263
+accuracy: 0.902594
+ -- 110 / 333 --
+mean loss: 0.406507
+accuracy: 0.899934
+ -- 120 / 333 --
+mean loss: 0.399369
+accuracy: 0.886585
+ -- 130 / 333 --
+mean loss: 0.377011
+accuracy: 0.873721
+ -- 140 / 333 --
+mean loss: 0.382352
+accuracy: 0.885415
+ -- 150 / 333 --
+mean loss: 0.373445
+accuracy: 0.887140
+ -- 160 / 333 --
+mean loss: 0.396849
+accuracy: 0.887395
+ -- 170 / 333 --
+mean loss: 0.393551
+accuracy: 0.883642
+ -- 180 / 333 --
+mean loss: 0.417151
+accuracy: 0.883563
+ -- 190 / 333 --
+mean loss: 0.421768
+accuracy: 0.883438
+ -- 200 / 333 --
+mean loss: 0.411061
+accuracy: 0.881429
+ -- 210 / 333 --
+mean loss: 0.389790
+accuracy: 0.874009
+ -- 220 / 333 --
+mean loss: 0.390621
+accuracy: 0.882531
+ -- 230 / 333 --
+mean loss: 0.364209
+accuracy: 0.866874
+ -- 240 / 333 --
+mean loss: 0.417208
+accuracy: 0.881966
+ -- 250 / 333 --
+mean loss: 0.408361
+accuracy: 0.887391
+ -- 260 / 333 --
+mean loss: 0.395346
+accuracy: 0.890774
+ -- 270 / 333 --
+mean loss: 0.369621
+accuracy: 0.881591
+ -- 280 / 333 --
+mean loss: 0.401706
+accuracy: 0.877259
+ -- 290 / 333 --
+mean loss: 0.401228
+accuracy: 0.873021
+ -- 300 / 333 --
+mean loss: 0.374746
+accuracy: 0.872781
+ -- 310 / 333 --
+mean loss: 0.388258
+accuracy: 0.873653
+ -- 320 / 333 --
+mean loss: 0.404929
+accuracy: 0.886312
+ -- 330 / 333 --
+mean loss: 0.406402
+accuracy: 0.895294
+Starting pickle....
+**** EPOCH 043 ****
+2019-01-20 05:21:51.165416
+ -- 010 / 333 --
+mean loss: 0.417237
+accuracy: 0.880285
+ -- 020 / 333 --
+mean loss: 0.382717
+accuracy: 0.869127
+ -- 030 / 333 --
+mean loss: 0.383781
+accuracy: 0.884376
+ -- 040 / 333 --
+mean loss: 0.375938
+accuracy: 0.864106
+ -- 050 / 333 --
+mean loss: 0.370346
+accuracy: 0.887936
+ -- 060 / 333 --
+mean loss: 0.402154
+accuracy: 0.887583
+ -- 070 / 333 --
+mean loss: 0.381780
+accuracy: 0.890218
+ -- 080 / 333 --
+mean loss: 0.403111
+accuracy: 0.879916
+ -- 090 / 333 --
+mean loss: 0.367484
+accuracy: 0.887881
+ -- 100 / 333 --
+mean loss: 0.391377
+accuracy: 0.872295
+ -- 110 / 333 --
+mean loss: 0.393801
+accuracy: 0.889925
+ -- 120 / 333 --
+mean loss: 0.377853
+accuracy: 0.899650
+ -- 130 / 333 --
+mean loss: 0.380169
+accuracy: 0.894265
+ -- 140 / 333 --
+mean loss: 0.409699
+accuracy: 0.885521
+ -- 150 / 333 --
+mean loss: 0.407889
+accuracy: 0.872424
+ -- 160 / 333 --
+mean loss: 0.400333
+accuracy: 0.874478
+ -- 170 / 333 --
+mean loss: 0.392814
+accuracy: 0.877345
+ -- 180 / 333 --
+mean loss: 0.398023
+accuracy: 0.883639
+ -- 190 / 333 --
+mean loss: 0.371037
+accuracy: 0.906158
+ -- 200 / 333 --
+mean loss: 0.400288
+accuracy: 0.872606
+ -- 210 / 333 --
+mean loss: 0.377873
+accuracy: 0.893632
+ -- 220 / 333 --
+mean loss: 0.388466
+accuracy: 0.893249
+ -- 230 / 333 --
+mean loss: 0.395562
+accuracy: 0.878099
+ -- 240 / 333 --
+mean loss: 0.373598
+accuracy: 0.889415
+ -- 250 / 333 --
+mean loss: 0.393058
+accuracy: 0.888275
+ -- 260 / 333 --
+mean loss: 0.403128
+accuracy: 0.884144
+ -- 270 / 333 --
+mean loss: 0.377210
+accuracy: 0.880944
+ -- 280 / 333 --
+mean loss: 0.414802
+accuracy: 0.877274
+ -- 290 / 333 --
+mean loss: 0.378346
+accuracy: 0.880632
+ -- 300 / 333 --
+mean loss: 0.374271
+accuracy: 0.895070
+ -- 310 / 333 --
+mean loss: 0.350725
+accuracy: 0.865889
+ -- 320 / 333 --
+mean loss: 0.374240
+accuracy: 0.880411
+ -- 330 / 333 --
+mean loss: 0.417757
+accuracy: 0.866897
+Starting pickle....
+**** EPOCH 044 ****
+2019-01-20 05:34:25.683733
+ -- 010 / 333 --
+mean loss: 0.383845
+accuracy: 0.875561
+ -- 020 / 333 --
+mean loss: 0.373671
+accuracy: 0.892952
+ -- 030 / 333 --
+mean loss: 0.382618
+accuracy: 0.890679
+ -- 040 / 333 --
+mean loss: 0.381195
+accuracy: 0.885043
+ -- 050 / 333 --
+mean loss: 0.394476
+accuracy: 0.879924
+ -- 060 / 333 --
+mean loss: 0.408685
+accuracy: 0.873229
+ -- 070 / 333 --
+mean loss: 0.374010
+accuracy: 0.885234
+ -- 080 / 333 --
+mean loss: 0.385127
+accuracy: 0.886877
+ -- 090 / 333 --
+mean loss: 0.370948
+accuracy: 0.881797
+ -- 100 / 333 --
+mean loss: 0.360646
+accuracy: 0.876161
+ -- 110 / 333 --
+mean loss: 0.368397
+accuracy: 0.884745
+ -- 120 / 333 --
+mean loss: 0.401299
+accuracy: 0.874887
+ -- 130 / 333 --
+mean loss: 0.368234
+accuracy: 0.878586
+ -- 140 / 333 --
+mean loss: 0.430865
+accuracy: 0.882109
+ -- 150 / 333 --
+mean loss: 0.391715
+accuracy: 0.894522
+ -- 160 / 333 --
+mean loss: 0.370893
+accuracy: 0.882131
+ -- 170 / 333 --
+mean loss: 0.409362
+accuracy: 0.898183
+ -- 180 / 333 --
+mean loss: 0.404228
+accuracy: 0.882544
+ -- 190 / 333 --
+mean loss: 0.382630
+accuracy: 0.873054
+ -- 200 / 333 --
+mean loss: 0.391704
+accuracy: 0.865892
+ -- 210 / 333 --
+mean loss: 0.410390
+accuracy: 0.883794
+ -- 220 / 333 --
+mean loss: 0.385899
+accuracy: 0.879090
+ -- 230 / 333 --
+mean loss: 0.411847
+accuracy: 0.898757
+ -- 240 / 333 --
+mean loss: 0.391156
+accuracy: 0.899177
+ -- 250 / 333 --
+mean loss: 0.371902
+accuracy: 0.901251
+ -- 260 / 333 --
+mean loss: 0.371491
+accuracy: 0.870768
+ -- 270 / 333 --
+mean loss: 0.381072
+accuracy: 0.891477
+ -- 280 / 333 --
+mean loss: 0.387294
+accuracy: 0.876546
+ -- 290 / 333 --
+mean loss: 0.379762
+accuracy: 0.865111
+ -- 300 / 333 --
+mean loss: 0.371358
+accuracy: 0.880319
+ -- 310 / 333 --
+mean loss: 0.398250
+accuracy: 0.893866
+ -- 320 / 333 --
+mean loss: 0.394009
+accuracy: 0.894839
+ -- 330 / 333 --
+mean loss: 0.388879
+accuracy: 0.882005
+Starting pickle....
+**** EPOCH 045 ****
+2019-01-20 05:46:56.636518
+ -- 010 / 333 --
+mean loss: 0.370200
+accuracy: 0.877242
+ -- 020 / 333 --
+mean loss: 0.406302
+accuracy: 0.881499
+ -- 030 / 333 --
+mean loss: 0.414447
+accuracy: 0.888020
+ -- 040 / 333 --
+mean loss: 0.379512
+accuracy: 0.884119
+ -- 050 / 333 --
+mean loss: 0.383281
+accuracy: 0.879208
+ -- 060 / 333 --
+mean loss: 0.369815
+accuracy: 0.890728
+ -- 070 / 333 --
+mean loss: 0.396795
+accuracy: 0.883304
+ -- 080 / 333 --
+mean loss: 0.400468
+accuracy: 0.883890
+ -- 090 / 333 --
+mean loss: 0.389752
+accuracy: 0.875989
+ -- 100 / 333 --
+mean loss: 0.403344
+accuracy: 0.884577
+ -- 110 / 333 --
+mean loss: 0.379166
+accuracy: 0.898758
+ -- 120 / 333 --
+mean loss: 0.421825
+accuracy: 0.879196
+ -- 130 / 333 --
+mean loss: 0.400544
+accuracy: 0.886062
+ -- 140 / 333 --
+mean loss: 0.400089
+accuracy: 0.887920
+ -- 150 / 333 --
+mean loss: 0.389351
+accuracy: 0.882724
+ -- 160 / 333 --
+mean loss: 0.365597
+accuracy: 0.883011
+ -- 170 / 333 --
+mean loss: 0.371350
+accuracy: 0.876553
+ -- 180 / 333 --
+mean loss: 0.392958
+accuracy: 0.877366
+ -- 190 / 333 --
+mean loss: 0.381606
+accuracy: 0.895985
+ -- 200 / 333 --
+mean loss: 0.369156
+accuracy: 0.891056
+ -- 210 / 333 --
+mean loss: 0.369433
+accuracy: 0.886375
+ -- 220 / 333 --
+mean loss: 0.369950
+accuracy: 0.880960
+ -- 230 / 333 --
+mean loss: 0.405868
+accuracy: 0.882744
+ -- 240 / 333 --
+mean loss: 0.391359
+accuracy: 0.883002
+ -- 250 / 333 --
+mean loss: 0.393331
+accuracy: 0.893773
+ -- 260 / 333 --
+mean loss: 0.393963
+accuracy: 0.872319
+ -- 270 / 333 --
+mean loss: 0.388703
+accuracy: 0.860101
+ -- 280 / 333 --
+mean loss: 0.360389
+accuracy: 0.860051
+ -- 290 / 333 --
+mean loss: 0.436279
+accuracy: 0.874570
+ -- 300 / 333 --
+mean loss: 0.394408
+accuracy: 0.890148
+ -- 310 / 333 --
+mean loss: 0.390310
+accuracy: 0.894075
+ -- 320 / 333 --
+mean loss: 0.365213
+accuracy: 0.887119
+ -- 330 / 333 --
+mean loss: 0.390090
+accuracy: 0.883207
+Starting pickle....
+2019-01-20 05:59:30.433825
+---- EPOCH 018 EVALUATION ----
+eval mean loss: 0.209687
+eval point accuracy vox: 0.910277
+eval point avg class acc vox: 0.913580
+eval point accuracy: 0.910519
+eval point avg class acc: 0.919538
+eval point calibrated average acc: 0.925141
+vox based --------class 1 weight: 0.808921, acc: 0.902729; class 2 weight: 0.191079, acc: 0.936348; 
+2019-01-20 06:10:17.040772
+---- EPOCH 019 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006546
+eval whole scene point accuracy vox: 0.910041
+eval whole scene point avg class acc vox: 0.914109
+eval whole scene point accuracy: 0.910324
+eval whole scene point avg class acc: 0.919916
+eval whole scene point calibrated average acc vox: 0.916304
+vox based --------class 1 weight: 0.809013, acc: 0.907527; class 2 weight: 0.190987, acc: 0.920692; 
+Model saved in file: log/best_model_epoch_045.ckpt
+**** EPOCH 046 ****
+2019-01-20 06:16:47.141295
+ -- 010 / 333 --
+mean loss: 0.370531
+accuracy: 0.894819
+ -- 020 / 333 --
+mean loss: 0.412848
+accuracy: 0.877730
+ -- 030 / 333 --
+mean loss: 0.408003
+accuracy: 0.876927
+ -- 040 / 333 --
+mean loss: 0.360668
+accuracy: 0.881326
+ -- 050 / 333 --
+mean loss: 0.383270
+accuracy: 0.875389
+ -- 060 / 333 --
+mean loss: 0.373266
+accuracy: 0.864378
+ -- 070 / 333 --
+mean loss: 0.385241
+accuracy: 0.876071
+ -- 080 / 333 --
+mean loss: 0.390973
+accuracy: 0.893396
+ -- 090 / 333 --
+mean loss: 0.389116
+accuracy: 0.884406
+ -- 100 / 333 --
+mean loss: 0.357991
+accuracy: 0.870106
+ -- 110 / 333 --
+mean loss: 0.426700
+accuracy: 0.885505
+ -- 120 / 333 --
+mean loss: 0.384489
+accuracy: 0.877911
+ -- 130 / 333 --
+mean loss: 0.387261
+accuracy: 0.901956
+ -- 140 / 333 --
+mean loss: 0.374331
+accuracy: 0.891817
+ -- 150 / 333 --
+mean loss: 0.396635
+accuracy: 0.875030
+ -- 160 / 333 --
+mean loss: 0.406393
+accuracy: 0.886410
+ -- 170 / 333 --
+mean loss: 0.421389
+accuracy: 0.886404
+ -- 180 / 333 --
+mean loss: 0.378546
+accuracy: 0.878228
+ -- 190 / 333 --
+mean loss: 0.389359
+accuracy: 0.877884
+ -- 200 / 333 --
+mean loss: 0.384028
+accuracy: 0.883926
+ -- 210 / 333 --
+mean loss: 0.396523
+accuracy: 0.875956
+ -- 220 / 333 --
+mean loss: 0.412783
+accuracy: 0.882881
+ -- 230 / 333 --
+mean loss: 0.368906
+accuracy: 0.875754
+ -- 240 / 333 --
+mean loss: 0.387085
+accuracy: 0.887633
+ -- 250 / 333 --
+mean loss: 0.389186
+accuracy: 0.869693
+ -- 260 / 333 --
+mean loss: 0.392077
+accuracy: 0.888102
+ -- 270 / 333 --
+mean loss: 0.370478
+accuracy: 0.892599
+ -- 280 / 333 --
+mean loss: 0.378153
+accuracy: 0.882047
+ -- 290 / 333 --
+mean loss: 0.386991
+accuracy: 0.872300
+ -- 300 / 333 --
+mean loss: 0.351105
+accuracy: 0.894283
+ -- 310 / 333 --
+mean loss: 0.379592
+accuracy: 0.889338
+ -- 320 / 333 --
+mean loss: 0.359832
+accuracy: 0.881034
+ -- 330 / 333 --
+mean loss: 0.370869
+accuracy: 0.887965
+Starting pickle....
+**** EPOCH 047 ****
+2019-01-20 06:29:19.277708
+ -- 010 / 333 --
+mean loss: 0.397689
+accuracy: 0.889668
+ -- 020 / 333 --
+mean loss: 0.387725
+accuracy: 0.876165
+ -- 030 / 333 --
+mean loss: 0.376964
+accuracy: 0.883030
+ -- 040 / 333 --
+mean loss: 0.373684
+accuracy: 0.882490
+ -- 050 / 333 --
+mean loss: 0.411937
+accuracy: 0.874243
+ -- 060 / 333 --
+mean loss: 0.404486
+accuracy: 0.885101
+ -- 070 / 333 --
+mean loss: 0.381796
+accuracy: 0.888456
+ -- 080 / 333 --
+mean loss: 0.386791
+accuracy: 0.879573
+ -- 090 / 333 --
+mean loss: 0.394453
+accuracy: 0.886197
+ -- 100 / 333 --
+mean loss: 0.382861
+accuracy: 0.891426
+ -- 110 / 333 --
+mean loss: 0.404047
+accuracy: 0.886298
+ -- 120 / 333 --
+mean loss: 0.378932
+accuracy: 0.881548
+ -- 130 / 333 --
+mean loss: 0.386516
+accuracy: 0.896275
+ -- 140 / 333 --
+mean loss: 0.370786
+accuracy: 0.881500
+ -- 150 / 333 --
+mean loss: 0.380458
+accuracy: 0.898028
+ -- 160 / 333 --
+mean loss: 0.413649
+accuracy: 0.870642
+ -- 170 / 333 --
+mean loss: 0.410655
+accuracy: 0.881521
+ -- 180 / 333 --
+mean loss: 0.391448
+accuracy: 0.882104
+ -- 190 / 333 --
+mean loss: 0.375549
+accuracy: 0.879293
+ -- 200 / 333 --
+mean loss: 0.377209
+accuracy: 0.890616
+ -- 210 / 333 --
+mean loss: 0.372641
+accuracy: 0.884430
+ -- 220 / 333 --
+mean loss: 0.409868
+accuracy: 0.882481
+ -- 230 / 333 --
+mean loss: 0.375712
+accuracy: 0.878765
+ -- 240 / 333 --
+mean loss: 0.416897
+accuracy: 0.879543
+ -- 250 / 333 --
+mean loss: 0.390698
+accuracy: 0.877460
+ -- 260 / 333 --
+mean loss: 0.374290
+accuracy: 0.892061
+ -- 270 / 333 --
+mean loss: 0.400032
+accuracy: 0.880772
+ -- 280 / 333 --
+mean loss: 0.377928
+accuracy: 0.885106
+ -- 290 / 333 --
+mean loss: 0.370159
+accuracy: 0.898520
+ -- 300 / 333 --
+mean loss: 0.375127
+accuracy: 0.891199
+ -- 310 / 333 --
+mean loss: 0.362714
+accuracy: 0.888983
+ -- 320 / 333 --
+mean loss: 0.385126
+accuracy: 0.901460
+ -- 330 / 333 --
+mean loss: 0.392487
+accuracy: 0.890966
+Starting pickle....
+**** EPOCH 048 ****
+2019-01-20 06:41:52.261860
+ -- 010 / 333 --
+mean loss: 0.395467
+accuracy: 0.873048
+ -- 020 / 333 --
+mean loss: 0.399490
+accuracy: 0.891990
+ -- 030 / 333 --
+mean loss: 0.380498
+accuracy: 0.896338
+ -- 040 / 333 --
+mean loss: 0.366968
+accuracy: 0.871019
+ -- 050 / 333 --
+mean loss: 0.391228
+accuracy: 0.884764
+ -- 060 / 333 --
+mean loss: 0.370523
+accuracy: 0.882671
+ -- 070 / 333 --
+mean loss: 0.352193
+accuracy: 0.887231
+ -- 080 / 333 --
+mean loss: 0.381777
+accuracy: 0.872525
+ -- 090 / 333 --
+mean loss: 0.395679
+accuracy: 0.886566
+ -- 100 / 333 --
+mean loss: 0.391685
+accuracy: 0.877265
+ -- 110 / 333 --
+mean loss: 0.383747
+accuracy: 0.892995
+ -- 120 / 333 --
+mean loss: 0.395355
+accuracy: 0.873702
+ -- 130 / 333 --
+mean loss: 0.394218
+accuracy: 0.879990
+ -- 140 / 333 --
+mean loss: 0.383431
+accuracy: 0.877033
+ -- 150 / 333 --
+mean loss: 0.370236
+accuracy: 0.894903
+ -- 160 / 333 --
+mean loss: 0.389806
+accuracy: 0.876487
+ -- 170 / 333 --
+mean loss: 0.389475
+accuracy: 0.872348
+ -- 180 / 333 --
+mean loss: 0.403297
+accuracy: 0.892558
+ -- 190 / 333 --
+mean loss: 0.359554
+accuracy: 0.886480
+ -- 200 / 333 --
+mean loss: 0.399352
+accuracy: 0.878079
+ -- 210 / 333 --
+mean loss: 0.406750
+accuracy: 0.868499
+ -- 220 / 333 --
+mean loss: 0.394974
+accuracy: 0.894766
+ -- 230 / 333 --
+mean loss: 0.376836
+accuracy: 0.890558
+ -- 240 / 333 --
+mean loss: 0.408371
+accuracy: 0.868301
+ -- 250 / 333 --
+mean loss: 0.387841
+accuracy: 0.889782
+ -- 260 / 333 --
+mean loss: 0.380893
+accuracy: 0.877472
+ -- 270 / 333 --
+mean loss: 0.380580
+accuracy: 0.896255
+ -- 280 / 333 --
+mean loss: 0.397343
+accuracy: 0.882419
+ -- 290 / 333 --
+mean loss: 0.394750
+accuracy: 0.889414
+ -- 300 / 333 --
+mean loss: 0.361354
+accuracy: 0.882412
+ -- 310 / 333 --
+mean loss: 0.387596
+accuracy: 0.882133
+ -- 320 / 333 --
+mean loss: 0.368868
+accuracy: 0.909916
+ -- 330 / 333 --
+mean loss: 0.383799
+accuracy: 0.888524
+Starting pickle....
+**** EPOCH 049 ****
+2019-01-20 06:54:24.419649
+ -- 010 / 333 --
+mean loss: 0.384424
+accuracy: 0.884737
+ -- 020 / 333 --
+mean loss: 0.355186
+accuracy: 0.886728
+ -- 030 / 333 --
+mean loss: 0.379771
+accuracy: 0.879124
+ -- 040 / 333 --
+mean loss: 0.378724
+accuracy: 0.889300
+ -- 050 / 333 --
+mean loss: 0.388677
+accuracy: 0.861988
+ -- 060 / 333 --
+mean loss: 0.374872
+accuracy: 0.897536
+ -- 070 / 333 --
+mean loss: 0.372621
+accuracy: 0.883716
+ -- 080 / 333 --
+mean loss: 0.399497
+accuracy: 0.886580
+ -- 090 / 333 --
+mean loss: 0.381836
+accuracy: 0.897007
+ -- 100 / 333 --
+mean loss: 0.381482
+accuracy: 0.871838
+ -- 110 / 333 --
+mean loss: 0.414688
+accuracy: 0.876192
+ -- 120 / 333 --
+mean loss: 0.392359
+accuracy: 0.871876
+ -- 130 / 333 --
+mean loss: 0.410294
+accuracy: 0.890445
+ -- 140 / 333 --
+mean loss: 0.386007
+accuracy: 0.884022
+ -- 150 / 333 --
+mean loss: 0.368982
+accuracy: 0.895458
+ -- 160 / 333 --
+mean loss: 0.391514
+accuracy: 0.878441
+ -- 170 / 333 --
+mean loss: 0.398327
+accuracy: 0.885997
+ -- 180 / 333 --
+mean loss: 0.375622
+accuracy: 0.893953
+ -- 190 / 333 --
+mean loss: 0.382874
+accuracy: 0.883138
+ -- 200 / 333 --
+mean loss: 0.379620
+accuracy: 0.875023
+ -- 210 / 333 --
+mean loss: 0.387587
+accuracy: 0.903084
+ -- 220 / 333 --
+mean loss: 0.374321
+accuracy: 0.897622
+ -- 230 / 333 --
+mean loss: 0.403060
+accuracy: 0.898447
+ -- 240 / 333 --
+mean loss: 0.381615
+accuracy: 0.885243
+ -- 250 / 333 --
+mean loss: 0.385914
+accuracy: 0.869935
+ -- 260 / 333 --
+mean loss: 0.418775
+accuracy: 0.871206
+ -- 270 / 333 --
+mean loss: 0.398157
+accuracy: 0.873962
+ -- 280 / 333 --
+mean loss: 0.364846
+accuracy: 0.893769
+ -- 290 / 333 --
+mean loss: 0.391502
+accuracy: 0.886970
+ -- 300 / 333 --
+mean loss: 0.362374
+accuracy: 0.875170
+ -- 310 / 333 --
+mean loss: 0.376680
+accuracy: 0.892272
+ -- 320 / 333 --
+mean loss: 0.369046
+accuracy: 0.887717
+ -- 330 / 333 --
+mean loss: 0.401473
+accuracy: 0.892441
+Starting pickle....
+**** EPOCH 050 ****
+2019-01-20 07:06:58.541846
+ -- 010 / 333 --
+mean loss: 0.382403
+accuracy: 0.886473
+ -- 020 / 333 --
+mean loss: 0.368346
+accuracy: 0.899757
+ -- 030 / 333 --
+mean loss: 0.401168
+accuracy: 0.889340
+ -- 040 / 333 --
+mean loss: 0.387445
+accuracy: 0.892665
+ -- 050 / 333 --
+mean loss: 0.405911
+accuracy: 0.882105
+ -- 060 / 333 --
+mean loss: 0.401819
+accuracy: 0.881984
+ -- 070 / 333 --
+mean loss: 0.392169
+accuracy: 0.892656
+ -- 080 / 333 --
+mean loss: 0.382949
+accuracy: 0.891162
+ -- 090 / 333 --
+mean loss: 0.379191
+accuracy: 0.888949
+ -- 100 / 333 --
+mean loss: 0.364316
+accuracy: 0.875886
+ -- 110 / 333 --
+mean loss: 0.382826
+accuracy: 0.878659
+ -- 120 / 333 --
+mean loss: 0.361209
+accuracy: 0.890586
+ -- 130 / 333 --
+mean loss: 0.396840
+accuracy: 0.888727
+ -- 140 / 333 --
+mean loss: 0.392588
+accuracy: 0.891622
+ -- 150 / 333 --
+mean loss: 0.377928
+accuracy: 0.864331
+ -- 160 / 333 --
+mean loss: 0.369664
+accuracy: 0.882019
+ -- 170 / 333 --
+mean loss: 0.397049
+accuracy: 0.875422
+ -- 180 / 333 --
+mean loss: 0.382417
+accuracy: 0.879734
+ -- 190 / 333 --
+mean loss: 0.404660
+accuracy: 0.882928
+ -- 200 / 333 --
+mean loss: 0.366040
+accuracy: 0.889338
+ -- 210 / 333 --
+mean loss: 0.369639
+accuracy: 0.873565
+ -- 220 / 333 --
+mean loss: 0.394026
+accuracy: 0.879207
+ -- 230 / 333 --
+mean loss: 0.384459
+accuracy: 0.882593
+ -- 240 / 333 --
+mean loss: 0.381272
+accuracy: 0.898072
+ -- 250 / 333 --
+mean loss: 0.369186
+accuracy: 0.879688
+ -- 260 / 333 --
+mean loss: 0.366692
+accuracy: 0.894556
+ -- 270 / 333 --
+mean loss: 0.406479
+accuracy: 0.887767
+ -- 280 / 333 --
+mean loss: 0.387810
+accuracy: 0.874674
+ -- 290 / 333 --
+mean loss: 0.392555
+accuracy: 0.892362
+ -- 300 / 333 --
+mean loss: 0.392257
+accuracy: 0.871524
+ -- 310 / 333 --
+mean loss: 0.392228
+accuracy: 0.897714
+ -- 320 / 333 --
+mean loss: 0.368151
+accuracy: 0.896299
+ -- 330 / 333 --
+mean loss: 0.360520
+accuracy: 0.887232
+Starting pickle....
+2019-01-20 07:19:30.470708
+---- EPOCH 020 EVALUATION ----
+eval mean loss: 0.214419
+eval point accuracy vox: 0.907613
+eval point avg class acc vox: 0.915723
+eval point accuracy: 0.908027
+eval point avg class acc: 0.921025
+eval point calibrated average acc: 0.929100
+vox based --------class 1 weight: 0.808924, acc: 0.896797; class 2 weight: 0.191076, acc: 0.945252; 
+2019-01-20 07:30:17.090364
+---- EPOCH 021 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006713
+eval whole scene point accuracy vox: 0.907250
+eval whole scene point avg class acc vox: 0.916026
+eval whole scene point accuracy: 0.907706
+eval whole scene point avg class acc: 0.921211
+eval whole scene point calibrated average acc vox: 0.920759
+vox based --------class 1 weight: 0.809070, acc: 0.901829; class 2 weight: 0.190930, acc: 0.930224; 
+Model saved in file: log/best_model_epoch_050.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 051 ****
+2019-01-20 07:36:47.741050
+ -- 010 / 333 --
+mean loss: 0.390656
+accuracy: 0.902507
+ -- 020 / 333 --
+mean loss: 0.384960
+accuracy: 0.874724
+ -- 030 / 333 --
+mean loss: 0.389715
+accuracy: 0.886598
+ -- 040 / 333 --
+mean loss: 0.402571
+accuracy: 0.900015
+ -- 050 / 333 --
+mean loss: 0.379719
+accuracy: 0.881440
+ -- 060 / 333 --
+mean loss: 0.353128
+accuracy: 0.880293
+ -- 070 / 333 --
+mean loss: 0.379746
+accuracy: 0.894311
+ -- 080 / 333 --
+mean loss: 0.384603
+accuracy: 0.884185
+ -- 090 / 333 --
+mean loss: 0.377879
+accuracy: 0.872031
+ -- 100 / 333 --
+mean loss: 0.381616
+accuracy: 0.898099
+ -- 110 / 333 --
+mean loss: 0.366571
+accuracy: 0.897810
+ -- 120 / 333 --
+mean loss: 0.363668
+accuracy: 0.887855
+ -- 130 / 333 --
+mean loss: 0.359566
+accuracy: 0.891532
+ -- 140 / 333 --
+mean loss: 0.392871
+accuracy: 0.875257
+ -- 150 / 333 --
+mean loss: 0.402280
+accuracy: 0.887122
+ -- 160 / 333 --
+mean loss: 0.380179
+accuracy: 0.885997
+ -- 170 / 333 --
+mean loss: 0.383044
+accuracy: 0.882939
+ -- 180 / 333 --
+mean loss: 0.369429
+accuracy: 0.883852
+ -- 190 / 333 --
+mean loss: 0.350048
+accuracy: 0.885914
+ -- 200 / 333 --
+mean loss: 0.366223
+accuracy: 0.894181
+ -- 210 / 333 --
+mean loss: 0.380016
+accuracy: 0.900451
+ -- 220 / 333 --
+mean loss: 0.403446
+accuracy: 0.886049
+ -- 230 / 333 --
+mean loss: 0.379263
+accuracy: 0.898903
+ -- 240 / 333 --
+mean loss: 0.389478
+accuracy: 0.880450
+ -- 250 / 333 --
+mean loss: 0.395330
+accuracy: 0.895466
+ -- 260 / 333 --
+mean loss: 0.383704
+accuracy: 0.878059
+ -- 270 / 333 --
+mean loss: 0.382239
+accuracy: 0.890123
+ -- 280 / 333 --
+mean loss: 0.390326
+accuracy: 0.877655
+ -- 290 / 333 --
+mean loss: 0.390134
+accuracy: 0.898671
+ -- 300 / 333 --
+mean loss: 0.403996
+accuracy: 0.892723
+ -- 310 / 333 --
+mean loss: 0.358552
+accuracy: 0.888577
+ -- 320 / 333 --
+mean loss: 0.411853
+accuracy: 0.879163
+ -- 330 / 333 --
+mean loss: 0.403462
+accuracy: 0.892579
+Starting pickle....
+**** EPOCH 052 ****
+2019-01-20 07:49:20.250775
+ -- 010 / 333 --
+mean loss: 0.393137
+accuracy: 0.870810
+ -- 020 / 333 --
+mean loss: 0.383593
+accuracy: 0.900811
+ -- 030 / 333 --
+mean loss: 0.365030
+accuracy: 0.888203
+ -- 040 / 333 --
+mean loss: 0.360206
+accuracy: 0.876857
+ -- 050 / 333 --
+mean loss: 0.407583
+accuracy: 0.883945
+ -- 060 / 333 --
+mean loss: 0.392515
+accuracy: 0.902378
+ -- 070 / 333 --
+mean loss: 0.393661
+accuracy: 0.884353
+ -- 080 / 333 --
+mean loss: 0.369943
+accuracy: 0.885552
+ -- 090 / 333 --
+mean loss: 0.385995
+accuracy: 0.890345
+ -- 100 / 333 --
+mean loss: 0.362566
+accuracy: 0.881075
+ -- 110 / 333 --
+mean loss: 0.363326
+accuracy: 0.885552
+ -- 120 / 333 --
+mean loss: 0.374941
+accuracy: 0.885603
+ -- 130 / 333 --
+mean loss: 0.398340
+accuracy: 0.886121
+ -- 140 / 333 --
+mean loss: 0.369079
+accuracy: 0.878849
+ -- 150 / 333 --
+mean loss: 0.390334
+accuracy: 0.897255
+ -- 160 / 333 --
+mean loss: 0.367104
+accuracy: 0.883384
+ -- 170 / 333 --
+mean loss: 0.400218
+accuracy: 0.890031
+ -- 180 / 333 --
+mean loss: 0.389221
+accuracy: 0.864283
+ -- 190 / 333 --
+mean loss: 0.398131
+accuracy: 0.878313
+ -- 200 / 333 --
+mean loss: 0.404650
+accuracy: 0.879952
+ -- 210 / 333 --
+mean loss: 0.384019
+accuracy: 0.873097
+ -- 220 / 333 --
+mean loss: 0.391150
+accuracy: 0.877734
+ -- 230 / 333 --
+mean loss: 0.391265
+accuracy: 0.888269
+ -- 240 / 333 --
+mean loss: 0.376869
+accuracy: 0.882431
+ -- 250 / 333 --
+mean loss: 0.371760
+accuracy: 0.873845
+ -- 260 / 333 --
+mean loss: 0.382403
+accuracy: 0.863455
+ -- 270 / 333 --
+mean loss: 0.368079
+accuracy: 0.879764
+ -- 280 / 333 --
+mean loss: 0.381859
+accuracy: 0.878080
+ -- 290 / 333 --
+mean loss: 0.408518
+accuracy: 0.884163
+ -- 300 / 333 --
+mean loss: 0.368476
+accuracy: 0.887606
+ -- 310 / 333 --
+mean loss: 0.340231
+accuracy: 0.891378
+ -- 320 / 333 --
+mean loss: 0.363397
+accuracy: 0.885365
+ -- 330 / 333 --
+mean loss: 0.362555
+accuracy: 0.889696
+Starting pickle....
+**** EPOCH 053 ****
+2019-01-20 08:01:52.961813
+ -- 010 / 333 --
+mean loss: 0.364273
+accuracy: 0.884663
+ -- 020 / 333 --
+mean loss: 0.377631
+accuracy: 0.889697
+ -- 030 / 333 --
+mean loss: 0.386924
+accuracy: 0.868605
+ -- 040 / 333 --
+mean loss: 0.385786
+accuracy: 0.878777
+ -- 050 / 333 --
+mean loss: 0.353824
+accuracy: 0.875405
+ -- 060 / 333 --
+mean loss: 0.391882
+accuracy: 0.882598
+ -- 070 / 333 --
+mean loss: 0.377216
+accuracy: 0.892792
+ -- 080 / 333 --
+mean loss: 0.363998
+accuracy: 0.891013
+ -- 090 / 333 --
+mean loss: 0.375454
+accuracy: 0.893334
+ -- 100 / 333 --
+mean loss: 0.386011
+accuracy: 0.892430
+ -- 110 / 333 --
+mean loss: 0.376075
+accuracy: 0.876823
+ -- 120 / 333 --
+mean loss: 0.371649
+accuracy: 0.899284
+ -- 130 / 333 --
+mean loss: 0.421774
+accuracy: 0.877342
+ -- 140 / 333 --
+mean loss: 0.396633
+accuracy: 0.885709
+ -- 150 / 333 --
+mean loss: 0.387874
+accuracy: 0.887346
+ -- 160 / 333 --
+mean loss: 0.396491
+accuracy: 0.881800
+ -- 170 / 333 --
+mean loss: 0.352935
+accuracy: 0.882565
+ -- 180 / 333 --
+mean loss: 0.395538
+accuracy: 0.898043
+ -- 190 / 333 --
+mean loss: 0.370369
+accuracy: 0.868330
+ -- 200 / 333 --
+mean loss: 0.386420
+accuracy: 0.895218
+ -- 210 / 333 --
+mean loss: 0.356281
+accuracy: 0.906259
+ -- 220 / 333 --
+mean loss: 0.391511
+accuracy: 0.871485
+ -- 230 / 333 --
+mean loss: 0.383686
+accuracy: 0.896506
+ -- 240 / 333 --
+mean loss: 0.372269
+accuracy: 0.896168
+ -- 250 / 333 --
+mean loss: 0.385029
+accuracy: 0.889700
+ -- 260 / 333 --
+mean loss: 0.350884
+accuracy: 0.876137
+ -- 270 / 333 --
+mean loss: 0.391308
+accuracy: 0.878609
+ -- 280 / 333 --
+mean loss: 0.384258
+accuracy: 0.876999
+ -- 290 / 333 --
+mean loss: 0.385071
+accuracy: 0.881100
+ -- 300 / 333 --
+mean loss: 0.375515
+accuracy: 0.893057
+ -- 310 / 333 --
+mean loss: 0.391409
+accuracy: 0.877420
+ -- 320 / 333 --
+mean loss: 0.379620
+accuracy: 0.891664
+ -- 330 / 333 --
+mean loss: 0.390135
+accuracy: 0.871961
+Starting pickle....
+**** EPOCH 054 ****
+2019-01-20 08:14:27.756705
+ -- 010 / 333 --
+mean loss: 0.411426
+accuracy: 0.882387
+ -- 020 / 333 --
+mean loss: 0.402735
+accuracy: 0.877269
+ -- 030 / 333 --
+mean loss: 0.382250
+accuracy: 0.889004
+ -- 040 / 333 --
+mean loss: 0.362416
+accuracy: 0.892855
+ -- 050 / 333 --
+mean loss: 0.389788
+accuracy: 0.881933
+ -- 060 / 333 --
+mean loss: 0.420576
+accuracy: 0.886224
+ -- 070 / 333 --
+mean loss: 0.374897
+accuracy: 0.887100
+ -- 080 / 333 --
+mean loss: 0.389947
+accuracy: 0.897667
+ -- 090 / 333 --
+mean loss: 0.361105
+accuracy: 0.880653
+ -- 100 / 333 --
+mean loss: 0.374146
+accuracy: 0.881353
+ -- 110 / 333 --
+mean loss: 0.397873
+accuracy: 0.874601
+ -- 120 / 333 --
+mean loss: 0.382376
+accuracy: 0.907765
+ -- 130 / 333 --
+mean loss: 0.422300
+accuracy: 0.887584
+ -- 140 / 333 --
+mean loss: 0.376582
+accuracy: 0.888864
+ -- 150 / 333 --
+mean loss: 0.374571
+accuracy: 0.890469
+ -- 160 / 333 --
+mean loss: 0.366771
+accuracy: 0.894662
+ -- 170 / 333 --
+mean loss: 0.392463
+accuracy: 0.877475
+ -- 180 / 333 --
+mean loss: 0.378647
+accuracy: 0.905985
+ -- 190 / 333 --
+mean loss: 0.374081
+accuracy: 0.897012
+ -- 200 / 333 --
+mean loss: 0.387408
+accuracy: 0.872052
+ -- 210 / 333 --
+mean loss: 0.358208
+accuracy: 0.889328
+ -- 220 / 333 --
+mean loss: 0.395464
+accuracy: 0.892209
+ -- 230 / 333 --
+mean loss: 0.361744
+accuracy: 0.895207
+ -- 240 / 333 --
+mean loss: 0.384672
+accuracy: 0.867744
+ -- 250 / 333 --
+mean loss: 0.389552
+accuracy: 0.879410
+ -- 260 / 333 --
+mean loss: 0.377010
+accuracy: 0.891100
+ -- 270 / 333 --
+mean loss: 0.359330
+accuracy: 0.859317
+ -- 280 / 333 --
+mean loss: 0.364106
+accuracy: 0.879875
+ -- 290 / 333 --
+mean loss: 0.394817
+accuracy: 0.879980
+ -- 300 / 333 --
+mean loss: 0.382708
+accuracy: 0.885688
+ -- 310 / 333 --
+mean loss: 0.352038
+accuracy: 0.883443
+ -- 320 / 333 --
+mean loss: 0.372808
+accuracy: 0.884403
+ -- 330 / 333 --
+mean loss: 0.391810
+accuracy: 0.883737
+Starting pickle....
+**** EPOCH 055 ****
+2019-01-20 08:27:02.265079
+ -- 010 / 333 --
+mean loss: 0.352770
+accuracy: 0.873767
+ -- 020 / 333 --
+mean loss: 0.376890
+accuracy: 0.886519
+ -- 030 / 333 --
+mean loss: 0.364801
+accuracy: 0.886417
+ -- 040 / 333 --
+mean loss: 0.389111
+accuracy: 0.894299
+ -- 050 / 333 --
+mean loss: 0.360662
+accuracy: 0.877473
+ -- 060 / 333 --
+mean loss: 0.396781
+accuracy: 0.888815
+ -- 070 / 333 --
+mean loss: 0.371850
+accuracy: 0.875511
+ -- 080 / 333 --
+mean loss: 0.377193
+accuracy: 0.897806
+ -- 090 / 333 --
+mean loss: 0.381189
+accuracy: 0.884829
+ -- 100 / 333 --
+mean loss: 0.374429
+accuracy: 0.887243
+ -- 110 / 333 --
+mean loss: 0.391568
+accuracy: 0.899274
+ -- 120 / 333 --
+mean loss: 0.375650
+accuracy: 0.892929
+ -- 130 / 333 --
+mean loss: 0.383747
+accuracy: 0.881423
+ -- 140 / 333 --
+mean loss: 0.402091
+accuracy: 0.882518
+ -- 150 / 333 --
+mean loss: 0.386509
+accuracy: 0.893448
+ -- 160 / 333 --
+mean loss: 0.385197
+accuracy: 0.867501
+ -- 170 / 333 --
+mean loss: 0.384333
+accuracy: 0.884844
+ -- 180 / 333 --
+mean loss: 0.359979
+accuracy: 0.893546
+ -- 190 / 333 --
+mean loss: 0.383156
+accuracy: 0.887086
+ -- 200 / 333 --
+mean loss: 0.374000
+accuracy: 0.900957
+ -- 210 / 333 --
+mean loss: 0.363075
+accuracy: 0.888355
+ -- 220 / 333 --
+mean loss: 0.371456
+accuracy: 0.886311
+ -- 230 / 333 --
+mean loss: 0.422387
+accuracy: 0.867410
+ -- 240 / 333 --
+mean loss: 0.395152
+accuracy: 0.880632
+ -- 250 / 333 --
+mean loss: 0.357977
+accuracy: 0.903251
+ -- 260 / 333 --
+mean loss: 0.372114
+accuracy: 0.891352
+ -- 270 / 333 --
+mean loss: 0.358178
+accuracy: 0.893021
+ -- 280 / 333 --
+mean loss: 0.361644
+accuracy: 0.889980
+ -- 290 / 333 --
+mean loss: 0.400135
+accuracy: 0.887488
+ -- 300 / 333 --
+mean loss: 0.392275
+accuracy: 0.887601
+ -- 310 / 333 --
+mean loss: 0.381803
+accuracy: 0.881403
+ -- 320 / 333 --
+mean loss: 0.376212
+accuracy: 0.886071
+ -- 330 / 333 --
+mean loss: 0.382108
+accuracy: 0.882214
+Starting pickle....
+2019-01-20 08:39:37.141463
+---- EPOCH 022 EVALUATION ----
+eval mean loss: 0.197091
+eval point accuracy vox: 0.915756
+eval point avg class acc vox: 0.912853
+eval point accuracy: 0.915716
+eval point avg class acc: 0.919785
+eval point calibrated average acc: 0.922313
+vox based --------class 1 weight: 0.808976, acc: 0.912202; class 2 weight: 0.191025, acc: 0.927368; 
+2019-01-20 08:50:23.883745
+---- EPOCH 023 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006218
+eval whole scene point accuracy vox: 0.914584
+eval whole scene point avg class acc vox: 0.913601
+eval whole scene point accuracy: 0.914634
+eval whole scene point avg class acc: 0.920258
+eval whole scene point calibrated average acc vox: 0.913071
+vox based --------class 1 weight: 0.809000, acc: 0.915192; class 2 weight: 0.191000, acc: 0.912010; 
+**** EPOCH 056 ****
+2019-01-20 08:56:53.462662
+ -- 010 / 333 --
+mean loss: 0.398799
+accuracy: 0.882529
+ -- 020 / 333 --
+mean loss: 0.363381
+accuracy: 0.894186
+ -- 030 / 333 --
+mean loss: 0.350760
+accuracy: 0.891771
+ -- 040 / 333 --
+mean loss: 0.391338
+accuracy: 0.894514
+ -- 050 / 333 --
+mean loss: 0.374611
+accuracy: 0.900343
+ -- 060 / 333 --
+mean loss: 0.356275
+accuracy: 0.885477
+ -- 070 / 333 --
+mean loss: 0.389254
+accuracy: 0.891592
+ -- 080 / 333 --
+mean loss: 0.383872
+accuracy: 0.890958
+ -- 090 / 333 --
+mean loss: 0.392106
+accuracy: 0.867010
+ -- 100 / 333 --
+mean loss: 0.395801
+accuracy: 0.888040
+ -- 110 / 333 --
+mean loss: 0.387058
+accuracy: 0.892338
+ -- 120 / 333 --
+mean loss: 0.387947
+accuracy: 0.888234
+ -- 130 / 333 --
+mean loss: 0.347679
+accuracy: 0.901865
+ -- 140 / 333 --
+mean loss: 0.403863
+accuracy: 0.892775
+ -- 150 / 333 --
+mean loss: 0.374406
+accuracy: 0.871495
+ -- 160 / 333 --
+mean loss: 0.371679
+accuracy: 0.895516
+ -- 170 / 333 --
+mean loss: 0.382811
+accuracy: 0.878493
+ -- 180 / 333 --
+mean loss: 0.363599
+accuracy: 0.865381
+ -- 190 / 333 --
+mean loss: 0.391313
+accuracy: 0.882704
+ -- 200 / 333 --
+mean loss: 0.362655
+accuracy: 0.899647
+ -- 210 / 333 --
+mean loss: 0.376075
+accuracy: 0.891549
+ -- 220 / 333 --
+mean loss: 0.390701
+accuracy: 0.893158
+ -- 230 / 333 --
+mean loss: 0.388462
+accuracy: 0.884408
+ -- 240 / 333 --
+mean loss: 0.368141
+accuracy: 0.888423
+ -- 250 / 333 --
+mean loss: 0.381598
+accuracy: 0.897460
+ -- 260 / 333 --
+mean loss: 0.388568
+accuracy: 0.885412
+ -- 270 / 333 --
+mean loss: 0.383668
+accuracy: 0.884548
+ -- 280 / 333 --
+mean loss: 0.384436
+accuracy: 0.895716
+ -- 290 / 333 --
+mean loss: 0.381392
+accuracy: 0.882484
+ -- 300 / 333 --
+mean loss: 0.357369
+accuracy: 0.886066
+ -- 310 / 333 --
+mean loss: 0.365276
+accuracy: 0.890768
+ -- 320 / 333 --
+mean loss: 0.404951
+accuracy: 0.883438
+ -- 330 / 333 --
+mean loss: 0.375766
+accuracy: 0.888458
+Starting pickle....
+**** EPOCH 057 ****
+2019-01-20 09:09:26.921825
+ -- 010 / 333 --
+mean loss: 0.392106
+accuracy: 0.882148
+ -- 020 / 333 --
+mean loss: 0.390518
+accuracy: 0.896806
+ -- 030 / 333 --
+mean loss: 0.385151
+accuracy: 0.873354
+ -- 040 / 333 --
+mean loss: 0.413076
+accuracy: 0.903382
+ -- 050 / 333 --
+mean loss: 0.378690
+accuracy: 0.892912
+ -- 060 / 333 --
+mean loss: 0.407982
+accuracy: 0.898872
+ -- 070 / 333 --
+mean loss: 0.368629
+accuracy: 0.883070
+ -- 080 / 333 --
+mean loss: 0.375992
+accuracy: 0.874786
+ -- 090 / 333 --
+mean loss: 0.390380
+accuracy: 0.884764
+ -- 100 / 333 --
+mean loss: 0.334599
+accuracy: 0.884512
+ -- 110 / 333 --
+mean loss: 0.379979
+accuracy: 0.898316
+ -- 120 / 333 --
+mean loss: 0.375262
+accuracy: 0.891285
+ -- 130 / 333 --
+mean loss: 0.398440
+accuracy: 0.890771
+ -- 140 / 333 --
+mean loss: 0.397677
+accuracy: 0.890181
+ -- 150 / 333 --
+mean loss: 0.370531
+accuracy: 0.897136
+ -- 160 / 333 --
+mean loss: 0.340462
+accuracy: 0.872617
+ -- 170 / 333 --
+mean loss: 0.359854
+accuracy: 0.902364
+ -- 180 / 333 --
+mean loss: 0.390211
+accuracy: 0.886082
+ -- 190 / 333 --
+mean loss: 0.356088
+accuracy: 0.888604
+ -- 200 / 333 --
+mean loss: 0.361721
+accuracy: 0.873725
+ -- 210 / 333 --
+mean loss: 0.376983
+accuracy: 0.896379
+ -- 220 / 333 --
+mean loss: 0.374771
+accuracy: 0.884224
+ -- 230 / 333 --
+mean loss: 0.373676
+accuracy: 0.878361
+ -- 240 / 333 --
+mean loss: 0.375182
+accuracy: 0.880406
+ -- 250 / 333 --
+mean loss: 0.364358
+accuracy: 0.844863
+ -- 260 / 333 --
+mean loss: 0.366530
+accuracy: 0.877626
+ -- 270 / 333 --
+mean loss: 0.366670
+accuracy: 0.870135
+ -- 280 / 333 --
+mean loss: 0.379339
+accuracy: 0.864147
+ -- 290 / 333 --
+mean loss: 0.371413
+accuracy: 0.884620
+ -- 300 / 333 --
+mean loss: 0.376860
+accuracy: 0.895456
+ -- 310 / 333 --
+mean loss: 0.366938
+accuracy: 0.873107
+ -- 320 / 333 --
+mean loss: 0.385102
+accuracy: 0.888779
+ -- 330 / 333 --
+mean loss: 0.373505
+accuracy: 0.876876
+Starting pickle....
+**** EPOCH 058 ****
+2019-01-20 09:22:00.255412
+ -- 010 / 333 --
+mean loss: 0.394616
+accuracy: 0.889444
+ -- 020 / 333 --
+mean loss: 0.365439
+accuracy: 0.880989
+ -- 030 / 333 --
+mean loss: 0.364785
+accuracy: 0.888428
+ -- 040 / 333 --
+mean loss: 0.367753
+accuracy: 0.891228
+ -- 050 / 333 --
+mean loss: 0.385723
+accuracy: 0.889241
+ -- 060 / 333 --
+mean loss: 0.387232
+accuracy: 0.885369
+ -- 070 / 333 --
+mean loss: 0.341211
+accuracy: 0.882690
+ -- 080 / 333 --
+mean loss: 0.370457
+accuracy: 0.880508
+ -- 090 / 333 --
+mean loss: 0.353143
+accuracy: 0.896798
+ -- 100 / 333 --
+mean loss: 0.362856
+accuracy: 0.890811
+ -- 110 / 333 --
+mean loss: 0.376129
+accuracy: 0.883111
+ -- 120 / 333 --
+mean loss: 0.384012
+accuracy: 0.863393
+ -- 130 / 333 --
+mean loss: 0.402718
+accuracy: 0.882665
+ -- 140 / 333 --
+mean loss: 0.356107
+accuracy: 0.892289
+ -- 150 / 333 --
+mean loss: 0.355536
+accuracy: 0.871817
+ -- 160 / 333 --
+mean loss: 0.402343
+accuracy: 0.866567
+ -- 170 / 333 --
+mean loss: 0.387718
+accuracy: 0.880273
+ -- 180 / 333 --
+mean loss: 0.356686
+accuracy: 0.875204
+ -- 190 / 333 --
+mean loss: 0.345722
+accuracy: 0.898717
+ -- 200 / 333 --
+mean loss: 0.399708
+accuracy: 0.884950
+ -- 210 / 333 --
+mean loss: 0.399742
+accuracy: 0.874327
+ -- 220 / 333 --
+mean loss: 0.345457
+accuracy: 0.893454
+ -- 230 / 333 --
+mean loss: 0.377441
+accuracy: 0.884913
+ -- 240 / 333 --
+mean loss: 0.380072
+accuracy: 0.896203
+ -- 250 / 333 --
+mean loss: 0.410903
+accuracy: 0.882880
+ -- 260 / 333 --
+mean loss: 0.419359
+accuracy: 0.902074
+ -- 270 / 333 --
+mean loss: 0.391892
+accuracy: 0.889656
+ -- 280 / 333 --
+mean loss: 0.363928
+accuracy: 0.900919
+ -- 290 / 333 --
+mean loss: 0.354543
+accuracy: 0.888034
+ -- 300 / 333 --
+mean loss: 0.382527
+accuracy: 0.886756
+ -- 310 / 333 --
+mean loss: 0.378666
+accuracy: 0.891871
+ -- 320 / 333 --
+mean loss: 0.361551
+accuracy: 0.893505
+ -- 330 / 333 --
+mean loss: 0.383519
+accuracy: 0.886512
+Starting pickle....
+**** EPOCH 059 ****
+2019-01-20 09:34:33.613924
+ -- 010 / 333 --
+mean loss: 0.378917
+accuracy: 0.889560
+ -- 020 / 333 --
+mean loss: 0.343973
+accuracy: 0.892723
+ -- 030 / 333 --
+mean loss: 0.364568
+accuracy: 0.876327
+ -- 040 / 333 --
+mean loss: 0.376455
+accuracy: 0.885081
+ -- 050 / 333 --
+mean loss: 0.383732
+accuracy: 0.874861
+ -- 060 / 333 --
+mean loss: 0.368559
+accuracy: 0.886299
+ -- 070 / 333 --
+mean loss: 0.375936
+accuracy: 0.885408
+ -- 080 / 333 --
+mean loss: 0.354809
+accuracy: 0.894255
+ -- 090 / 333 --
+mean loss: 0.387928
+accuracy: 0.884038
+ -- 100 / 333 --
+mean loss: 0.393640
+accuracy: 0.894244
+ -- 110 / 333 --
+mean loss: 0.366268
+accuracy: 0.882761
+ -- 120 / 333 --
+mean loss: 0.349483
+accuracy: 0.884459
+ -- 130 / 333 --
+mean loss: 0.375979
+accuracy: 0.876759
+ -- 140 / 333 --
+mean loss: 0.337002
+accuracy: 0.885863
+ -- 150 / 333 --
+mean loss: 0.402599
+accuracy: 0.890713
+ -- 160 / 333 --
+mean loss: 0.391839
+accuracy: 0.889339
+ -- 170 / 333 --
+mean loss: 0.371525
+accuracy: 0.883216
+ -- 180 / 333 --
+mean loss: 0.356524
+accuracy: 0.891766
+ -- 190 / 333 --
+mean loss: 0.371554
+accuracy: 0.872979
+ -- 200 / 333 --
+mean loss: 0.398864
+accuracy: 0.882651
+ -- 210 / 333 --
+mean loss: 0.367302
+accuracy: 0.889142
+ -- 220 / 333 --
+mean loss: 0.381265
+accuracy: 0.891264
+ -- 230 / 333 --
+mean loss: 0.362463
+accuracy: 0.900354
+ -- 240 / 333 --
+mean loss: 0.381695
+accuracy: 0.893105
+ -- 250 / 333 --
+mean loss: 0.363121
+accuracy: 0.858605
+ -- 260 / 333 --
+mean loss: 0.370392
+accuracy: 0.880237
+ -- 270 / 333 --
+mean loss: 0.391345
+accuracy: 0.880172
+ -- 280 / 333 --
+mean loss: 0.382383
+accuracy: 0.886906
+ -- 290 / 333 --
+mean loss: 0.384170
+accuracy: 0.894124
+ -- 300 / 333 --
+mean loss: 0.375676
+accuracy: 0.888210
+ -- 310 / 333 --
+mean loss: 0.393774
+accuracy: 0.895171
+ -- 320 / 333 --
+mean loss: 0.366130
+accuracy: 0.872274
+ -- 330 / 333 --
+mean loss: 0.395774
+accuracy: 0.881113
+Starting pickle....
+**** EPOCH 060 ****
+2019-01-20 09:47:06.585535
+ -- 010 / 333 --
+mean loss: 0.386021
+accuracy: 0.896914
+ -- 020 / 333 --
+mean loss: 0.381828
+accuracy: 0.907364
+ -- 030 / 333 --
+mean loss: 0.365575
+accuracy: 0.894611
+ -- 040 / 333 --
+mean loss: 0.348333
+accuracy: 0.897184
+ -- 050 / 333 --
+mean loss: 0.386284
+accuracy: 0.876752
+ -- 060 / 333 --
+mean loss: 0.373915
+accuracy: 0.886781
+ -- 070 / 333 --
+mean loss: 0.387878
+accuracy: 0.882320
+ -- 080 / 333 --
+mean loss: 0.389701
+accuracy: 0.896067
+ -- 090 / 333 --
+mean loss: 0.384812
+accuracy: 0.893032
+ -- 100 / 333 --
+mean loss: 0.340205
+accuracy: 0.894217
+ -- 110 / 333 --
+mean loss: 0.387038
+accuracy: 0.887122
+ -- 120 / 333 --
+mean loss: 0.355926
+accuracy: 0.868219
+ -- 130 / 333 --
+mean loss: 0.378089
+accuracy: 0.892094
+ -- 140 / 333 --
+mean loss: 0.387496
+accuracy: 0.870607
+ -- 150 / 333 --
+mean loss: 0.370922
+accuracy: 0.885649
+ -- 160 / 333 --
+mean loss: 0.396633
+accuracy: 0.883991
+ -- 170 / 333 --
+mean loss: 0.357560
+accuracy: 0.883684
+ -- 180 / 333 --
+mean loss: 0.388664
+accuracy: 0.883736
+ -- 190 / 333 --
+mean loss: 0.359618
+accuracy: 0.902900
+ -- 200 / 333 --
+mean loss: 0.411066
+accuracy: 0.898655
+ -- 210 / 333 --
+mean loss: 0.356254
+accuracy: 0.872722
+ -- 220 / 333 --
+mean loss: 0.368994
+accuracy: 0.885167
+ -- 230 / 333 --
+mean loss: 0.375105
+accuracy: 0.887967
+ -- 240 / 333 --
+mean loss: 0.379863
+accuracy: 0.881082
+ -- 250 / 333 --
+mean loss: 0.363519
+accuracy: 0.894773
+ -- 260 / 333 --
+mean loss: 0.381252
+accuracy: 0.884205
+ -- 270 / 333 --
+mean loss: 0.379248
+accuracy: 0.898561
+ -- 280 / 333 --
+mean loss: 0.373743
+accuracy: 0.877855
+ -- 290 / 333 --
+mean loss: 0.359285
+accuracy: 0.893400
+ -- 300 / 333 --
+mean loss: 0.366084
+accuracy: 0.876330
+ -- 310 / 333 --
+mean loss: 0.367497
+accuracy: 0.888271
+ -- 320 / 333 --
+mean loss: 0.391862
+accuracy: 0.894592
+ -- 330 / 333 --
+mean loss: 0.413441
+accuracy: 0.904496
+Starting pickle....
+2019-01-20 09:59:40.533586
+---- EPOCH 024 EVALUATION ----
+eval mean loss: 0.211224
+eval point accuracy vox: 0.909377
+eval point avg class acc vox: 0.917038
+eval point accuracy: 0.910086
+eval point avg class acc: 0.922229
+eval point calibrated average acc: 0.929771
+vox based --------class 1 weight: 0.808930, acc: 0.899603; class 2 weight: 0.191070, acc: 0.944855; 
+2019-01-20 10:10:25.545059
+---- EPOCH 025 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.006631
+eval whole scene point accuracy vox: 0.908641
+eval whole scene point avg class acc vox: 0.917688
+eval whole scene point accuracy: 0.909410
+eval whole scene point avg class acc: 0.922655
+eval whole scene point calibrated average acc vox: 0.922567
+vox based --------class 1 weight: 0.809013, acc: 0.903050; class 2 weight: 0.190987, acc: 0.932325; 
+Model saved in file: log/best_model_epoch_060.ckpt
+Model saved in file: log/model.ckpt
+**** EPOCH 061 ****
+2019-01-20 10:16:56.071138
+ -- 010 / 333 --
+mean loss: 0.374028
+accuracy: 0.885396
+ -- 020 / 333 --
+mean loss: 0.393726
+accuracy: 0.892812
+ -- 030 / 333 --
+mean loss: 0.364259
+accuracy: 0.877351
+ -- 040 / 333 --
+mean loss: 0.376244
+accuracy: 0.898915
+ -- 050 / 333 --
+mean loss: 0.392901
+accuracy: 0.881248
+ -- 060 / 333 --
+mean loss: 0.366315
+accuracy: 0.890979
+ -- 070 / 333 --
+mean loss: 0.372451
+accuracy: 0.895295
+ -- 080 / 333 --
+mean loss: 0.345354
+accuracy: 0.864722
+ -- 090 / 333 --
+mean loss: 0.371546
+accuracy: 0.897256
+ -- 100 / 333 --
+mean loss: 0.382562
+accuracy: 0.881411
+ -- 110 / 333 --
+mean loss: 0.379393
+accuracy: 0.894047
+ -- 120 / 333 --
+mean loss: 0.386220
+accuracy: 0.893077
+ -- 130 / 333 --
+mean loss: 0.369588
+accuracy: 0.892828
+ -- 140 / 333 --
+mean loss: 0.347445
+accuracy: 0.904563
+ -- 150 / 333 --
+mean loss: 0.387489
+accuracy: 0.900190
+ -- 160 / 333 --
+mean loss: 0.352846
+accuracy: 0.876485
+ -- 170 / 333 --
+mean loss: 0.377643
+accuracy: 0.895322
+ -- 180 / 333 --
+mean loss: 0.372481
+accuracy: 0.891449
+ -- 190 / 333 --
+mean loss: 0.364483
+accuracy: 0.882330
+ -- 200 / 333 --
+mean loss: 0.371430
+accuracy: 0.886707
+ -- 210 / 333 --
+mean loss: 0.369817
+accuracy: 0.893462
+ -- 220 / 333 --
+mean loss: 0.366211
+accuracy: 0.884229
+ -- 230 / 333 --
+mean loss: 0.384239
+accuracy: 0.886185
+ -- 240 / 333 --
+mean loss: 0.371405
+accuracy: 0.872270
+ -- 250 / 333 --
+mean loss: 0.380883
+accuracy: 0.869717
+ -- 260 / 333 --
+mean loss: 0.386986
+accuracy: 0.889549
+ -- 270 / 333 --
+mean loss: 0.384481
+accuracy: 0.893198
+ -- 280 / 333 --
+mean loss: 0.383824
+accuracy: 0.877563
+ -- 290 / 333 --
+mean loss: 0.366373
+accuracy: 0.890448
+ -- 300 / 333 --
+mean loss: 0.390979
+accuracy: 0.879716
+ -- 310 / 333 --
+mean loss: 0.366669
+accuracy: 0.868982
+ -- 320 / 333 --
+mean loss: 0.384472
+accuracy: 0.890416
+ -- 330 / 333 --
+mean loss: 0.389091
+accuracy: 0.883668
+Starting pickle....
+**** EPOCH 062 ****
+2019-01-20 10:29:30.437827
+ -- 010 / 333 --
+mean loss: 0.383663
+accuracy: 0.888253
+ -- 020 / 333 --
+mean loss: 0.389755
+accuracy: 0.887338
+ -- 030 / 333 --
+mean loss: 0.351326
+accuracy: 0.885045
+ -- 040 / 333 --
+mean loss: 0.378102
+accuracy: 0.878141
+ -- 050 / 333 --
+mean loss: 0.376492
+accuracy: 0.890181
+ -- 060 / 333 --
+mean loss: 0.358762
+accuracy: 0.888568
+ -- 070 / 333 --
+mean loss: 0.354780
+accuracy: 0.903279
+ -- 080 / 333 --
+mean loss: 0.377312
+accuracy: 0.876093
+ -- 090 / 333 --
+mean loss: 0.367530
+accuracy: 0.877505
+ -- 100 / 333 --
+mean loss: 0.373291
+accuracy: 0.894324
+ -- 110 / 333 --
+mean loss: 0.397087
+accuracy: 0.887213
+ -- 120 / 333 --
+mean loss: 0.366138
+accuracy: 0.892546
+ -- 130 / 333 --
+mean loss: 0.359036
+accuracy: 0.878852
+ -- 140 / 333 --
+mean loss: 0.367243
+accuracy: 0.885947
+ -- 150 / 333 --
+mean loss: 0.377904
+accuracy: 0.883609
+ -- 160 / 333 --
+mean loss: 0.384042
+accuracy: 0.890482
+ -- 170 / 333 --
+mean loss: 0.369763
+accuracy: 0.888023
+ -- 180 / 333 --
+mean loss: 0.365552
+accuracy: 0.880404
+ -- 190 / 333 --
+mean loss: 0.370583
+accuracy: 0.878592
+ -- 200 / 333 --
+mean loss: 0.355471
+accuracy: 0.880004
+ -- 210 / 333 --
+mean loss: 0.375574
+accuracy: 0.881939
+ -- 220 / 333 --
+mean loss: 0.380545
+accuracy: 0.888652
+ -- 230 / 333 --
+mean loss: 0.357808
+accuracy: 0.888734
+ -- 240 / 333 --
+mean loss: 0.379733
+accuracy: 0.882888
+ -- 250 / 333 --
+mean loss: 0.355469
+accuracy: 0.888151
+ -- 260 / 333 --
+mean loss: 0.358087
+accuracy: 0.890802
+ -- 270 / 333 --
+mean loss: 0.378835
+accuracy: 0.877889
+ -- 280 / 333 --
+mean loss: 0.381512
+accuracy: 0.880134
+ -- 290 / 333 --
+mean loss: 0.381515
+accuracy: 0.880387
+ -- 300 / 333 --
+mean loss: 0.353122
+accuracy: 0.889216
+ -- 310 / 333 --
+mean loss: 0.382280
+accuracy: 0.881673
+ -- 320 / 333 --
+mean loss: 0.393849
+accuracy: 0.877176
+ -- 330 / 333 --
+mean loss: 0.396845
+accuracy: 0.887191
+Starting pickle....
+**** EPOCH 063 ****
+2019-01-20 10:42:02.735187
+ -- 010 / 333 --
+mean loss: 0.367753
+accuracy: 0.883871
+ -- 020 / 333 --
+mean loss: 0.381698
+accuracy: 0.886265
+ -- 030 / 333 --
+mean loss: 0.377946
+accuracy: 0.886592
+ -- 040 / 333 --
+mean loss: 0.378655
+accuracy: 0.886706
+ -- 050 / 333 --
+mean loss: 0.370364
+accuracy: 0.884235
+ -- 060 / 333 --
+mean loss: 0.365828
+accuracy: 0.888556
+ -- 070 / 333 --
+mean loss: 0.379801
+accuracy: 0.882324
+ -- 080 / 333 --
+mean loss: 0.389060
+accuracy: 0.887296
+ -- 090 / 333 --
+mean loss: 0.362703
+accuracy: 0.876750
+ -- 100 / 333 --
+mean loss: 0.345909
+accuracy: 0.884027
+ -- 110 / 333 --
+mean loss: 0.374100
+accuracy: 0.894676
+ -- 120 / 333 --
+mean loss: 0.377312
+accuracy: 0.892113
+ -- 130 / 333 --
+mean loss: 0.388404
+accuracy: 0.893286
+ -- 140 / 333 --
+mean loss: 0.387045
+accuracy: 0.896370
+ -- 150 / 333 --
+mean loss: 0.372608
+accuracy: 0.878299
+ -- 160 / 333 --
+mean loss: 0.396673
+accuracy: 0.889130
+ -- 170 / 333 --
+mean loss: 0.403387
+accuracy: 0.894040
+ -- 180 / 333 --
+mean loss: 0.369099
+accuracy: 0.895567
+ -- 190 / 333 --
+mean loss: 0.364169
+accuracy: 0.870969
+ -- 200 / 333 --
+mean loss: 0.343871
+accuracy: 0.882160
+ -- 210 / 333 --
+mean loss: 0.384488
+accuracy: 0.884399
+ -- 220 / 333 --
+mean loss: 0.361228
+accuracy: 0.891278
+ -- 230 / 333 --
+mean loss: 0.382750
+accuracy: 0.908835
+ -- 240 / 333 --
+mean loss: 0.373711
+accuracy: 0.890780
+ -- 250 / 333 --
+mean loss: 0.364406
+accuracy: 0.887216
+ -- 260 / 333 --
+mean loss: 0.370733
+accuracy: 0.895661
+ -- 270 / 333 --
+mean loss: 0.356278
+accuracy: 0.891098
+ -- 280 / 333 --
+mean loss: 0.352314
+accuracy: 0.887936
+ -- 290 / 333 --
+mean loss: 0.369440
+accuracy: 0.887799
+ -- 300 / 333 --
+mean loss: 0.366246
+accuracy: 0.879305
+ -- 310 / 333 --
+mean loss: 0.359691
+accuracy: 0.890326
+ -- 320 / 333 --
+mean loss: 0.381682
+accuracy: 0.885106
+ -- 330 / 333 --
+mean loss: 0.368021
+accuracy: 0.885032
+Starting pickle....
+**** EPOCH 064 ****
