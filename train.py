@@ -187,8 +187,9 @@ def train():
             log_string('**** EPOCH %03d ****' % (epoch))
             sys.stdout.flush()
 
-            train_one_epoch(sess, ops, train_writer)
             test_whole_scene(sess, ops)
+            train_one_epoch(sess, ops, train_writer)
+            # test_whole_scene(sess, ops)
             if epoch%5==0:
                 acc = eval_one_epoch(sess, ops, test_writer)
                 acc = eval_whole_scene_one_epoch(sess, ops, test_writer)
@@ -512,77 +513,100 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
 
 def test_whole_scene(sess, ops):
 
-    # global EPOCH_CNT
-    is_training = False
-    # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
+    # # global EPOCH_CNT
+    # is_training = False
+    # # test_idxs = np.arange(0, len(TEST_DATASET_WHOLE_SCENE))
 
-    # num_batches = len(TEST_DATASET_WHOLE_SCENE)
-    num_batches = 32
+    # # num_batches = len(TEST_DATASET_WHOLE_SCENE)
+    # num_batches = 32
 
-    # total_correct = 0
-    # total_seen = 0
-    # loss_sum = 0
-    # total_seen_class = [0 for _ in range(NUM_CLASSES)]
-    # total_correct_class = [0 for _ in range(NUM_CLASSES)]
+    # # total_correct = 0
+    # # total_seen = 0
+    # # loss_sum = 0
+    # # total_seen_class = [0 for _ in range(NUM_CLASSES)]
+    # # total_correct_class = [0 for _ in range(NUM_CLASSES)]
 
-    # total_correct_vox = 0
-    # total_seen_vox = 0
-    # total_seen_class_vox = [0 for _ in range(NUM_CLASSES)]
-    # total_correct_class_vox = [0 for _ in range(NUM_CLASSES)]
+    # # total_correct_vox = 0
+    # # total_seen_vox = 0
+    # # total_seen_class_vox = [0 for _ in range(NUM_CLASSES)]
+    # # total_correct_class_vox = [0 for _ in range(NUM_CLASSES)]
 
-    # log_string(str(datetime.now()))
-    # log_string('---- EPOCH %03d EVALUATION WHOLE SCENE----'%(EPOCH_CNT))
+    # # log_string(str(datetime.now()))
+    # # log_string('---- EPOCH %03d EVALUATION WHOLE SCENE----'%(EPOCH_CNT))
 
-    # labelweights = np.zeros(NUM_CLASSES)
-    # labelweights_vox = np.zeros(NUM_CLASSES)
-    is_continue_batch = False
+    # # labelweights = np.zeros(NUM_CLASSES)
+    # # labelweights_vox = np.zeros(NUM_CLASSES)
+    # is_continue_batch = False
 
-    extra_batch_data = np.zeros((0,NUM_POINT,3))
-    extra_batch_label = np.zeros((0,NUM_POINT))
-    extra_batch_smpw = np.zeros((0,NUM_POINT))
+    # extra_batch_data = np.zeros((0,NUM_POINT,3))
+    # extra_batch_label = np.zeros((0,NUM_POINT))
+    # extra_batch_smpw = np.zeros((0,NUM_POINT))
     
-    for batch_idx in range(num_batches):
-        if not is_continue_batch:
-            # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
-            batch_data, batch_label, batch_smpw, points_default = PRED_DATASET_WHOLE_SCENE[batch_idx]
-            batch_data = np.concatenate((batch_data,extra_batch_data),axis=0)
-            batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
-            batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)
-        else:
-            batch_data_tmp, batch_label_tmp, batch_smpw_tmp, _ = PRED_DATASET_WHOLE_SCENE[batch_idx]
-            batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
-            batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
-            batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
+    # for batch_idx in range(num_batches):
+    #     if not is_continue_batch:
+    #         # point_sets, semantic_segs, sample_weights = TEST_DATASET_WHOLE_SCENE
+    #         batch_data, batch_label, batch_smpw, points_default = PRED_DATASET_WHOLE_SCENE[batch_idx]
+    #         batch_data = np.concatenate((batch_data,extra_batch_data),axis=0)
+    #         batch_label = np.concatenate((batch_label,extra_batch_label),axis=0)
+    #         batch_smpw = np.concatenate((batch_smpw,extra_batch_smpw),axis=0)
+    #     else:
+    #         batch_data_tmp, batch_label_tmp, batch_smpw_tmp, _ = PRED_DATASET_WHOLE_SCENE[batch_idx]
+    #         batch_data = np.concatenate((batch_data,batch_data_tmp),axis=0)
+    #         batch_label = np.concatenate((batch_label,batch_label_tmp),axis=0)
+    #         batch_smpw = np.concatenate((batch_smpw,batch_smpw_tmp),axis=0)
 
-        if batch_data.shape[0]<BATCH_SIZE:
-            is_continue_batch = True
-            continue
-        elif batch_data.shape[0]==BATCH_SIZE:
-            is_continue_batch = False
-            extra_batch_data = np.zeros((0,NUM_POINT,3))
-            extra_batch_label = np.zeros((0,NUM_POINT))
-            extra_batch_smpw = np.zeros((0,NUM_POINT))
-        else:
-            is_continue_batch = False
-            extra_batch_data = batch_data[BATCH_SIZE:,:,:]
-            extra_batch_label = batch_label[BATCH_SIZE:,:]
-            extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
-            batch_data = batch_data[:BATCH_SIZE,:,:]
-            batch_label = batch_label[:BATCH_SIZE,:]
-            batch_smpw = batch_smpw[:BATCH_SIZE,:]
+    #     if batch_data.shape[0]<BATCH_SIZE:
+    #         is_continue_batch = True
+    #         continue
+    #     elif batch_data.shape[0]==BATCH_SIZE:
+    #         is_continue_batch = False
+    #         extra_batch_data = np.zeros((0,NUM_POINT,3))
+    #         extra_batch_label = np.zeros((0,NUM_POINT))
+    #         extra_batch_smpw = np.zeros((0,NUM_POINT))
+    #     else:
+    #         is_continue_batch = False
+    #         extra_batch_data = batch_data[BATCH_SIZE:,:,:]
+    #         extra_batch_label = batch_label[BATCH_SIZE:,:]
+    #         extra_batch_smpw = batch_smpw[BATCH_SIZE:,:]
+    #         batch_data = batch_data[:BATCH_SIZE,:,:]
+    #         batch_label = batch_label[:BATCH_SIZE,:]
+    #         batch_smpw = batch_smpw[:BATCH_SIZE,:]
 
-        aug_data = batch_data
-        feed_dict = {ops['pointclouds_pl']: aug_data,
-            ops['labels_pl']: batch_label,
-            ops['smpws_pl']: batch_smpw,
-            ops['is_training_pl']: is_training}
+    # Creates a dataset that reads all of the examples from two files.
+    filenames = tf.placeholder(tf.string, shape=[None])
+    dataset = tf.data.TFRecordDataset(filenames)
+    # dataset = dataset.map(...)  # Parse the record into tensors.
+    dataset = dataset.repeat()  # Repeat the input indefinitely.
+    dataset = dataset.batch(32)
+    iterator = dataset.make_initializable_iterator()
 
-        summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
-            ops['loss'], ops['pred']], feed_dict=feed_dict)
-        #import pdb; pdb.set_trace()    
-        log_string("Starting pickle...")
-        pickle.dump(batch_data, open('input_vals.p', 'wb'))
-        pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
+    # You can feed the initializer with the appropriate filenames for the current
+    # phase of execution, e.g. training vs. validation.
+
+    # Initialize `iterator` with training data.
+    training_filenames = ["data/tf_serialized/CH_int_array_TEST.tfrecords"]
+
+    feed_dict= {
+        filenames: training_filenames
+        }
+
+    sess.run(iterator.initializer, feed_dict=feed_dict)
+
+    summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
+        ops['loss'], ops['pred']])
+
+    # aug_data = batch_data
+    # feed_dict = {ops['pointclouds_pl']: aug_data,
+    #     ops['labels_pl']: batch_label,
+    #     ops['smpws_pl']: batch_smpw,
+    #     ops['is_training_pl']: is_training}
+
+    # summary, step, loss_val, pred_val = sess.run([ops['merged'], ops['step'],
+    #     ops['loss'], ops['pred']], feed_dict=feed_dict)
+    #import pdb; pdb.set_trace()    
+    log_string("Starting pickle...")
+    pickle.dump(batch_data, open('input_vals.p', 'wb'))
+    pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
 if __name__ == "__main__":
     
