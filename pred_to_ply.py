@@ -53,7 +53,7 @@ for index in range(input_array.shape[0]):
 					dtype=[('x', 'f8'), ('y', 'f8'), ('z', 'f8')]
 					)
 
-	import pdb; pdb.set_trace()
+	
 
 	n = len(vertex)
 	assert len(vertex_color) == n
@@ -65,13 +65,13 @@ for index in range(input_array.shape[0]):
 
 	for prop in vertex_color.dtype.names:
 	    vertex_all[prop] = vertex_color[prop]
-
+	# import pdb; pdb.set_trace()
 	ply = PlyData([PlyElement.describe(vertex_all, 'vertex')], text=True)
 	
 	ply.write(open('pred/labled_{}.ply'.format(index), mode='wb'))
 
-	with open('pred/labled_{}.ply'.format(index), mode='wb') as f:
-		PlyData([ply], byte_order='>').write(f)
+	# with open('pred/labled_{}.ply'.format(index), mode='wb') as f:
+	# 	PlyData([ply], byte_order='>').write(f)
 
 	
 

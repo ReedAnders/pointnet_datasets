@@ -70,10 +70,10 @@ class ScannetDataset():
 		coordmax = np.max(point_set,axis=0)
 		coordmin = np.min(point_set,axis=0)
 
-		normalizer = (coordmax-coordmin)
-		point_set = point_set/normalizer
-		coordmax = np.max(point_set,axis=0)
-		coordmin = np.min(point_set,axis=0)
+		# normalizer = (coordmax-coordmin)
+		# point_set = point_set/normalizer
+		# coordmax = np.max(point_set,axis=0)
+		# coordmin = np.min(point_set,axis=0)
 
 		smpmin = np.maximum(
 			coordmax-[self.subsample_dimensions_m,self.subsample_dimensions_m,self.subsample_dimensions_m*2], 
@@ -181,10 +181,10 @@ class ScannetDatasetWholeScene():
 		coordmax = np.max(point_set_ini,axis=0)
 		coordmin = np.min(point_set_ini,axis=0)
 
-		normalizer = (coordmax-coordmin)
-		point_set_ini = point_set_ini/normalizer
-		coordmax = np.max(point_set_ini,axis=0)
-		coordmin = np.min(point_set_ini,axis=0)	
+		# normalizer = (coordmax-coordmin)
+		# point_set_ini = point_set_ini/normalizer
+		# coordmax = np.max(point_set_ini,axis=0)
+		# coordmin = np.min(point_set_ini,axis=0)	
 
 		nsubvolume_x = np.ceil((coordmax[0]-coordmin[0])/self.subsample_dimensions_m).astype(np.int32)
 		nsubvolume_y = np.ceil((coordmax[1]-coordmin[1])/self.subsample_dimensions_m).astype(np.int32)
