@@ -511,6 +511,35 @@ def eval_whole_scene_one_epoch(sess, ops, test_writer):
     return caliacc
 
 
+
+def decode(serialized_example):
+    """Parses data, label, and sample weight from the given `serialized_example`."""
+    
+    features = tf.parse_single_example(
+    serialized_example,
+    
+    # Defaults are not specified since both keys are required.
+    features={
+        'pointclouds_pl': tf.FixedLenFeature([], tf.string),
+        'labels_pl': tf.FixedLenFeature([], tf.string),
+        'smpws_pl': tf.FixedLenFeature([], tf.string),
+    })
+
+    # Convert from a scalar string tensor (whose single string has
+    # length mnist.IMAGE_PIXELS) to a uint8 tensor with shape
+    # [mnist.IMAGE_PIXELS].
+    data = tf.decode_raw(features['pointclouds_pl'], tf.float64)
+    labels = tf.decode_raw(features['labels_pl'], tf.float64)
+    smpws = tf.decode_raw(features['smpws_pl'], tf.float64)
+    # data.set_shape((mnist.IMAGE_PIXELS))
+
+    import pdb; pdb.set_trace()
+
+    # Convert label from a scalar uint8 tensor to an int32 scalar.
+    # label = tf.cast(features['label'], tf.int32)
+
+    return data, labels, smpws
+
 def test_whole_scene(sess, ops):
 
     # # global EPOCH_CNT
@@ -575,7 +604,7 @@ def test_whole_scene(sess, ops):
     # Creates a dataset that reads all of the examples from two files.
     filenames = tf.placeholder(tf.string, shape=[None])
     dataset = tf.data.TFRecordDataset(filenames)
-    # dataset = dataset.map(...)  # Parse the record into tensors.
+    dataset = dataset.map(decode)  # Parse the record into tensors.
     dataset = dataset.repeat()  # Repeat the input indefinitely.
     dataset = dataset.batch(32)
     iterator = dataset.make_initializable_iterator()
