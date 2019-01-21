@@ -533,7 +533,9 @@ def decode(serialized_example):
     smpws = tf.decode_raw(features['smpws_pl'], tf.float64)
     # data.set_shape((mnist.IMAGE_PIXELS))
 
-    import pdb; pdb.set_trace()
+    data = tf.reshape(data, [NUM_CLASSES, NUM_POINT, 3])
+    labels = tf.reshape(labels, [NUM_CLASSES, NUM_POINT])
+    smpws = tf.reshape(smpws, [NUM_CLASSES, NUM_POINT])
 
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     # label = tf.cast(features['label'], tf.int32)
