@@ -63,17 +63,17 @@ def decode(serialized_example):
     # [mnist.IMAGE_PIXELS].
     data = tf.decode_raw(features['pointclouds_pl'], tf.float32)
     labels = tf.decode_raw(features['labels_pl'], tf.float32)
-    smpws = tf.decode_raw(features['smpws_pl'], tf.float32)
+    sample_weights = tf.decode_raw(features['smpws_pl'], tf.float32)
     # data.set_shape((mnist.IMAGE_PIXELS))
 
     data = tf.reshape(data, [FLAGS.num_classes, FLAGS.num_points, 3])
     labels = tf.reshape(labels, [FLAGS.num_classes, FLAGS.num_points])
-    smpws = tf.reshape(smpws, [FLAGS.num_classes, FLAGS.num_points])
+    sample_weights = tf.reshape(sample_weights, [FLAGS.num_classes, FLAGS.num_points])
     
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     # label = tf.cast(features['label'], tf.int32)
 
-    return data, labels, smpws
+    return data, labels, sample_weights
 
 
 def inputs(train, batch_size, num_epochs):
@@ -134,7 +134,7 @@ def run_training():
 
     is_training = tf.constant(FLAGS.is_training, dtype=tf.bool)
     # Build a Graph that computes predictions from the inference model.
-    logits = model.get_model(pointcloud_batch, is_training, FLAGS.num_classes)
+    logits, _ = model.get_model(pointcloud_batch, is_training, FLAGS.num_classes)
 
     # Add to the Graph the loss calculation.
     loss = model.get_loss(logits, label_batch, sample_weight_batch)
