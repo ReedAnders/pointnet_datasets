@@ -69,7 +69,7 @@ def decode(serialized_example):
     data = tf.reshape(data, [FLAGS.num_classes, FLAGS.num_points, 3])
     labels = tf.reshape(labels, [FLAGS.num_classes, FLAGS.num_points])
     smpws = tf.reshape(smpws, [FLAGS.num_classes, FLAGS.num_points])
-
+    
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     # label = tf.cast(features['label'], tf.int32)
 
@@ -109,7 +109,7 @@ def inputs(train, batch_size, num_epochs):
     # The map transformation takes a function and applies it to every element
     # of the dataset.
     dataset = dataset.map(decode)
-
+    #import pdb; pdb.set_trace()
     # The shuffle transformation uses a finite-sized buffer to shuffle elements
     # in memory. The parameter is the number of elements in the buffer. For
     # completely uniform shuffling, set the parameter to be the same as the
@@ -117,7 +117,7 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.shuffle(1000 + 3 * batch_size)
 
     dataset = dataset.repeat(num_epochs)
-    dataset = dataset.batch(batch_size)
+    #dataset = dataset.batch(batch_size)
 
     iterator = dataset.make_initializable_iterator()
   return iterator.get_next()
