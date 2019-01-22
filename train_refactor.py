@@ -175,6 +175,7 @@ def run_training():
       # Initialize the variables (the trained variables and the
       # epoch counter).
       sess.run(init_op)
+      sess.run(iterator.initializer)
       try:
         step = 0
         while True:  # Train until OutOfRangeError
