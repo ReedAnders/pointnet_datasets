@@ -145,6 +145,7 @@ def run_training():
         optimizer = tf.train.MomentumOptimizer(FLAGS.learning_rate, momentum=MOMENTUM)
     elif FLAGS.optimizer == 'adam':
         optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
+    import pdb; pdb.set_trace() 
     train_op = optimizer.minimize(loss, FLAGS.learning_rate)
 
     # The op for initializing the variables.
