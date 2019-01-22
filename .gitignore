@@ -3,6 +3,7 @@ data/
 log/
 notes.py
 pred/
+env_refactor/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
