@@ -132,8 +132,9 @@ def run_training():
     pointcloud_batch, label_batch, sample_weight_batch = inputs(
         train=FLAGS.is_training, batch_size=FLAGS.batch_size, num_epochs=FLAGS.num_epochs)
 
+    is_training = tf.constant(FLAGS.is_training, dtype=tf.bool)
     # Build a Graph that computes predictions from the inference model.
-    logits = model.get_model(pointcloud_batch, FLAGS.is_training, FLAGS.num_classes)
+    logits = model.get_model(pointcloud_batch, is_training, FLAGS.num_classes)
 
     # Add to the Graph the loss calculation.
     loss = model.get_loss(logits, label_batch, sample_weight_batch)
