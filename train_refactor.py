@@ -61,9 +61,9 @@ def decode(serialized_example):
     # Convert from a scalar string tensor (whose single string has
     # length mnist.IMAGE_PIXELS) to a uint8 tensor with shape
     # [mnist.IMAGE_PIXELS].
-    data = tf.decode_raw(features['pointclouds_pl'], tf.float64)
-    labels = tf.decode_raw(features['labels_pl'], tf.float64)
-    smpws = tf.decode_raw(features['smpws_pl'], tf.float64)
+    data = tf.decode_raw(features['pointclouds_pl'], tf.float32)
+    labels = tf.decode_raw(features['labels_pl'], tf.float32)
+    smpws = tf.decode_raw(features['smpws_pl'], tf.float32)
     # data.set_shape((mnist.IMAGE_PIXELS))
 
     data = tf.reshape(data, [FLAGS.num_classes, FLAGS.num_points, 3])
