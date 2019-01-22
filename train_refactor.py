@@ -119,7 +119,7 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.repeat(num_epochs)
     #dataset = dataset.batch(batch_size)
 
-    iterator = dataset.make_initializer()
+    iterator = tf.compat.v1.data.make_one_shot_iterator(dataset)
 
   return iterator.get_next()
 
