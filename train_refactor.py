@@ -123,6 +123,18 @@ def inputs(train, batch_size, num_epochs):
   return iterator.get_next()
 
 
+def get_learning_rate():
+
+    learning_rate = tf.train.exponential_decay(
+                        FLAGS.learning_rate,  # Base learning rate.
+                        FLAGS.batch_size,  # Current index into the dataset.
+                        200000,          # Decay step.
+                        0.7,          # Decay rate.
+                        staircase=True)
+    learing_rate = tf.maximum(learning_rate, 0.00001) # CLIP THE LEARNING RATE!
+    return learning_rate    
+
+
 def run_training():
   """Train MNIST for a number of steps."""
 
@@ -141,12 +153,14 @@ def run_training():
 
     # Add to the Graph operations that train the model.
     # TODO change learning_rate from float to tensor 
+    learning_rate = get_learning_rate()
     if FLAGS.optimizer == 'momentum':
-        optimizer = tf.train.MomentumOptimizer(FLAGS.learning_rate, momentum=MOMENTUM)
+        optimizer = tf.train.MomentumOptimizer(learning_rate, momentum=MOMENTUM)
     elif FLAGS.optimizer == 'adam':
-        optimizer = tf.train.AdamOptimizer(FLAGS.learning_rate)
-    import pdb; pdb.set_trace() 
-    train_op = optimizer.minimize(loss, FLAGS.learning_rate)
+
+        optimizer = tf.train.AdamOptimizer(learning_rate)
+    train_op = optimizer.minimize(loss, learning_rate)
+
 
     # The op for initializing the variables.
     init_op = tf.group(tf.global_variables_initializer(),
@@ -191,7 +205,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--learning_rate',
       type=float,
-      default=0.01,
+      default=0.001,
       help='Initial learning rate.')
   parser.add_argument(
       '--num_epochs',
