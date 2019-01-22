@@ -119,7 +119,8 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.repeat(num_epochs)
     #dataset = dataset.batch(batch_size)
 
-    iterator = dataset.make_initializable_iterator()
+    iterator = dataset.make_initializer()
+
   return iterator.get_next()
 
 
@@ -143,6 +144,7 @@ def training(loss, learning_rate):
   # Use the optimizer to apply the gradients that minimize the loss
   # (and also increment the global step counter) as a single training step.
   train_op = optimizer.minimize(loss, global_step=global_step)
+
   return train_op
 
 
@@ -175,7 +177,6 @@ def run_training():
       # Initialize the variables (the trained variables and the
       # epoch counter).
       sess.run(init_op)
-      sess.run(iterator.initializer)
       try:
         step = 0
         while True:  # Train until OutOfRangeError
