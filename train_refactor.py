@@ -73,6 +73,8 @@ def decode(serialized_example):
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     # label = tf.cast(features['label'], tf.int32)
 
+    return data, labels, smpws
+
 
 def inputs(train, batch_size, num_epochs):
   """Reads input data num_epochs times.
