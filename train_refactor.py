@@ -123,16 +123,27 @@ def inputs(train, batch_size, num_epochs):
   return iterator.get_next()
 
 
-def get_learning_rate():
+def training(loss, learning_rate):
+  """Sets up the training Ops.
+  Creates a summarizer to track the loss over time in TensorBoard.
+  Creates an optimizer and applies the gradients to all trainable variables.
+  The Op returned by this function is what must be passed to the
+  `sess.run()` call to cause the model to train.
+  Args:
+    loss: Loss tensor, from loss().
+    learning_rate: The learning rate to use for gradient descent.
+  Returns:
+    train_op: The Op for training.
+  """
 
-    learning_rate = tf.train.exponential_decay(
-                        FLAGS.learning_rate,  # Base learning rate.
-                        FLAGS.batch_size,  # Current index into the dataset.
-                        200000,          # Decay step.
-                        0.7,          # Decay rate.
-                        staircase=True)
-    learing_rate = tf.maximum(learning_rate, 0.00001) # CLIP THE LEARNING RATE!
-    return learning_rate    
+  # Create the gradient descent optimizer with the given learning rate.
+  optimizer = tf.train.AdamOptimizer(learning_rate)
+  # Create a variable to track the global step.
+  global_step = tf.Variable(0, name='global_step', trainable=False)
+  # Use the optimizer to apply the gradients that minimize the loss
+  # (and also increment the global step counter) as a single training step.
+  train_op = optimizer.minimize(loss, global_step=global_step)
+return train_op
 
 
 def run_training():
@@ -152,14 +163,7 @@ def run_training():
     loss = model.get_loss(logits, label_batch, sample_weight_batch)
 
     # Add to the Graph operations that train the model.
-    # TODO change learning_rate from float to tensor 
-    learning_rate = get_learning_rate()
-    if FLAGS.optimizer == 'momentum':
-        optimizer = tf.train.MomentumOptimizer(learning_rate, momentum=MOMENTUM)
-    elif FLAGS.optimizer == 'adam':
-
-        optimizer = tf.train.AdamOptimizer(learning_rate)
-    train_op = optimizer.minimize(loss, learning_rate)
+    train_op = training(loss, FLAGS.learning_rate)
 
 
     # The op for initializing the variables.
