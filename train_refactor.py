@@ -122,7 +122,7 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.repeat(num_epochs)
     dataset = dataset.batch(batch_size)
 
-    iterator = dataset.make_initializable_iterator()
+    iterator = dataset.make_one_shot_iterator()
 
   return iterator.get_next()
 
@@ -180,8 +180,6 @@ def run_training():
       # Initialize the variables (the trained variables and the
       # epoch counter).
       sess.run(init_op)
-      with tf.variable_scope('input'):
-      	sess.run(iterator.initializer)
 
       try:
         step = 0
