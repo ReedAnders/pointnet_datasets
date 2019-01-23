@@ -100,7 +100,7 @@ def inputs(train, batch_size, num_epochs):
     num_epochs = None
   filename = os.path.join(FLAGS.train_dir, TRAIN_FILE
                           if train else VALIDATION_FILE)
-
+  import pdb; pdb.set_trace()
   with tf.name_scope('input'):
     # TFRecordDataset opens a binary file and reads one record at a time.
     # `filename` could also be a list of filenames, which will be read in order.
@@ -221,7 +221,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--is_training',
       type=bool,
-      default=True,
+      default=False,
       help='Toggles train or test within model.')
   parser.add_argument(
       '--num_classes',
