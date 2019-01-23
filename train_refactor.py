@@ -31,6 +31,7 @@ import argparse
 import os.path
 import sys
 import time
+import glob
 
 import tensorflow as tf
 
@@ -41,8 +42,8 @@ import model
 FLAGS = None
 
 # Constants used for dealing with the files, matches convert_to_records.
-TRAIN_FILE = 'train.tfrecords'
-VALIDATION_FILE = 'validation.tfrecords'
+# TRAIN_FILE = 'train.tfrecords'
+# VALIDATION_FILE = 'validation.tfrecords'
 
 
 def decode(serialized_example):
@@ -98,13 +99,14 @@ def inputs(train, batch_size, num_epochs):
   """
   if not num_epochs:
     num_epochs = None
-  filename = os.path.join(FLAGS.train_dir, TRAIN_FILE
-                          if train else VALIDATION_FILE)
+  # filenames = os.path.join(FLAGS.train_dir, TRAIN_FILE
+  #                         if train else VALIDATION_FILE)
+  filenames = glob.glob('data/tf_serialized/*')
 
   with tf.name_scope('input'):
     # TFRecordDataset opens a binary file and reads one record at a time.
     # `filename` could also be a list of filenames, which will be read in order.
-    dataset = tf.data.TFRecordDataset(filename)
+    dataset = tf.data.TFRecordDataset(filenames)
 
     # The map transformation takes a function and applies it to every element
     # of the dataset.
