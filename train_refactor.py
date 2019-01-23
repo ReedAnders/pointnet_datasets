@@ -31,6 +31,7 @@ import argparse
 import os.path
 import sys
 import time
+import glob
 
 import tensorflow as tf
 
@@ -41,8 +42,8 @@ import model
 FLAGS = None
 
 # Constants used for dealing with the files, matches convert_to_records.
-TRAIN_FILE = 'train.tfrecords'
-VALIDATION_FILE = 'validation.tfrecords'
+# TRAIN_FILE = 'train.tfrecords'
+# VALIDATION_FILE = 'validation.tfrecords'
 
 
 def decode(serialized_example):
@@ -65,10 +66,10 @@ def decode(serialized_example):
     labels = tf.decode_raw(features['labels_pl'], tf.int32)
     sample_weights = tf.decode_raw(features['smpws_pl'], tf.float32)
     # data.set_shape((mnist.IMAGE_PIXELS))
-
-    data = tf.reshape(data, [FLAGS.num_classes, FLAGS.num_points, 3])
-    labels = tf.reshape(labels, [FLAGS.num_classes, FLAGS.num_points])
-    sample_weights = tf.reshape(sample_weights, [FLAGS.num_classes, FLAGS.num_points])
+    
+    data = tf.reshape(data, [FLAGS.num_points, 3])
+    labels = tf.reshape(labels, [FLAGS.num_points])
+    sample_weights = tf.reshape(sample_weights, [FLAGS.num_points])
     
     # Convert label from a scalar uint8 tensor to an int32 scalar.
     # label = tf.cast(features['label'], tf.int32)
@@ -98,13 +99,15 @@ def inputs(train, batch_size, num_epochs):
   """
   if not num_epochs:
     num_epochs = None
-  filename = os.path.join(FLAGS.train_dir, TRAIN_FILE
-                          if train else VALIDATION_FILE)
-  import pdb; pdb.set_trace()
+  # filenames = os.path.join(FLAGS.train_dir, TRAIN_FILE
+  #                         if train else VALIDATION_FILE)
+  filenames = glob.glob('data/tf_serialized/*')
+
+
   with tf.name_scope('input'):
     # TFRecordDataset opens a binary file and reads one record at a time.
     # `filename` could also be a list of filenames, which will be read in order.
-    dataset = tf.data.TFRecordDataset(filename)
+    dataset = tf.data.TFRecordDataset(filenames)
 
     # The map transformation takes a function and applies it to every element
     # of the dataset.
@@ -156,7 +159,7 @@ def run_training():
     # Input images and labels.
     pointcloud_batch, label_batch, sample_weight_batch = inputs(
         train=FLAGS.is_training, batch_size=FLAGS.batch_size, num_epochs=FLAGS.num_epochs)
-
+    import pdb; pdb.set_trace()
     is_training = tf.constant(FLAGS.is_training, dtype=tf.bool)
     # Build a Graph that computes predictions from the inference model.
     logits, _ = model.get_model(pointcloud_batch, is_training, FLAGS.num_classes)
@@ -226,7 +229,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--num_classes',
       type=int,
-      default=32,
+      default=3,
       help='Number of classes to segment in data.')
   parser.add_argument(
       '--batch_size', 
