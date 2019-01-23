@@ -122,7 +122,7 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.repeat(num_epochs)
     #dataset = dataset.batch(batch_size)
 
-    iterator = dataset.make_one_shot_iterator()
+    iterator = dataset.make_initializable_iterator()
 
   return iterator.get_next()
 
@@ -159,7 +159,7 @@ def run_training():
     # Input images and labels.
     pointcloud_batch, label_batch, sample_weight_batch = inputs(
         train=FLAGS.is_training, batch_size=FLAGS.batch_size, num_epochs=FLAGS.num_epochs)
-    import pdb; pdb.set_trace()
+    
     is_training = tf.constant(FLAGS.is_training, dtype=tf.bool)
     # Build a Graph that computes predictions from the inference model.
     logits, _ = model.get_model(pointcloud_batch, is_training, FLAGS.num_classes)
@@ -180,6 +180,7 @@ def run_training():
       # Initialize the variables (the trained variables and the
       # epoch counter).
       sess.run(init_op)
+      sess.run(pointcloud_batch, label_batch, sample_weight_batch)
       try:
         step = 0
         while True:  # Train until OutOfRangeError
