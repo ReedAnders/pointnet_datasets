@@ -120,7 +120,7 @@ def inputs(train, batch_size, num_epochs):
     dataset = dataset.shuffle(1000 + 3 * batch_size)
 
     dataset = dataset.repeat(num_epochs)
-    #dataset = dataset.batch(batch_size)
+    dataset = dataset.batch(batch_size)
 
     iterator = dataset.make_initializable_iterator()
 
@@ -180,7 +180,9 @@ def run_training():
       # Initialize the variables (the trained variables and the
       # epoch counter).
       sess.run(init_op)
-      sess.run(pointcloud_batch, label_batch, sample_weight_batch)
+      with tf.variable_scope('input'):
+      	sess.run(iterator.initializer)
+
       try:
         step = 0
         while True:  # Train until OutOfRangeError
