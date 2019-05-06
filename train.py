@@ -1,3 +1,4 @@
+from datetime import datetime
 import argparse
 import math
 from datetime import datetime
@@ -581,8 +582,13 @@ def test_whole_scene(sess, ops):
             ops['loss'], ops['pred']], feed_dict=feed_dict)
         #import pdb; pdb.set_trace()    
         log_string("Starting pickle...")
-        pickle.dump(batch_data, open('input_vals.p', 'wb'))
-        pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
+        #pickle.dump(batch_data, open('input_vals.p', 'wb'))
+        #pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
+
+	input_pickle_name = 'input_vals_{}.p'.format(datetime.datetime.utcnow())
+        pred_pickle_name = 'pred_vals_{}.p'.format(datetime.datetime.utcnow())
+        pickle.dump(batch_data, open(input_pickle_name, 'wb'))
+        pickle.dump([summary, step, loss_val, pred_val], open(pred_pickle_name, 'wb'))
 
 if __name__ == "__main__":
     

@@ -153,7 +153,7 @@ class ScannetDatasetWholeScene():
 		# Veggie Data
 		self.coords_data_filename = os.path.join(self.root, 'veggie_platter_coordinates.pickle')
 		self.labels_data_filename = os.path.join(self.root, 'veggie_platter_labels.pickle')
-		
+				
 		with open(self.coords_data_filename,'rb') as fp:
 			self.scene_points_list = pickle.load(fp)
 		with open(self.labels_data_filename,'rb') as fp:
