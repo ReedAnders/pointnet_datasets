@@ -1,4 +1,4 @@
-from datetime import datetime
+
 import argparse
 import math
 from datetime import datetime
@@ -585,8 +585,8 @@ def test_whole_scene(sess, ops):
         #pickle.dump(batch_data, open('input_vals.p', 'wb'))
         #pickle.dump([summary, step, loss_val, pred_val], open('pred_vals.p', 'wb'))
 
-	input_pickle_name = 'input_vals_{}.p'.format(datetime.datetime.utcnow())
-        pred_pickle_name = 'pred_vals_{}.p'.format(datetime.datetime.utcnow())
+	input_pickle_name = 'input_vals_{}.p'.format(datetime.now())
+        pred_pickle_name = 'pred_vals_{}.p'.format(datetime.now())
         pickle.dump(batch_data, open(input_pickle_name, 'wb'))
         pickle.dump([summary, step, loss_val, pred_val], open(pred_pickle_name, 'wb'))
 

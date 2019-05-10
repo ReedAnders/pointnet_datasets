@@ -7,683 +7,2600 @@ keep_dims is deprecated, use keepdims instead
 WARNING:tensorflow:From /home/subbotnik/pointnet_datasets_pre11Jan/env/local/lib/python2.7/site-packages/tensorflow/python/util/deprecation.py:519: calling conv1d (from tensorflow.python.ops.nn_ops) with data_format=NHWC is deprecated and will be removed in a future version.
 Instructions for updating:
 `NHWC` for data_format is deprecated, use `NWC` instead
-2019-01-20 12:13:56.941218: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
-2019-01-20 12:13:57.079449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+2019-05-07 12:31:19.608858: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2019-05-07 12:31:19.781113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
 name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
 pciBusID: 0000:17:00.0
 totalMemory: 15.90GiB freeMemory: 15.77GiB
-2019-01-20 12:13:57.174957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
+2019-05-07 12:31:19.876145: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 1 with properties: 
 name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
 pciBusID: 0000:65:00.0
 totalMemory: 15.90GiB freeMemory: 15.77GiB
-2019-01-20 12:13:57.271883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
+2019-05-07 12:31:19.972366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 2 with properties: 
 name: Quadro P5000 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
 pciBusID: 0000:66:00.0
 totalMemory: 15.89GiB freeMemory: 15.76GiB
-2019-01-20 12:13:57.275061: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
-2019-01-20 12:13:57.724758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2019-01-20 12:13:57.724798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
-2019-01-20 12:13:57.724803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
-2019-01-20 12:13:57.724806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
-2019-01-20 12:13:57.724809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
-2019-01-20 12:13:57.725291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
-2019-01-20 12:13:57.725960: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
-2019-01-20 12:13:57.726468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
-pid: 2312
+2019-05-07 12:31:19.975814: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0, 1, 2
+2019-05-07 12:31:21.083995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-07 12:31:21.084029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 1 2 
+2019-05-07 12:31:21.084034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N Y Y 
+2019-05-07 12:31:21.084037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 1:   Y N Y 
+2019-05-07 12:31:21.084039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 2:   Y Y N 
+2019-05-07 12:31:21.084597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15285 MB memory) -> physical GPU (device: 0, name: Quadro P5000, pci bus id: 0000:17:00.0, compute capability: 6.1)
+2019-05-07 12:31:21.085268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15285 MB memory) -> physical GPU (device: 1, name: Quadro P5000, pci bus id: 0000:65:00.0, compute capability: 6.1)
+2019-05-07 12:31:21.085849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15267 MB memory) -> physical GPU (device: 2, name: Quadro P5000, pci bus id: 0000:66:00.0, compute capability: 6.1)
+pid: 8206
 Tensor("Placeholder_3:0", shape=(), dtype=bool, device=/device:GPU:0)
 --- Get model and loss
 --- Get training operator
 **** EPOCH 000 ****
-2019-01-20 12:13:59.093154
- -- 010 / 333 --
-mean loss: 1.914194
-accuracy: 0.347179
- -- 020 / 333 --
-mean loss: 1.248479
-accuracy: 0.424176
- -- 030 / 333 --
-mean loss: 1.079629
-accuracy: 0.468923
- -- 040 / 333 --
-mean loss: 0.932267
-accuracy: 0.496815
- -- 050 / 333 --
-mean loss: 0.863139
-accuracy: 0.502132
- -- 060 / 333 --
-mean loss: 0.824413
-accuracy: 0.536084
- -- 070 / 333 --
-mean loss: 0.840427
-accuracy: 0.522226
- -- 080 / 333 --
-mean loss: 0.829851
-accuracy: 0.542301
- -- 090 / 333 --
-mean loss: 0.810362
-accuracy: 0.533032
- -- 100 / 333 --
-mean loss: 0.769140
-accuracy: 0.543192
- -- 110 / 333 --
-mean loss: 0.752350
-accuracy: 0.548252
- -- 120 / 333 --
-mean loss: 0.690273
-accuracy: 0.570525
- -- 130 / 333 --
-mean loss: 0.672494
-accuracy: 0.582930
- -- 140 / 333 --
-mean loss: 0.737224
-accuracy: 0.570969
- -- 150 / 333 --
-mean loss: 0.733250
-accuracy: 0.584468
- -- 160 / 333 --
-mean loss: 0.702989
-accuracy: 0.573980
- -- 170 / 333 --
-mean loss: 0.689640
-accuracy: 0.567345
- -- 180 / 333 --
-mean loss: 0.678139
-accuracy: 0.573781
- -- 190 / 333 --
-mean loss: 0.685760
-accuracy: 0.576686
- -- 200 / 333 --
-mean loss: 0.641602
-accuracy: 0.610535
- -- 210 / 333 --
-mean loss: 0.613197
-accuracy: 0.616212
- -- 220 / 333 --
-mean loss: 0.613568
-accuracy: 0.605004
- -- 230 / 333 --
-mean loss: 0.692905
-accuracy: 0.604916
- -- 240 / 333 --
-mean loss: 0.631430
-accuracy: 0.601435
- -- 250 / 333 --
-mean loss: 0.609871
-accuracy: 0.608790
- -- 260 / 333 --
-mean loss: 0.637685
-accuracy: 0.602869
- -- 270 / 333 --
-mean loss: 0.648407
-accuracy: 0.612425
- -- 280 / 333 --
-mean loss: 0.651747
-accuracy: 0.591394
- -- 290 / 333 --
-mean loss: 0.593944
-accuracy: 0.612148
- -- 300 / 333 --
-mean loss: 0.636174
-accuracy: 0.625887
- -- 310 / 333 --
-mean loss: 0.617880
-accuracy: 0.607011
- -- 320 / 333 --
-mean loss: 0.585006
-accuracy: 0.617373
- -- 330 / 333 --
-mean loss: 0.635477
-accuracy: 0.626262
+2019-05-07 12:31:22.428399
+ -- 010 / 021 --
+mean loss: 2.044683
+accuracy: 0.566172
+ -- 020 / 021 --
+mean loss: 2.025025
+accuracy: 0.751394
 Starting pickle...
-2019-01-20 12:26:52.612889
+2019-05-07 12:32:13.998535
 ---- EPOCH 000 EVALUATION ----
-eval mean loss: 0.279003
-eval point accuracy vox: 0.875246
-eval point avg class acc vox: 0.872656
-eval point accuracy: 0.872229
-eval point avg class acc: 0.877524
-eval point calibrated average acc: 0.880813
-vox based --------class 1 weight: 0.808926, acc: 0.867657; class 2 weight: 0.191074, acc: 0.887390; 
-2019-01-20 12:37:41.896044
+eval mean loss: 1.084579
+eval point accuracy vox: 0.753622
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.773145
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.753622, acc: 1.000000; class 2 weight: 0.246378, acc: 0.000000; 
+2019-05-07 12:32:37.263517
 ---- EPOCH 001 EVALUATION WHOLE SCENE----
-eval whole scene mean loss: 0.008686
-eval whole scene point accuracy vox: 0.875598
-eval whole scene point avg class acc vox: 0.873050
-eval whole scene point accuracy: 0.872483
-eval whole scene point avg class acc: 0.877934
-eval whole scene point calibrated average acc vox: 0.871676
-vox based --------class 1 weight: 0.809024, acc: 0.877172; class 2 weight: 0.190976, acc: 0.868927; 
+eval whole scene mean loss: 1.084523
+eval whole scene point accuracy vox: 0.746273
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792448
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746273, acc: 1.000000; class 2 weight: 0.253727, acc: 0.000000; 
 Model saved in file: log/best_model_epoch_000.ckpt
 Model saved in file: log/model.ckpt
 **** EPOCH 001 ****
-2019-01-20 12:44:21.820482
- -- 010 / 333 --
-mean loss: 0.595387
-accuracy: 0.632411
- -- 020 / 333 --
-mean loss: 0.591258
-accuracy: 0.634708
- -- 030 / 333 --
-mean loss: 0.592681
-accuracy: 0.631410
- -- 040 / 333 --
-mean loss: 0.614834
-accuracy: 0.626771
- -- 050 / 333 --
-mean loss: 0.542648
-accuracy: 0.636791
- -- 060 / 333 --
-mean loss: 0.582196
-accuracy: 0.634479
- -- 070 / 333 --
-mean loss: 0.611929
-accuracy: 0.624811
- -- 080 / 333 --
-mean loss: 0.583274
-accuracy: 0.634399
- -- 090 / 333 --
-mean loss: 0.583676
-accuracy: 0.636559
- -- 100 / 333 --
-mean loss: 0.585747
-accuracy: 0.636397
- -- 110 / 333 --
-mean loss: 0.578103
-accuracy: 0.629403
- -- 120 / 333 --
-mean loss: 0.554225
-accuracy: 0.635784
- -- 130 / 333 --
-mean loss: 0.637310
-accuracy: 0.650243
- -- 140 / 333 --
-mean loss: 0.561511
-accuracy: 0.646843
- -- 150 / 333 --
-mean loss: 0.611702
-accuracy: 0.640596
- -- 160 / 333 --
-mean loss: 0.596293
-accuracy: 0.638134
- -- 170 / 333 --
-mean loss: 0.585005
-accuracy: 0.673359
- -- 180 / 333 --
-mean loss: 0.611568
-accuracy: 0.641538
- -- 190 / 333 --
-mean loss: 0.532526
-accuracy: 0.656642
- -- 200 / 333 --
-mean loss: 0.575436
-accuracy: 0.663077
- -- 210 / 333 --
-mean loss: 0.535653
-accuracy: 0.655487
- -- 220 / 333 --
-mean loss: 0.582454
-accuracy: 0.661623
- -- 230 / 333 --
-mean loss: 0.563765
-accuracy: 0.648606
- -- 240 / 333 --
-mean loss: 0.568208
-accuracy: 0.662288
- -- 250 / 333 --
-mean loss: 0.552416
-accuracy: 0.654160
- -- 260 / 333 --
-mean loss: 0.547423
-accuracy: 0.646518
- -- 270 / 333 --
-mean loss: 0.579733
-accuracy: 0.652909
- -- 280 / 333 --
-mean loss: 0.569590
-accuracy: 0.661405
- -- 290 / 333 --
-mean loss: 0.559682
-accuracy: 0.662886
- -- 300 / 333 --
-mean loss: 0.562687
-accuracy: 0.657572
- -- 310 / 333 --
-mean loss: 0.526342
-accuracy: 0.672641
- -- 320 / 333 --
-mean loss: 0.579111
-accuracy: 0.658084
- -- 330 / 333 --
-mean loss: 0.523769
-accuracy: 0.669833
+2019-05-07 13:30:45.544577
+ -- 010 / 021 --
+mean loss: 2.019838
+accuracy: 0.750960
+ -- 020 / 021 --
+mean loss: 2.040355
+accuracy: 0.748295
 Starting pickle...
 **** EPOCH 002 ****
-2019-01-20 12:57:03.574532
- -- 010 / 333 --
-mean loss: 0.545732
-accuracy: 0.651014
- -- 020 / 333 --
-mean loss: 0.553135
-accuracy: 0.686396
- -- 030 / 333 --
-mean loss: 0.525805
-accuracy: 0.677769
- -- 040 / 333 --
-mean loss: 0.599977
-accuracy: 0.666383
- -- 050 / 333 --
-mean loss: 0.589044
-accuracy: 0.668670
- -- 060 / 333 --
-mean loss: 0.501735
-accuracy: 0.692017
- -- 070 / 333 --
-mean loss: 0.551458
-accuracy: 0.694724
- -- 080 / 333 --
-mean loss: 0.548087
-accuracy: 0.691026
- -- 090 / 333 --
-mean loss: 0.573235
-accuracy: 0.697613
- -- 100 / 333 --
-mean loss: 0.551103
-accuracy: 0.694381
- -- 110 / 333 --
-mean loss: 0.528865
-accuracy: 0.677660
- -- 120 / 333 --
-mean loss: 0.560277
-accuracy: 0.687633
- -- 130 / 333 --
-mean loss: 0.572301
-accuracy: 0.664070
- -- 140 / 333 --
-mean loss: 0.565188
-accuracy: 0.694592
- -- 150 / 333 --
-mean loss: 0.531824
-accuracy: 0.678824
- -- 160 / 333 --
-mean loss: 0.554039
-accuracy: 0.674952
- -- 170 / 333 --
-mean loss: 0.548444
-accuracy: 0.698296
- -- 180 / 333 --
-mean loss: 0.535064
-accuracy: 0.699374
- -- 190 / 333 --
-mean loss: 0.512852
-accuracy: 0.690564
- -- 200 / 333 --
-mean loss: 0.522135
-accuracy: 0.692923
- -- 210 / 333 --
-mean loss: 0.545952
-accuracy: 0.713865
- -- 220 / 333 --
-mean loss: 0.501693
-accuracy: 0.713226
- -- 230 / 333 --
-mean loss: 0.520841
-accuracy: 0.714529
- -- 240 / 333 --
-mean loss: 0.556402
-accuracy: 0.710664
- -- 250 / 333 --
-mean loss: 0.510817
-accuracy: 0.723566
- -- 260 / 333 --
-mean loss: 0.542987
-accuracy: 0.721822
- -- 270 / 333 --
-mean loss: 0.512103
-accuracy: 0.723671
- -- 280 / 333 --
-mean loss: 0.529370
-accuracy: 0.703877
- -- 290 / 333 --
-mean loss: 0.520412
-accuracy: 0.707945
- -- 300 / 333 --
-mean loss: 0.520712
-accuracy: 0.726538
- -- 310 / 333 --
-mean loss: 0.507764
-accuracy: 0.712617
- -- 320 / 333 --
-mean loss: 0.490010
-accuracy: 0.720181
- -- 330 / 333 --
-mean loss: 0.527797
-accuracy: 0.721416
+2019-05-07 13:31:20.651346
+ -- 010 / 021 --
+mean loss: 1.985567
+accuracy: 0.762143
+ -- 020 / 021 --
+mean loss: 1.978444
+accuracy: 0.762853
 Starting pickle...
 **** EPOCH 003 ****
-2019-01-20 13:09:39.799260
- -- 010 / 333 --
-mean loss: 0.484883
-accuracy: 0.729633
- -- 020 / 333 --
-mean loss: 0.507590
-accuracy: 0.735767
- -- 030 / 333 --
-mean loss: 0.552378
-accuracy: 0.704510
- -- 040 / 333 --
-mean loss: 0.507951
-accuracy: 0.724083
- -- 050 / 333 --
-mean loss: 0.555329
-accuracy: 0.736700
- -- 060 / 333 --
-mean loss: 0.540027
-accuracy: 0.728568
- -- 070 / 333 --
-mean loss: 0.501689
-accuracy: 0.738063
- -- 080 / 333 --
-mean loss: 0.512897
-accuracy: 0.746997
- -- 090 / 333 --
-mean loss: 0.511932
-accuracy: 0.724315
- -- 100 / 333 --
-mean loss: 0.513793
-accuracy: 0.746895
- -- 110 / 333 --
-mean loss: 0.521608
-accuracy: 0.722974
- -- 120 / 333 --
-mean loss: 0.489251
-accuracy: 0.742811
- -- 130 / 333 --
-mean loss: 0.528288
-accuracy: 0.734674
- -- 140 / 333 --
-mean loss: 0.537486
-accuracy: 0.747382
- -- 150 / 333 --
-mean loss: 0.525306
-accuracy: 0.739892
- -- 160 / 333 --
-mean loss: 0.524157
-accuracy: 0.743538
- -- 170 / 333 --
-mean loss: 0.472780
-accuracy: 0.770613
- -- 180 / 333 --
-mean loss: 0.525642
-accuracy: 0.756154
- -- 190 / 333 --
-mean loss: 0.527973
-accuracy: 0.755165
- -- 200 / 333 --
-mean loss: 0.499190
-accuracy: 0.761847
- -- 210 / 333 --
-mean loss: 0.530629
-accuracy: 0.760715
- -- 220 / 333 --
-mean loss: 0.498963
-accuracy: 0.758549
- -- 230 / 333 --
-mean loss: 0.520698
-accuracy: 0.742270
- -- 240 / 333 --
-mean loss: 0.505859
-accuracy: 0.740100
- -- 250 / 333 --
-mean loss: 0.541317
-accuracy: 0.735064
- -- 260 / 333 --
-mean loss: 0.515138
-accuracy: 0.769175
- -- 270 / 333 --
-mean loss: 0.483902
-accuracy: 0.778675
- -- 280 / 333 --
-mean loss: 0.515239
-accuracy: 0.762276
- -- 290 / 333 --
-mean loss: 0.478882
-accuracy: 0.766359
- -- 300 / 333 --
-mean loss: 0.502407
-accuracy: 0.752514
- -- 310 / 333 --
-mean loss: 0.485400
-accuracy: 0.760231
- -- 320 / 333 --
-mean loss: 0.537139
-accuracy: 0.761777
- -- 330 / 333 --
-mean loss: 0.517838
-accuracy: 0.765018
+2019-05-07 13:31:55.813309
+ -- 010 / 021 --
+mean loss: 2.008141
+accuracy: 0.751254
+ -- 020 / 021 --
+mean loss: 1.992852
+accuracy: 0.761203
 Starting pickle...
 **** EPOCH 004 ****
-2019-01-20 13:22:14.226804
- -- 010 / 333 --
-mean loss: 0.510445
-accuracy: 0.777874
- -- 020 / 333 --
-mean loss: 0.497148
-accuracy: 0.762426
- -- 030 / 333 --
-mean loss: 0.473351
-accuracy: 0.792254
- -- 040 / 333 --
-mean loss: 0.486093
-accuracy: 0.780617
- -- 050 / 333 --
-mean loss: 0.505675
-accuracy: 0.763298
- -- 060 / 333 --
-mean loss: 0.488649
-accuracy: 0.761594
- -- 070 / 333 --
-mean loss: 0.506019
-accuracy: 0.780128
- -- 080 / 333 --
-mean loss: 0.512685
-accuracy: 0.766581
- -- 090 / 333 --
-mean loss: 0.493463
-accuracy: 0.780389
- -- 100 / 333 --
-mean loss: 0.511460
-accuracy: 0.762146
- -- 110 / 333 --
-mean loss: 0.571269
-accuracy: 0.772832
- -- 120 / 333 --
-mean loss: 0.533829
-accuracy: 0.780450
- -- 130 / 333 --
-mean loss: 0.506620
-accuracy: 0.767303
- -- 140 / 333 --
-mean loss: 0.505473
-accuracy: 0.766236
- -- 150 / 333 --
-mean loss: 0.489503
-accuracy: 0.782535
- -- 160 / 333 --
-mean loss: 0.530260
-accuracy: 0.772823
- -- 170 / 333 --
-mean loss: 0.520296
-accuracy: 0.807094
- -- 180 / 333 --
-mean loss: 0.471358
-accuracy: 0.788990
- -- 190 / 333 --
-mean loss: 0.526106
-accuracy: 0.790905
- -- 200 / 333 --
-mean loss: 0.501492
-accuracy: 0.791118
- -- 210 / 333 --
-mean loss: 0.477153
-accuracy: 0.804603
- -- 220 / 333 --
-mean loss: 0.516770
-accuracy: 0.790242
- -- 230 / 333 --
-mean loss: 0.504855
-accuracy: 0.802539
- -- 240 / 333 --
-mean loss: 0.491365
-accuracy: 0.790171
- -- 250 / 333 --
-mean loss: 0.482623
-accuracy: 0.787933
- -- 260 / 333 --
-mean loss: 0.480415
-accuracy: 0.815427
- -- 270 / 333 --
-mean loss: 0.484268
-accuracy: 0.791727
- -- 280 / 333 --
-mean loss: 0.518196
-accuracy: 0.798266
- -- 290 / 333 --
-mean loss: 0.527961
-accuracy: 0.811953
- -- 300 / 333 --
-mean loss: 0.470969
-accuracy: 0.823697
- -- 310 / 333 --
-mean loss: 0.477435
-accuracy: 0.798675
- -- 320 / 333 --
-mean loss: 0.528527
-accuracy: 0.801533
- -- 330 / 333 --
-mean loss: 0.492136
-accuracy: 0.807590
+2019-05-07 13:32:31.112986
+ -- 010 / 021 --
+mean loss: 1.904306
+accuracy: 0.795650
+ -- 020 / 021 --
+mean loss: 2.007941
+accuracy: 0.740066
 Starting pickle...
 **** EPOCH 005 ****
-2019-01-20 13:34:50.759132
- -- 010 / 333 --
-mean loss: 0.497873
-accuracy: 0.806081
- -- 020 / 333 --
-mean loss: 0.522821
-accuracy: 0.803135
- -- 030 / 333 --
-mean loss: 0.474982
-accuracy: 0.823905
- -- 040 / 333 --
-mean loss: 0.489070
-accuracy: 0.820670
- -- 050 / 333 --
-mean loss: 0.502138
-accuracy: 0.796008
- -- 060 / 333 --
-mean loss: 0.522356
-accuracy: 0.792130
- -- 070 / 333 --
-mean loss: 0.511952
-accuracy: 0.794007
- -- 080 / 333 --
-mean loss: 0.497105
-accuracy: 0.812150
- -- 090 / 333 --
-mean loss: 0.487967
-accuracy: 0.836703
- -- 100 / 333 --
-mean loss: 0.476237
-accuracy: 0.805787
- -- 110 / 333 --
-mean loss: 0.512445
-accuracy: 0.800694
- -- 120 / 333 --
-mean loss: 0.457005
-accuracy: 0.812154
- -- 130 / 333 --
-mean loss: 0.484180
-accuracy: 0.815645
- -- 140 / 333 --
-mean loss: 0.483894
-accuracy: 0.821770
- -- 150 / 333 --
-mean loss: 0.542365
-accuracy: 0.814201
- -- 160 / 333 --
-mean loss: 0.485041
-accuracy: 0.823484
- -- 170 / 333 --
-mean loss: 0.498002
-accuracy: 0.826783
- -- 180 / 333 --
-mean loss: 0.482709
-accuracy: 0.818575
- -- 190 / 333 --
-mean loss: 0.487932
-accuracy: 0.830275
- -- 200 / 333 --
-mean loss: 0.488014
-accuracy: 0.825933
- -- 210 / 333 --
-mean loss: 0.496678
-accuracy: 0.835416
- -- 220 / 333 --
-mean loss: 0.500533
-accuracy: 0.826908
- -- 230 / 333 --
-mean loss: 0.556110
-accuracy: 0.820393
- -- 240 / 333 --
-mean loss: 0.470912
-accuracy: 0.844588
- -- 250 / 333 --
-mean loss: 0.469111
-accuracy: 0.836615
- -- 260 / 333 --
-mean loss: 0.460029
-accuracy: 0.827300
- -- 270 / 333 --
-mean loss: 0.510319
-accuracy: 0.823121
- -- 280 / 333 --
-mean loss: 0.474518
-accuracy: 0.846257
- -- 290 / 333 --
-mean loss: 0.481085
-accuracy: 0.845727
- -- 300 / 333 --
-mean loss: 0.503621
-accuracy: 0.827029
- -- 310 / 333 --
-mean loss: 0.510389
-accuracy: 0.837770
- -- 320 / 333 --
-mean loss: 0.461037
-accuracy: 0.850894
- -- 330 / 333 --
-mean loss: 0.511942
-accuracy: 0.839886
+2019-05-07 13:33:06.269211
+ -- 010 / 021 --
+mean loss: 1.911183
+accuracy: 0.768161
+ -- 020 / 021 --
+mean loss: 1.912095
+accuracy: 0.774158
 Starting pickle...
-2019-01-20 13:47:27.354385
+2019-05-07 13:33:41.327290
 ---- EPOCH 002 EVALUATION ----
-eval mean loss: 0.248515
-eval point accuracy vox: 0.891669
-eval point avg class acc vox: 0.896182
-eval point accuracy: 0.888465
-eval point avg class acc: 0.900504
-eval point calibrated average acc: 0.907982
-vox based --------class 1 weight: 0.808970, acc: 0.878069; class 2 weight: 0.191030, acc: 0.922939; 
-2019-01-20 13:58:16.132479
+eval mean loss: 1.021634
+eval point accuracy vox: 0.749307
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.767833
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.749307, acc: 1.000000; class 2 weight: 0.250693, acc: 0.000000; 
+2019-05-07 13:34:04.784652
 ---- EPOCH 003 EVALUATION WHOLE SCENE----
-eval whole scene mean loss: 0.007701
-eval whole scene point accuracy vox: 0.892433
-eval whole scene point avg class acc vox: 0.896206
-eval whole scene point accuracy: 0.889176
-eval whole scene point avg class acc: 0.900545
-eval whole scene point calibrated average acc vox: 0.898241
-vox based --------class 1 weight: 0.808989, acc: 0.890100; class 2 weight: 0.191011, acc: 0.902311; 
-Model saved in file: log/best_model_epoch_005.ckpt
+eval whole scene mean loss: 1.021103
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792446
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
 Starting pickle...
 Done pickling...
 **** EPOCH 006 ****
+2019-05-07 14:32:09.818783
+ -- 010 / 021 --
+mean loss: 1.933278
+accuracy: 0.765329
+ -- 020 / 021 --
+mean loss: 1.868143
+accuracy: 0.787644
+Starting pickle...
+**** EPOCH 007 ****
+2019-05-07 14:32:44.917779
+ -- 010 / 021 --
+mean loss: 1.934379
+accuracy: 0.734210
+ -- 020 / 021 --
+mean loss: 1.883023
+accuracy: 0.776288
+Starting pickle...
+**** EPOCH 008 ****
+2019-05-07 14:33:20.001335
+ -- 010 / 021 --
+mean loss: 1.848847
+accuracy: 0.771083
+ -- 020 / 021 --
+mean loss: 1.914439
+accuracy: 0.729248
+Starting pickle...
+**** EPOCH 009 ****
+2019-05-07 14:33:55.174156
+ -- 010 / 021 --
+mean loss: 1.870460
+accuracy: 0.752514
+ -- 020 / 021 --
+mean loss: 1.836746
+accuracy: 0.781622
+Starting pickle...
+**** EPOCH 010 ****
+2019-05-07 14:34:30.230207
+ -- 010 / 021 --
+mean loss: 1.806201
+accuracy: 0.748858
+ -- 020 / 021 --
+mean loss: 1.820775
+accuracy: 0.755473
+Starting pickle...
+2019-05-07 14:35:05.105963
+---- EPOCH 004 EVALUATION ----
+eval mean loss: 0.967719
+eval point accuracy vox: 0.750897
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769485
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750897, acc: 1.000000; class 2 weight: 0.249103, acc: 0.000000; 
+2019-05-07 14:35:28.164182
+---- EPOCH 005 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.966574
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792441
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 011 ****
+2019-05-07 15:33:23.430430
+ -- 010 / 021 --
+mean loss: 1.834623
+accuracy: 0.737540
+ -- 020 / 021 --
+mean loss: 1.742669
+accuracy: 0.784889
+Starting pickle...
+**** EPOCH 012 ****
+2019-05-07 15:33:58.819111
+ -- 010 / 021 --
+mean loss: 1.753681
+accuracy: 0.803340
+ -- 020 / 021 --
+mean loss: 1.863041
+accuracy: 0.750089
+Starting pickle...
+**** EPOCH 013 ****
+2019-05-07 15:34:33.964153
+ -- 010 / 021 --
+mean loss: 1.874125
+accuracy: 0.728916
+ -- 020 / 021 --
+mean loss: 1.780347
+accuracy: 0.760030
+Starting pickle...
+**** EPOCH 014 ****
+2019-05-07 15:35:09.164430
+ -- 010 / 021 --
+mean loss: 1.811347
+accuracy: 0.751628
+ -- 020 / 021 --
+mean loss: 1.751177
+accuracy: 0.781503
+Starting pickle...
+**** EPOCH 015 ****
+2019-05-07 15:35:43.897127
+ -- 010 / 021 --
+mean loss: 1.695845
+accuracy: 0.807057
+ -- 020 / 021 --
+mean loss: 1.795784
+accuracy: 0.752227
+Starting pickle...
+2019-05-07 15:36:19.013284
+---- EPOCH 006 EVALUATION ----
+eval mean loss: 0.923139
+eval point accuracy vox: 0.746894
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.767731
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.746894, acc: 1.000000; class 2 weight: 0.253106, acc: 0.000000; 
+2019-05-07 15:36:42.161588
+---- EPOCH 007 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.921277
+eval whole scene point accuracy vox: 0.746280
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792450
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746280, acc: 1.000000; class 2 weight: 0.253720, acc: 0.000000; 
+**** EPOCH 016 ****
+2019-05-07 16:34:47.630808
+ -- 010 / 021 --
+mean loss: 1.745215
+accuracy: 0.763683
+ -- 020 / 021 --
+mean loss: 1.722141
+accuracy: 0.750241
+Starting pickle...
+**** EPOCH 017 ****
+2019-05-07 16:35:22.709588
+ -- 010 / 021 --
+mean loss: 1.724277
+accuracy: 0.764428
+ -- 020 / 021 --
+mean loss: 1.722602
+accuracy: 0.784077
+Starting pickle...
+**** EPOCH 018 ****
+2019-05-07 16:35:57.897793
+ -- 010 / 021 --
+mean loss: 1.710263
+accuracy: 0.765807
+ -- 020 / 021 --
+mean loss: 1.734898
+accuracy: 0.759935
+Starting pickle...
+**** EPOCH 019 ****
+2019-05-07 16:36:33.001357
+ -- 010 / 021 --
+mean loss: 1.701338
+accuracy: 0.785108
+ -- 020 / 021 --
+mean loss: 1.709463
+accuracy: 0.759668
+Starting pickle...
+**** EPOCH 020 ****
+2019-05-07 16:37:08.013352
+ -- 010 / 021 --
+mean loss: 1.749402
+accuracy: 0.763803
+ -- 020 / 021 --
+mean loss: 1.661607
+accuracy: 0.788902
+Starting pickle...
+2019-05-07 16:37:43.012812
+---- EPOCH 008 EVALUATION ----
+eval mean loss: 0.884677
+eval point accuracy vox: 0.748180
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769784
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.748180, acc: 1.000000; class 2 weight: 0.251820, acc: 0.000000; 
+2019-05-07 16:38:06.068981
+---- EPOCH 009 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.882358
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792441
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 021 ****
+2019-05-07 17:35:59.216638
+ -- 010 / 021 --
+mean loss: 1.641198
+accuracy: 0.788058
+ -- 020 / 021 --
+mean loss: 1.688030
+accuracy: 0.767599
+Starting pickle...
+**** EPOCH 022 ****
+2019-05-07 17:36:34.311057
+ -- 010 / 021 --
+mean loss: 1.692583
+accuracy: 0.758455
+ -- 020 / 021 --
+mean loss: 1.672451
+accuracy: 0.785397
+Starting pickle...
+**** EPOCH 023 ****
+2019-05-07 17:37:09.470155
+ -- 010 / 021 --
+mean loss: 1.701876
+accuracy: 0.742505
+ -- 020 / 021 --
+mean loss: 1.645858
+accuracy: 0.774879
+Starting pickle...
+**** EPOCH 024 ****
+2019-05-07 17:37:44.548797
+ -- 010 / 021 --
+mean loss: 1.626002
+accuracy: 0.774903
+ -- 020 / 021 --
+mean loss: 1.658181
+accuracy: 0.762599
+Starting pickle...
+**** EPOCH 025 ****
+2019-05-07 17:38:19.624966
+ -- 010 / 021 --
+mean loss: 1.621334
+accuracy: 0.778506
+ -- 020 / 021 --
+mean loss: 1.623741
+accuracy: 0.775325
+Starting pickle...
+2019-05-07 17:38:54.746400
+---- EPOCH 010 EVALUATION ----
+eval mean loss: 0.852028
+eval point accuracy vox: 0.746334
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.765395
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.746334, acc: 1.000000; class 2 weight: 0.253666, acc: 0.000000; 
+2019-05-07 17:39:17.915826
+---- EPOCH 011 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.848475
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792476
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+**** EPOCH 026 ****
+2019-05-07 18:37:14.702917
+ -- 010 / 021 --
+mean loss: 1.637316
+accuracy: 0.769650
+ -- 020 / 021 --
+mean loss: 1.572664
+accuracy: 0.804390
+Starting pickle...
+**** EPOCH 027 ****
+2019-05-07 18:37:50.053057
+ -- 010 / 021 --
+mean loss: 1.647490
+accuracy: 0.768272
+ -- 020 / 021 --
+mean loss: 1.596720
+accuracy: 0.768448
+Starting pickle...
+**** EPOCH 028 ****
+2019-05-07 18:38:25.189149
+ -- 010 / 021 --
+mean loss: 1.636312
+accuracy: 0.759076
+ -- 020 / 021 --
+mean loss: 1.595402
+accuracy: 0.777033
+Starting pickle...
+**** EPOCH 029 ****
+2019-05-07 18:39:00.191517
+ -- 010 / 021 --
+mean loss: 1.595468
+accuracy: 0.775084
+ -- 020 / 021 --
+mean loss: 1.602547
+accuracy: 0.780940
+Starting pickle...
+**** EPOCH 030 ****
+2019-05-07 18:39:35.341317
+ -- 010 / 021 --
+mean loss: 1.598113
+accuracy: 0.759452
+ -- 020 / 021 --
+mean loss: 1.613972
+accuracy: 0.765534
+Starting pickle...
+2019-05-07 18:40:10.503002
+---- EPOCH 012 EVALUATION ----
+eval mean loss: 0.822724
+eval point accuracy vox: 0.747157
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769113
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.747157, acc: 1.000000; class 2 weight: 0.252843, acc: 0.000000; 
+2019-05-07 18:40:33.674618
+---- EPOCH 013 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.818980
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792456
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 031 ****
+2019-05-07 19:38:29.747008
+ -- 010 / 021 --
+mean loss: 1.610442
+accuracy: 0.747646
+ -- 020 / 021 --
+mean loss: 1.556399
+accuracy: 0.762655
+Starting pickle...
+**** EPOCH 032 ****
+2019-05-07 19:39:05.104542
+ -- 010 / 021 --
+mean loss: 1.549515
+accuracy: 0.771948
+ -- 020 / 021 --
+mean loss: 1.563224
+accuracy: 0.788418
+Starting pickle...
+**** EPOCH 033 ****
+2019-05-07 19:39:40.454028
+ -- 010 / 021 --
+mean loss: 1.573601
+accuracy: 0.786849
+ -- 020 / 021 --
+mean loss: 1.580799
+accuracy: 0.758910
+Starting pickle...
+**** EPOCH 034 ****
+2019-05-07 19:40:15.431478
+ -- 010 / 021 --
+mean loss: 1.558113
+accuracy: 0.762540
+ -- 020 / 021 --
+mean loss: 1.594206
+accuracy: 0.767753
+Starting pickle...
+**** EPOCH 035 ****
+2019-05-07 19:40:50.530287
+ -- 010 / 021 --
+mean loss: 1.548478
+accuracy: 0.779243
+ -- 020 / 021 --
+mean loss: 1.589635
+accuracy: 0.740629
+Starting pickle...
+2019-05-07 19:41:25.615419
+---- EPOCH 014 EVALUATION ----
+eval mean loss: 0.798601
+eval point accuracy vox: 0.752449
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.772695
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.752449, acc: 1.000000; class 2 weight: 0.247551, acc: 0.000000; 
+2019-05-07 19:41:48.833646
+---- EPOCH 015 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.795020
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792476
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
+**** EPOCH 036 ****
+2019-05-07 20:39:49.770275
+ -- 010 / 021 --
+mean loss: 1.583161
+accuracy: 0.769407
+ -- 020 / 021 --
+mean loss: 1.531297
+accuracy: 0.796206
+Starting pickle...
+**** EPOCH 037 ****
+2019-05-07 20:40:24.587167
+ -- 010 / 021 --
+mean loss: 1.549130
+accuracy: 0.787904
+ -- 020 / 021 --
+mean loss: 1.530369
+accuracy: 0.764994
+Starting pickle...
+**** EPOCH 038 ****
+2019-05-07 20:40:59.564482
+ -- 010 / 021 --
+mean loss: 1.590005
+accuracy: 0.737135
+ -- 020 / 021 --
+mean loss: 1.481001
+accuracy: 0.804953
+Starting pickle...
+**** EPOCH 039 ****
+2019-05-07 20:41:34.827822
+ -- 010 / 021 --
+mean loss: 1.536189
+accuracy: 0.782419
+ -- 020 / 021 --
+mean loss: 1.558521
+accuracy: 0.764193
+Starting pickle...
+**** EPOCH 040 ****
+2019-05-07 20:42:10.113378
+ -- 010 / 021 --
+mean loss: 1.578751
+accuracy: 0.767222
+ -- 020 / 021 --
+mean loss: 1.506787
+accuracy: 0.777607
+Starting pickle...
+2019-05-07 20:42:45.312414
+---- EPOCH 016 EVALUATION ----
+eval mean loss: 0.779881
+eval point accuracy vox: 0.749690
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.771146
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.749690, acc: 1.000000; class 2 weight: 0.250310, acc: 0.000000; 
+2019-05-07 20:43:08.512782
+---- EPOCH 017 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.775756
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792425
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 041 ****
+2019-05-07 21:41:06.817075
+ -- 010 / 021 --
+mean loss: 1.488125
+accuracy: 0.768670
+ -- 020 / 021 --
+mean loss: 1.513276
+accuracy: 0.778270
+Starting pickle...
+**** EPOCH 042 ****
+2019-05-07 21:41:42.014096
+ -- 010 / 021 --
+mean loss: 1.504792
+accuracy: 0.759242
+ -- 020 / 021 --
+mean loss: 1.515096
+accuracy: 0.765734
+Starting pickle...
+**** EPOCH 043 ****
+2019-05-07 21:42:16.961547
+ -- 010 / 021 --
+mean loss: 1.451767
+accuracy: 0.798391
+ -- 020 / 021 --
+mean loss: 1.520588
+accuracy: 0.762597
+Starting pickle...
+**** EPOCH 044 ****
+2019-05-07 21:42:52.022740
+ -- 010 / 021 --
+mean loss: 1.497811
+accuracy: 0.751352
+ -- 020 / 021 --
+mean loss: 1.547112
+accuracy: 0.766304
+Starting pickle...
+**** EPOCH 045 ****
+2019-05-07 21:43:27.143674
+ -- 010 / 021 --
+mean loss: 1.508656
+accuracy: 0.755927
+ -- 020 / 021 --
+mean loss: 1.515962
+accuracy: 0.769917
+Starting pickle...
+2019-05-07 21:44:02.470579
+---- EPOCH 018 EVALUATION ----
+eval mean loss: 0.760716
+eval point accuracy vox: 0.750743
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.770772
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750743, acc: 1.000000; class 2 weight: 0.249257, acc: 0.000000; 
+2019-05-07 21:44:25.670568
+---- EPOCH 019 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.755953
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792437
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+**** EPOCH 046 ****
+2019-05-07 22:42:25.573303
+ -- 010 / 021 --
+mean loss: 1.513362
+accuracy: 0.783291
+ -- 020 / 021 --
+mean loss: 1.536783
+accuracy: 0.741446
+Starting pickle...
+**** EPOCH 047 ****
+2019-05-07 22:43:00.669255
+ -- 010 / 021 --
+mean loss: 1.474578
+accuracy: 0.780281
+ -- 020 / 021 --
+mean loss: 1.479727
+accuracy: 0.770052
+Starting pickle...
+**** EPOCH 048 ****
+2019-05-07 22:43:35.746993
+ -- 010 / 021 --
+mean loss: 1.508936
+accuracy: 0.762743
+ -- 020 / 021 --
+mean loss: 1.524666
+accuracy: 0.757018
+Starting pickle...
+**** EPOCH 049 ****
+2019-05-07 22:44:10.540316
+ -- 010 / 021 --
+mean loss: 1.471155
+accuracy: 0.761342
+ -- 020 / 021 --
+mean loss: 1.482519
+accuracy: 0.779697
+Starting pickle...
+**** EPOCH 050 ****
+2019-05-07 22:44:45.693272
+ -- 010 / 021 --
+mean loss: 1.437134
+accuracy: 0.773350
+ -- 020 / 021 --
+mean loss: 1.462127
+accuracy: 0.772826
+Starting pickle...
+2019-05-07 22:45:20.928124
+---- EPOCH 020 EVALUATION ----
+eval mean loss: 0.746348
+eval point accuracy vox: 0.752242
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.773538
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.752242, acc: 1.000000; class 2 weight: 0.247758, acc: 0.000000; 
+2019-05-07 22:45:43.930617
+---- EPOCH 021 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.742023
+eval whole scene point accuracy vox: 0.746273
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792464
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746273, acc: 1.000000; class 2 weight: 0.253727, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 051 ****
+2019-05-07 23:43:37.247115
+ -- 010 / 021 --
+mean loss: 1.477185
+accuracy: 0.752154
+ -- 020 / 021 --
+mean loss: 1.465553
+accuracy: 0.775813
+Starting pickle...
+**** EPOCH 052 ****
+2019-05-07 23:44:12.459098
+ -- 010 / 021 --
+mean loss: 1.512710
+accuracy: 0.755983
+ -- 020 / 021 --
+mean loss: 1.442898
+accuracy: 0.764524
+Starting pickle...
+**** EPOCH 053 ****
+2019-05-07 23:44:47.585117
+ -- 010 / 021 --
+mean loss: 1.482806
+accuracy: 0.770593
+ -- 020 / 021 --
+mean loss: 1.463362
+accuracy: 0.778815
+Starting pickle...
+**** EPOCH 054 ****
+2019-05-07 23:45:22.679112
+ -- 010 / 021 --
+mean loss: 1.497397
+accuracy: 0.751164
+ -- 020 / 021 --
+mean loss: 1.436468
+accuracy: 0.768329
+Starting pickle...
+**** EPOCH 055 ****
+2019-05-07 23:45:57.901988
+ -- 010 / 021 --
+mean loss: 1.444848
+accuracy: 0.791980
+ -- 020 / 021 --
+mean loss: 1.480211
+accuracy: 0.740679
+Starting pickle...
+2019-05-07 23:46:32.797165
+---- EPOCH 022 EVALUATION ----
+eval mean loss: 0.737995
+eval point accuracy vox: 0.737082
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.760310
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.737082, acc: 1.000000; class 2 weight: 0.262918, acc: 0.000000; 
+2019-05-07 23:46:55.711844
+---- EPOCH 023 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.730482
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792433
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+**** EPOCH 056 ****
+2019-05-08 00:44:53.422733
+ -- 010 / 021 --
+mean loss: 1.446149
+accuracy: 0.776865
+ -- 020 / 021 --
+mean loss: 1.465173
+accuracy: 0.776870
+Starting pickle...
+**** EPOCH 057 ****
+2019-05-08 00:45:28.580150
+ -- 010 / 021 --
+mean loss: 1.465853
+accuracy: 0.774345
+ -- 020 / 021 --
+mean loss: 1.422991
+accuracy: 0.782761
+Starting pickle...
+**** EPOCH 058 ****
+2019-05-08 00:46:03.928904
+ -- 010 / 021 --
+mean loss: 1.447254
+accuracy: 0.785719
+ -- 020 / 021 --
+mean loss: 1.485064
+accuracy: 0.757269
+Starting pickle...
+**** EPOCH 059 ****
+2019-05-08 00:46:39.020832
+ -- 010 / 021 --
+mean loss: 1.477257
+accuracy: 0.763654
+ -- 020 / 021 --
+mean loss: 1.450620
+accuracy: 0.770268
+Starting pickle...
+**** EPOCH 060 ****
+2019-05-08 00:47:14.268063
+ -- 010 / 021 --
+mean loss: 1.423679
+accuracy: 0.796613
+ -- 020 / 021 --
+mean loss: 1.464767
+accuracy: 0.745396
+Starting pickle...
+2019-05-08 00:47:49.331221
+---- EPOCH 024 EVALUATION ----
+eval mean loss: 0.725904
+eval point accuracy vox: 0.750781
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.768915
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750781, acc: 1.000000; class 2 weight: 0.249219, acc: 0.000000; 
+2019-05-08 00:48:12.456407
+---- EPOCH 025 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.720273
+eval whole scene point accuracy vox: 0.746272
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792447
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746272, acc: 1.000000; class 2 weight: 0.253728, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 061 ****
+2019-05-08 01:46:10.740046
+ -- 010 / 021 --
+mean loss: 1.441740
+accuracy: 0.760544
+ -- 020 / 021 --
+mean loss: 1.463835
+accuracy: 0.746922
+Starting pickle...
+**** EPOCH 062 ****
+2019-05-08 01:46:45.971499
+ -- 010 / 021 --
+mean loss: 1.455351
+accuracy: 0.772720
+ -- 020 / 021 --
+mean loss: 1.396033
+accuracy: 0.789262
+Starting pickle...
+**** EPOCH 063 ****
+2019-05-08 01:47:21.022840
+ -- 010 / 021 --
+mean loss: 1.403368
+accuracy: 0.789703
+ -- 020 / 021 --
+mean loss: 1.455539
+accuracy: 0.750507
+Starting pickle...
+**** EPOCH 064 ****
+2019-05-08 01:47:56.062365
+ -- 010 / 021 --
+mean loss: 1.400439
+accuracy: 0.779997
+ -- 020 / 021 --
+mean loss: 1.467172
+accuracy: 0.748606
+Starting pickle...
+**** EPOCH 065 ****
+2019-05-08 01:48:31.140248
+ -- 010 / 021 --
+mean loss: 1.425727
+accuracy: 0.762542
+ -- 020 / 021 --
+mean loss: 1.461878
+accuracy: 0.761319
+Starting pickle...
+2019-05-08 01:49:06.221309
+---- EPOCH 026 EVALUATION ----
+eval mean loss: 0.716189
+eval point accuracy vox: 0.752614
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.771844
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.752614, acc: 1.000000; class 2 weight: 0.247386, acc: 0.000000; 
+2019-05-08 01:49:29.492491
+---- EPOCH 027 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.711144
+eval whole scene point accuracy vox: 0.746277
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792436
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746277, acc: 1.000000; class 2 weight: 0.253723, acc: 0.000000; 
+**** EPOCH 066 ****
+2019-05-08 02:47:24.665538
+ -- 010 / 021 --
+mean loss: 1.394058
+accuracy: 0.802942
+ -- 020 / 021 --
+mean loss: 1.450313
+accuracy: 0.764024
+Starting pickle...
+**** EPOCH 067 ****
+2019-05-08 02:47:59.970608
+ -- 010 / 021 --
+mean loss: 1.427582
+accuracy: 0.763509
+ -- 020 / 021 --
+mean loss: 1.395123
+accuracy: 0.783818
+Starting pickle...
+**** EPOCH 068 ****
+2019-05-08 02:48:35.260286
+ -- 010 / 021 --
+mean loss: 1.429119
+accuracy: 0.763411
+ -- 020 / 021 --
+mean loss: 1.427673
+accuracy: 0.771103
+Starting pickle...
+**** EPOCH 069 ****
+2019-05-08 02:49:10.322292
+ -- 010 / 021 --
+mean loss: 1.376152
+accuracy: 0.745803
+ -- 020 / 021 --
+mean loss: 1.431503
+accuracy: 0.763211
+Starting pickle...
+**** EPOCH 070 ****
+2019-05-08 02:49:45.414528
+ -- 010 / 021 --
+mean loss: 1.432362
+accuracy: 0.777848
+ -- 020 / 021 --
+mean loss: 1.402143
+accuracy: 0.758903
+Starting pickle...
+2019-05-08 02:50:20.410219
+---- EPOCH 028 EVALUATION ----
+eval mean loss: 0.707386
+eval point accuracy vox: 0.749966
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.771384
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.749966, acc: 1.000000; class 2 weight: 0.250034, acc: 0.000000; 
+2019-05-08 02:50:43.571444
+---- EPOCH 029 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.702010
+eval whole scene point accuracy vox: 0.746278
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792466
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746278, acc: 1.000000; class 2 weight: 0.253722, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 071 ****
+2019-05-08 03:48:45.052742
+ -- 010 / 021 --
+mean loss: 1.394085
+accuracy: 0.785462
+ -- 020 / 021 --
+mean loss: 1.429890
+accuracy: 0.760964
+Starting pickle...
+**** EPOCH 072 ****
+2019-05-08 03:49:20.165207
+ -- 010 / 021 --
+mean loss: 1.447702
+accuracy: 0.754932
+ -- 020 / 021 --
+mean loss: 1.366346
+accuracy: 0.778838
+Starting pickle...
+**** EPOCH 073 ****
+2019-05-08 03:49:55.713993
+ -- 010 / 021 --
+mean loss: 1.424277
+accuracy: 0.760302
+ -- 020 / 021 --
+mean loss: 1.429324
+accuracy: 0.769253
+Starting pickle...
+**** EPOCH 074 ****
+2019-05-08 03:50:30.835531
+ -- 010 / 021 --
+mean loss: 1.396824
+accuracy: 0.781670
+ -- 020 / 021 --
+mean loss: 1.464529
+accuracy: 0.752295
+Starting pickle...
+**** EPOCH 075 ****
+2019-05-08 03:51:05.964917
+ -- 010 / 021 --
+mean loss: 1.440376
+accuracy: 0.748861
+ -- 020 / 021 --
+mean loss: 1.377587
+accuracy: 0.773686
+Starting pickle...
+2019-05-08 03:51:41.090085
+---- EPOCH 030 EVALUATION ----
+eval mean loss: 0.702063
+eval point accuracy vox: 0.750527
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769370
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750527, acc: 1.000000; class 2 weight: 0.249473, acc: 0.000000; 
+2019-05-08 03:52:04.354468
+---- EPOCH 031 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.696206
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792442
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+**** EPOCH 076 ****
+2019-05-08 04:50:01.035193
+ -- 010 / 021 --
+mean loss: 1.412848
+accuracy: 0.754673
+ -- 020 / 021 --
+mean loss: 1.410096
+accuracy: 0.759147
+Starting pickle...
+**** EPOCH 077 ****
+2019-05-08 04:50:36.098946
+ -- 010 / 021 --
+mean loss: 1.429917
+accuracy: 0.750613
+ -- 020 / 021 --
+mean loss: 1.438580
+accuracy: 0.762040
+Starting pickle...
+**** EPOCH 078 ****
+2019-05-08 04:51:11.235833
+ -- 010 / 021 --
+mean loss: 1.419331
+accuracy: 0.757608
+ -- 020 / 021 --
+mean loss: 1.392533
+accuracy: 0.782869
+Starting pickle...
+**** EPOCH 079 ****
+2019-05-08 04:51:46.416600
+ -- 010 / 021 --
+mean loss: 1.351714
+accuracy: 0.803582
+ -- 020 / 021 --
+mean loss: 1.452625
+accuracy: 0.738221
+Starting pickle...
+**** EPOCH 080 ****
+2019-05-08 04:52:21.553469
+ -- 010 / 021 --
+mean loss: 1.400702
+accuracy: 0.762941
+ -- 020 / 021 --
+mean loss: 1.374852
+accuracy: 0.775138
+Starting pickle...
+2019-05-08 04:52:56.682406
+---- EPOCH 032 EVALUATION ----
+eval mean loss: 0.697619
+eval point accuracy vox: 0.747198
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.767394
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.747198, acc: 1.000000; class 2 weight: 0.252802, acc: 0.000000; 
+2019-05-08 04:53:19.863134
+---- EPOCH 033 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.691317
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792441
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 081 ****
+2019-05-08 05:51:18.700170
+ -- 010 / 021 --
+mean loss: 1.381283
+accuracy: 0.765490
+ -- 020 / 021 --
+mean loss: 1.442072
+accuracy: 0.735369
+Starting pickle...
+**** EPOCH 082 ****
+2019-05-08 05:51:53.813016
+ -- 010 / 021 --
+mean loss: 1.376232
+accuracy: 0.776880
+ -- 020 / 021 --
+mean loss: 1.426745
+accuracy: 0.738014
+Starting pickle...
+**** EPOCH 083 ****
+2019-05-08 05:52:28.902029
+ -- 010 / 021 --
+mean loss: 1.357907
+accuracy: 0.781288
+ -- 020 / 021 --
+mean loss: 1.453942
+accuracy: 0.739849
+Starting pickle...
+**** EPOCH 084 ****
+2019-05-08 05:53:04.113665
+ -- 010 / 021 --
+mean loss: 1.342633
+accuracy: 0.796159
+ -- 020 / 021 --
+mean loss: 1.391118
+accuracy: 0.755872
+Starting pickle...
+**** EPOCH 085 ****
+2019-05-08 05:53:39.185827
+ -- 010 / 021 --
+mean loss: 1.390734
+accuracy: 0.761676
+ -- 020 / 021 --
+mean loss: 1.430896
+accuracy: 0.750471
+Starting pickle...
+2019-05-08 05:54:14.456053
+---- EPOCH 034 EVALUATION ----
+eval mean loss: 0.694799
+eval point accuracy vox: 0.740498
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.759411
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.740498, acc: 1.000000; class 2 weight: 0.259502, acc: 0.000000; 
+2019-05-08 05:54:37.760146
+---- EPOCH 035 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.686470
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792506
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+**** EPOCH 086 ****
+2019-05-08 06:52:34.662594
+ -- 010 / 021 --
+mean loss: 1.387487
+accuracy: 0.775778
+ -- 020 / 021 --
+mean loss: 1.389109
+accuracy: 0.770749
+Starting pickle...
+**** EPOCH 087 ****
+2019-05-08 06:53:09.841249
+ -- 010 / 021 --
+mean loss: 1.392733
+accuracy: 0.748502
+ -- 020 / 021 --
+mean loss: 1.381494
+accuracy: 0.774016
+Starting pickle...
+**** EPOCH 088 ****
+2019-05-08 06:53:45.165078
+ -- 010 / 021 --
+mean loss: 1.380137
+accuracy: 0.767225
+ -- 020 / 021 --
+mean loss: 1.374933
+accuracy: 0.797051
+Starting pickle...
+**** EPOCH 089 ****
+2019-05-08 06:54:20.446352
+ -- 010 / 021 --
+mean loss: 1.402926
+accuracy: 0.747277
+ -- 020 / 021 --
+mean loss: 1.400844
+accuracy: 0.748755
+Starting pickle...
+**** EPOCH 090 ****
+2019-05-08 06:54:55.574056
+ -- 010 / 021 --
+mean loss: 1.436971
+accuracy: 0.742778
+ -- 020 / 021 --
+mean loss: 1.337745
+accuracy: 0.771981
+Starting pickle...
+2019-05-08 06:55:30.768962
+---- EPOCH 036 EVALUATION ----
+eval mean loss: 0.688247
+eval point accuracy vox: 0.751317
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.771518
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.751317, acc: 1.000000; class 2 weight: 0.248683, acc: 0.000000; 
+2019-05-08 06:55:53.718782
+---- EPOCH 037 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.683059
+eval whole scene point accuracy vox: 0.746278
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792457
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746278, acc: 1.000000; class 2 weight: 0.253722, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 091 ****
+2019-05-08 07:53:48.907056
+ -- 010 / 021 --
+mean loss: 1.351145
+accuracy: 0.783121
+ -- 020 / 021 --
+mean loss: 1.408883
+accuracy: 0.751265
+Starting pickle...
+**** EPOCH 092 ****
+2019-05-08 07:54:24.165621
+ -- 010 / 021 --
+mean loss: 1.425411
+accuracy: 0.738252
+ -- 020 / 021 --
+mean loss: 1.343019
+accuracy: 0.769749
+Starting pickle...
+**** EPOCH 093 ****
+2019-05-08 07:54:59.138533
+ -- 010 / 021 --
+mean loss: 1.375379
+accuracy: 0.786626
+ -- 020 / 021 --
+mean loss: 1.389381
+accuracy: 0.762044
+Starting pickle...
+**** EPOCH 094 ****
+2019-05-08 07:55:34.292423
+ -- 010 / 021 --
+mean loss: 1.362494
+accuracy: 0.788715
+ -- 020 / 021 --
+mean loss: 1.427962
+accuracy: 0.740451
+Starting pickle...
+**** EPOCH 095 ****
+2019-05-08 07:56:09.567248
+ -- 010 / 021 --
+mean loss: 1.345837
+accuracy: 0.802297
+ -- 020 / 021 --
+mean loss: 1.406471
+accuracy: 0.758739
+Starting pickle...
+2019-05-08 07:56:44.590202
+---- EPOCH 038 EVALUATION ----
+eval mean loss: 0.683635
+eval point accuracy vox: 0.756390
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.775925
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.756390, acc: 1.000000; class 2 weight: 0.243610, acc: 0.000000; 
+2019-05-08 07:57:07.944653
+---- EPOCH 039 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.679558
+eval whole scene point accuracy vox: 0.746282
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792492
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746282, acc: 1.000000; class 2 weight: 0.253718, acc: 0.000000; 
+**** EPOCH 096 ****
+2019-05-08 08:55:04.692325
+ -- 010 / 021 --
+mean loss: 1.353475
+accuracy: 0.780989
+ -- 020 / 021 --
+mean loss: 1.378034
+accuracy: 0.754683
+Starting pickle...
+**** EPOCH 097 ****
+2019-05-08 08:55:40.233788
+ -- 010 / 021 --
+mean loss: 1.372451
+accuracy: 0.767448
+ -- 020 / 021 --
+mean loss: 1.391800
+accuracy: 0.752518
+Starting pickle...
+**** EPOCH 098 ****
+2019-05-08 08:56:15.350757
+ -- 010 / 021 --
+mean loss: 1.389194
+accuracy: 0.764209
+ -- 020 / 021 --
+mean loss: 1.385224
+accuracy: 0.753744
+Starting pickle...
+**** EPOCH 099 ****
+2019-05-08 08:56:50.517603
+ -- 010 / 021 --
+mean loss: 1.339285
+accuracy: 0.778199
+ -- 020 / 021 --
+mean loss: 1.389008
+accuracy: 0.755423
+Starting pickle...
+**** EPOCH 100 ****
+2019-05-08 08:57:26.328004
+ -- 010 / 021 --
+mean loss: 1.413760
+accuracy: 0.759160
+ -- 020 / 021 --
+mean loss: 1.373088
+accuracy: 0.768821
+Starting pickle...
+2019-05-08 08:58:01.470769
+---- EPOCH 040 EVALUATION ----
+eval mean loss: 0.680701
+eval point accuracy vox: 0.754637
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.773362
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.754637, acc: 1.000000; class 2 weight: 0.245363, acc: 0.000000; 
+2019-05-08 08:58:24.534193
+---- EPOCH 041 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.676011
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792398
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 101 ****
+2019-05-08 09:56:20.889697
+ -- 010 / 021 --
+mean loss: 1.336713
+accuracy: 0.777751
+ -- 020 / 021 --
+mean loss: 1.387179
+accuracy: 0.740481
+Starting pickle...
+**** EPOCH 102 ****
+2019-05-08 09:56:56.094514
+ -- 010 / 021 --
+mean loss: 1.332263
+accuracy: 0.775269
+ -- 020 / 021 --
+mean loss: 1.397805
+accuracy: 0.755885
+Starting pickle...
+**** EPOCH 103 ****
+2019-05-08 09:57:31.279145
+ -- 010 / 021 --
+mean loss: 1.320497
+accuracy: 0.768365
+ -- 020 / 021 --
+mean loss: 1.389636
+accuracy: 0.738713
+Starting pickle...
+**** EPOCH 104 ****
+2019-05-08 09:58:06.215625
+ -- 010 / 021 --
+mean loss: 1.379430
+accuracy: 0.761198
+ -- 020 / 021 --
+mean loss: 1.362727
+accuracy: 0.767627
+Starting pickle...
+**** EPOCH 105 ****
+2019-05-08 09:58:41.247433
+ -- 010 / 021 --
+mean loss: 1.413437
+accuracy: 0.744988
+ -- 020 / 021 --
+mean loss: 1.335998
+accuracy: 0.789799
+Starting pickle...
+2019-05-08 09:59:16.650358
+---- EPOCH 042 EVALUATION ----
+eval mean loss: 0.678214
+eval point accuracy vox: 0.750562
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769306
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750562, acc: 1.000000; class 2 weight: 0.249438, acc: 0.000000; 
+2019-05-08 09:59:39.937815
+---- EPOCH 043 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.672468
+eval whole scene point accuracy vox: 0.746273
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792477
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746273, acc: 1.000000; class 2 weight: 0.253727, acc: 0.000000; 
+**** EPOCH 106 ****
+2019-05-08 10:57:42.025896
+ -- 010 / 021 --
+mean loss: 1.357694
+accuracy: 0.779652
+ -- 020 / 021 --
+mean loss: 1.375182
+accuracy: 0.766751
+Starting pickle...
+**** EPOCH 107 ****
+2019-05-08 10:58:17.084084
+ -- 010 / 021 --
+mean loss: 1.361504
+accuracy: 0.761120
+ -- 020 / 021 --
+mean loss: 1.356444
+accuracy: 0.767752
+Starting pickle...
+**** EPOCH 108 ****
+2019-05-08 10:58:52.246585
+ -- 010 / 021 --
+mean loss: 1.313276
+accuracy: 0.792620
+ -- 020 / 021 --
+mean loss: 1.354110
+accuracy: 0.771434
+Starting pickle...
+**** EPOCH 109 ****
+2019-05-08 10:59:27.353459
+ -- 010 / 021 --
+mean loss: 1.320401
+accuracy: 0.794582
+ -- 020 / 021 --
+mean loss: 1.390298
+accuracy: 0.770053
+Starting pickle...
+**** EPOCH 110 ****
+2019-05-08 11:00:02.719211
+ -- 010 / 021 --
+mean loss: 1.305373
+accuracy: 0.770656
+ -- 020 / 021 --
+mean loss: 1.324146
+accuracy: 0.777728
+Starting pickle...
+2019-05-08 11:00:37.893955
+---- EPOCH 044 EVALUATION ----
+eval mean loss: 0.670152
+eval point accuracy vox: 0.749795
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.771390
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.749795, acc: 1.000000; class 2 weight: 0.250205, acc: 0.000000; 
+2019-05-08 11:01:00.842820
+---- EPOCH 045 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.664463
+eval whole scene point accuracy vox: 0.746275
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792418
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746275, acc: 1.000000; class 2 weight: 0.253725, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 111 ****
+2019-05-08 11:58:54.748687
+ -- 010 / 021 --
+mean loss: 1.343109
+accuracy: 0.761081
+ -- 020 / 021 --
+mean loss: 1.370834
+accuracy: 0.779918
+Starting pickle...
+**** EPOCH 112 ****
+2019-05-08 11:59:30.014384
+ -- 010 / 021 --
+mean loss: 1.420233
+accuracy: 0.746081
+ -- 020 / 021 --
+mean loss: 1.312018
+accuracy: 0.787232
+Starting pickle...
+**** EPOCH 113 ****
+2019-05-08 12:00:05.053415
+ -- 010 / 021 --
+mean loss: 1.307084
+accuracy: 0.801308
+ -- 020 / 021 --
+mean loss: 1.348851
+accuracy: 0.739660
+Starting pickle...
+**** EPOCH 114 ****
+2019-05-08 12:00:40.483682
+ -- 010 / 021 --
+mean loss: 1.346811
+accuracy: 0.770245
+ -- 020 / 021 --
+mean loss: 1.345451
+accuracy: 0.757547
+Starting pickle...
+**** EPOCH 115 ****
+2019-05-08 12:01:15.831325
+ -- 010 / 021 --
+mean loss: 1.352100
+accuracy: 0.766835
+ -- 020 / 021 --
+mean loss: 1.369536
+accuracy: 0.750090
+Starting pickle...
+2019-05-08 12:01:51.144883
+---- EPOCH 046 EVALUATION ----
+eval mean loss: 0.666518
+eval point accuracy vox: 0.758927
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.774360
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.758927, acc: 1.000000; class 2 weight: 0.241074, acc: 0.000000; 
+2019-05-08 12:02:14.297284
+---- EPOCH 047 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.661616
+eval whole scene point accuracy vox: 0.746277
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792412
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746277, acc: 1.000000; class 2 weight: 0.253723, acc: 0.000000; 
+**** EPOCH 116 ****
+2019-05-08 13:00:12.562084
+ -- 010 / 021 --
+mean loss: 1.304982
+accuracy: 0.763895
+ -- 020 / 021 --
+mean loss: 1.315383
+accuracy: 0.754017
+Starting pickle...
+**** EPOCH 117 ****
+2019-05-08 13:00:47.704357
+ -- 010 / 021 --
+mean loss: 1.291761
+accuracy: 0.784100
+ -- 020 / 021 --
+mean loss: 1.420131
+accuracy: 0.757646
+Starting pickle...
+**** EPOCH 118 ****
+2019-05-08 13:01:22.836964
+ -- 010 / 021 --
+mean loss: 1.360574
+accuracy: 0.773628
+ -- 020 / 021 --
+mean loss: 1.355388
+accuracy: 0.777663
+Starting pickle...
+**** EPOCH 119 ****
+2019-05-08 13:01:58.228090
+ -- 010 / 021 --
+mean loss: 1.371512
+accuracy: 0.745555
+ -- 020 / 021 --
+mean loss: 1.335821
+accuracy: 0.786094
+Starting pickle...
+**** EPOCH 120 ****
+2019-05-08 13:02:33.461945
+ -- 010 / 021 --
+mean loss: 1.358358
+accuracy: 0.771110
+ -- 020 / 021 --
+mean loss: 1.322977
+accuracy: 0.773027
+Starting pickle...
+2019-05-08 13:03:08.571532
+---- EPOCH 048 EVALUATION ----
+eval mean loss: 0.666195
+eval point accuracy vox: 0.746227
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.767625
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.746227, acc: 1.000000; class 2 weight: 0.253773, acc: 0.000000; 
+2019-05-08 13:03:31.808101
+---- EPOCH 049 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.659475
+eval whole scene point accuracy vox: 0.746278
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792482
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746278, acc: 1.000000; class 2 weight: 0.253722, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 121 ****
+2019-05-08 14:01:37.446332
+ -- 010 / 021 --
+mean loss: 1.322365
+accuracy: 0.778896
+ -- 020 / 021 --
+mean loss: 1.320284
+accuracy: 0.767680
+Starting pickle...
+**** EPOCH 122 ****
+2019-05-08 14:02:12.580296
+ -- 010 / 021 --
+mean loss: 1.370081
+accuracy: 0.771373
+ -- 020 / 021 --
+mean loss: 1.377440
+accuracy: 0.740752
+Starting pickle...
+**** EPOCH 123 ****
+2019-05-08 14:02:47.763192
+ -- 010 / 021 --
+mean loss: 1.376153
+accuracy: 0.748219
+ -- 020 / 021 --
+mean loss: 1.358642
+accuracy: 0.762677
+Starting pickle...
+**** EPOCH 124 ****
+2019-05-08 14:03:22.758044
+ -- 010 / 021 --
+mean loss: 1.288033
+accuracy: 0.781417
+ -- 020 / 021 --
+mean loss: 1.305305
+accuracy: 0.770988
+Starting pickle...
+**** EPOCH 125 ****
+2019-05-08 14:03:57.972247
+ -- 010 / 021 --
+mean loss: 1.305851
+accuracy: 0.782220
+ -- 020 / 021 --
+mean loss: 1.355827
+accuracy: 0.754024
+Starting pickle...
+2019-05-08 14:04:33.315018
+---- EPOCH 050 EVALUATION ----
+eval mean loss: 0.662278
+eval point accuracy vox: 0.748051
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.765034
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.748051, acc: 1.000000; class 2 weight: 0.251949, acc: 0.000000; 
+2019-05-08 14:04:56.303353
+---- EPOCH 051 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.654523
+eval whole scene point accuracy vox: 0.746280
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792466
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746280, acc: 1.000000; class 2 weight: 0.253720, acc: 0.000000; 
+**** EPOCH 126 ****
+2019-05-08 15:02:58.610886
+ -- 010 / 021 --
+mean loss: 1.363736
+accuracy: 0.774435
+ -- 020 / 021 --
+mean loss: 1.327005
+accuracy: 0.757194
+Starting pickle...
+**** EPOCH 127 ****
+2019-05-08 15:03:33.850037
+ -- 010 / 021 --
+mean loss: 1.261105
+accuracy: 0.797995
+ -- 020 / 021 --
+mean loss: 1.399705
+accuracy: 0.726340
+Starting pickle...
+**** EPOCH 128 ****
+2019-05-08 15:04:09.010977
+ -- 010 / 021 --
+mean loss: 1.373875
+accuracy: 0.731942
+ -- 020 / 021 --
+mean loss: 1.263983
+accuracy: 0.795613
+Starting pickle...
+**** EPOCH 129 ****
+2019-05-08 15:04:43.943050
+ -- 010 / 021 --
+mean loss: 1.356185
+accuracy: 0.738348
+ -- 020 / 021 --
+mean loss: 1.344056
+accuracy: 0.759653
+Starting pickle...
+**** EPOCH 130 ****
+2019-05-08 15:05:18.835649
+ -- 010 / 021 --
+mean loss: 1.329132
+accuracy: 0.781990
+ -- 020 / 021 --
+mean loss: 1.308269
+accuracy: 0.767225
+Starting pickle...
+2019-05-08 15:05:53.972653
+---- EPOCH 052 EVALUATION ----
+eval mean loss: 0.659273
+eval point accuracy vox: 0.750227
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.768030
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750227, acc: 1.000000; class 2 weight: 0.249773, acc: 0.000000; 
+2019-05-08 15:06:17.084176
+---- EPOCH 053 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.652344
+eval whole scene point accuracy vox: 0.746270
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792477
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746270, acc: 1.000000; class 2 weight: 0.253730, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 131 ****
+2019-05-08 16:04:18.177659
+ -- 010 / 021 --
+mean loss: 1.404422
+accuracy: 0.723575
+ -- 020 / 021 --
+mean loss: 1.276981
+accuracy: 0.799195
+Starting pickle...
+**** EPOCH 132 ****
+2019-05-08 16:04:53.032216
+ -- 010 / 021 --
+mean loss: 1.348761
+accuracy: 0.770378
+ -- 020 / 021 --
+mean loss: 1.354951
+accuracy: 0.774407
+Starting pickle...
+**** EPOCH 133 ****
+2019-05-08 16:05:28.008170
+ -- 010 / 021 --
+mean loss: 1.349828
+accuracy: 0.758152
+ -- 020 / 021 --
+mean loss: 1.348431
+accuracy: 0.765632
+Starting pickle...
+**** EPOCH 134 ****
+2019-05-08 16:06:03.178642
+ -- 010 / 021 --
+mean loss: 1.346224
+accuracy: 0.773135
+ -- 020 / 021 --
+mean loss: 1.340802
+accuracy: 0.755903
+Starting pickle...
+**** EPOCH 135 ****
+2019-05-08 16:06:38.255817
+ -- 010 / 021 --
+mean loss: 1.284197
+accuracy: 0.792258
+ -- 020 / 021 --
+mean loss: 1.335597
+accuracy: 0.746728
+Starting pickle...
+2019-05-08 16:07:13.448857
+---- EPOCH 054 EVALUATION ----
+eval mean loss: 0.658563
+eval point accuracy vox: 0.750955
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.770575
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750955, acc: 1.000000; class 2 weight: 0.249045, acc: 0.000000; 
+2019-05-08 16:07:36.352448
+---- EPOCH 055 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.652562
+eval whole scene point accuracy vox: 0.746274
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792455
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746274, acc: 1.000000; class 2 weight: 0.253726, acc: 0.000000; 
+**** EPOCH 136 ****
+2019-05-08 17:05:41.393576
+ -- 010 / 021 --
+mean loss: 1.351637
+accuracy: 0.766803
+ -- 020 / 021 --
+mean loss: 1.291125
+accuracy: 0.792729
+Starting pickle...
+**** EPOCH 137 ****
+2019-05-08 17:06:16.131997
+ -- 010 / 021 --
+mean loss: 1.326726
+accuracy: 0.758727
+ -- 020 / 021 --
+mean loss: 1.353682
+accuracy: 0.748206
+Starting pickle...
+**** EPOCH 138 ****
+2019-05-08 17:06:51.373805
+ -- 010 / 021 --
+mean loss: 1.337012
+accuracy: 0.786072
+ -- 020 / 021 --
+mean loss: 1.349268
+accuracy: 0.764136
+Starting pickle...
+**** EPOCH 139 ****
+2019-05-08 17:07:26.715375
+ -- 010 / 021 --
+mean loss: 1.283621
+accuracy: 0.780939
+ -- 020 / 021 --
+mean loss: 1.349456
+accuracy: 0.757280
+Starting pickle...
+**** EPOCH 140 ****
+2019-05-08 17:08:01.929215
+ -- 010 / 021 --
+mean loss: 1.333872
+accuracy: 0.755988
+ -- 020 / 021 --
+mean loss: 1.323441
+accuracy: 0.763822
+Starting pickle...
+2019-05-08 17:08:37.314763
+---- EPOCH 056 EVALUATION ----
+eval mean loss: 0.657199
+eval point accuracy vox: 0.753538
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.773117
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.753538, acc: 1.000000; class 2 weight: 0.246462, acc: 0.000000; 
+2019-05-08 17:09:00.539934
+---- EPOCH 057 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.651998
+eval whole scene point accuracy vox: 0.746279
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792434
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746279, acc: 1.000000; class 2 weight: 0.253721, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 141 ****
+2019-05-08 18:07:05.696905
+ -- 010 / 021 --
+mean loss: 1.333532
+accuracy: 0.752551
+ -- 020 / 021 --
+mean loss: 1.336854
+accuracy: 0.778760
+Starting pickle...
+**** EPOCH 142 ****
+2019-05-08 18:07:40.989427
+ -- 010 / 021 --
+mean loss: 1.364802
+accuracy: 0.756147
+ -- 020 / 021 --
+mean loss: 1.312824
+accuracy: 0.767764
+Starting pickle...
+**** EPOCH 143 ****
+2019-05-08 18:08:16.142757
+ -- 010 / 021 --
+mean loss: 1.312521
+accuracy: 0.763803
+ -- 020 / 021 --
+mean loss: 1.327659
+accuracy: 0.757044
+Starting pickle...
+**** EPOCH 144 ****
+2019-05-08 18:08:51.286046
+ -- 010 / 021 --
+mean loss: 1.346264
+accuracy: 0.766810
+ -- 020 / 021 --
+mean loss: 1.306839
+accuracy: 0.779893
+Starting pickle...
+**** EPOCH 145 ****
+2019-05-08 18:09:26.449809
+ -- 010 / 021 --
+mean loss: 1.323116
+accuracy: 0.784217
+ -- 020 / 021 --
+mean loss: 1.319015
+accuracy: 0.784603
+Starting pickle...
+2019-05-08 18:10:01.497108
+---- EPOCH 058 EVALUATION ----
+eval mean loss: 0.655634
+eval point accuracy vox: 0.750808
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769086
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.750808, acc: 1.000000; class 2 weight: 0.249192, acc: 0.000000; 
+2019-05-08 18:10:24.664930
+---- EPOCH 059 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.649224
+eval whole scene point accuracy vox: 0.746277
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792437
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746277, acc: 1.000000; class 2 weight: 0.253723, acc: 0.000000; 
+**** EPOCH 146 ****
+2019-05-08 19:08:23.282428
+ -- 010 / 021 --
+mean loss: 1.330582
+accuracy: 0.771858
+ -- 020 / 021 --
+mean loss: 1.322563
+accuracy: 0.763404
+Starting pickle...
+**** EPOCH 147 ****
+2019-05-08 19:08:58.510519
+ -- 010 / 021 --
+mean loss: 1.315034
+accuracy: 0.780910
+ -- 020 / 021 --
+mean loss: 1.335936
+accuracy: 0.767595
+Starting pickle...
+**** EPOCH 148 ****
+2019-05-08 19:09:33.654805
+ -- 010 / 021 --
+mean loss: 1.374032
+accuracy: 0.734024
+ -- 020 / 021 --
+mean loss: 1.286148
+accuracy: 0.794925
+Starting pickle...
+**** EPOCH 149 ****
+2019-05-08 19:10:08.785384
+ -- 010 / 021 --
+mean loss: 1.372269
+accuracy: 0.776307
+ -- 020 / 021 --
+mean loss: 1.327578
+accuracy: 0.769388
+Starting pickle...
+**** EPOCH 150 ****
+2019-05-08 19:10:44.095298
+ -- 010 / 021 --
+mean loss: 1.302080
+accuracy: 0.767355
+ -- 020 / 021 --
+mean loss: 1.373689
+accuracy: 0.735578
+Starting pickle...
+2019-05-08 19:11:19.338506
+---- EPOCH 060 EVALUATION ----
+eval mean loss: 0.653586
+eval point accuracy vox: 0.754052
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.775451
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.754052, acc: 1.000000; class 2 weight: 0.245948, acc: 0.000000; 
+2019-05-08 19:11:42.613691
+---- EPOCH 061 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.649015
+eval whole scene point accuracy vox: 0.746271
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792446
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746271, acc: 1.000000; class 2 weight: 0.253729, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 151 ****
+2019-05-08 20:09:48.174337
+ -- 010 / 021 --
+mean loss: 1.280142
+accuracy: 0.788857
+ -- 020 / 021 --
+mean loss: 1.385549
+accuracy: 0.741727
+Starting pickle...
+**** EPOCH 152 ****
+2019-05-08 20:10:23.373172
+ -- 010 / 021 --
+mean loss: 1.344295
+accuracy: 0.764307
+ -- 020 / 021 --
+mean loss: 1.365958
+accuracy: 0.757276
+Starting pickle...
+**** EPOCH 153 ****
+2019-05-08 20:10:58.759457
+ -- 010 / 021 --
+mean loss: 1.340844
+accuracy: 0.764654
+ -- 020 / 021 --
+mean loss: 1.306454
+accuracy: 0.778114
+Starting pickle...
+**** EPOCH 154 ****
+2019-05-08 20:11:34.095182
+ -- 010 / 021 --
+mean loss: 1.326673
+accuracy: 0.781850
+ -- 020 / 021 --
+mean loss: 1.326657
+accuracy: 0.770430
+Starting pickle...
+**** EPOCH 155 ****
+2019-05-08 20:12:09.148774
+ -- 010 / 021 --
+mean loss: 1.314754
+accuracy: 0.757940
+ -- 020 / 021 --
+mean loss: 1.356536
+accuracy: 0.747799
+Starting pickle...
+2019-05-08 20:12:44.146484
+---- EPOCH 062 EVALUATION ----
+eval mean loss: 0.655159
+eval point accuracy vox: 0.755364
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.776658
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.755364, acc: 1.000000; class 2 weight: 0.244636, acc: 0.000000; 
+2019-05-08 20:13:07.223907
+---- EPOCH 063 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.651147
+eval whole scene point accuracy vox: 0.746273
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792481
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746273, acc: 1.000000; class 2 weight: 0.253727, acc: 0.000000; 
+**** EPOCH 156 ****
+2019-05-08 21:11:15.916265
+ -- 010 / 021 --
+mean loss: 1.308224
+accuracy: 0.776308
+ -- 020 / 021 --
+mean loss: 1.332044
+accuracy: 0.765802
+Starting pickle...
+**** EPOCH 157 ****
+2019-05-08 21:11:51.092769
+ -- 010 / 021 --
+mean loss: 1.291232
+accuracy: 0.764439
+ -- 020 / 021 --
+mean loss: 1.328939
+accuracy: 0.767785
+Starting pickle...
+**** EPOCH 158 ****
+2019-05-08 21:12:26.446896
+ -- 010 / 021 --
+mean loss: 1.313568
+accuracy: 0.761000
+ -- 020 / 021 --
+mean loss: 1.361160
+accuracy: 0.760142
+Starting pickle...
+**** EPOCH 159 ****
+2019-05-08 21:13:01.590233
+ -- 010 / 021 --
+mean loss: 1.293967
+accuracy: 0.776886
+ -- 020 / 021 --
+mean loss: 1.325606
+accuracy: 0.755458
+Starting pickle...
+**** EPOCH 160 ****
+2019-05-08 21:13:36.893033
+ -- 010 / 021 --
+mean loss: 1.331489
+accuracy: 0.775700
+ -- 020 / 021 --
+mean loss: 1.341774
+accuracy: 0.759785
+Starting pickle...
+2019-05-08 21:14:12.060033
+---- EPOCH 064 EVALUATION ----
+eval mean loss: 0.655906
+eval point accuracy vox: 0.747507
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.765360
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.747507, acc: 1.000000; class 2 weight: 0.252493, acc: 0.000000; 
+2019-05-08 21:14:35.087576
+---- EPOCH 065 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.648930
+eval whole scene point accuracy vox: 0.746280
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792426
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746280, acc: 1.000000; class 2 weight: 0.253720, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 161 ****
+2019-05-08 22:12:29.890083
+ -- 010 / 021 --
+mean loss: 1.354687
+accuracy: 0.757976
+ -- 020 / 021 --
+mean loss: 1.304354
+accuracy: 0.780780
+Starting pickle...
+**** EPOCH 162 ****
+2019-05-08 22:13:05.169946
+ -- 010 / 021 --
+mean loss: 1.322493
+accuracy: 0.766666
+ -- 020 / 021 --
+mean loss: 1.315396
+accuracy: 0.777243
+Starting pickle...
+**** EPOCH 163 ****
+2019-05-08 22:13:40.271670
+ -- 010 / 021 --
+mean loss: 1.277013
+accuracy: 0.767476
+ -- 020 / 021 --
+mean loss: 1.335760
+accuracy: 0.763654
+Starting pickle...
+**** EPOCH 164 ****
+2019-05-08 22:14:15.511538
+ -- 010 / 021 --
+mean loss: 1.284220
+accuracy: 0.780405
+ -- 020 / 021 --
+mean loss: 1.329928
+accuracy: 0.755978
+Starting pickle...
+**** EPOCH 165 ****
+2019-05-08 22:14:50.618747
+ -- 010 / 021 --
+mean loss: 1.392601
+accuracy: 0.741352
+ -- 020 / 021 --
+mean loss: 1.291656
+accuracy: 0.785940
+Starting pickle...
+2019-05-08 22:15:25.795498
+---- EPOCH 066 EVALUATION ----
+eval mean loss: 0.652852
+eval point accuracy vox: 0.751138
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.772226
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.751138, acc: 1.000000; class 2 weight: 0.248862, acc: 0.000000; 
+2019-05-08 22:15:49.223182
+---- EPOCH 067 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.647635
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792431
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
+**** EPOCH 166 ****
+2019-05-08 23:13:54.195434
+ -- 010 / 021 --
+mean loss: 1.307857
+accuracy: 0.760195
+ -- 020 / 021 --
+mean loss: 1.335557
+accuracy: 0.763609
+Starting pickle...
+**** EPOCH 167 ****
+2019-05-08 23:14:29.148308
+ -- 010 / 021 --
+mean loss: 1.264454
+accuracy: 0.801148
+ -- 020 / 021 --
+mean loss: 1.362652
+accuracy: 0.736564
+Starting pickle...
+**** EPOCH 168 ****
+2019-05-08 23:15:04.211114
+ -- 010 / 021 --
+mean loss: 1.325571
+accuracy: 0.750820
+ -- 020 / 021 --
+mean loss: 1.328838
+accuracy: 0.774547
+Starting pickle...
+**** EPOCH 169 ****
+2019-05-08 23:15:39.575151
+ -- 010 / 021 --
+mean loss: 1.356530
+accuracy: 0.754257
+ -- 020 / 021 --
+mean loss: 1.305136
+accuracy: 0.792746
+Starting pickle...
+**** EPOCH 170 ****
+2019-05-08 23:16:15.082051
+ -- 010 / 021 --
+mean loss: 1.341384
+accuracy: 0.750003
+ -- 020 / 021 --
+mean loss: 1.303764
+accuracy: 0.774620
+Starting pickle...
+2019-05-08 23:16:50.023628
+---- EPOCH 068 EVALUATION ----
+eval mean loss: 0.652759
+eval point accuracy vox: 0.753484
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.770817
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.753484, acc: 1.000000; class 2 weight: 0.246516, acc: 0.000000; 
+2019-05-08 23:17:13.125842
+---- EPOCH 069 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.647234
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792477
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 171 ****
+2019-05-09 00:15:10.530248
+ -- 010 / 021 --
+mean loss: 1.348893
+accuracy: 0.724188
+ -- 020 / 021 --
+mean loss: 1.254855
+accuracy: 0.786673
+Starting pickle...
+**** EPOCH 172 ****
+2019-05-09 00:15:45.791466
+ -- 010 / 021 --
+mean loss: 1.289050
+accuracy: 0.765163
+ -- 020 / 021 --
+mean loss: 1.283581
+accuracy: 0.788557
+Starting pickle...
+**** EPOCH 173 ****
+2019-05-09 00:16:20.872589
+ -- 010 / 021 --
+mean loss: 1.374656
+accuracy: 0.767382
+ -- 020 / 021 --
+mean loss: 1.251487
+accuracy: 0.789333
+Starting pickle...
+**** EPOCH 174 ****
+2019-05-09 00:16:55.910004
+ -- 010 / 021 --
+mean loss: 1.275727
+accuracy: 0.778982
+ -- 020 / 021 --
+mean loss: 1.335972
+accuracy: 0.750331
+Starting pickle...
+**** EPOCH 175 ****
+2019-05-09 00:17:31.163222
+ -- 010 / 021 --
+mean loss: 1.266800
+accuracy: 0.792962
+ -- 020 / 021 --
+mean loss: 1.294253
+accuracy: 0.754457
+Starting pickle...
+2019-05-09 00:18:06.467600
+---- EPOCH 070 EVALUATION ----
+eval mean loss: 0.647146
+eval point accuracy vox: 0.742632
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.766332
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.742632, acc: 1.000000; class 2 weight: 0.257368, acc: 0.000000; 
+2019-05-09 00:18:29.530800
+---- EPOCH 071 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.639730
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792478
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
+**** EPOCH 176 ****
+2019-05-09 01:16:24.648353
+ -- 010 / 021 --
+mean loss: 1.346975
+accuracy: 0.761711
+ -- 020 / 021 --
+mean loss: 1.329756
+accuracy: 0.767698
+Starting pickle...
+**** EPOCH 177 ****
+2019-05-09 01:16:59.907012
+ -- 010 / 021 --
+mean loss: 1.251981
+accuracy: 0.805748
+ -- 020 / 021 --
+mean loss: 1.289933
+accuracy: 0.763744
+Starting pickle...
+**** EPOCH 178 ****
+2019-05-09 01:17:34.761726
+ -- 010 / 021 --
+mean loss: 1.314308
+accuracy: 0.770633
+ -- 020 / 021 --
+mean loss: 1.295191
+accuracy: 0.769543
+Starting pickle...
+**** EPOCH 179 ****
+2019-05-09 01:18:09.850108
+ -- 010 / 021 --
+mean loss: 1.318370
+accuracy: 0.759578
+ -- 020 / 021 --
+mean loss: 1.329420
+accuracy: 0.768274
+Starting pickle...
+**** EPOCH 180 ****
+2019-05-09 01:18:44.796611
+ -- 010 / 021 --
+mean loss: 1.345362
+accuracy: 0.758211
+ -- 020 / 021 --
+mean loss: 1.256040
+accuracy: 0.764511
+Starting pickle...
+2019-05-09 01:19:20.057485
+---- EPOCH 072 EVALUATION ----
+eval mean loss: 0.645862
+eval point accuracy vox: 0.749207
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.769467
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.749207, acc: 1.000000; class 2 weight: 0.250793, acc: 0.000000; 
+2019-05-09 01:19:43.141466
+---- EPOCH 073 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.639410
+eval whole scene point accuracy vox: 0.746277
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792443
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746277, acc: 1.000000; class 2 weight: 0.253723, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 181 ****
+2019-05-09 02:17:50.945779
+ -- 010 / 021 --
+mean loss: 1.347428
+accuracy: 0.767324
+ -- 020 / 021 --
+mean loss: 1.282422
+accuracy: 0.777648
+Starting pickle...
+**** EPOCH 182 ****
+2019-05-09 02:18:26.150034
+ -- 010 / 021 --
+mean loss: 1.311290
+accuracy: 0.756388
+ -- 020 / 021 --
+mean loss: 1.331901
+accuracy: 0.772455
+Starting pickle...
+**** EPOCH 183 ****
+2019-05-09 02:19:01.242113
+ -- 010 / 021 --
+mean loss: 1.311472
+accuracy: 0.774492
+ -- 020 / 021 --
+mean loss: 1.357401
+accuracy: 0.744688
+Starting pickle...
+**** EPOCH 184 ****
+2019-05-09 02:19:36.517828
+ -- 010 / 021 --
+mean loss: 1.315418
+accuracy: 0.744431
+ -- 020 / 021 --
+mean loss: 1.306931
+accuracy: 0.757212
+Starting pickle...
+**** EPOCH 185 ****
+2019-05-09 02:20:11.671791
+ -- 010 / 021 --
+mean loss: 1.303671
+accuracy: 0.789745
+ -- 020 / 021 --
+mean loss: 1.297082
+accuracy: 0.775557
+Starting pickle...
+2019-05-09 02:20:46.908440
+---- EPOCH 074 EVALUATION ----
+eval mean loss: 0.648078
+eval point accuracy vox: 0.747511
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.768973
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.747511, acc: 1.000000; class 2 weight: 0.252489, acc: 0.000000; 
+2019-05-09 02:21:10.031913
+---- EPOCH 075 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.641837
+eval whole scene point accuracy vox: 0.746274
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792431
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746274, acc: 1.000000; class 2 weight: 0.253726, acc: 0.000000; 
+**** EPOCH 186 ****
+2019-05-09 03:19:19.040608
+ -- 010 / 021 --
+mean loss: 1.297777
+accuracy: 0.782636
+ -- 020 / 021 --
+mean loss: 1.316549
+accuracy: 0.764619
+Starting pickle...
+**** EPOCH 187 ****
+2019-05-09 03:19:54.268184
+ -- 010 / 021 --
+mean loss: 1.309470
+accuracy: 0.761903
+ -- 020 / 021 --
+mean loss: 1.298854
+accuracy: 0.769642
+Starting pickle...
+**** EPOCH 188 ****
+2019-05-09 03:20:29.397354
+ -- 010 / 021 --
+mean loss: 1.350762
+accuracy: 0.762775
+ -- 020 / 021 --
+mean loss: 1.287969
+accuracy: 0.776579
+Starting pickle...
+**** EPOCH 189 ****
+2019-05-09 03:21:04.782962
+ -- 010 / 021 --
+mean loss: 1.295793
+accuracy: 0.789593
+ -- 020 / 021 --
+mean loss: 1.322015
+accuracy: 0.778526
+Starting pickle...
+**** EPOCH 190 ****
+2019-05-09 03:21:39.810281
+ -- 010 / 021 --
+mean loss: 1.345011
+accuracy: 0.759240
+ -- 020 / 021 --
+mean loss: 1.273521
+accuracy: 0.790810
+Starting pickle...
+2019-05-09 03:22:14.952988
+---- EPOCH 076 EVALUATION ----
+eval mean loss: 0.648247
+eval point accuracy vox: 0.745565
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.765892
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.745565, acc: 1.000000; class 2 weight: 0.254435, acc: 0.000000; 
+2019-05-09 03:22:38.085920
+---- EPOCH 077 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.641203
+eval whole scene point accuracy vox: 0.746277
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792467
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746277, acc: 1.000000; class 2 weight: 0.253723, acc: 0.000000; 
+Model saved in file: log/model.ckpt
+**** EPOCH 191 ****
+2019-05-09 04:20:35.998019
+ -- 010 / 021 --
+mean loss: 1.309035
+accuracy: 0.783601
+ -- 020 / 021 --
+mean loss: 1.289152
+accuracy: 0.766864
+Starting pickle...
+**** EPOCH 192 ****
+2019-05-09 04:21:11.320883
+ -- 010 / 021 --
+mean loss: 1.347500
+accuracy: 0.761662
+ -- 020 / 021 --
+mean loss: 1.265044
+accuracy: 0.763221
+Starting pickle...
+**** EPOCH 193 ****
+2019-05-09 04:21:46.495997
+ -- 010 / 021 --
+mean loss: 1.311821
+accuracy: 0.774652
+ -- 020 / 021 --
+mean loss: 1.336041
+accuracy: 0.755961
+Starting pickle...
+**** EPOCH 194 ****
+2019-05-09 04:22:21.629315
+ -- 010 / 021 --
+mean loss: 1.384034
+accuracy: 0.733593
+ -- 020 / 021 --
+mean loss: 1.251723
+accuracy: 0.800092
+Starting pickle...
+**** EPOCH 195 ****
+2019-05-09 04:22:56.854110
+ -- 010 / 021 --
+mean loss: 1.324597
+accuracy: 0.759962
+ -- 020 / 021 --
+mean loss: 1.267063
+accuracy: 0.790967
+Starting pickle...
+2019-05-09 04:23:32.214419
+---- EPOCH 078 EVALUATION ----
+eval mean loss: 0.648619
+eval point accuracy vox: 0.743878
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.764035
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.743878, acc: 1.000000; class 2 weight: 0.256122, acc: 0.000000; 
+2019-05-09 04:23:55.409315
+---- EPOCH 079 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.641175
+eval whole scene point accuracy vox: 0.746276
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792488
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746276, acc: 1.000000; class 2 weight: 0.253724, acc: 0.000000; 
+**** EPOCH 196 ****
+2019-05-09 05:21:50.530719
+ -- 010 / 021 --
+mean loss: 1.338035
+accuracy: 0.749155
+ -- 020 / 021 --
+mean loss: 1.273118
+accuracy: 0.787363
+Starting pickle...
+**** EPOCH 197 ****
+2019-05-09 05:22:25.665279
+ -- 010 / 021 --
+mean loss: 1.282508
+accuracy: 0.771597
+ -- 020 / 021 --
+mean loss: 1.347049
+accuracy: 0.768547
+Starting pickle...
+**** EPOCH 198 ****
+2019-05-09 05:23:00.920869
+ -- 010 / 021 --
+mean loss: 1.335861
+accuracy: 0.755135
+ -- 020 / 021 --
+mean loss: 1.283187
+accuracy: 0.775348
+Starting pickle...
+**** EPOCH 199 ****
+2019-05-09 05:23:36.236048
+ -- 010 / 021 --
+mean loss: 1.251907
+accuracy: 0.751907
+ -- 020 / 021 --
+mean loss: 1.346909
+accuracy: 0.750900
+Starting pickle...
+**** EPOCH 200 ****
+2019-05-09 05:24:11.295837
+ -- 010 / 021 --
+mean loss: 1.311773
+accuracy: 0.771375
+ -- 020 / 021 --
+mean loss: 1.319205
+accuracy: 0.768739
+Starting pickle...
+2019-05-09 05:24:46.301752
+---- EPOCH 080 EVALUATION ----
+eval mean loss: 0.647398
+eval point accuracy vox: 0.738079
+eval point avg class acc vox: 0.500000
+eval point accuracy: 0.761073
+eval point avg class acc: 0.500000
+eval point calibrated average acc: 0.333333
+vox based --------class 1 weight: 0.738079, acc: 1.000000; class 2 weight: 0.261921, acc: 0.000000; 
+2019-05-09 05:25:09.377937
+---- EPOCH 081 EVALUATION WHOLE SCENE----
+eval whole scene mean loss: 0.638989
+eval whole scene point accuracy vox: 0.746278
+eval whole scene point avg class acc vox: 0.500000
+eval whole scene point accuracy: 0.792456
+eval whole scene point avg class acc: 0.500000
+eval whole scene point calibrated average acc vox: 0.333333
+vox based --------class 1 weight: 0.746278, acc: 1.000000; class 2 weight: 0.253722, acc: 0.000000; 
+Model saved in file: log/model.ckpt
